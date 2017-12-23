@@ -79,6 +79,12 @@
     <Compile Include="Klawiatura.designer.cs">
       <DependentUpon>Klawiatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="KolKomOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KolKomOrg.Designer.cs">
+      <DependentUpon>KolKomOrg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klawiatura.resx">
       <DependentUpon>Klawiatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KolKomOrg.resx">
+      <DependentUpon>KolKomOrg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main2.pl.resx">
       <DependentUpon>Main2.cs</DependentUpon>

@@ -66,3 +66,27 @@ E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\l
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe.config
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.aaa.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Wizualizacja01.Klawiatura.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKomunikatu.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoPotwierdzeniaWyjscia.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresoweGminy.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresowyRRW.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Podsumowanie.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Properties.Resources.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Semestralne_KtoreMiesiace.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborKartaCzyGotowka.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborMiesieczneSemestralne.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.pl.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.GenerateResource.Cache
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.CoreCompileInputs.cache
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.exe
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.KolKomOrg.resources

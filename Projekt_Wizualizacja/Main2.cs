@@ -255,6 +255,7 @@ namespace Projekt_Wizualizacja
                     label15.Visible = true;
                     //pJedno_L_T.Width = 292;
                     pJedno_L_T.Height = 168;
+                    pJedno_L_T.Enabled = false;
                 }
                 else
                 {
@@ -268,6 +269,7 @@ namespace Projekt_Wizualizacja
                     label12.Visible = false;
                     label15.Visible = false;
                     pJedno_L_T.Height = 316;
+                    pJedno_L_T.Enabled = true;
 
                 }
             }
@@ -1874,9 +1876,37 @@ namespace Projekt_Wizualizacja
             RefreshSummaryRTB();
         }
 
+
+
+        private void pb_postep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void btn_MN24_Click(object sender, EventArgs e)
+        {
+            Minus(tb_NRight);
+            RefreshSummaryRTB();
+        }
+
+        private void btn_PU24_Click(object sender, EventArgs e)
+        {
+            Plus(tb_URight);
+            RefreshSummaryRTB();
+        }
+
+        private void btn_MU24_Click(object sender, EventArgs e)
+        {
+            Minus(tb_URight);
+            RefreshSummaryRTB();
+        }
+        #endregion
+
         private void pJedno_b_platnosc_Click(object sender, EventArgs e)
         {
-            if ( price > 0)
+            if (price > 0)
             {
                 WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(tb_Price.Text);
                 wyborKartaCzyGotowka.ShowDialog();
@@ -1904,29 +1934,14 @@ namespace Projekt_Wizualizacja
             }
         }
 
-        private void pb_postep_Click(object sender, EventArgs e)
+        private void pJedno_L_T_Click(object sender, EventArgs e)
         {
-
+            if (Flag == 5)
+            {
+                KolKomOrg pop = new KolKomOrg();
+                pop.ShowDialog();
+            }
         }
-
-        private void btn_MN24_Click(object sender, EventArgs e)
-        {
-            Minus(tb_NRight);
-            RefreshSummaryRTB();
-        }
-
-        private void btn_PU24_Click(object sender, EventArgs e)
-        {
-            Plus(tb_URight);
-            RefreshSummaryRTB();
-        }
-
-        private void btn_MU24_Click(object sender, EventArgs e)
-        {
-            Minus(tb_URight);
-            RefreshSummaryRTB();
-        }
-#endregion
         #endregion
 
 
