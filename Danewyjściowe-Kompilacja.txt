@@ -1,0 +1,4 @@
+﻿1>------ Kompilacja rozpoczęta: Projekt: Projekt_Wizualizacja, Konfiguracja: Debug Any CPU ------
+1>E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\Main2.cs(68,23,68,31): warning CS0414: Pole „Main.KolKom24” jest przypisane, lecz jego wartość nie jest nigdy używana
+1>  Projekt_Wizualizacja -> E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe
+========== Kompilacja: 1 zakończono powodzeniem, 0 zakończono niepowodzeniem, 0 zaktualizowano, 0 pominięto ==========

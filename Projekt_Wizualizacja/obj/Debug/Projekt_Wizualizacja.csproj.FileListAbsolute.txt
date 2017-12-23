@@ -1,0 +1,68 @@
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe.config
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Properties.Resources.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.GenerateResource.Cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.CoreCompileInputs.cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.exe
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.pl.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresoweGminy.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresowyRRW.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Podsumowanie.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborKartaCzyGotowka.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoPotwierdzeniaWyjscia.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborMiesieczneSemestralne.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKomunikatu.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.aaa.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\Projekt_Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Semestralne_KtoreMiesiace.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe.config
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.aaa.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKomunikatu.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoPotwierdzeniaWyjscia.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresoweGminy.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresowyRRW.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Podsumowanie.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Properties.Resources.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Semestralne_KtoreMiesiace.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborKartaCzyGotowka.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborMiesieczneSemestralne.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.pl.resources
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.GenerateResource.Cache
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.CoreCompileInputs.cache
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.exe
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
+E:\Dysk Google\Visual\Wizu\wizu 13-12\Projekt_Wizualizacja\obj\Debug\Wizualizacja01.Klawiatura.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.aaa.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Wizualizacja01.Klawiatura.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKomunikatu.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoPotwierdzeniaWyjscia.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresoweGminy.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OkresowyRRW.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Podsumowanie.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Properties.Resources.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Semestralne_KtoreMiesiace.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborKartaCzyGotowka.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.WyborMiesieczneSemestralne.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Main.pl.resources
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.GenerateResource.Cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csproj.CoreCompileInputs.cache
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.exe
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe.config
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.exe
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
+E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizualizacja.resources.dll
