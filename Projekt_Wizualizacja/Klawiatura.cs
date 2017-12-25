@@ -121,7 +121,7 @@ namespace Wizualizacja01
         private void AnulujBut_Click(object sender, EventArgs e)
         {
             take = false;
-            closed = true;
+            //closed = true;
             this.Close();
         }
 
@@ -135,7 +135,7 @@ namespace Wizualizacja01
         {
             //TBcen_bil.Text = Convert.ToString(bilety.Length);
             take = true;
-            closed = true;
+            //closed = true;
             this.Close();
         }
 

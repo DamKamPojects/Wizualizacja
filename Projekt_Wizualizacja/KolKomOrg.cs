@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wizualizacja01;
 
 namespace Projekt_Wizualizacja
 {
     public partial class KolKomOrg : Form
     {
+        /* NOTE: Ceny powinny być klasa statyczną*/
         public KolKomOrg()
         {
             InitializeComponent();
@@ -19,15 +21,45 @@ namespace Projekt_Wizualizacja
             T2 = null;
         }
 
-        public string Tekst = null;
-        private string T1, T2;
+        public string TextToSend = null;
+        public bool SendText;
+        public double PriceNorm;
+        public double PriceUlg;
 
+        private string T1, T2;
+        private Ceny_biletow Price = new Ceny_biletow();
         private int[] buffer = new int[] { 0, 0 };
+
+
+        const string SKM = "SKM";
+        const string ZTM = "ZTM Gdańsk";
+        const string MZK_G = "ZKM Gdynia";
+        const string MZK_W = "ZKM Wejherowo";
+        const string PR = "PR"; // nie wiem co to za przewoźnik
+        const string prefix = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów ważny dla: ";
+        const string lacz = " oraz ";
+        const string norm = "\n\tNormalny: ilość - ";
+        const string ugl = "\n\tUlgowy: ilość - ";
+        const string cena = ", cena - ";
+
+
+        #region klikanie
 
         private void b_zatwiedz_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (ButtonCheck())
+            {
+                SendText = true;
+                Przewoznicy();
+                Close();
+            }
+            else MessageBox.Show("Należy wybrać dwóch przewoźników!");
+        }
 
+        private void b_Anuluj_Click(object sender, EventArgs e)
+        {
+            SendText = false;
+            Close();
         }
 
         private void b_ZTM_Click(object sender, EventArgs e)
@@ -55,6 +87,30 @@ namespace Projekt_Wizualizacja
         {
             Kolorowanie(5);
         }
+
+        private void btn_PN_Click(object sender, EventArgs e)
+        {
+            Plus(tb_N);
+        }
+
+        private void btn_PU_Click(object sender, EventArgs e)
+        {
+            Plus(tb_U);
+        }
+
+        private void btn_MN_Click(object sender, EventArgs e)
+        {
+            Minus(tb_N);
+        }
+
+        private void btn_MU_Click(object sender, EventArgs e)
+        {
+            Minus(tb_U);
+        }
+        #endregion
+
+        #region Metody
+
         private void Kolorowanie(int button)
         {
             if (buffer[0] != button && buffer[0] != 0)
@@ -94,8 +150,7 @@ namespace Projekt_Wizualizacja
                     BColor(buffer[0]);
                 }
             }
-        }
-        
+        }      
         void BColor(int button)
         {
             switch (button)
@@ -142,5 +197,63 @@ namespace Projekt_Wizualizacja
                     break;
             }
         }
+
+        void Plus(TextBox tb)
+        {
+            tb.Text = (Convert.ToInt32(tb.Text) + 1).ToString();
+        }
+        void Minus(TextBox tb)
+        {
+            if (Convert.ToInt32(tb.Text) - 1 >= 0) tb.Text = (Convert.ToInt32(tb.Text) - 1).ToString();
+            else tb.Text = "0";
+        }
+        private void tb_N_Click(object sender, EventArgs e)
+        {
+            GetKeyboard(tb_N, Price.MetroKolKom24_2);
+        }
+        private void tb_U_Click(object sender, EventArgs e)
+        {
+            GetKeyboard(tb_U, Price.MetroKolKom24_2/2);
+        }
+        void GetKeyboard(TextBox tb, double price)
+        {
+            string input = tb.Text;
+            Klawiatura kl = new Klawiatura(tb.Text, price);
+            kl.ShowDialog();
+            while (!kl.closed)
+            {
+            }
+            if (kl.take) tb.Text = kl.TBil_bil.Text;
+        }
+
+        void Przewoznicy()
+        {
+            T1 = GetPrzewoznik(buffer[0]);
+            T2 = GetPrzewoznik(buffer[1]);
+            PriceNorm = Convert.ToInt32(tb_N.Text) * Price.MetroKolKom24_2;
+            PriceUlg = Convert.ToInt32(tb_U.Text) * Price.MetroKolKom24_2 / 2;
+            if (tb_N.Text!="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + norm + tb_N.Text + cena + String.Format("{0:0.00} zł", PriceNorm) + ugl + tb_U.Text + cena + String.Format("{0:0.00} zł", PriceUlg);
+            if (tb_N.Text!="0" && tb_U.Text=="0") TextToSend = prefix + T1 + lacz + T2 + norm + tb_N.Text + cena + String.Format("{0:0.00} zł", PriceNorm);
+            if (tb_N.Text=="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + ugl + tb_U.Text + cena + String.Format("{0:0.00} zł", PriceUlg);
+        }
+        string GetPrzewoznik(int input)
+        {
+            switch (input)
+            {
+                case 1: return ZTM;
+                case 2: return MZK_G;
+                case 3: return MZK_W;
+                case 4: return SKM;
+                case 5: return PR;
+                default: return "Blad";
+            }
+        }
+        bool ButtonCheck()
+        {
+            if (buffer.Contains(0)) return false;
+            else return true;
+        }
+
+        #endregion
     }
 }

@@ -13,7 +13,6 @@ namespace Projekt_Wizualizacja
 {
     public partial class Main : Form
     {
-        /*ZEROWANIE KOLEKCJI I TEXBOXOW*/
         public Main()
         {
             InitializeComponent();
@@ -65,10 +64,13 @@ namespace Projekt_Wizualizacja
         static string KomJPSpec = "\nBilet metropolitalny na jeden przejazd na linie nocne, pospieszne, specjalne i zwykłe:";
         static string Kom24 = "\nBilet metropolitalny 24-godzinny komunalny";
         static string Kom72 = "\nBilet metropolitalny 72-godzinny komunalny";
-        static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
+        //static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
         static string KolKom24All = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny wszystkich organizatorów";
         static string KolKom72 = "\nBilet metropolitalny 72-godzinny kolejowo-komunalny wszystkich organizatorów";
+        private string KolKom24 = null;
         #endregion
+        List<double> KolKom24PricesNorm = new List<double>();
+        List<double> KolKom24PricesUlg = new List<double>();
         #endregion
 
         #region Metody
@@ -165,6 +167,18 @@ namespace Projekt_Wizualizacja
 
             tb_Price.Text = "0";
             rtb_Summary2.Text = null;
+            try
+            {
+                if (Flag == 5)
+                {
+                    KolKom24PricesNorm.RemoveAll(x => x > 0);
+                    KolKom24PricesUlg.RemoveAll(x => x > 0);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
 
@@ -487,7 +501,7 @@ namespace Projekt_Wizualizacja
         }
         void Komunalne2472()
         {
-            //24h       COŚ Z TYM TRZEBA ZROBIĆ
+            //24h all
             if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
             {
                 rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
@@ -500,7 +514,7 @@ namespace Projekt_Wizualizacja
             {
                 rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
             }
-            //72h       COŚ Z TYM TRZEBA ZROBIĆ
+            //72h
             if (tb_NRight.Text != "0" && tb_URight.Text == "0")
             {
                 rtb_Summary2.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString();
@@ -517,6 +531,8 @@ namespace Projekt_Wizualizacja
         void KolejowoKomunalne()
         {
             //24h dla dwóch przewoźników
+            if (KolKom24 != null) rtb_Summary2.Text += KolKom24;
+            #region stare
             //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
             //{
             //    rtb_Summary2.Text += KolKom24 + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_2).ToString();
@@ -529,6 +545,7 @@ namespace Projekt_Wizualizacja
             //{
             //    rtb_Summary2.Text += KolKom24 + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_2).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKolKom24_2 / 2).ToString();
             //}
+            #endregion
             //24h dla wszystkich przewoźników
             if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
             {
@@ -718,9 +735,6 @@ namespace Projekt_Wizualizacja
             string input = tb.Text;
             Klawiatura kl = new Klawiatura(tb.Text, price);
             kl.ShowDialog();
-            while (!kl.closed)
-            {
-            }
             if(kl.take)tb.Text = kl.TBil_bil.Text;
             RefreshSummaryRTB();
         }
@@ -792,6 +806,14 @@ namespace Projekt_Wizualizacja
                     }
                 case 5:
                     {
+                        foreach (var item in KolKom24PricesNorm)
+                        {
+                            price += item;
+                        }
+                        foreach (var item in KolKom24PricesUlg)
+                        {
+                            price += item;
+                        }
                         price += Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All;
                         price += Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2;
                         price += Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72;
@@ -807,7 +829,6 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        //\/ Nie ingerowałem
         #region Programowanie kontrolek
 
         private void Form1_Load(object sender, EventArgs e)
@@ -839,7 +860,6 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        //\/ Nie ingerowałem
         #region Panel wstecz i Koniec
         private void panelKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
@@ -1940,6 +1960,13 @@ namespace Projekt_Wizualizacja
             {
                 KolKomOrg pop = new KolKomOrg();
                 pop.ShowDialog();
+                if (pop.SendText)
+                {
+                    KolKom24 = pop.TextToSend;
+                    KolKom24PricesNorm.Add(pop.PriceNorm);
+                    KolKom24PricesUlg.Add(pop.PriceUlg);
+                    RefreshSummaryRTB();
+                }
             }
         }
         #endregion
