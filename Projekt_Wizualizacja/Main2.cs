@@ -13,7 +13,6 @@ namespace Projekt_Wizualizacja
 {
     public partial class Main : Form
     {
-        /*ZEROWANIE KOLEKCJI I TEXBOXOW*/
         public Main()
         {
             InitializeComponent();
@@ -47,12 +46,17 @@ namespace Projekt_Wizualizacja
         public int Flag;    //flaga do treści panelu, może być niepotrzebne (można to pewnie zastąpić AktualneOkno)
         // \/ przechowywanie wartości textboxów
         public double price;
+        #region kolekcje
         Dictionary<TextBox, string> ValueStorage;
         Dictionary<TextBox, string> ValueStorage2;
-
+        List<double> KolKom24PricesNorm = new List<double>();
+        List<double> KolKom24PricesUlg = new List<double>();
+        List<string> KolKom24Storage = new List<string>();
+        List<string> KolKom24StorageShort = new List<string>();
+        #endregion
 
         //pola do szybszego pisania stringów do summary
-#region Stringi do summary
+        #region Stringi do summary
         static string Normalny = "\n\tNormalny: ilość - ";
         static string Ulgowy = "\n\tUlgowy: ilość - ";
         static string Cena = ", Cena - ";
@@ -65,9 +69,10 @@ namespace Projekt_Wizualizacja
         static string KomJPSpec = "\nBilet metropolitalny na jeden przejazd na linie nocne, pospieszne, specjalne i zwykłe:";
         static string Kom24 = "\nBilet metropolitalny 24-godzinny komunalny";
         static string Kom72 = "\nBilet metropolitalny 72-godzinny komunalny";
-        static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
+        //static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
         static string KolKom24All = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny wszystkich organizatorów";
         static string KolKom72 = "\nBilet metropolitalny 72-godzinny kolejowo-komunalny wszystkich organizatorów";
+        private string KolKom24 = null;
         #endregion
         #endregion
 
@@ -165,8 +170,26 @@ namespace Projekt_Wizualizacja
 
             tb_Price.Text = "0";
             rtb_Summary2.Text = null;
+            try
+            {
+                if (Flag == 5)
+                {
+                    KolKom24PricesNorm.RemoveAll(x => x > 0);
+                    KolKom24PricesUlg.RemoveAll(x => x > 0);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
+
+        void CheckRemoveButton()
+        {
+            if (KolKom24Storage.Count > 0) btn_RemoveKolKom24.Enabled = true;
+            else btn_RemoveKolKom24.Enabled = false;
+        }//To musiałem wrzucić do RefreshSummaryRTB niestety
 
         //zabwa z pictureboxami i przesuwaniem paneli //to narazie nie działa
         private void ZmianaPictureBoxMetodaRysunki(Image imageL, Image imageM, Image imageR)
@@ -254,7 +277,10 @@ namespace Projekt_Wizualizacja
                     label12.Visible = true;
                     label15.Visible = true;
                     //pJedno_L_T.Width = 292;
-                    pJedno_L_T.Height = 168;
+                   // pJedno_L_T.Height = 168;
+                    pJedno_L_T.Enabled = false;
+                    btn_RemoveKolKom24.Visible = false;
+                    //btn_RemoveKolKom24.Enabled = false;
                 }
                 else
                 {
@@ -267,7 +293,10 @@ namespace Projekt_Wizualizacja
                     tb_ULeft.Visible = false;
                     label12.Visible = false;
                     label15.Visible = false;
-                    pJedno_L_T.Height = 316;
+                    //pJedno_L_T.Height = 316;
+                    btn_RemoveKolKom24.Visible = true;
+                    btn_RemoveKolKom24.Enabled = false;
+                    pJedno_L_T.Enabled = true;
 
                 }
             }
@@ -485,7 +514,7 @@ namespace Projekt_Wizualizacja
         }
         void Komunalne2472()
         {
-            //24h       COŚ Z TYM TRZEBA ZROBIĆ
+            //24h all
             if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
             {
                 rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
@@ -498,7 +527,7 @@ namespace Projekt_Wizualizacja
             {
                 rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
             }
-            //72h       COŚ Z TYM TRZEBA ZROBIĆ
+            //72h
             if (tb_NRight.Text != "0" && tb_URight.Text == "0")
             {
                 rtb_Summary2.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString();
@@ -515,6 +544,12 @@ namespace Projekt_Wizualizacja
         void KolejowoKomunalne()
         {
             //24h dla dwóch przewoźników
+            foreach (var item in KolKom24Storage)
+            {
+                //if (item != null) rtb_Summary2.Text += KolKom24;
+                rtb_Summary2.Text += item;
+            }
+            #region stare
             //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
             //{
             //    rtb_Summary2.Text += KolKom24 + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_2).ToString();
@@ -527,6 +562,7 @@ namespace Projekt_Wizualizacja
             //{
             //    rtb_Summary2.Text += KolKom24 + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_2).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKolKom24_2 / 2).ToString();
             //}
+            #endregion
             //24h dla wszystkich przewoźników
             if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
             {
@@ -701,6 +737,7 @@ namespace Projekt_Wizualizacja
                     }
                 case 5:
                     {
+                        CheckRemoveButton();
                         KolejowoKomunalne();
                         GetPrice();
                         break;
@@ -716,9 +753,6 @@ namespace Projekt_Wizualizacja
             string input = tb.Text;
             Klawiatura kl = new Klawiatura(tb.Text, price);
             kl.ShowDialog();
-            while (!kl.closed)
-            {
-            }
             if(kl.take)tb.Text = kl.TBil_bil.Text;
             RefreshSummaryRTB();
         }
@@ -790,6 +824,14 @@ namespace Projekt_Wizualizacja
                     }
                 case 5:
                     {
+                        foreach (var item in KolKom24PricesNorm)
+                        {
+                            price += item;
+                        }
+                        foreach (var item in KolKom24PricesUlg)
+                        {
+                            price += item;
+                        }
                         price += Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All;
                         price += Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2;
                         price += Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72;
@@ -805,7 +847,6 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        //\/ Nie ingerowałem
         #region Programowanie kontrolek
 
         private void Form1_Load(object sender, EventArgs e)
@@ -837,7 +878,6 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        //\/ Nie ingerowałem
         #region Panel wstecz i Koniec
         private void panelKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
@@ -1818,6 +1858,14 @@ namespace Projekt_Wizualizacja
 
             //Tutaj wstawić zmianę elementów
         }
+
+        private void btn_RemoveKolKom24_Click(object sender, EventArgs e)
+        {
+            KolKom24Remover rmv = new KolKom24Remover(KolKom24Storage, KolKom24StorageShort);
+            rmv.ShowDialog();
+            RefreshSummaryRTB();
+        }
+
         #region plusminus
         private void btn_PNJedn_Click(object sender, EventArgs e)
         {
@@ -1874,9 +1922,39 @@ namespace Projekt_Wizualizacja
             RefreshSummaryRTB();
         }
 
+
+
+        private void pb_postep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void btn_MN24_Click(object sender, EventArgs e)
+        {
+            Minus(tb_NRight);
+            RefreshSummaryRTB();
+        }
+
+        private void btn_PU24_Click(object sender, EventArgs e)
+        {
+            Plus(tb_URight);
+            RefreshSummaryRTB();
+        }
+
+
+
+        private void btn_MU24_Click(object sender, EventArgs e)
+        {
+            Minus(tb_URight);
+            RefreshSummaryRTB();
+        }
+        #endregion
+
         private void pJedno_b_platnosc_Click(object sender, EventArgs e)
         {
-            if ( price > 0)
+            if (price > 0)
             {
                 WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(tb_Price.Text);
                 wyborKartaCzyGotowka.ShowDialog();
@@ -1904,29 +1982,24 @@ namespace Projekt_Wizualizacja
             }
         }
 
-        private void pb_postep_Click(object sender, EventArgs e)
+        private void pJedno_L_T_Click(object sender, EventArgs e)
         {
+            if (Flag == 5)
+            {
+                KolKomOrg pop = new KolKomOrg();
+                pop.ShowDialog();
+                if (pop.SendText)
+                {
+                    KolKom24 = pop.TextToSend;
+                    KolKom24Storage.Add(KolKom24);
+                    KolKom24StorageShort.Add("Przewoźnicy: " + pop.T1 + ", " + pop.T2 + "; Norm: " + pop.QuantN + ", " + String.Format("{0:0.00} zł", pop.PriceNorm) + "; Ulg: " + pop.QuantU + ", " + String.Format("{0:0.00} zł", pop.PriceUlg));
+                    KolKom24PricesNorm.Add(pop.PriceNorm);
+                    KolKom24PricesUlg.Add(pop.PriceUlg);
+                    RefreshSummaryRTB();
+                }
 
+            }
         }
-
-        private void btn_MN24_Click(object sender, EventArgs e)
-        {
-            Minus(tb_NRight);
-            RefreshSummaryRTB();
-        }
-
-        private void btn_PU24_Click(object sender, EventArgs e)
-        {
-            Plus(tb_URight);
-            RefreshSummaryRTB();
-        }
-
-        private void btn_MU24_Click(object sender, EventArgs e)
-        {
-            Minus(tb_URight);
-            RefreshSummaryRTB();
-        }
-#endregion
         #endregion
 
 
