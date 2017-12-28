@@ -90,3 +90,4 @@ E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\pl\Projekt_Wizual
 E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.exe
 E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
 E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.KolKomOrg.resources
+E:\Dysk Google\Git\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.KolKom24Remover.resources

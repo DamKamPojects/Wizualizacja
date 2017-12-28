@@ -79,6 +79,12 @@
     <Compile Include="Klawiatura.designer.cs">
       <DependentUpon>Klawiatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="KolKom24Remover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KolKom24Remover.Designer.cs">
+      <DependentUpon>KolKom24Remover.cs</DependentUpon>
+    </Compile>
     <Compile Include="KolKomOrg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klawiatura.resx">
       <DependentUpon>Klawiatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KolKom24Remover.resx">
+      <DependentUpon>KolKom24Remover.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KolKomOrg.resx">
       <DependentUpon>KolKomOrg.cs</DependentUpon>
@@ -254,6 +263,9 @@
     <Content Include="Resources\image_bilet2.jpg" />
     <None Include="Resources\niebieskietlo.jpg" />
     <None Include="Resources\plusik_i_minusik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

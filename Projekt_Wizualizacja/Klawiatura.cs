@@ -62,6 +62,7 @@ namespace Wizualizacja01
              
         private void Klawiatura_Load(object sender, EventArgs e)
         {
+            CenterToScreen();
             TBil_bil.Text = bilety;
            // u można by wrzucić domyślne wartości do textboxa, np + bądź minusem wybrałem ileś tam biletów to po odpaleniu klawiaturki wyskoczy tyle w textboxie
         }

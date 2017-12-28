@@ -17,6 +17,7 @@ namespace Projekt_Wizualizacja
         public KolKomOrg()
         {
             InitializeComponent();
+            CenterToScreen();
             T1 = null;
             T2 = null;
         }
@@ -25,8 +26,9 @@ namespace Projekt_Wizualizacja
         public bool SendText;
         public double PriceNorm;
         public double PriceUlg;
+        public string T1, T2;
+        public string QuantN, QuantU;
 
-        private string T1, T2;
         private Ceny_biletow Price = new Ceny_biletow();
         private int[] buffer = new int[] { 0, 0 };
 
@@ -53,6 +55,7 @@ namespace Projekt_Wizualizacja
                 Przewoznicy();
                 Close();
             }
+            else if(tb_U.Text=="0" && tb_N.Text=="0") MessageBox.Show("Należy wybrać przynajmniej jeden bilet dowolnego rodzaju!");
             else MessageBox.Show("Należy wybrać dwóch przewoźników!");
         }
 
@@ -61,7 +64,7 @@ namespace Projekt_Wizualizacja
             SendText = false;
             Close();
         }
-
+        #region nudy
         private void b_ZTM_Click(object sender, EventArgs e)
         {
             Kolorowanie(1);
@@ -107,6 +110,7 @@ namespace Projekt_Wizualizacja
         {
             Minus(tb_U);
         }
+        #endregion
         #endregion
 
         #region Metody
@@ -230,11 +234,13 @@ namespace Projekt_Wizualizacja
         {
             T1 = GetPrzewoznik(buffer[0]);
             T2 = GetPrzewoznik(buffer[1]);
+            QuantN = tb_N.Text;
+            QuantU = tb_U.Text;
             PriceNorm = Convert.ToInt32(tb_N.Text) * Price.MetroKolKom24_2;
             PriceUlg = Convert.ToInt32(tb_U.Text) * Price.MetroKolKom24_2 / 2;
-            if (tb_N.Text!="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + norm + tb_N.Text + cena + String.Format("{0:0.00} zł", PriceNorm) + ugl + tb_U.Text + cena + String.Format("{0:0.00} zł", PriceUlg);
-            if (tb_N.Text!="0" && tb_U.Text=="0") TextToSend = prefix + T1 + lacz + T2 + norm + tb_N.Text + cena + String.Format("{0:0.00} zł", PriceNorm);
-            if (tb_N.Text=="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + ugl + tb_U.Text + cena + String.Format("{0:0.00} zł", PriceUlg);
+            if (tb_N.Text!="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN + cena + String.Format("{0:0.00} zł", PriceNorm) + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
+            if (tb_N.Text!="0" && tb_U.Text=="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN  + cena + String.Format("{0:0.00} zł", PriceNorm);
+            if (tb_N.Text=="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
         }
         string GetPrzewoznik(int input)
         {
@@ -251,6 +257,7 @@ namespace Projekt_Wizualizacja
         bool ButtonCheck()
         {
             if (buffer.Contains(0)) return false;
+            else if (tb_N.Text == "0" && tb_U.Text == "0") return false;
             else return true;
         }
 

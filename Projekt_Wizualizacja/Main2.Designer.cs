@@ -141,6 +141,7 @@
             this.btn_PNRight = new System.Windows.Forms.Button();
             this.btn_PULeft = new System.Windows.Forms.Button();
             this.btn_MULeft = new System.Windows.Forms.Button();
+            this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
@@ -791,6 +792,7 @@
             // panelJednorazowe
             // 
             this.panelJednorazowe.BackColor = System.Drawing.Color.Transparent;
+            this.panelJednorazowe.Controls.Add(this.btn_RemoveKolKom24);
             this.panelJednorazowe.Controls.Add(this.label17);
             this.panelJednorazowe.Controls.Add(this.label16);
             this.panelJednorazowe.Controls.Add(this.label15);
@@ -1028,6 +1030,14 @@
             this.btn_MULeft.UseVisualStyleBackColor = true;
             this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
             // 
+            // btn_RemoveKolKom24
+            // 
+            this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
+            this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
+            this.btn_RemoveKolKom24.UseVisualStyleBackColor = true;
+            this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -1187,6 +1197,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_RemoveKolKom24;
     }
 }
 
