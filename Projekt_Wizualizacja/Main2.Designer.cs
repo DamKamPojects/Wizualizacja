@@ -113,6 +113,7 @@
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
             this.panelJednorazowe = new System.Windows.Forms.Panel();
+            this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -141,7 +142,6 @@
             this.btn_PNRight = new System.Windows.Forms.Button();
             this.btn_PULeft = new System.Windows.Forms.Button();
             this.btn_MULeft = new System.Windows.Forms.Button();
-            this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
@@ -829,6 +829,14 @@
             resources.ApplyResources(this.panelJednorazowe, "panelJednorazowe");
             this.panelJednorazowe.Name = "panelJednorazowe";
             // 
+            // btn_RemoveKolKom24
+            // 
+            this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
+            this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
+            this.btn_RemoveKolKom24.UseVisualStyleBackColor = true;
+            this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
+            // 
             // label17
             // 
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -1030,14 +1038,6 @@
             this.btn_MULeft.UseVisualStyleBackColor = true;
             this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
             // 
-            // btn_RemoveKolKom24
-            // 
-            this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
-            this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
-            this.btn_RemoveKolKom24.UseVisualStyleBackColor = true;
-            this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -1046,10 +1046,10 @@
             this.Controls.Add(this.panelGorny);
             this.Controls.Add(this.l_postep);
             this.Controls.Add(this.pb_postep);
-            this.Controls.Add(this.panelJednorazowe);
-            this.Controls.Add(this.pSemes);
             this.Controls.Add(this.panelOkresowe);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelJednorazowe);
+            this.Controls.Add(this.pSemes);
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
