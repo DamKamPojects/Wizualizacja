@@ -239,45 +239,7 @@ namespace Projekt_Wizualizacja
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        public int DoUsunieciaZmienna = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            switch(DoUsunieciaZmienna % 10)
-            {
-                case 0:
-                    {
-                        this.BackColor = Color.Yellow;
-                        break;
-                    }
-                case 1:
-                    {
-                        this.BackColor = Color.WhiteSmoke;
-                        break;
-                    }
-                case 2:
-                    {
-                        this.BackColor = Color.Maroon;
-                        break;
-                    }
-                case 3:
-                    {
-                        this.BackColor = Color.MediumBlue;
-                        break;
-                    }
-                case 4:
-                    {
-                        this.BackColor = Color.Yellow;
-                        break;
-                    }
-                case 5:
-                    {
-                        this.BackColor = Color.Yellow;
-                        break;
-                    }
-            }
-        }
+        }               
 
         private void pGotow_b_50gr_Click(object sender, EventArgs e)
         {

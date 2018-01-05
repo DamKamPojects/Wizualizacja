@@ -69,7 +69,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -230,7 +229,6 @@
             // pPodsu
             // 
             this.pPodsu.BackColor = System.Drawing.Color.Transparent;
-            this.pPodsu.Controls.Add(this.button1);
             this.pPodsu.Controls.Add(this.label3);
             this.pPodsu.Controls.Add(this.label2);
             this.pPodsu.Controls.Add(this.pPodsu_b_ZmienPlactnosci);
@@ -270,7 +268,7 @@
             // 
             // panelPodsumowanie_tb_SposobPlatnosci
             // 
-            this.panelPodsumowanie_tb_SposobPlatnosci.BackColor = System.Drawing.Color.Silver;
+            this.panelPodsumowanie_tb_SposobPlatnosci.BackColor = System.Drawing.SystemColors.Control;
             this.panelPodsumowanie_tb_SposobPlatnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(93, 424);
             this.panelPodsumowanie_tb_SposobPlatnosci.Multiline = true;
@@ -298,7 +296,7 @@
             this.panelPodsumowanie_tb_Suma.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPodsumowanie_tb_Suma.BackColor = System.Drawing.Color.Silver;
+            this.panelPodsumowanie_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.panelPodsumowanie_tb_Suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(509, 421);
             this.panelPodsumowanie_tb_Suma.Multiline = true;
@@ -547,21 +545,11 @@
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1008, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 279;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1312, 727);
             this.ControlBox = false;
             this.Controls.Add(this.l_postep);
@@ -627,6 +615,5 @@
         private System.Windows.Forms.Button pGotow_b_5zl;
         public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label l_postep;
-        private System.Windows.Forms.Button button1;
     }
 }

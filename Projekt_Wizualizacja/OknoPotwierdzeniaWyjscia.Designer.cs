@@ -36,6 +36,7 @@
             // l_Ostrzezenie
             // 
             this.l_Ostrzezenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_Ostrzezenie.ForeColor = System.Drawing.Color.White;
             this.l_Ostrzezenie.Location = new System.Drawing.Point(0, 0);
             this.l_Ostrzezenie.Name = "l_Ostrzezenie";
             this.l_Ostrzezenie.Size = new System.Drawing.Size(680, 150);
@@ -45,32 +46,35 @@
             // 
             // b_Tak
             // 
+            this.b_Tak.BackColor = System.Drawing.Color.White;
             this.b_Tak.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.b_Tak.ForeColor = System.Drawing.Color.Red;
+            this.b_Tak.ForeColor = System.Drawing.Color.Black;
             this.b_Tak.Location = new System.Drawing.Point(60, 150);
             this.b_Tak.Name = "b_Tak";
             this.b_Tak.Size = new System.Drawing.Size(200, 80);
             this.b_Tak.TabIndex = 1;
             this.b_Tak.Text = "TAK";
-            this.b_Tak.UseVisualStyleBackColor = true;
+            this.b_Tak.UseVisualStyleBackColor = false;
             this.b_Tak.Click += new System.EventHandler(this.b_Tak_Click);
             // 
             // b_Nie
             // 
+            this.b_Nie.BackColor = System.Drawing.Color.White;
             this.b_Nie.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.b_Nie.ForeColor = System.Drawing.Color.Green;
+            this.b_Nie.ForeColor = System.Drawing.Color.Black;
             this.b_Nie.Location = new System.Drawing.Point(420, 150);
             this.b_Nie.Name = "b_Nie";
             this.b_Nie.Size = new System.Drawing.Size(200, 80);
             this.b_Nie.TabIndex = 2;
             this.b_Nie.Text = "NIE";
-            this.b_Nie.UseVisualStyleBackColor = true;
+            this.b_Nie.UseVisualStyleBackColor = false;
             this.b_Nie.Click += new System.EventHandler(this.b_Nie_Click);
             // 
             // OknoPotwierdzeniaWyjscia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(684, 261);
             this.ControlBox = false;
             this.Controls.Add(this.b_Nie);

@@ -21,15 +21,15 @@ namespace Wizualizacja01
         {
             suma = Convert.ToDouble(bilety) * cena;
             TBil_bil.Text = bilety;
-            TBcen_bil.Text = Convert.ToString(suma);
+            TBcen_bil.Text = String.Format("{0:0.00} zł", suma);
         }
 
         public void WpisywanieDoTB(string cyfra) //metoda edytująca pole tekstowe ilość biletów oraz cene po wcisnieciu klawisza
         {
             // ten if sprawdza czy
             if (bilety=="0")   bilety = cyfra;   
-            else if(bilety.Length<3)  bilety = bilety + cyfra; 
-            else bilety = "999";
+            else if(bilety.Length<2)  bilety = bilety + cyfra; 
+            else bilety = "99";
             
             EdycjaTextBoxow();
         }
@@ -144,7 +144,6 @@ namespace Wizualizacja01
         {
             if (bilety.Length > 1) bilety=bilety.Remove(bilety.Length-1);
             else if (bilety != "0" && bilety.Length == 1) bilety = "0";
-            //else TBcen_bil.Text = "Chuj";
 
             EdycjaTextBoxow();            
         }

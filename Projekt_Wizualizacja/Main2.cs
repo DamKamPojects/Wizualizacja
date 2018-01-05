@@ -119,7 +119,7 @@ namespace Projekt_Wizualizacja
         private void TimeToLeft() // metoda pokazująca ile czasu zostało
         {
             int RemainingTime, min, sec;
-            RemainingTime = TimeOfTransaction - pb_postep.Value/10;
+            RemainingTime = pb_postep.Maximum/10 - pb_postep.Value/10;
             string sec2;
             min = RemainingTime/60;
             sec = RemainingTime % 60;
@@ -133,7 +133,7 @@ namespace Projekt_Wizualizacja
                 sec2 = Convert.ToString(sec);
             }
 
-           // l_postep.Text = Convert.ToString(min) +":"+ sec2;
+            l_postep.Text = "Pozostały czas transakcji: " + Convert.ToString(min) +":"+ sec2;
             //l_postep.Visible = false;
         }
         void Plus(TextBox tb)   //dodawanie 1 do wartości w tb
@@ -215,7 +215,7 @@ namespace Projekt_Wizualizacja
 
             if (Flag == 1)
             {
-                pJedno_L_T.Text = "Bilet  na jeden przejazd na linie zwykłe.";
+                pJedno_L_T.Text = "Bilet na jeden przejazd na linie zwykłe.";
                 pJedno_M_T.Text = "Bilet godzinny na linie zwykłe.";
                 pJedno_R_T.Text = "Bilet 24-godzinny";
                 return;
@@ -280,6 +280,8 @@ namespace Projekt_Wizualizacja
                    // pJedno_L_T.Height = 168;
                     pJedno_L_T.Enabled = false;
                     btn_RemoveKolKom24.Visible = false;
+                    pJedno_L_T.Height = 160;
+                    pJedno_L_T.BackColor = pJedno_M_T.BackColor;
                     //btn_RemoveKolKom24.Enabled = false;
                 }
                 else
@@ -297,7 +299,8 @@ namespace Projekt_Wizualizacja
                     btn_RemoveKolKom24.Visible = true;
                     btn_RemoveKolKom24.Enabled = false;
                     pJedno_L_T.Enabled = true;
-
+                    pJedno_L_T.Height = 225;
+                    pJedno_L_T.BackColor = Color.White;
                 }
             }
             if (AktualneOkno == 6) //bilety miesieczne
@@ -853,7 +856,7 @@ namespace Projekt_Wizualizacja
         {
             Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
             //this.BackgroundImage = imageTlo;
-            pb_postep.Maximum = 3000;
+            //pb_postep.Maximum = 1200;
             this.Size=new Size(1328,748); //bazowa wielkość okna
             MoveToTheCenter();
             GetCurrentTime();
@@ -1944,6 +1947,7 @@ namespace Projekt_Wizualizacja
             RefreshSummaryRTB();
         }
 
+        //czesc do zmiany kolorkow
         public int DoUsunieciaZmienna = 0;
         private void button2_Click(object sender, EventArgs e)
         {

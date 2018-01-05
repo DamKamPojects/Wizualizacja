@@ -36,8 +36,11 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gb_WyborJezyka = new System.Windows.Forms.GroupBox();
+            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
             this.l_WyborJezyka = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gb_InneFunkcje = new System.Windows.Forms.GroupBox();
+            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
             this.panelMenu_b_RozkladJazdy = new System.Windows.Forms.Button();
             this.panelMenu_b_DoladowanieTelefonu = new System.Windows.Forms.Button();
             this.panelMenu_b_BiletyMiesieczne = new System.Windows.Forms.Button();
@@ -49,16 +52,12 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
             this.panelKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.panelKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
             this.panelOkresowe = new System.Windows.Forms.Panel();
-            this.panelOkresowe_gb_RodzajeBiletow = new System.Windows.Forms.GroupBox();
-            this.panelOkresowe_b_NocnySieci = new System.Windows.Forms.Button();
-            this.panelOkresowe_b_NocnyRRW = new System.Windows.Forms.Button();
-            this.panelOkresowe_b_NocnyGminy = new System.Windows.Forms.Button();
-            this.panelOkresowe_b_Nocny = new System.Windows.Forms.Button();
-            this.panelOkresowe_b_zwykleGdy = new System.Windows.Forms.Button();
             this.pOkres_gb_RodzajBiletu = new System.Windows.Forms.GroupBox();
             this.panelOkresowe_b_ulgowy = new System.Windows.Forms.Button();
             this.panelOkresowe_b_zwykly = new System.Windows.Forms.Button();
@@ -82,6 +81,12 @@
             this.lPodsumowanie = new System.Windows.Forms.Label();
             this.b_Powrot = new System.Windows.Forms.Button();
             this.panelOkresowe_b_Platnosc = new System.Windows.Forms.Button();
+            this.panelOkresowe_gb_RodzajeBiletow = new System.Windows.Forms.GroupBox();
+            this.panelOkresowe_b_NocnySieci = new System.Windows.Forms.Button();
+            this.panelOkresowe_b_NocnyRRW = new System.Windows.Forms.Button();
+            this.panelOkresowe_b_NocnyGminy = new System.Windows.Forms.Button();
+            this.panelOkresowe_b_Nocny = new System.Windows.Forms.Button();
+            this.panelOkresowe_b_zwykleGdy = new System.Windows.Forms.Button();
             this.pSemes = new System.Windows.Forms.Panel();
             this.pSemes_gb_KategorieBiletow = new System.Windows.Forms.GroupBox();
             this.pSemes_b_NocnySieci = new System.Windows.Forms.Button();
@@ -109,6 +114,7 @@
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
             this.panelJednorazowe = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -127,44 +133,38 @@
             this.tb_ULeft = new System.Windows.Forms.TextBox();
             this.tb_NLeft = new System.Windows.Forms.TextBox();
             this.btn_PNLeft = new System.Windows.Forms.Button();
+            this.btn_MNLeft = new System.Windows.Forms.Button();
             this.btn_MNMid = new System.Windows.Forms.Button();
             this.btn_MUMid = new System.Windows.Forms.Button();
             this.btn_MURight = new System.Windows.Forms.Button();
+            this.btn_MNRight = new System.Windows.Forms.Button();
             this.btn_PNMid = new System.Windows.Forms.Button();
             this.btn_PUMid = new System.Windows.Forms.Button();
             this.btn_PURight = new System.Windows.Forms.Button();
+            this.btn_PNRight = new System.Windows.Forms.Button();
             this.btn_PULeft = new System.Windows.Forms.Button();
             this.btn_MULeft = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_MNLeft = new System.Windows.Forms.Button();
-            this.btn_MNRight = new System.Windows.Forms.Button();
-            this.btn_PNRight = new System.Windows.Forms.Button();
-            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gb_InneFunkcje.SuspendLayout();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKoniecWstecz.SuspendLayout();
             this.panelOkresowe.SuspendLayout();
-            this.panelOkresowe_gb_RodzajeBiletow.SuspendLayout();
             this.pOkres_gb_RodzajBiletu.SuspendLayout();
             this.pOkres_gb_Waznosc.SuspendLayout();
             this.pOkres_tb_TypBiletu.SuspendLayout();
             this.pOkres_gb_Bilet.SuspendLayout();
+            this.panelOkresowe_gb_RodzajeBiletow.SuspendLayout();
             this.pSemes.SuspendLayout();
             this.pSemes_gb_KategorieBiletow.SuspendLayout();
             this.pSemes_gb_RodzajeBiletow.SuspendLayout();
             this.pSemes_gb_IleMies.SuspendLayout();
             this.panelJednorazowe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_postep
@@ -172,7 +172,7 @@
             this.pb_postep.BackColor = System.Drawing.Color.White;
             this.pb_postep.ForeColor = System.Drawing.Color.DarkOliveGreen;
             resources.ApplyResources(this.pb_postep, "pb_postep");
-            this.pb_postep.Maximum = 120;
+            this.pb_postep.Maximum = 600;
             this.pb_postep.Name = "pb_postep";
             this.pb_postep.Step = 1;
             this.pb_postep.Click += new System.EventHandler(this.pb_postep_Click);
@@ -220,11 +220,25 @@
             this.gb_WyborJezyka.Name = "gb_WyborJezyka";
             this.gb_WyborJezyka.TabStop = false;
             // 
+            // pb_jezykPOL
+            // 
+            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
+            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
+            this.pb_jezykPOL.Name = "pb_jezykPOL";
+            this.pb_jezykPOL.TabStop = false;
+            // 
             // l_WyborJezyka
             // 
             resources.ApplyResources(this.l_WyborJezyka, "l_WyborJezyka");
             this.l_WyborJezyka.ForeColor = System.Drawing.Color.SeaShell;
             this.l_WyborJezyka.Name = "l_WyborJezyka";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // gb_InneFunkcje
             // 
@@ -234,6 +248,15 @@
             resources.ApplyResources(this.gb_InneFunkcje, "gb_InneFunkcje");
             this.gb_InneFunkcje.Name = "gb_InneFunkcje";
             this.gb_InneFunkcje.TabStop = false;
+            // 
+            // panelMenu_b_JakDojade
+            // 
+            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
+            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
+            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
+            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
+            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
+            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
             // 
             // panelMenu_b_RozkladJazdy
             // 
@@ -261,7 +284,7 @@
             // 
             // panelMenu_b_BiletyMetroKolKom
             // 
-            this.panelMenu_b_BiletyMetroKolKom.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelMenu_b_BiletyMetroKolKom.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelMenu_b_BiletyMetroKolKom, "panelMenu_b_BiletyMetroKolKom");
             this.panelMenu_b_BiletyMetroKolKom.Name = "panelMenu_b_BiletyMetroKolKom";
             this.panelMenu_b_BiletyMetroKolKom.UseVisualStyleBackColor = false;
@@ -269,7 +292,7 @@
             // 
             // panelMenu_b_BiletyMetroKomun
             // 
-            this.panelMenu_b_BiletyMetroKomun.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelMenu_b_BiletyMetroKomun.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelMenu_b_BiletyMetroKomun, "panelMenu_b_BiletyMetroKomun");
             this.panelMenu_b_BiletyMetroKomun.Name = "panelMenu_b_BiletyMetroKomun";
             this.panelMenu_b_BiletyMetroKomun.UseVisualStyleBackColor = false;
@@ -277,7 +300,7 @@
             // 
             // panelMenu_b_BiletyJednorazowe
             // 
-            this.panelMenu_b_BiletyJednorazowe.BackColor = System.Drawing.Color.SeaShell;
+            this.panelMenu_b_BiletyJednorazowe.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelMenu_b_BiletyJednorazowe, "panelMenu_b_BiletyJednorazowe");
             this.panelMenu_b_BiletyJednorazowe.Name = "panelMenu_b_BiletyJednorazowe";
             this.panelMenu_b_BiletyJednorazowe.UseVisualStyleBackColor = false;
@@ -321,6 +344,20 @@
             this.l_data.ForeColor = System.Drawing.Color.SeaShell;
             this.l_data.Name = "l_data";
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // panelKoniecWstecz
             // 
             this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Koniec);
@@ -362,52 +399,6 @@
             resources.ApplyResources(this.panelOkresowe, "panelOkresowe");
             this.panelOkresowe.Name = "panelOkresowe";
             // 
-            // panelOkresowe_gb_RodzajeBiletow
-            // 
-            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnySieci);
-            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnyRRW);
-            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnyGminy);
-            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_Nocny);
-            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_zwykleGdy);
-            resources.ApplyResources(this.panelOkresowe_gb_RodzajeBiletow, "panelOkresowe_gb_RodzajeBiletow");
-            this.panelOkresowe_gb_RodzajeBiletow.Name = "panelOkresowe_gb_RodzajeBiletow";
-            this.panelOkresowe_gb_RodzajeBiletow.TabStop = false;
-            // 
-            // panelOkresowe_b_NocnySieci
-            // 
-            resources.ApplyResources(this.panelOkresowe_b_NocnySieci, "panelOkresowe_b_NocnySieci");
-            this.panelOkresowe_b_NocnySieci.Name = "panelOkresowe_b_NocnySieci";
-            this.panelOkresowe_b_NocnySieci.UseVisualStyleBackColor = true;
-            this.panelOkresowe_b_NocnySieci.Click += new System.EventHandler(this.panelOkresowe_b_NocnySieci_Click);
-            // 
-            // panelOkresowe_b_NocnyRRW
-            // 
-            resources.ApplyResources(this.panelOkresowe_b_NocnyRRW, "panelOkresowe_b_NocnyRRW");
-            this.panelOkresowe_b_NocnyRRW.Name = "panelOkresowe_b_NocnyRRW";
-            this.panelOkresowe_b_NocnyRRW.UseVisualStyleBackColor = true;
-            this.panelOkresowe_b_NocnyRRW.Click += new System.EventHandler(this.panelOkresowe_b_NocnyRRW_Click);
-            // 
-            // panelOkresowe_b_NocnyGminy
-            // 
-            resources.ApplyResources(this.panelOkresowe_b_NocnyGminy, "panelOkresowe_b_NocnyGminy");
-            this.panelOkresowe_b_NocnyGminy.Name = "panelOkresowe_b_NocnyGminy";
-            this.panelOkresowe_b_NocnyGminy.UseVisualStyleBackColor = true;
-            this.panelOkresowe_b_NocnyGminy.Click += new System.EventHandler(this.panelOkresowe_b_NocnyGminy_Click);
-            // 
-            // panelOkresowe_b_Nocny
-            // 
-            resources.ApplyResources(this.panelOkresowe_b_Nocny, "panelOkresowe_b_Nocny");
-            this.panelOkresowe_b_Nocny.Name = "panelOkresowe_b_Nocny";
-            this.panelOkresowe_b_Nocny.UseVisualStyleBackColor = true;
-            this.panelOkresowe_b_Nocny.Click += new System.EventHandler(this.panelOkresowe_b_Nocny_Click);
-            // 
-            // panelOkresowe_b_zwykleGdy
-            // 
-            resources.ApplyResources(this.panelOkresowe_b_zwykleGdy, "panelOkresowe_b_zwykleGdy");
-            this.panelOkresowe_b_zwykleGdy.Name = "panelOkresowe_b_zwykleGdy";
-            this.panelOkresowe_b_zwykleGdy.UseVisualStyleBackColor = true;
-            this.panelOkresowe_b_zwykleGdy.Click += new System.EventHandler(this.panelOkresowe_b_zwykleGdy_Click);
-            // 
             // pOkres_gb_RodzajBiletu
             // 
             this.pOkres_gb_RodzajBiletu.BackColor = System.Drawing.Color.Transparent;
@@ -420,7 +411,7 @@
             // 
             // panelOkresowe_b_ulgowy
             // 
-            this.panelOkresowe_b_ulgowy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelOkresowe_b_ulgowy.BackColor = System.Drawing.Color.White;
             this.panelOkresowe_b_ulgowy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             resources.ApplyResources(this.panelOkresowe_b_ulgowy, "panelOkresowe_b_ulgowy");
             this.panelOkresowe_b_ulgowy.Name = "panelOkresowe_b_ulgowy";
@@ -429,9 +420,10 @@
             // 
             // panelOkresowe_b_zwykly
             // 
+            this.panelOkresowe_b_zwykly.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_zwykly, "panelOkresowe_b_zwykly");
             this.panelOkresowe_b_zwykly.Name = "panelOkresowe_b_zwykly";
-            this.panelOkresowe_b_zwykly.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_zwykly.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_zwykly.Click += new System.EventHandler(this.panelOkresowe_b_zwykly_Click);
             // 
             // label3
@@ -452,9 +444,10 @@
             // 
             // panelOkresowe_b_PonPia
             // 
+            this.panelOkresowe_b_PonPia.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_PonPia, "panelOkresowe_b_PonPia");
             this.panelOkresowe_b_PonPia.Name = "panelOkresowe_b_PonPia";
-            this.panelOkresowe_b_PonPia.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_PonPia.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_PonPia.Click += new System.EventHandler(this.panelOkresowe_b_PonPia_Click);
             // 
             // label2
@@ -465,9 +458,10 @@
             // 
             // panelOkresowe_b_WszDni
             // 
+            this.panelOkresowe_b_WszDni.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_WszDni, "panelOkresowe_b_WszDni");
             this.panelOkresowe_b_WszDni.Name = "panelOkresowe_b_WszDni";
-            this.panelOkresowe_b_WszDni.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_WszDni.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_WszDni.Click += new System.EventHandler(this.panelOkresowe_szDni_Click);
             // 
             // pOkres_tb_TypBiletu
@@ -488,16 +482,18 @@
             // 
             // panelOkresowe_b_okaziciela
             // 
+            this.panelOkresowe_b_okaziciela.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_okaziciela, "panelOkresowe_b_okaziciela");
             this.panelOkresowe_b_okaziciela.Name = "panelOkresowe_b_okaziciela";
-            this.panelOkresowe_b_okaziciela.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_okaziciela.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_okaziciela.Click += new System.EventHandler(this.panelOkresowe_b_okaziciela_Click);
             // 
             // panelOkresowe_b_imienny
             // 
+            this.panelOkresowe_b_imienny.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_imienny, "panelOkresowe_b_imienny");
             this.panelOkresowe_b_imienny.Name = "panelOkresowe_b_imienny";
-            this.panelOkresowe_b_imienny.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_imienny.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_imienny.Click += new System.EventHandler(this.panelOkresowe_b_imienny_Click);
             // 
             // label4
@@ -518,9 +514,10 @@
             // 
             // panelOkresowe_b_mies
             // 
+            this.panelOkresowe_b_mies.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_mies, "panelOkresowe_b_mies");
             this.panelOkresowe_b_mies.Name = "panelOkresowe_b_mies";
-            this.panelOkresowe_b_mies.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_mies.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_mies.Click += new System.EventHandler(this.panelOkresowe_b_mies_Click);
             // 
             // label5
@@ -532,14 +529,16 @@
             // 
             // panelOkresowe_b_30dni
             // 
+            this.panelOkresowe_b_30dni.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_30dni, "panelOkresowe_b_30dni");
             this.panelOkresowe_b_30dni.Name = "panelOkresowe_b_30dni";
-            this.panelOkresowe_b_30dni.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_30dni.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_30dni.Click += new System.EventHandler(this.panelOkresowe_b_30dni_Click);
             // 
             // panelOkresowe_tb_Podsumowanie
             // 
             resources.ApplyResources(this.panelOkresowe_tb_Podsumowanie, "panelOkresowe_tb_Podsumowanie");
+            this.panelOkresowe_tb_Podsumowanie.BackColor = System.Drawing.SystemColors.Control;
             this.panelOkresowe_tb_Podsumowanie.Name = "panelOkresowe_tb_Podsumowanie";
             this.panelOkresowe_tb_Podsumowanie.ReadOnly = true;
             // 
@@ -552,6 +551,7 @@
             // panelOkresowe_tb_Suma
             // 
             resources.ApplyResources(this.panelOkresowe_tb_Suma, "panelOkresowe_tb_Suma");
+            this.panelOkresowe_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.panelOkresowe_tb_Suma.Name = "panelOkresowe_tb_Suma";
             this.panelOkresowe_tb_Suma.ReadOnly = true;
             // 
@@ -569,10 +569,62 @@
             // 
             // panelOkresowe_b_Platnosc
             // 
+            this.panelOkresowe_b_Platnosc.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelOkresowe_b_Platnosc, "panelOkresowe_b_Platnosc");
             this.panelOkresowe_b_Platnosc.Name = "panelOkresowe_b_Platnosc";
-            this.panelOkresowe_b_Platnosc.UseVisualStyleBackColor = true;
+            this.panelOkresowe_b_Platnosc.UseVisualStyleBackColor = false;
             this.panelOkresowe_b_Platnosc.Click += new System.EventHandler(this.panelOkresowe_b_Platnosc_Click);
+            // 
+            // panelOkresowe_gb_RodzajeBiletow
+            // 
+            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnySieci);
+            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnyRRW);
+            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_NocnyGminy);
+            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_Nocny);
+            this.panelOkresowe_gb_RodzajeBiletow.Controls.Add(this.panelOkresowe_b_zwykleGdy);
+            resources.ApplyResources(this.panelOkresowe_gb_RodzajeBiletow, "panelOkresowe_gb_RodzajeBiletow");
+            this.panelOkresowe_gb_RodzajeBiletow.Name = "panelOkresowe_gb_RodzajeBiletow";
+            this.panelOkresowe_gb_RodzajeBiletow.TabStop = false;
+            // 
+            // panelOkresowe_b_NocnySieci
+            // 
+            this.panelOkresowe_b_NocnySieci.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelOkresowe_b_NocnySieci, "panelOkresowe_b_NocnySieci");
+            this.panelOkresowe_b_NocnySieci.Name = "panelOkresowe_b_NocnySieci";
+            this.panelOkresowe_b_NocnySieci.UseVisualStyleBackColor = false;
+            this.panelOkresowe_b_NocnySieci.Click += new System.EventHandler(this.panelOkresowe_b_NocnySieci_Click);
+            // 
+            // panelOkresowe_b_NocnyRRW
+            // 
+            this.panelOkresowe_b_NocnyRRW.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelOkresowe_b_NocnyRRW, "panelOkresowe_b_NocnyRRW");
+            this.panelOkresowe_b_NocnyRRW.Name = "panelOkresowe_b_NocnyRRW";
+            this.panelOkresowe_b_NocnyRRW.UseVisualStyleBackColor = false;
+            this.panelOkresowe_b_NocnyRRW.Click += new System.EventHandler(this.panelOkresowe_b_NocnyRRW_Click);
+            // 
+            // panelOkresowe_b_NocnyGminy
+            // 
+            this.panelOkresowe_b_NocnyGminy.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelOkresowe_b_NocnyGminy, "panelOkresowe_b_NocnyGminy");
+            this.panelOkresowe_b_NocnyGminy.Name = "panelOkresowe_b_NocnyGminy";
+            this.panelOkresowe_b_NocnyGminy.UseVisualStyleBackColor = false;
+            this.panelOkresowe_b_NocnyGminy.Click += new System.EventHandler(this.panelOkresowe_b_NocnyGminy_Click);
+            // 
+            // panelOkresowe_b_Nocny
+            // 
+            this.panelOkresowe_b_Nocny.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelOkresowe_b_Nocny, "panelOkresowe_b_Nocny");
+            this.panelOkresowe_b_Nocny.Name = "panelOkresowe_b_Nocny";
+            this.panelOkresowe_b_Nocny.UseVisualStyleBackColor = false;
+            this.panelOkresowe_b_Nocny.Click += new System.EventHandler(this.panelOkresowe_b_Nocny_Click);
+            // 
+            // panelOkresowe_b_zwykleGdy
+            // 
+            this.panelOkresowe_b_zwykleGdy.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panelOkresowe_b_zwykleGdy, "panelOkresowe_b_zwykleGdy");
+            this.panelOkresowe_b_zwykleGdy.Name = "panelOkresowe_b_zwykleGdy";
+            this.panelOkresowe_b_zwykleGdy.UseVisualStyleBackColor = false;
+            this.panelOkresowe_b_zwykleGdy.Click += new System.EventHandler(this.panelOkresowe_b_zwykleGdy_Click);
             // 
             // pSemes
             // 
@@ -603,37 +655,42 @@
             // 
             // pSemes_b_NocnySieci
             // 
+            this.pSemes_b_NocnySieci.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_NocnySieci, "pSemes_b_NocnySieci");
             this.pSemes_b_NocnySieci.Name = "pSemes_b_NocnySieci";
-            this.pSemes_b_NocnySieci.UseVisualStyleBackColor = true;
+            this.pSemes_b_NocnySieci.UseVisualStyleBackColor = false;
             this.pSemes_b_NocnySieci.Click += new System.EventHandler(this.pSemes_b_NocnySieci_Click);
             // 
             // pSemes_b_NocnyRRW
             // 
+            this.pSemes_b_NocnyRRW.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_NocnyRRW, "pSemes_b_NocnyRRW");
             this.pSemes_b_NocnyRRW.Name = "pSemes_b_NocnyRRW";
-            this.pSemes_b_NocnyRRW.UseVisualStyleBackColor = true;
+            this.pSemes_b_NocnyRRW.UseVisualStyleBackColor = false;
             this.pSemes_b_NocnyRRW.Click += new System.EventHandler(this.pSemes_b_NocnyRRW_Click);
             // 
             // pSemes_b_NocnyGminy
             // 
+            this.pSemes_b_NocnyGminy.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_NocnyGminy, "pSemes_b_NocnyGminy");
             this.pSemes_b_NocnyGminy.Name = "pSemes_b_NocnyGminy";
-            this.pSemes_b_NocnyGminy.UseVisualStyleBackColor = true;
+            this.pSemes_b_NocnyGminy.UseVisualStyleBackColor = false;
             this.pSemes_b_NocnyGminy.Click += new System.EventHandler(this.pSemes_b_NocnyGminy_Click);
             // 
             // pSemes_b_Nocny
             // 
+            this.pSemes_b_Nocny.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_Nocny, "pSemes_b_Nocny");
             this.pSemes_b_Nocny.Name = "pSemes_b_Nocny";
-            this.pSemes_b_Nocny.UseVisualStyleBackColor = true;
+            this.pSemes_b_Nocny.UseVisualStyleBackColor = false;
             this.pSemes_b_Nocny.Click += new System.EventHandler(this.pSemes_b_Nocny_Click);
             // 
             // pSemes_b_zwykleGdy
             // 
+            this.pSemes_b_zwykleGdy.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_zwykleGdy, "pSemes_b_zwykleGdy");
             this.pSemes_b_zwykleGdy.Name = "pSemes_b_zwykleGdy";
-            this.pSemes_b_zwykleGdy.UseVisualStyleBackColor = true;
+            this.pSemes_b_zwykleGdy.UseVisualStyleBackColor = false;
             this.pSemes_b_zwykleGdy.Click += new System.EventHandler(this.pSemes_b_zwykleGdy_Click);
             // 
             // pSemes_gb_RodzajeBiletow
@@ -648,7 +705,7 @@
             // 
             // pSemes_b_ulgowy
             // 
-            this.pSemes_b_ulgowy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pSemes_b_ulgowy.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_ulgowy, "pSemes_b_ulgowy");
             this.pSemes_b_ulgowy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pSemes_b_ulgowy.Name = "pSemes_b_ulgowy";
@@ -657,9 +714,10 @@
             // 
             // pSemes_b_zwykly
             // 
+            this.pSemes_b_zwykly.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_zwykly, "pSemes_b_zwykly");
             this.pSemes_b_zwykly.Name = "pSemes_b_zwykly";
-            this.pSemes_b_zwykly.UseVisualStyleBackColor = true;
+            this.pSemes_b_zwykly.UseVisualStyleBackColor = false;
             this.pSemes_b_zwykly.Click += new System.EventHandler(this.pSemes_b_zwykly_Click);
             // 
             // label7
@@ -679,9 +737,10 @@
             // 
             // pSemes_b_5miesiecy
             // 
+            this.pSemes_b_5miesiecy.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_5miesiecy, "pSemes_b_5miesiecy");
             this.pSemes_b_5miesiecy.Name = "pSemes_b_5miesiecy";
-            this.pSemes_b_5miesiecy.UseVisualStyleBackColor = true;
+            this.pSemes_b_5miesiecy.UseVisualStyleBackColor = false;
             this.pSemes_b_5miesiecy.Click += new System.EventHandler(this.pSemes_b_5mies_Click);
             // 
             // label8
@@ -693,14 +752,16 @@
             // 
             // pSemes_b_4miesiace
             // 
+            this.pSemes_b_4miesiace.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_4miesiace, "pSemes_b_4miesiace");
             this.pSemes_b_4miesiace.Name = "pSemes_b_4miesiace";
-            this.pSemes_b_4miesiace.UseVisualStyleBackColor = true;
+            this.pSemes_b_4miesiace.UseVisualStyleBackColor = false;
             this.pSemes_b_4miesiace.Click += new System.EventHandler(this.pSemes_b_4miesiace_Click);
             // 
             // pSemes_tb_Podsumowanie
             // 
             resources.ApplyResources(this.pSemes_tb_Podsumowanie, "pSemes_tb_Podsumowanie");
+            this.pSemes_tb_Podsumowanie.BackColor = System.Drawing.SystemColors.Control;
             this.pSemes_tb_Podsumowanie.Name = "pSemes_tb_Podsumowanie";
             this.pSemes_tb_Podsumowanie.ReadOnly = true;
             // 
@@ -713,6 +774,7 @@
             // pSemes_tb_Suma
             // 
             resources.ApplyResources(this.pSemes_tb_Suma, "pSemes_tb_Suma");
+            this.pSemes_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.pSemes_tb_Suma.Name = "pSemes_tb_Suma";
             this.pSemes_tb_Suma.ReadOnly = true;
             // 
@@ -730,9 +792,10 @@
             // 
             // pSemes_b_Platnosc
             // 
+            this.pSemes_b_Platnosc.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pSemes_b_Platnosc, "pSemes_b_Platnosc");
             this.pSemes_b_Platnosc.Name = "pSemes_b_Platnosc";
-            this.pSemes_b_Platnosc.UseVisualStyleBackColor = true;
+            this.pSemes_b_Platnosc.UseVisualStyleBackColor = false;
             this.pSemes_b_Platnosc.Click += new System.EventHandler(this.pSemes_b_Platnosc_Click);
             // 
             // label6
@@ -759,11 +822,13 @@
             // 
             // tb_Price
             // 
+            this.tb_Price.BackColor = System.Drawing.Color.Snow;
             resources.ApplyResources(this.tb_Price, "tb_Price");
             this.tb_Price.Name = "tb_Price";
             // 
             // rtb_Summary2
             // 
+            this.rtb_Summary2.BackColor = System.Drawing.Color.Snow;
             resources.ApplyResources(this.rtb_Summary2, "rtb_Summary2");
             this.rtb_Summary2.Name = "rtb_Summary2";
             // 
@@ -808,12 +873,19 @@
             resources.ApplyResources(this.panelJednorazowe, "panelJednorazowe");
             this.panelJednorazowe.Name = "panelJednorazowe";
             // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label19.Name = "label19";
+            // 
             // btn_RemoveKolKom24
             // 
+            this.btn_RemoveKolKom24.BackColor = System.Drawing.Color.Silver;
             this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
             this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
-            this.btn_RemoveKolKom24.UseVisualStyleBackColor = true;
+            this.btn_RemoveKolKom24.UseVisualStyleBackColor = false;
             this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
             // 
             // label17
@@ -862,7 +934,7 @@
             // 
             // pJedno_L_T
             // 
-            this.pJedno_L_T.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pJedno_L_T.BackColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.pJedno_L_T, "pJedno_L_T");
             this.pJedno_L_T.ForeColor = System.Drawing.Color.Black;
             this.pJedno_L_T.Name = "pJedno_L_T";
@@ -931,6 +1003,15 @@
             this.btn_PNLeft.UseVisualStyleBackColor = true;
             this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
             // 
+            // btn_MNLeft
+            // 
+            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
+            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
+            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNLeft.Name = "btn_MNLeft";
+            this.btn_MNLeft.UseVisualStyleBackColor = true;
+            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
+            // 
             // btn_MNMid
             // 
             resources.ApplyResources(this.btn_MNMid, "btn_MNMid");
@@ -954,6 +1035,14 @@
             this.btn_MURight.Name = "btn_MURight";
             this.btn_MURight.UseVisualStyleBackColor = true;
             this.btn_MURight.Click += new System.EventHandler(this.btn_MU24_Click);
+            // 
+            // btn_MNRight
+            // 
+            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
+            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNRight.Name = "btn_MNRight";
+            this.btn_MNRight.UseVisualStyleBackColor = true;
+            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
             // 
             // btn_PNMid
             // 
@@ -979,6 +1068,14 @@
             this.btn_PURight.UseVisualStyleBackColor = true;
             this.btn_PURight.Click += new System.EventHandler(this.btn_PU24_Click);
             // 
+            // btn_PNRight
+            // 
+            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
+            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNRight.Name = "btn_PNRight";
+            this.btn_PNRight.UseVisualStyleBackColor = true;
+            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
+            // 
             // btn_PULeft
             // 
             resources.ApplyResources(this.btn_PULeft, "btn_PULeft");
@@ -995,77 +1092,10 @@
             this.btn_MULeft.UseVisualStyleBackColor = true;
             this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
             // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_MNLeft
-            // 
-            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
-            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
-            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNLeft.Name = "btn_MNLeft";
-            this.btn_MNLeft.UseVisualStyleBackColor = true;
-            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
-            // 
-            // btn_MNRight
-            // 
-            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
-            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNRight.Name = "btn_MNRight";
-            this.btn_MNRight.UseVisualStyleBackColor = true;
-            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
-            // 
-            // btn_PNRight
-            // 
-            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
-            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNRight.Name = "btn_PNRight";
-            this.btn_PNRight.UseVisualStyleBackColor = true;
-            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
-            // 
-            // pb_jezykPOL
-            // 
-            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
-            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
-            this.pb_jezykPOL.Name = "pb_jezykPOL";
-            this.pb_jezykPOL.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // panelMenu_b_JakDojade
-            // 
-            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
-            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
-            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
-            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = true;
-            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Name = "label19";
             // 
             // Main
             // 
@@ -1084,13 +1114,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.gb_WyborJezyka.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gb_InneFunkcje.ResumeLayout(false);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKoniecWstecz.ResumeLayout(false);
             this.panelOkresowe.ResumeLayout(false);
             this.panelOkresowe.PerformLayout();
-            this.panelOkresowe_gb_RodzajeBiletow.ResumeLayout(false);
             this.pOkres_gb_RodzajBiletu.ResumeLayout(false);
             this.pOkres_gb_RodzajBiletu.PerformLayout();
             this.pOkres_gb_Waznosc.ResumeLayout(false);
@@ -1099,6 +1131,7 @@
             this.pOkres_tb_TypBiletu.PerformLayout();
             this.pOkres_gb_Bilet.ResumeLayout(false);
             this.pOkres_gb_Bilet.PerformLayout();
+            this.panelOkresowe_gb_RodzajeBiletow.ResumeLayout(false);
             this.pSemes.ResumeLayout(false);
             this.pSemes.PerformLayout();
             this.pSemes_gb_KategorieBiletow.ResumeLayout(false);
@@ -1108,9 +1141,6 @@
             this.pSemes_gb_IleMies.PerformLayout();
             this.panelJednorazowe.ResumeLayout(false);
             this.panelJednorazowe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

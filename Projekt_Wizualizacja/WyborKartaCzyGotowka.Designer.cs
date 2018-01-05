@@ -57,7 +57,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(774, 30);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Rodzaj płatności:";
+            this.label2.Text = "rodzaj płatności:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
             this.Controls.Add(this.l_DoZaplaty);
