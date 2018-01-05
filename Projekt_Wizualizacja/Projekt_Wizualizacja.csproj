@@ -53,8 +53,11 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +67,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aaa.cs">
@@ -73,6 +79,12 @@
       <DependentUpon>aaa.cs</DependentUpon>
     </Compile>
     <Compile Include="Ceny_biletow.cs" />
+    <Compile Include="Kalendarz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kalendarz.Designer.cs">
+      <DependentUpon>Kalendarz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klawiatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,7 @@
     <Compile Include="KolKomOrg.Designer.cs">
       <DependentUpon>KolKomOrg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kolory.cs" />
     <Compile Include="Main2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="aaa.resx">
       <DependentUpon>aaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kalendarz.resx">
+      <DependentUpon>Kalendarz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klawiatura.resx">
       <DependentUpon>Klawiatura.cs</DependentUpon>
@@ -258,8 +274,13 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\minut_dodawanie biletow.jpg" />
+    <None Include="Resources\plus_dodawaniebiletow.jpg" />
+    <None Include="Resources\minus.jpg" />
+    <None Include="Resources\znak-plus-w-kwadracie_318-53016.jpg" />
     <None Include="Resources\karta.jpg" />
     <None Include="Resources\gotowka.jpg" />
+    <None Include="Resources\Bez tytułu.png" />
     <Content Include="Resources\image_bilet2.jpg" />
     <None Include="Resources\niebieskietlo.jpg" />
     <None Include="Resources\plusik_i_minusik.jpg" />

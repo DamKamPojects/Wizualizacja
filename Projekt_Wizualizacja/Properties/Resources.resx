@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="znak-plus-w-kwadracie_318-53016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\znak-plus-w-kwadracie_318-53016.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="niebieskietlo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\niebieskietlo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,16 +151,28 @@
   <data name="image_bilet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_bilet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="karta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Image2.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Image4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Image4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bez tytułu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bez tytułu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image_flagaPOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_flagaPOL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="karta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\karta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_dodawaniebiletow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_dodawaniebiletow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minut_dodawanie biletow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minut_dodawanie biletow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

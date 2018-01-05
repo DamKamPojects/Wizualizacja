@@ -84,7 +84,7 @@ namespace Projekt_Wizualizacja
             PrzesuwaniePaneli();
             
         }
-        private void KoniecButton() //metoda do przycisku koniec
+        private void KoniecButton() //metoda do przycisku koniec; narazie niepotrzebna
         {
 
         }
@@ -852,7 +852,7 @@ namespace Projekt_Wizualizacja
         private void Form1_Load(object sender, EventArgs e)
         {
             Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
-            this.BackgroundImage = imageTlo;
+            //this.BackgroundImage = imageTlo;
             pb_postep.Maximum = 3000;
             this.Size=new Size(1328,748); //bazowa wielkość okna
             MoveToTheCenter();
@@ -954,7 +954,8 @@ namespace Projekt_Wizualizacja
         #region Boczne
         private void panelMenu_b_RozkladJazdy_Click(object sender, EventArgs e)
         {
-
+            Kalendarz kalendarz = new Kalendarz();
+            kalendarz.ShowDialog();
         }
 
         private void panelMenu_b_JakDojade_Click(object sender, EventArgs e)
@@ -1943,7 +1944,126 @@ namespace Projekt_Wizualizacja
             RefreshSummaryRTB();
         }
 
+        public int DoUsunieciaZmienna = 0;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            switch (DoUsunieciaZmienna % 22)
+            {
+                case 0:
+                    {
+                        this.BackColor = Color.Yellow;
+                        break;
+                    }
+                case 1:
+                    {
+                        this.BackColor = Color.WhiteSmoke;
+                        break;
+                    }
+                case 2:
+                    {
+                        this.BackColor = Color.Maroon;
+                        break;
+                    }
+                case 3:
+                    {
+                        this.BackColor = Color.MediumBlue;
+                        break;
+                    }
+                case 4:
+                    {
+                        this.BackColor = Color.MediumSeaGreen;
+                        break;
+                    }
+                case 5:
+                    {
+                        this.BackColor = Color.MediumSlateBlue;
+                        break;
+                    }
+                case 6:
+                    {
+                        this.BackColor = Color.MidnightBlue;
+                        break;
+                    }
+                case 7:
+                    {
+                        this.BackColor = Color.Moccasin;
+                        break;
+                    }
+                case 8:
+                    {
+                        this.BackColor = Color.Navy;
+                        break;
+                    }
+                case 9:
+                    {
+                        this.BackColor = Color.Olive;
+                        break;
+                    }
+                case 10:
+                    {
+                        this.BackColor = Color.OrangeRed;
+                        break;
+                    }
+                case 11:
+                    {
+                        this.BackColor = Color.PaleGreen;
+                        break;
+                    }
+                case 12:
+                    {
+                        this.BackColor = Color.Peru;
+                        break;
+                    }
+                case 13:
+                    {
+                        this.BackColor = Color.Purple;
+                        break;
+                    }
+                case 14:
+                    {
+                        this.BackColor = Color.Red;
+                        break;
+                    }
+                case 15:
+                    {
+                        this.BackColor = Color.SaddleBrown;
+                        break;
+                    }
+                case 16:
+                    {
+                        this.BackColor = Color.SandyBrown;
+                        break;
+                    }
+                case 17:
+                    {
+                        this.BackColor = Color.SeaGreen;
+                        break;
+                    }
+                case 18:
+                    {
+                        this.BackColor = Color.Sienna;
+                        break;
+                    }
+                case 19:
+                    {
+                        this.BackColor = Color.SteelBlue;
+                        break;
+                    }
+                case 20:
+                    {
+                        this.BackColor = Color.Teal;
+                        break;
+                    }
+                case 21:
+                    {
+                        this.BackColor = Color.DarkKhaki;
+                        break;
+                    }
 
+            }
+            DoUsunieciaZmienna++;
+            label18.Text = Convert.ToString(DoUsunieciaZmienna % 22);
+        }
 
         private void btn_MU24_Click(object sender, EventArgs e)
         {

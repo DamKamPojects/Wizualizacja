@@ -33,6 +33,7 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
             this.panelKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.panelKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
@@ -67,16 +68,16 @@
             this.pGotow_tb_Podsumowanie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.l_postep = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKoniecWstecz.SuspendLayout();
             this.pPodsu.SuspendLayout();
             this.pGotow.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pGotowka_gb_Pobrano.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGorny
@@ -124,6 +125,19 @@
             this.l_data.Text = "PONIEDZIAŁEK, 12.12.2012";
             this.l_data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panelKoniecWstecz
             // 
             this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Koniec);
@@ -135,6 +149,7 @@
             // 
             // panelKoniecWstecz_b_Koniec
             // 
+            this.panelKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
             this.panelKoniecWstecz_b_Koniec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.panelKoniecWstecz_b_Koniec.ForeColor = System.Drawing.Color.Maroon;
             this.panelKoniecWstecz_b_Koniec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -143,18 +158,19 @@
             this.panelKoniecWstecz_b_Koniec.Size = new System.Drawing.Size(120, 50);
             this.panelKoniecWstecz_b_Koniec.TabIndex = 1;
             this.panelKoniecWstecz_b_Koniec.Text = "KONIEC";
-            this.panelKoniecWstecz_b_Koniec.UseVisualStyleBackColor = true;
+            this.panelKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
             this.panelKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.panelKoniecWstecz_b_Koniec_Click);
             // 
             // panelKoniecWstecz_b_Wstecz
             // 
+            this.panelKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
             this.panelKoniecWstecz_b_Wstecz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panelKoniecWstecz_b_Wstecz.Location = new System.Drawing.Point(40, 30);
             this.panelKoniecWstecz_b_Wstecz.Name = "panelKoniecWstecz_b_Wstecz";
             this.panelKoniecWstecz_b_Wstecz.Size = new System.Drawing.Size(120, 50);
             this.panelKoniecWstecz_b_Wstecz.TabIndex = 0;
             this.panelKoniecWstecz_b_Wstecz.Text = "Wstecz";
-            this.panelKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = true;
+            this.panelKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
             this.panelKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.panelKoniecWstecz_b_Wstecz_Click);
             // 
             // pb_postep
@@ -214,6 +230,7 @@
             // pPodsu
             // 
             this.pPodsu.BackColor = System.Drawing.Color.Transparent;
+            this.pPodsu.Controls.Add(this.button1);
             this.pPodsu.Controls.Add(this.label3);
             this.pPodsu.Controls.Add(this.label2);
             this.pPodsu.Controls.Add(this.pPodsu_b_ZmienPlactnosci);
@@ -241,17 +258,19 @@
             // 
             // pPodsu_b_ZmienPlactnosci
             // 
+            this.pPodsu_b_ZmienPlactnosci.BackColor = System.Drawing.Color.White;
             this.pPodsu_b_ZmienPlactnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pPodsu_b_ZmienPlactnosci.Location = new System.Drawing.Point(890, 49);
             this.pPodsu_b_ZmienPlactnosci.Name = "pPodsu_b_ZmienPlactnosci";
             this.pPodsu_b_ZmienPlactnosci.Size = new System.Drawing.Size(330, 120);
             this.pPodsu_b_ZmienPlactnosci.TabIndex = 274;
             this.pPodsu_b_ZmienPlactnosci.Text = "Zmień sposób płatności";
-            this.pPodsu_b_ZmienPlactnosci.UseVisualStyleBackColor = true;
+            this.pPodsu_b_ZmienPlactnosci.UseVisualStyleBackColor = false;
             this.pPodsu_b_ZmienPlactnosci.Click += new System.EventHandler(this.pPodsu_b_ZmienPlactnosci_Click);
             // 
             // panelPodsumowanie_tb_SposobPlatnosci
             // 
+            this.panelPodsumowanie_tb_SposobPlatnosci.BackColor = System.Drawing.Color.Silver;
             this.panelPodsumowanie_tb_SposobPlatnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(93, 424);
             this.panelPodsumowanie_tb_SposobPlatnosci.Multiline = true;
@@ -259,17 +278,19 @@
             this.panelPodsumowanie_tb_SposobPlatnosci.ReadOnly = true;
             this.panelPodsumowanie_tb_SposobPlatnosci.Size = new System.Drawing.Size(302, 63);
             this.panelPodsumowanie_tb_SposobPlatnosci.TabIndex = 273;
+            this.panelPodsumowanie_tb_SposobPlatnosci.Text = "Karta płatnicza";
             this.panelPodsumowanie_tb_SposobPlatnosci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pPodsu_b_Potwierdz
             // 
+            this.pPodsu_b_Potwierdz.BackColor = System.Drawing.Color.White;
             this.pPodsu_b_Potwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(890, 354);
             this.pPodsu_b_Potwierdz.Name = "pPodsu_b_Potwierdz";
             this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(330, 120);
             this.pPodsu_b_Potwierdz.TabIndex = 272;
             this.pPodsu_b_Potwierdz.Text = "POTWIERDŹ";
-            this.pPodsu_b_Potwierdz.UseVisualStyleBackColor = true;
+            this.pPodsu_b_Potwierdz.UseVisualStyleBackColor = false;
             this.pPodsu_b_Potwierdz.Click += new System.EventHandler(this.pPodsu_b_Potwiedz_Click);
             // 
             // panelPodsumowanie_tb_Suma
@@ -277,6 +298,7 @@
             this.panelPodsumowanie_tb_Suma.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPodsumowanie_tb_Suma.BackColor = System.Drawing.Color.Silver;
             this.panelPodsumowanie_tb_Suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(509, 421);
             this.panelPodsumowanie_tb_Suma.Multiline = true;
@@ -512,19 +534,6 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // l_postep
             // 
             this.l_postep.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -538,11 +547,21 @@
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1008, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 279;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1312, 727);
             this.ControlBox = false;
             this.Controls.Add(this.l_postep);
@@ -554,6 +573,7 @@
             this.Load += new System.EventHandler(this.Podsumowanie_Load);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKoniecWstecz.ResumeLayout(false);
             this.pPodsu.ResumeLayout(false);
             this.pPodsu.PerformLayout();
@@ -561,7 +581,6 @@
             this.pGotow.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.pGotowka_gb_Pobrano.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,5 +627,6 @@
         private System.Windows.Forms.Button pGotow_b_5zl;
         public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label l_postep;
+        private System.Windows.Forms.Button button1;
     }
 }
