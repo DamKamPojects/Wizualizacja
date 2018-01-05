@@ -44,6 +44,7 @@ namespace Projekt_Wizualizacja
         public double Suma;
         public int RodzajWybranegoBiletuOkresowego = 0;
         public int Flag;    //flaga do treści panelu, może być niepotrzebne (można to pewnie zastąpić AktualneOkno)
+        public string[] pJedno_TekstDoTB = new string[4] {"","","",""}; //index 0 znaczy polaczone
         // \/ przechowywanie wartości textboxów
         public double price;
         #region kolekcje
@@ -57,11 +58,11 @@ namespace Projekt_Wizualizacja
 
         //pola do szybszego pisania stringów do summary
         #region Stringi do summary
-        static string Normalny = "\tNormalny: ilość - ";
-        static string Ulgowy = "\tUlgowy: ilość - ";
-        static string Cena = ", Cena - ";
-        static string BJP = "Bilet na jeden przejazd:";
-        static string Godzinny = "Bilet godzinny:";
+        static string Normalny = ">Normalny:\tilość - ";
+        static string Ulgowy = ">Ulgowy:  \tilość - ";
+        static string Cena = ",\tCena - ";
+        static string BJP = "    Bilet na jeden przejazd:";
+        static string Godzinny = "    Bilet godzinny:";
         static string H24 = "Bilet 24-godzinny:";
         static string NBJP = "Bilet nocny na jeden przejazd:";
         static string NGodzinny = "Bilet nocny godzinny:";
@@ -169,7 +170,7 @@ namespace Projekt_Wizualizacja
             tb_URight.Text = "0";
 
             tb_Price.Text = "0";
-            rtb_Summary2.Text = null;
+            pJedno_tb_Podsumowanie.Text = null;
             try
             {
                 if (Flag == 5)
@@ -331,7 +332,7 @@ namespace Projekt_Wizualizacja
         #region Do Update summary
 
         //metoda do aktualizacji tb w jednorazowych
-        private string JednorazoweAktualizacajTB(string rodzajBiletu, string iloscNorm, string iloscUlga, double cena)
+        private string pJedno_OpisBiletuDoTB(string rodzajBiletu, string iloscNorm, string iloscUlga, double cena)
         {
             string tekst = "";
             if (iloscNorm != "0" || iloscUlga != "0") //to oznacza ze wybrano jakiś bilet
@@ -348,154 +349,105 @@ namespace Projekt_Wizualizacja
             {
                 tekst += Ulgowy + iloscUlga + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(iloscUlga) * cena / 2)) + Environment.NewLine;
             }
-            if (iloscNorm != "0" || iloscUlga != "0") //dodatkowa pusta linia na końcu na końcu
+            if (iloscNorm != "0" || iloscUlga != "0") //to oznacza ze wybrano jakiś bilet
             {
-                tekst += Environment.NewLine;
+                tekst += "-----------------------------------------------------------------------\n";
             }
+            //pJedno_tb_Podsumowanie.Text += tekst;
             return tekst;
         }
-        private void ToDictionary()
+        
+        private void JednorazoweObslugaTB() //wpisuje dane do texboxa
         {
-            if (Flag==1)
-            {
-
-            }
+            pJedno_TekstDoTB[0] = pJedno_TekstDoTB[1] + pJedno_TekstDoTB[2] + pJedno_TekstDoTB[3];
+            pJedno_tb_Podsumowanie.Text = pJedno_TekstDoTB[0];
         }
 
         #region Metody główne
+        //jednorazowe
         void Jednorazowe1()
-        {   
+        {
+            string teksty = "";
             //Dzienne na jeden przejazd
-            JednorazoweAktualizacajTB(BJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JDzienJP);
+            teksty+=pJedno_OpisBiletuDoTB(BJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JDzienJP);
             //Dzienne godzinne
-            JednorazoweAktualizacajTB(Godzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JDzienGodz);            
+            teksty+=pJedno_OpisBiletuDoTB(Godzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JDzienGodz);
+            pJedno_TekstDoTB[1] = teksty; //zapisuje do pierwszego członu
         }
         void Jednorazowe24h()
         {
             //24 godzinne
-            JednorazoweAktualizacajTB(H24, tb_NRight.Text, tb_URight.Text, ceny1.J24h);            
+            pJedno_TekstDoTB[2]=pJedno_OpisBiletuDoTB(H24, tb_NRight.Text, tb_URight.Text, ceny1.J24h);            
         }
         void Jednorazowe2()
         {//Nocne na jeden przejazd
-            JednorazoweAktualizacajTB(NBJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JNocJP);
-            //Nocne godzinne
-            JednorazoweAktualizacajTB(Godzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JNocGodz);
+            pJedno_TekstDoTB[3]=pJedno_OpisBiletuDoTB(NBJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JNocJP)+ pJedno_OpisBiletuDoTB(NGodzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JNocGodz);
+        }
+
+        void Komunalne1()
+        {
+            pJedno_TekstDoTB[1] = pJedno_OpisBiletuDoTB(KomBJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKomDJP);
+            ////jeden przejazd zwykły
             //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
             //{
-            //    rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString();
+            //    pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString();
             //}
             //if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
             //{
-            //    rtb_Summary2.Text += NBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
+            //    pJedno_tb_Podsumowanie.Text += KomBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
             //}
             //if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
             //{
-            //    rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
+            //    pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
             //}
-            ////Nocne godzinne
-            //if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
-            //{
-            //    rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString();
-            //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
-            //{
-            //    rtb_Summary2.Text += NGodzinny + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
-            //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
-            //{
-            //    rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
-            //}
-            ////24h       COŚ Z TYM TRZEBA ZROBIĆ
-
-
-        }
-        void Komunalne1()
-        {
-            //jeden przejazd zwykły
-            if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            {
-                rtb_Summary2.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            {
-                rtb_Summary2.Text += KomBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            {
-                rtb_Summary2.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
-            }
             
         }
         void Komunalne2()
         {
-            //jeden przejazd zwykły
-            if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            {
-                rtb_Summary2.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            {
-                rtb_Summary2.Text += KomJPSpec + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            {
-                rtb_Summary2.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
-            }
-            ////24h       COŚ Z TYM TRZEBA ZROBIĆ
-            //if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
+            pJedno_TekstDoTB[2] = pJedno_OpisBiletuDoTB(KomJPSpec, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKomNJP);
+            ////jeden przejazd zwykły
+            //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
             //{
-            //    rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
+            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString();
             //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
+            //if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
             //{
-            //    rtb_Summary2.Text += Kom24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
+            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
             //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
+            //if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
             //{
-            //    rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
-            //}
-            ////72h       COŚ Z TYM TRZEBA ZROBIĆ
-            //if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-            //{
-            //    rtb_Summary2.Text += Kom72 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom72).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-            //{
-            //    rtb_Summary2.Text += Kom72 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom72 / 2).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-            //{
-            //    rtb_Summary2.Text += Kom72 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom72).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom72 / 2).ToString();
-            //}
+            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
+            //}            
         }
         void Komunalne2472()
         {
+            pJedno_TekstDoTB[3] = pJedno_OpisBiletuDoTB(Kom24, tb_NMid.Text, tb_UMid.Text, ceny1.MetroKom24)+ pJedno_OpisBiletuDoTB(Kom72, tb_NRight.Text, tb_URight.Text, ceny1.MetroKom72);
             //24h all
-            if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
-            {
-                rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
-            {
-                rtb_Summary2.Text += Kom24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
-            {
-                rtb_Summary2.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
-            }
-            //72h
-            if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-            {
-                rtb_Summary2.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString();
-            }
-            if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-            {
-                rtb_Summary2.Text += Kom72 + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
-            }
-            if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-            {
-                rtb_Summary2.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
-            }
+            //if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
+            //}
+            //if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
+            //}
+            //if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
+            //}
+            ////72h
+            //if (tb_NRight.Text != "0" && tb_URight.Text == "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString();
+            //}
+            //if (tb_URight.Text != "0" && tb_NRight.Text == "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom72 + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
+            //}
+            //if (tb_URight.Text != "0" && tb_NRight.Text != "0")
+            //{
+            //    pJedno_tb_Podsumowanie.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
+            //}
         }
         void KolejowoKomunalne()
         {
@@ -503,7 +455,7 @@ namespace Projekt_Wizualizacja
             foreach (var item in KolKom24Storage)
             {
                 //if (item != null) rtb_Summary2.Text += KolKom24;
-                rtb_Summary2.Text += item;
+                pJedno_tb_Podsumowanie.Text += item;
             }
             #region stare
             //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
@@ -522,28 +474,28 @@ namespace Projekt_Wizualizacja
             //24h dla wszystkich przewoźników
             if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
             {
-                rtb_Summary2.Text += KolKom24All + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom24All + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All).ToString();
             }
             if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
             {
-                rtb_Summary2.Text += KolKom24All + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom24All + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2).ToString();
             }
             if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
             {
-                rtb_Summary2.Text += KolKom24All + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom24All + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2).ToString();
             }
             //72h 4ALL
             if (tb_NRight.Text != "0" && tb_URight.Text == "0")
             {
-                rtb_Summary2.Text += KolKom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72).ToString();
             }
             if (tb_URight.Text != "0" && tb_NRight.Text == "0")
             {
-                rtb_Summary2.Text += KolKom72 + Ulgowy + tb_URight + Cena + (Convert.ToInt32(tb_URight) * ceny1.MetroKolKom72 / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom72 + Ulgowy + tb_URight + Cena + (Convert.ToInt32(tb_URight) * ceny1.MetroKolKom72 / 2).ToString();
             }
             if (tb_URight.Text != "0" && tb_NRight.Text != "0")
             {
-                rtb_Summary2.Text += KolKom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKolKom72 / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KolKom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKolKom72 / 2).ToString();
             }
         }
         #endregion
@@ -553,28 +505,28 @@ namespace Projekt_Wizualizacja
         {   //JP
             if (ValueStorage[tb_NLeft] != "0" && ValueStorage[tb_ULeft] == "0")
             {
-                rtb_Summary2.Text += BJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.JDzienJP).ToString();
+                pJedno_tb_Podsumowanie.Text += BJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.JDzienJP).ToString();
             }
             if (ValueStorage[tb_ULeft] != "0" && ValueStorage[tb_NLeft] == "0")
             {
-                rtb_Summary2.Text += BJP + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.JDzienJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += BJP + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.JDzienJP / 2).ToString();
             }
             if (ValueStorage[tb_ULeft] != "0" && ValueStorage[tb_NLeft] != "0")
             {
-                rtb_Summary2.Text += BJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.JDzienJP).ToString() + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.JDzienJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += BJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.JDzienJP).ToString() + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.JDzienJP / 2).ToString();
             }
             //Godz
             if (ValueStorage[tb_NMid] != "0" && ValueStorage[tb_UMid] == "0")
             {
-                rtb_Summary2.Text += Godzinny + Normalny + ValueStorage[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage[tb_NMid]) * ceny1.JDzienGodz).ToString();
+                pJedno_tb_Podsumowanie.Text += Godzinny + Normalny + ValueStorage[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage[tb_NMid]) * ceny1.JDzienGodz).ToString();
             }
             if (ValueStorage[tb_UMid] != "0" && ValueStorage[tb_NMid] == "0")
             {
-                rtb_Summary2.Text += Godzinny + Ulgowy + ValueStorage[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage[tb_UMid]) * ceny1.JDzienGodz / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += Godzinny + Ulgowy + ValueStorage[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage[tb_UMid]) * ceny1.JDzienGodz / 2).ToString();
             }
             if (ValueStorage[tb_UMid] != "0" && ValueStorage[tb_NMid] != "0")
             {
-                rtb_Summary2.Text += Godzinny + Normalny + ValueStorage[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage[tb_NMid]) * ceny1.JDzienGodz).ToString() + Ulgowy + ValueStorage[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage[tb_UMid]) * ceny1.JDzienGodz / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += Godzinny + Normalny + ValueStorage[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage[tb_NMid]) * ceny1.JDzienGodz).ToString() + Ulgowy + ValueStorage[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage[tb_UMid]) * ceny1.JDzienGodz / 2).ToString();
             }
         }
         void Jednorazowe2FromStorage()
@@ -582,43 +534,43 @@ namespace Projekt_Wizualizacja
             //JP
             if (ValueStorage2[tb_NLeft] != "0" && ValueStorage2[tb_ULeft] == "0")
             {
-                rtb_Summary2.Text += NBJP + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.JNocJP).ToString();
+                pJedno_tb_Podsumowanie.Text += NBJP + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.JNocJP).ToString();
             }
             if (ValueStorage2[tb_ULeft] != "0" && ValueStorage2[tb_NLeft] == "0")
             {
-                rtb_Summary2.Text += NBJP + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.JNocJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += NBJP + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.JNocJP / 2).ToString();
             }
             if (ValueStorage2[tb_ULeft] != "0" && ValueStorage2[tb_NLeft] != "0")
             {
-                rtb_Summary2.Text += NBJP + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.JNocJP).ToString() + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.JNocJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += NBJP + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.JNocJP).ToString() + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.JNocJP / 2).ToString();
             }
             //Godz
             if (ValueStorage2[tb_NMid] != "0" && ValueStorage2[tb_UMid] == "0")
             {
-                rtb_Summary2.Text += NGodzinny + Normalny + ValueStorage2[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_NMid]) * ceny1.JNocGodz).ToString();
+                pJedno_tb_Podsumowanie.Text += NGodzinny + Normalny + ValueStorage2[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_NMid]) * ceny1.JNocGodz).ToString();
             }
             if (ValueStorage2[tb_UMid] != "0" && ValueStorage2[tb_NMid] == "0")
             {
-                rtb_Summary2.Text += NGodzinny + Ulgowy + ValueStorage2[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_UMid]) * ceny1.JNocGodz / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += NGodzinny + Ulgowy + ValueStorage2[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_UMid]) * ceny1.JNocGodz / 2).ToString();
             }
             if (ValueStorage2[tb_UMid] != "0" && ValueStorage2[tb_NMid] != "0")
             {
-                rtb_Summary2.Text += NGodzinny + Normalny + ValueStorage2[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_NMid]) * ceny1.JNocGodz).ToString() + Ulgowy + ValueStorage2[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_UMid]) * ceny1.JNocGodz / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += NGodzinny + Normalny + ValueStorage2[tb_NMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_NMid]) * ceny1.JNocGodz).ToString() + Ulgowy + ValueStorage2[tb_UMid] + Cena + (Convert.ToInt32(ValueStorage2[tb_UMid]) * ceny1.JNocGodz / 2).ToString();
             }
         }
         void Komunalne1FromStorage()
         {   //JP dzień
             if (ValueStorage[tb_NLeft] != "0" && ValueStorage[tb_ULeft] == "0")
             {
-                rtb_Summary2.Text += KomBJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.MetroKomDJP).ToString();
+                pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.MetroKomDJP).ToString();
             }
             if (ValueStorage[tb_ULeft] != "0" && ValueStorage[tb_NLeft] == "0")
             {
-                rtb_Summary2.Text += KomBJP + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.MetroKomDJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KomBJP + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.MetroKomDJP / 2).ToString();
             }
             if (ValueStorage[tb_ULeft] != "0" && ValueStorage[tb_NLeft] != "0")
             {
-                rtb_Summary2.Text += KomBJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.MetroKomDJP).ToString() + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.MetroKomDJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + ValueStorage[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.MetroKomDJP).ToString() + Ulgowy + ValueStorage[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.MetroKomDJP / 2).ToString();
             }
         }
         void Komunalne2FromStorage()
@@ -626,15 +578,15 @@ namespace Projekt_Wizualizacja
 
             if (ValueStorage2[tb_NLeft] != "0" && ValueStorage2[tb_ULeft] == "0")
             {
-                rtb_Summary2.Text += KomJPSpec + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.MetroKomNJP).ToString();
+                pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.MetroKomNJP).ToString();
             }
             if (ValueStorage2[tb_ULeft] != "0" && ValueStorage2[tb_NLeft] == "0")
             {
-                rtb_Summary2.Text += KomJPSpec + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.MetroKomNJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KomJPSpec + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.MetroKomNJP / 2).ToString();
             }
             if (ValueStorage2[tb_ULeft] != "0" && ValueStorage2[tb_NLeft] != "0")
             {
-                rtb_Summary2.Text += KomJPSpec + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.MetroKomNJP).ToString() + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.MetroKomNJP / 2).ToString();
+                pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + ValueStorage2[tb_NLeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.MetroKomNJP).ToString() + Ulgowy + ValueStorage2[tb_ULeft] + Cena + (Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.MetroKomNJP / 2).ToString();
             }
             //if (ValueStorage[tb_NLeft] != "0" && ValueStorage[tb_ULeft] == "0")
             //{
@@ -656,20 +608,20 @@ namespace Projekt_Wizualizacja
         /* Odświeżanie Summary w zależności od aktywnego okna na podstawie flagi*/
         void RefreshSummaryRTB()
         {
-            rtb_Summary2.Text = null;
+            pJedno_tb_Podsumowanie.Text = null;
             switch (Flag)
             {
                 case 1:
                     {
                         Jednorazowe1();
                         Jednorazowe24h();
-                        Jednorazowe2FromStorage();
+                        //Jednorazowe2FromStorage();
                         GetPrice();
                         break;
                     }
                 case 2:
                     {
-                        Jednorazowe1FromStorage();
+                        // Jednorazowe1FromStorage();
                         Jednorazowe24h();
                         Jednorazowe2();
                         GetPrice();
@@ -679,13 +631,13 @@ namespace Projekt_Wizualizacja
                     {
                         Komunalne1();
                         Komunalne2472();
-                        Komunalne2FromStorage();
+                        //Komunalne2FromStorage();
                         GetPrice();
                         break;
                     }
                 case 4:
                     {
-                        Komunalne1FromStorage();
+                        //Komunalne1FromStorage();
                         Komunalne2472();
                         Komunalne2();
                         GetPrice();
@@ -701,6 +653,7 @@ namespace Projekt_Wizualizacja
                 default:
                     break;
             }
+            JednorazoweObslugaTB();
             
 
         }
@@ -1734,16 +1687,17 @@ namespace Projekt_Wizualizacja
                 wyborKartaCzyGotowka.Close();
 
 
-                Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
-                podsumowanie.RodzajKupowanegoBiletu = 1;
-                podsumowanie.ShowDialog();
-                if (podsumowanie.Koniec == true)
+                //Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
+                Podsumowanie podsumowanieOkresowe = new Podsumowanie(panelOkresowe_tb_Podsumowanie.Text, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
+                podsumowanieOkresowe.RodzajKupowanegoBiletu = 1;
+                podsumowanieOkresowe.ShowDialog();
+                if (podsumowanieOkresowe.Koniec == true)
                 {
                     ResetValuesOkresowe();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
                 }
-                podsumowanie.Close();
+                podsumowanieOkresowe.Close();
                 //podsumowanie.Visible = true;
             }
             else
@@ -2046,7 +2000,7 @@ namespace Projekt_Wizualizacja
                 wyborKartaCzyGotowka.Close();
 
                 //string cos = rtb_Summary2.Text;
-                Podsumowanie podsumowanie = new Podsumowanie(rtb_Summary2.Text, tb_Price.Text, SposobPlatnosci, pb_postep.Value, price);
+                Podsumowanie podsumowanie = new Podsumowanie(pJedno_tb_Podsumowanie.Text, tb_Price.Text, SposobPlatnosci, pb_postep.Value, price);
                 podsumowanie.RodzajKupowanegoBiletu = 0;
                 podsumowanie.ShowDialog();
                 if (podsumowanie.Koniec == true)

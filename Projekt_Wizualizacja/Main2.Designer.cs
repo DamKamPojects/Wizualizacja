@@ -108,7 +108,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pJedno_b_Platnosc = new System.Windows.Forms.Button();
             this.tb_Price = new System.Windows.Forms.TextBox();
-            this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
             this.panelJednorazowe = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
@@ -145,6 +144,8 @@
             this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
+            this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
+            this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
             this.gb_InneFunkcje.SuspendLayout();
@@ -796,15 +797,10 @@
             resources.ApplyResources(this.tb_Price, "tb_Price");
             this.tb_Price.Name = "tb_Price";
             // 
-            // rtb_Summary2
-            // 
-            this.rtb_Summary2.BackColor = System.Drawing.Color.Snow;
-            resources.ApplyResources(this.rtb_Summary2, "rtb_Summary2");
-            this.rtb_Summary2.Name = "rtb_Summary2";
-            // 
             // panelJednorazowe
             // 
             this.panelJednorazowe.BackColor = System.Drawing.Color.Transparent;
+            this.panelJednorazowe.Controls.Add(this.pJedno_tb_Podsumowanie);
             this.panelJednorazowe.Controls.Add(this.label19);
             this.panelJednorazowe.Controls.Add(this.btn_RemoveKolKom24);
             this.panelJednorazowe.Controls.Add(this.label17);
@@ -1097,6 +1093,17 @@
             this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
             this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
             // 
+            // pJedno_tb_Podsumowanie
+            // 
+            resources.ApplyResources(this.pJedno_tb_Podsumowanie, "pJedno_tb_Podsumowanie");
+            this.pJedno_tb_Podsumowanie.Name = "pJedno_tb_Podsumowanie";
+            // 
+            // rtb_Summary2
+            // 
+            this.rtb_Summary2.BackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.rtb_Summary2, "rtb_Summary2");
+            this.rtb_Summary2.Name = "rtb_Summary2";
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -1249,7 +1256,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button pJedno_b_Platnosc;
         private System.Windows.Forms.TextBox tb_Price;
-        private System.Windows.Forms.RichTextBox rtb_Summary2;
         private System.Windows.Forms.Button pJedno_R_T;
         private System.Windows.Forms.Button pJedno_L_T;
         private System.Windows.Forms.Button pJedno_M_T;
@@ -1263,6 +1269,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox pJedno_tb_Podsumowanie;
+        private System.Windows.Forms.RichTextBox rtb_Summary2;
     }
 }
 
