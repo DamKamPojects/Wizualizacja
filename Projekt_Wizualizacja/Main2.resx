@@ -135,6 +135,9 @@
   <data name="pb_postep.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="pb_postep.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;pb_postep.Name" xml:space="preserve">
     <value>pb_postep</value>
   </data>
@@ -154,10 +157,10 @@
     <value>NoControl</value>
   </data>
   <data name="l_postep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 632</value>
+    <value>36, 632</value>
   </data>
   <data name="l_postep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1225, 25</value>
+    <value>1212, 25</value>
   </data>
   <data name="l_postep.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -167,6 +170,9 @@
   </data>
   <data name="l_postep.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
+  </data>
+  <data name="l_postep.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;l_postep.Name" xml:space="preserve">
     <value>l_postep</value>
@@ -179,6 +185,123 @@
   </data>
   <data name="&gt;&gt;l_postep.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <metadata name="panelMenu_b_BiletyMetroKolKom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelMenu_b_BiletyMetroKomun.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelMenu_b_BiletyJednorazowe.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gb_WyborJezyka.Name" xml:space="preserve">
+    <value>gb_WyborJezyka</value>
+  </data>
+  <data name="&gt;&gt;gb_WyborJezyka.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_WyborJezyka.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;gb_WyborJezyka.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Name" xml:space="preserve">
+    <value>gb_InneFunkcje</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMiesieczne.Name" xml:space="preserve">
+    <value>panelMenu_b_BiletyMiesieczne</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMiesieczne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMiesieczne.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMiesieczne.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKolKom.Name" xml:space="preserve">
+    <value>panelMenu_b_BiletyMetroKolKom</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKolKom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKolKom.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKolKom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKomun.Name" xml:space="preserve">
+    <value>panelMenu_b_BiletyMetroKomun</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKomun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKomun.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyMetroKomun.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyJednorazowe.Name" xml:space="preserve">
+    <value>panelMenu_b_BiletyJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyJednorazowe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyJednorazowe.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_BiletyJednorazowe.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panelMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 32pt</value>
+  </data>
+  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 139</value>
+  </data>
+  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1262, 488</value>
+  </data>
+  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 20pt, style=Bold</value>
@@ -213,27 +336,6 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pb_jezykPOL.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="pb_jezykPOL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pb_jezykPOL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 41</value>
-  </data>
-  <data name="pb_jezykPOL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pb_jezykPOL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 50</value>
-  </data>
-  <data name="pb_jezykPOL.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pb_jezykPOL.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;pb_jezykPOL.Name" xml:space="preserve">
     <value>pb_jezykPOL</value>
   </data>
@@ -246,27 +348,6 @@
   <data name="&gt;&gt;pb_jezykPOL.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="l_WyborJezyka.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="l_WyborJezyka.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="l_WyborJezyka.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 5</value>
-  </data>
-  <data name="l_WyborJezyka.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 22</value>
-  </data>
-  <data name="l_WyborJezyka.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="l_WyborJezyka.Text" xml:space="preserve">
-    <value>Wybierz język:</value>
-  </data>
-  <data name="l_WyborJezyka.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
   <data name="&gt;&gt;l_WyborJezyka.Name" xml:space="preserve">
     <value>l_WyborJezyka</value>
   </data>
@@ -278,27 +359,6 @@
   </data>
   <data name="&gt;&gt;l_WyborJezyka.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="pictureBox2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 41</value>
-  </data>
-  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 50</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
     <value>pictureBox2</value>
@@ -339,20 +399,38 @@
   <data name="&gt;&gt;gb_WyborJezyka.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelMenu_b_JakDojade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="l_WyborJezyka.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
-  <data name="panelMenu_b_JakDojade.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="l_WyborJezyka.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="panelMenu_b_JakDojade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 230</value>
+  <data name="l_WyborJezyka.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 5</value>
   </data>
-  <data name="panelMenu_b_JakDojade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 70</value>
+  <data name="l_WyborJezyka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
   </data>
-  <data name="panelMenu_b_JakDojade.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="l_WyborJezyka.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="l_WyborJezyka.Text" xml:space="preserve">
+    <value>Wybierz język:</value>
+  </data>
+  <data name="l_WyborJezyka.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;l_WyborJezyka.Name" xml:space="preserve">
+    <value>l_WyborJezyka</value>
+  </data>
+  <data name="&gt;&gt;l_WyborJezyka.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;l_WyborJezyka.Parent" xml:space="preserve">
+    <value>gb_WyborJezyka</value>
+  </data>
+  <data name="&gt;&gt;l_WyborJezyka.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;panelMenu_b_JakDojade.Name" xml:space="preserve">
     <value>panelMenu_b_JakDojade</value>
@@ -365,6 +443,57 @@
   </data>
   <data name="&gt;&gt;panelMenu_b_JakDojade.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_RozkladJazdy.Name" xml:space="preserve">
+    <value>panelMenu_b_RozkladJazdy</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_RozkladJazdy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_RozkladJazdy.Parent" xml:space="preserve">
+    <value>gb_InneFunkcje</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_RozkladJazdy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_DoladowanieTelefonu.Name" xml:space="preserve">
+    <value>panelMenu_b_DoladowanieTelefonu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_DoladowanieTelefonu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_DoladowanieTelefonu.Parent" xml:space="preserve">
+    <value>gb_InneFunkcje</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_DoladowanieTelefonu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gb_InneFunkcje.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="gb_InneFunkcje.Location" type="System.Drawing.Point, System.Drawing">
+    <value>910, 40</value>
+  </data>
+  <data name="gb_InneFunkcje.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="gb_InneFunkcje.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 331</value>
+  </data>
+  <data name="gb_InneFunkcje.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Name" xml:space="preserve">
+    <value>gb_InneFunkcje</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;gb_InneFunkcje.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="panelMenu_b_RozkladJazdy.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -424,33 +553,6 @@
     <value>gb_InneFunkcje</value>
   </data>
   <data name="&gt;&gt;panelMenu_b_DoladowanieTelefonu.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="gb_InneFunkcje.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20pt</value>
-  </data>
-  <data name="gb_InneFunkcje.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 40</value>
-  </data>
-  <data name="gb_InneFunkcje.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="gb_InneFunkcje.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 331</value>
-  </data>
-  <data name="gb_InneFunkcje.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;gb_InneFunkcje.Name" xml:space="preserve">
-    <value>gb_InneFunkcje</value>
-  </data>
-  <data name="&gt;&gt;gb_InneFunkcje.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_InneFunkcje.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;gb_InneFunkcje.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="panelMenu_b_BiletyMiesieczne.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -580,30 +682,6 @@ jednorazowe</value>
   <data name="&gt;&gt;panelMenu_b_BiletyJednorazowe.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="panelMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 32pt</value>
-  </data>
-  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 139</value>
-  </data>
-  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1262, 488</value>
-  </data>
-  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="panelMenu_b_Pomoc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
   </data>
@@ -640,6 +718,123 @@ jednorazowe</value>
   <metadata name="gb_AktualnaData.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;gb_AktualnaData.Name" xml:space="preserve">
+    <value>gb_AktualnaData</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Name" xml:space="preserve">
+    <value>panelKoniecWstecz</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panelGorny.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelGorny.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1312, 140</value>
+  </data>
+  <data name="panelGorny.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panelGorny.Name" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;panelGorny.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelGorny.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelGorny.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="gb_AktualnaData.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;l_godzina.Name" xml:space="preserve">
+    <value>l_godzina</value>
+  </data>
+  <data name="&gt;&gt;l_godzina.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;l_godzina.Parent" xml:space="preserve">
+    <value>gb_AktualnaData</value>
+  </data>
+  <data name="&gt;&gt;l_godzina.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;l_data.Name" xml:space="preserve">
+    <value>l_data</value>
+  </data>
+  <data name="&gt;&gt;l_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;l_data.Parent" xml:space="preserve">
+    <value>gb_AktualnaData</value>
+  </data>
+  <data name="&gt;&gt;l_data.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gb_AktualnaData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>510, 11</value>
+  </data>
+  <data name="gb_AktualnaData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 90</value>
+  </data>
+  <data name="gb_AktualnaData.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.Name" xml:space="preserve">
+    <value>gb_AktualnaData</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;gb_AktualnaData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="l_godzina.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 24pt, style=Bold</value>
   </data>
@@ -706,27 +901,6 @@ jednorazowe</value>
   <data name="&gt;&gt;l_data.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="gb_AktualnaData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>510, 11</value>
-  </data>
-  <data name="gb_AktualnaData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 90</value>
-  </data>
-  <data name="gb_AktualnaData.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;gb_AktualnaData.Name" xml:space="preserve">
-    <value>gb_AktualnaData</value>
-  </data>
-  <data name="&gt;&gt;gb_AktualnaData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_AktualnaData.Parent" xml:space="preserve">
-    <value>panelGorny</value>
-  </data>
-  <data name="&gt;&gt;gb_AktualnaData.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -742,6 +916,9 @@ jednorazowe</value>
   <data name="button2.Text" xml:space="preserve">
     <value>Kolorki</value>
   </data>
+  <data name="button2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;button2.Name" xml:space="preserve">
     <value>button2</value>
   </data>
@@ -754,35 +931,56 @@ jednorazowe</value>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <metadata name="panelKoniecWstecz_b_Koniec.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelKoniecWstecz_b_Wstecz.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Koniec.Name" xml:space="preserve">
+    <value>panelKoniecWstecz_b_Koniec</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Koniec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 21</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Koniec.Parent" xml:space="preserve">
+    <value>panelKoniecWstecz</value>
   </data>
-  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Koniec.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 80</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Wstecz.Name" xml:space="preserve">
+    <value>panelKoniecWstecz_b_Wstecz</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Wstecz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Wstecz.Parent" xml:space="preserve">
+    <value>panelKoniecWstecz</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelKoniecWstecz_b_Wstecz.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="panelKoniecWstecz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>901, 11</value>
+  </data>
+  <data name="panelKoniecWstecz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 109</value>
+  </data>
+  <data name="panelKoniecWstecz.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Name" xml:space="preserve">
+    <value>panelKoniecWstecz</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelKoniecWstecz.Parent" xml:space="preserve">
     <value>panelGorny</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;panelKoniecWstecz.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="panelKoniecWstecz_b_Koniec.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -850,51 +1048,237 @@ jednorazowe</value>
   <data name="&gt;&gt;panelKoniecWstecz_b_Wstecz.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelKoniecWstecz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>901, 11</value>
+  <metadata name="pOkres_gb_RodzajBiletu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pOkres_gb_Waznosc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pOkres_tb_TypBiletu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pOkres_gb_Bilet.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelOkresowe_gb_RodzajeBiletow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Name" xml:space="preserve">
+    <value>pOkres_gb_RodzajBiletu</value>
   </data>
-  <data name="panelKoniecWstecz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 109</value>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelKoniecWstecz.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
   </data>
-  <data name="&gt;&gt;panelKoniecWstecz.Name" xml:space="preserve">
-    <value>panelKoniecWstecz</value>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panelKoniecWstecz.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Name" xml:space="preserve">
+    <value>pOkres_gb_Waznosc</value>
   </data>
-  <data name="&gt;&gt;panelKoniecWstecz.Parent" xml:space="preserve">
-    <value>panelGorny</value>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelKoniecWstecz.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Name" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Name" xml:space="preserve">
+    <value>pOkres_gb_Bilet</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Podsumowanie.Name" xml:space="preserve">
+    <value>panelOkresowe_tb_Podsumowanie</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Podsumowanie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Podsumowanie.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Podsumowanie.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panelGorny.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;l_DoZaplaty.Name" xml:space="preserve">
+    <value>l_DoZaplaty</value>
   </data>
-  <data name="panelGorny.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1312, 140</value>
+  <data name="&gt;&gt;l_DoZaplaty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelGorny.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;l_DoZaplaty.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
   </data>
-  <data name="&gt;&gt;panelGorny.Name" xml:space="preserve">
-    <value>panelGorny</value>
+  <data name="&gt;&gt;l_DoZaplaty.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;panelGorny.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelOkresowe_tb_Suma.Name" xml:space="preserve">
+    <value>panelOkresowe_tb_Suma</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Suma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Suma.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_tb_Suma.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lPodsumowanie.Name" xml:space="preserve">
+    <value>lPodsumowanie</value>
+  </data>
+  <data name="&gt;&gt;lPodsumowanie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lPodsumowanie.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;lPodsumowanie.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;b_Powrot.Name" xml:space="preserve">
+    <value>b_Powrot</value>
+  </data>
+  <data name="&gt;&gt;b_Powrot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;b_Powrot.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;b_Powrot.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Platnosc.Name" xml:space="preserve">
+    <value>panelOkresowe_b_Platnosc</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Platnosc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Platnosc.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Platnosc.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Name" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="panelOkresowe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 139</value>
+  </data>
+  <data name="panelOkresowe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1262, 488</value>
+  </data>
+  <data name="panelOkresowe.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe.Name" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelGorny.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelOkresowe.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelGorny.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panelOkresowe.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <metadata name="pOkres_gb_RodzajBiletu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;panelOkresowe_b_ulgowy.Name" xml:space="preserve">
+    <value>panelOkresowe_b_ulgowy</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_ulgowy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_ulgowy.Parent" xml:space="preserve">
+    <value>pOkres_gb_RodzajBiletu</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_ulgowy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykly.Name" xml:space="preserve">
+    <value>panelOkresowe_b_zwykly</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykly.Parent" xml:space="preserve">
+    <value>pOkres_gb_RodzajBiletu</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>pOkres_gb_RodzajBiletu</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pOkres_gb_RodzajBiletu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 128</value>
+  </data>
+  <data name="pOkres_gb_RodzajBiletu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 110</value>
+  </data>
+  <data name="pOkres_gb_RodzajBiletu.TabIndex" type="System.Int32, mscorlib">
+    <value>274</value>
+  </data>
+  <data name="pOkres_gb_RodzajBiletu.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Name" xml:space="preserve">
+    <value>pOkres_gb_RodzajBiletu</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panelOkresowe_b_ulgowy.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -982,33 +1366,78 @@ jednorazowe</value>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pOkres_gb_RodzajBiletu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 128</value>
-  </data>
-  <data name="pOkres_gb_RodzajBiletu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 110</value>
-  </data>
-  <data name="pOkres_gb_RodzajBiletu.TabIndex" type="System.Int32, mscorlib">
-    <value>274</value>
-  </data>
-  <data name="pOkres_gb_RodzajBiletu.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Name" xml:space="preserve">
-    <value>pOkres_gb_RodzajBiletu</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.Parent" xml:space="preserve">
-    <value>panelOkresowe</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_RodzajBiletu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="pOkres_gb_Waznosc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="panelOkresowe_b_PonPia.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelOkresowe_b_WszDni.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;panelOkresowe_b_PonPia.Name" xml:space="preserve">
+    <value>panelOkresowe_b_PonPia</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_PonPia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_PonPia.Parent" xml:space="preserve">
+    <value>pOkres_gb_Waznosc</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_PonPia.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>pOkres_gb_Waznosc</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_WszDni.Name" xml:space="preserve">
+    <value>panelOkresowe_b_WszDni</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_WszDni.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_WszDni.Parent" xml:space="preserve">
+    <value>pOkres_gb_Waznosc</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_WszDni.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pOkres_gb_Waznosc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>480, 128</value>
+  </data>
+  <data name="pOkres_gb_Waznosc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 110</value>
+  </data>
+  <data name="pOkres_gb_Waznosc.TabIndex" type="System.Int32, mscorlib">
+    <value>273</value>
+  </data>
+  <data name="pOkres_gb_Waznosc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Name" xml:space="preserve">
+    <value>pOkres_gb_Waznosc</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Waznosc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="panelOkresowe_b_PonPia.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1105,33 +1534,81 @@ jednorazowe</value>
   <data name="&gt;&gt;panelOkresowe_b_WszDni.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pOkres_gb_Waznosc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 128</value>
-  </data>
-  <data name="pOkres_gb_Waznosc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 110</value>
-  </data>
-  <data name="pOkres_gb_Waznosc.TabIndex" type="System.Int32, mscorlib">
-    <value>273</value>
-  </data>
-  <data name="pOkres_gb_Waznosc.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Waznosc.Name" xml:space="preserve">
-    <value>pOkres_gb_Waznosc</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Waznosc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Waznosc.Parent" xml:space="preserve">
-    <value>panelOkresowe</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Waznosc.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="pOkres_tb_TypBiletu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_okaziciela.Name" xml:space="preserve">
+    <value>panelOkresowe_b_okaziciela</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_okaziciela.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_okaziciela.Parent" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_okaziciela.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_imienny.Name" xml:space="preserve">
+    <value>panelOkresowe_b_imienny</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_imienny.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_imienny.Parent" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_imienny.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pOkres_tb_TypBiletu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>480, 12</value>
+  </data>
+  <data name="pOkres_tb_TypBiletu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 110</value>
+  </data>
+  <data name="pOkres_tb_TypBiletu.TabIndex" type="System.Int32, mscorlib">
+    <value>272</value>
+  </data>
+  <data name="pOkres_tb_TypBiletu.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Name" xml:space="preserve">
+    <value>pOkres_tb_TypBiletu</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_tb_TypBiletu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>73, 126</value>
   </data>
@@ -1240,33 +1717,66 @@ jednorazowe</value>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="pOkres_tb_TypBiletu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 12</value>
-  </data>
-  <data name="pOkres_tb_TypBiletu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 110</value>
-  </data>
-  <data name="pOkres_tb_TypBiletu.TabIndex" type="System.Int32, mscorlib">
-    <value>272</value>
-  </data>
-  <data name="pOkres_tb_TypBiletu.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pOkres_tb_TypBiletu.Name" xml:space="preserve">
-    <value>pOkres_tb_TypBiletu</value>
-  </data>
-  <data name="&gt;&gt;pOkres_tb_TypBiletu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pOkres_tb_TypBiletu.Parent" xml:space="preserve">
-    <value>panelOkresowe</value>
-  </data>
-  <data name="&gt;&gt;pOkres_tb_TypBiletu.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="pOkres_gb_Bilet.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;panelOkresowe_b_mies.Name" xml:space="preserve">
+    <value>panelOkresowe_b_mies</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_mies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_mies.Parent" xml:space="preserve">
+    <value>pOkres_gb_Bilet</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_mies.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>pOkres_gb_Bilet</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_30dni.Name" xml:space="preserve">
+    <value>panelOkresowe_b_30dni</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_30dni.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_30dni.Parent" xml:space="preserve">
+    <value>pOkres_gb_Bilet</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_30dni.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pOkres_gb_Bilet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 12</value>
+  </data>
+  <data name="pOkres_gb_Bilet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 110</value>
+  </data>
+  <data name="pOkres_gb_Bilet.TabIndex" type="System.Int32, mscorlib">
+    <value>271</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Name" xml:space="preserve">
+    <value>pOkres_gb_Bilet</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;pOkres_gb_Bilet.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="panelOkresowe_b_mies.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1353,27 +1863,6 @@ jednorazowe</value>
   </data>
   <data name="&gt;&gt;panelOkresowe_b_30dni.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="pOkres_gb_Bilet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 12</value>
-  </data>
-  <data name="pOkres_gb_Bilet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 110</value>
-  </data>
-  <data name="pOkres_gb_Bilet.TabIndex" type="System.Int32, mscorlib">
-    <value>271</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Bilet.Name" xml:space="preserve">
-    <value>pOkres_gb_Bilet</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Bilet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Bilet.Parent" xml:space="preserve">
-    <value>panelOkresowe</value>
-  </data>
-  <data name="&gt;&gt;pOkres_gb_Bilet.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="panelOkresowe_tb_Podsumowanie.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1564,6 +2053,90 @@ jednorazowe</value>
   <metadata name="panelOkresowe_gb_RodzajeBiletow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;panelOkresowe_b_NocnySieci.Name" xml:space="preserve">
+    <value>panelOkresowe_b_NocnySieci</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnySieci.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnySieci.Parent" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnySieci.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyRRW.Name" xml:space="preserve">
+    <value>panelOkresowe_b_NocnyRRW</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyRRW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyRRW.Parent" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyRRW.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyGminy.Name" xml:space="preserve">
+    <value>panelOkresowe_b_NocnyGminy</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyGminy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyGminy.Parent" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_NocnyGminy.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Nocny.Name" xml:space="preserve">
+    <value>panelOkresowe_b_Nocny</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Nocny.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Nocny.Parent" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_Nocny.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykleGdy.Name" xml:space="preserve">
+    <value>panelOkresowe_b_zwykleGdy</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykleGdy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykleGdy.Parent" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_b_zwykleGdy.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panelOkresowe_gb_RodzajeBiletow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 254</value>
+  </data>
+  <data name="panelOkresowe_gb_RodzajeBiletow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 190</value>
+  </data>
+  <data name="panelOkresowe_gb_RodzajeBiletow.TabIndex" type="System.Int32, mscorlib">
+    <value>275</value>
+  </data>
+  <data name="panelOkresowe_gb_RodzajeBiletow.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Name" xml:space="preserve">
+    <value>panelOkresowe_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Parent" xml:space="preserve">
+    <value>panelOkresowe</value>
+  </data>
+  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="panelOkresowe_b_NocnySieci.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -1716,54 +2289,237 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="&gt;&gt;panelOkresowe_b_zwykleGdy.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panelOkresowe_gb_RodzajeBiletow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 254</value>
+  <metadata name="pSemes_gb_KategorieBiletow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Name" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
   </data>
-  <data name="panelOkresowe_gb_RodzajeBiletow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>850, 190</value>
-  </data>
-  <data name="panelOkresowe_gb_RodzajeBiletow.TabIndex" type="System.Int32, mscorlib">
-    <value>275</value>
-  </data>
-  <data name="panelOkresowe_gb_RodzajeBiletow.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Name" xml:space="preserve">
-    <value>panelOkresowe_gb_RodzajeBiletow</value>
-  </data>
-  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Type" xml:space="preserve">
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.Parent" xml:space="preserve">
-    <value>panelOkresowe</value>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Parent" xml:space="preserve">
+    <value>pSemes</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="panelOkresowe.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Name" xml:space="preserve">
+    <value>pSemes_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_IleMies.Name" xml:space="preserve">
+    <value>pSemes_gb_IleMies</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_IleMies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_IleMies.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_IleMies.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Podsumowanie.Name" xml:space="preserve">
+    <value>pSemes_tb_Podsumowanie</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Podsumowanie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Podsumowanie.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Podsumowanie.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Suma.Name" xml:space="preserve">
+    <value>pSemes_tb_Suma</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Suma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Suma.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_tb_Suma.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Platnosc.Name" xml:space="preserve">
+    <value>pSemes_b_Platnosc</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Platnosc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Platnosc.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Platnosc.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pSemes.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 139</value>
   </data>
-  <data name="panelOkresowe.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pSemes.Size" type="System.Drawing.Size, System.Drawing">
     <value>1262, 488</value>
   </data>
-  <data name="panelOkresowe.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+  <data name="pSemes.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe.Name" xml:space="preserve">
-    <value>panelOkresowe</value>
+  <data name="&gt;&gt;pSemes.Name" xml:space="preserve">
+    <value>pSemes</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe.Type" xml:space="preserve">
+  <data name="&gt;&gt;pSemes.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pSemes.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelOkresowe.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;pSemes.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="pSemes_gb_KategorieBiletow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;pSemes_b_NocnySieci.Name" xml:space="preserve">
+    <value>pSemes_b_NocnySieci</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnySieci.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnySieci.Parent" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnySieci.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyRRW.Name" xml:space="preserve">
+    <value>pSemes_b_NocnyRRW</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyRRW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyRRW.Parent" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyRRW.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyGminy.Name" xml:space="preserve">
+    <value>pSemes_b_NocnyGminy</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyGminy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyGminy.Parent" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_NocnyGminy.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Nocny.Name" xml:space="preserve">
+    <value>pSemes_b_Nocny</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Nocny.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Nocny.Parent" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_Nocny.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykleGdy.Name" xml:space="preserve">
+    <value>pSemes_b_zwykleGdy</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykleGdy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykleGdy.Parent" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykleGdy.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pSemes_gb_KategorieBiletow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 254</value>
+  </data>
+  <data name="pSemes_gb_KategorieBiletow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 190</value>
+  </data>
+  <data name="pSemes_gb_KategorieBiletow.TabIndex" type="System.Int32, mscorlib">
+    <value>275</value>
+  </data>
+  <data name="pSemes_gb_KategorieBiletow.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Name" xml:space="preserve">
+    <value>pSemes_gb_KategorieBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Parent" xml:space="preserve">
+    <value>pSemes</value>
+  </data>
+  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pSemes_b_NocnySieci.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -1916,29 +2672,65 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="&gt;&gt;pSemes_b_zwykleGdy.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pSemes_gb_KategorieBiletow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 254</value>
+  <data name="&gt;&gt;pSemes_b_ulgowy.Name" xml:space="preserve">
+    <value>pSemes_b_ulgowy</value>
   </data>
-  <data name="pSemes_gb_KategorieBiletow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>850, 190</value>
+  <data name="&gt;&gt;pSemes_b_ulgowy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pSemes_gb_KategorieBiletow.TabIndex" type="System.Int32, mscorlib">
-    <value>275</value>
+  <data name="&gt;&gt;pSemes_b_ulgowy.Parent" xml:space="preserve">
+    <value>pSemes_gb_RodzajeBiletow</value>
   </data>
-  <data name="pSemes_gb_KategorieBiletow.Visible" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;pSemes_b_ulgowy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykly.Name" xml:space="preserve">
+    <value>pSemes_b_zwykly</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykly.Parent" xml:space="preserve">
+    <value>pSemes_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_zwykly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>pSemes_gb_RodzajeBiletow</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pSemes_gb_RodzajeBiletow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>490, 82</value>
+  </data>
+  <data name="pSemes_gb_RodzajeBiletow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 155</value>
+  </data>
+  <data name="pSemes_gb_RodzajeBiletow.TabIndex" type="System.Int32, mscorlib">
+    <value>274</value>
+  </data>
+  <data name="pSemes_gb_RodzajeBiletow.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Name" xml:space="preserve">
-    <value>pSemes_gb_KategorieBiletow</value>
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Name" xml:space="preserve">
+    <value>pSemes_gb_RodzajeBiletow</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Type" xml:space="preserve">
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Parent" xml:space="preserve">
     <value>pSemes</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_KategorieBiletow.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="pSemes_b_ulgowy.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -2033,29 +2825,62 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pSemes_gb_RodzajeBiletow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 82</value>
+  <data name="&gt;&gt;pSemes_b_5miesiecy.Name" xml:space="preserve">
+    <value>pSemes_b_5miesiecy</value>
   </data>
-  <data name="pSemes_gb_RodzajeBiletow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;pSemes_b_5miesiecy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_5miesiecy.Parent" xml:space="preserve">
+    <value>pSemes_gb_IleMies</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_5miesiecy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>pSemes_gb_IleMies</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_4miesiace.Name" xml:space="preserve">
+    <value>pSemes_b_4miesiace</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_4miesiace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_4miesiace.Parent" xml:space="preserve">
+    <value>pSemes_gb_IleMies</value>
+  </data>
+  <data name="&gt;&gt;pSemes_b_4miesiace.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pSemes_gb_IleMies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 82</value>
+  </data>
+  <data name="pSemes_gb_IleMies.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 155</value>
   </data>
-  <data name="pSemes_gb_RodzajeBiletow.TabIndex" type="System.Int32, mscorlib">
-    <value>274</value>
+  <data name="pSemes_gb_IleMies.TabIndex" type="System.Int32, mscorlib">
+    <value>271</value>
   </data>
-  <data name="pSemes_gb_RodzajeBiletow.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;pSemes_gb_IleMies.Name" xml:space="preserve">
+    <value>pSemes_gb_IleMies</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Name" xml:space="preserve">
-    <value>pSemes_gb_RodzajeBiletow</value>
-  </data>
-  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Type" xml:space="preserve">
+  <data name="&gt;&gt;pSemes_gb_IleMies.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pSemes_gb_IleMies.Parent" xml:space="preserve">
     <value>pSemes</value>
   </data>
-  <data name="&gt;&gt;pSemes_gb_RodzajeBiletow.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;pSemes_gb_IleMies.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pSemes_b_5miesiecy.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt</value>
@@ -2148,27 +2973,6 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
     <value>pSemes_gb_IleMies</value>
   </data>
   <data name="&gt;&gt;pSemes_b_4miesiace.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pSemes_gb_IleMies.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 82</value>
-  </data>
-  <data name="pSemes_gb_IleMies.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 155</value>
-  </data>
-  <data name="pSemes_gb_IleMies.TabIndex" type="System.Int32, mscorlib">
-    <value>271</value>
-  </data>
-  <data name="&gt;&gt;pSemes_gb_IleMies.Name" xml:space="preserve">
-    <value>pSemes_gb_IleMies</value>
-  </data>
-  <data name="&gt;&gt;pSemes_gb_IleMies.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pSemes_gb_IleMies.Parent" xml:space="preserve">
-    <value>pSemes</value>
-  </data>
-  <data name="&gt;&gt;pSemes_gb_IleMies.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="pSemes_tb_Podsumowanie.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2393,27 +3197,6 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="pSemes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 139</value>
-  </data>
-  <data name="pSemes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1262, 488</value>
-  </data>
-  <data name="pSemes.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;pSemes.Name" xml:space="preserve">
-    <value>pSemes</value>
-  </data>
-  <data name="&gt;&gt;pSemes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pSemes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pSemes.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2530,6 +3313,387 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   </data>
   <data name="&gt;&gt;rtb_Summary2.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveKolKom24.Name" xml:space="preserve">
+    <value>btn_RemoveKolKom24</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveKolKom24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveKolKom24.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveKolKom24.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pJedno_R_T.Name" xml:space="preserve">
+    <value>pJedno_R_T</value>
+  </data>
+  <data name="&gt;&gt;pJedno_R_T.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pJedno_R_T.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;pJedno_R_T.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pJedno_L_T.Name" xml:space="preserve">
+    <value>pJedno_L_T</value>
+  </data>
+  <data name="&gt;&gt;pJedno_L_T.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pJedno_L_T.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;pJedno_L_T.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pJedno_M_T.Name" xml:space="preserve">
+    <value>pJedno_M_T</value>
+  </data>
+  <data name="&gt;&gt;pJedno_M_T.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pJedno_M_T.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;pJedno_M_T.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btn_Other.Name" xml:space="preserve">
+    <value>btn_Other</value>
+  </data>
+  <data name="&gt;&gt;btn_Other.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Other.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_Other.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;tb_NMid.Name" xml:space="preserve">
+    <value>tb_NMid</value>
+  </data>
+  <data name="&gt;&gt;tb_NMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_NMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_NMid.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;tb_UMid.Name" xml:space="preserve">
+    <value>tb_UMid</value>
+  </data>
+  <data name="&gt;&gt;tb_UMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_UMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_UMid.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tb_URight.Name" xml:space="preserve">
+    <value>tb_URight</value>
+  </data>
+  <data name="&gt;&gt;tb_URight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_URight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_URight.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;tb_NRight.Name" xml:space="preserve">
+    <value>tb_NRight</value>
+  </data>
+  <data name="&gt;&gt;tb_NRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_NRight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_NRight.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;tb_ULeft.Name" xml:space="preserve">
+    <value>tb_ULeft</value>
+  </data>
+  <data name="&gt;&gt;tb_ULeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_ULeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_ULeft.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;tb_NLeft.Name" xml:space="preserve">
+    <value>tb_NLeft</value>
+  </data>
+  <data name="&gt;&gt;tb_NLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_NLeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;tb_NLeft.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;btn_PNLeft.Name" xml:space="preserve">
+    <value>btn_PNLeft</value>
+  </data>
+  <data name="&gt;&gt;btn_PNLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PNLeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PNLeft.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;btn_MNLeft.Name" xml:space="preserve">
+    <value>btn_MNLeft</value>
+  </data>
+  <data name="&gt;&gt;btn_MNLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MNLeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MNLeft.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btn_MNMid.Name" xml:space="preserve">
+    <value>btn_MNMid</value>
+  </data>
+  <data name="&gt;&gt;btn_MNMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MNMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MNMid.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btn_MUMid.Name" xml:space="preserve">
+    <value>btn_MUMid</value>
+  </data>
+  <data name="&gt;&gt;btn_MUMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MUMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MUMid.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;btn_MURight.Name" xml:space="preserve">
+    <value>btn_MURight</value>
+  </data>
+  <data name="&gt;&gt;btn_MURight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MURight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MURight.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;btn_MNRight.Name" xml:space="preserve">
+    <value>btn_MNRight</value>
+  </data>
+  <data name="&gt;&gt;btn_MNRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MNRight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MNRight.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;btn_PNMid.Name" xml:space="preserve">
+    <value>btn_PNMid</value>
+  </data>
+  <data name="&gt;&gt;btn_PNMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PNMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PNMid.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;btn_PUMid.Name" xml:space="preserve">
+    <value>btn_PUMid</value>
+  </data>
+  <data name="&gt;&gt;btn_PUMid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PUMid.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PUMid.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;btn_PURight.Name" xml:space="preserve">
+    <value>btn_PURight</value>
+  </data>
+  <data name="&gt;&gt;btn_PURight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PURight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PURight.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;btn_PNRight.Name" xml:space="preserve">
+    <value>btn_PNRight</value>
+  </data>
+  <data name="&gt;&gt;btn_PNRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PNRight.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PNRight.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;btn_PULeft.Name" xml:space="preserve">
+    <value>btn_PULeft</value>
+  </data>
+  <data name="&gt;&gt;btn_PULeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_PULeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_PULeft.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;btn_MULeft.Name" xml:space="preserve">
+    <value>btn_MULeft</value>
+  </data>
+  <data name="&gt;&gt;btn_MULeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_MULeft.Parent" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;btn_MULeft.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="panelJednorazowe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 141</value>
+  </data>
+  <data name="panelJednorazowe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1259, 488</value>
+  </data>
+  <data name="panelJednorazowe.TabIndex" type="System.Int32, mscorlib">
+    <value>276</value>
+  </data>
+  <data name="&gt;&gt;panelJednorazowe.Name" xml:space="preserve">
+    <value>panelJednorazowe</value>
+  </data>
+  <data name="&gt;&gt;panelJednorazowe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelJednorazowe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelJednorazowe.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
@@ -3130,6 +4294,66 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   </data>
   <data name="&gt;&gt;tb_NLeft.ZOrder" xml:space="preserve">
     <value>21</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 692</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 21</value>
+  </data>
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 80</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panelGorny</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btn_PNLeft.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3940,6 +5164,9 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="btn_PNRight.Location" type="System.Drawing.Point, System.Drawing">
     <value>770, 215</value>
   </data>
+  <data name="btn_PNRight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
   <data name="btn_PNRight.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 60</value>
   </data>
@@ -4137,55 +5364,97 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   <data name="&gt;&gt;btn_MULeft.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="panelJednorazowe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 141</value>
+  <data name="pb_jezykPOL.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
-  <data name="panelJednorazowe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1259, 488</value>
-  </data>
-  <data name="panelJednorazowe.TabIndex" type="System.Int32, mscorlib">
-    <value>276</value>
-  </data>
-  <data name="&gt;&gt;panelJednorazowe.Name" xml:space="preserve">
-    <value>panelJednorazowe</value>
-  </data>
-  <data name="&gt;&gt;panelJednorazowe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelJednorazowe.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelJednorazowe.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pb_jezykPOL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 692</value>
+  <data name="pb_jezykPOL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 41</value>
   </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
+  <data name="pb_jezykPOL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
-    <value>278</value>
+  <data name="pb_jezykPOL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 50</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>label18</value>
+  <data name="pb_jezykPOL.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
+  <data name="pb_jezykPOL.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pb_jezykPOL.Name" xml:space="preserve">
+    <value>pb_jezykPOL</value>
   </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;pb_jezykPOL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pb_jezykPOL.Parent" xml:space="preserve">
+    <value>gb_WyborJezyka</value>
+  </data>
+  <data name="&gt;&gt;pb_jezykPOL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 41</value>
+  </data>
+  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 50</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>gb_WyborJezyka</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelMenu_b_JakDojade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="panelMenu_b_JakDojade.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="panelMenu_b_JakDojade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 230</value>
+  </data>
+  <data name="panelMenu_b_JakDojade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 70</value>
+  </data>
+  <data name="panelMenu_b_JakDojade.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_JakDojade.Name" xml:space="preserve">
+    <value>panelMenu_b_JakDojade</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_JakDojade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_JakDojade.Parent" xml:space="preserve">
+    <value>gb_InneFunkcje</value>
+  </data>
+  <data name="&gt;&gt;panelMenu_b_JakDojade.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -4205,6 +5474,9 @@ Sopotu albo Rumii Albo Gm: Kosakowo, Żukowo, Szemud, Wejherowo</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>9, 9, 9, 9</value>

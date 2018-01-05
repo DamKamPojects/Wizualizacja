@@ -23,8 +23,8 @@ namespace Projekt_Wizualizacja
                 {tb_UMid, "0" },
                 {tb_NLeft, "0" },
                 {tb_ULeft, "0" },
-                //{tb_NRight, "0" },
-                //{tb_URight, "0" }
+                {tb_NRight, "0" },
+                {tb_URight, "0" }
             };
             ValueStorage2 = new Dictionary<TextBox, string>()
             {
@@ -57,21 +57,21 @@ namespace Projekt_Wizualizacja
 
         //pola do szybszego pisania stringów do summary
         #region Stringi do summary
-        static string Normalny = "\n\tNormalny: ilość - ";
-        static string Ulgowy = "\n\tUlgowy: ilość - ";
+        static string Normalny = "\tNormalny: ilość - ";
+        static string Ulgowy = "\tUlgowy: ilość - ";
         static string Cena = ", Cena - ";
-        static string BJP = "\nBilet na jeden przejazd:";
-        static string Godzinny = "\nBilet godzinny:";
-        static string H24 = "\nBilet 24-godzinny:";
-        static string NBJP = "\nBilet nocny na jeden przejazd:";
-        static string NGodzinny = "\nBilet nocny godzinny:";
-        static string KomBJP = "\nBilet metropolitalny na jeden przejazd:";
-        static string KomJPSpec = "\nBilet metropolitalny na jeden przejazd na linie nocne, pospieszne, specjalne i zwykłe:";
-        static string Kom24 = "\nBilet metropolitalny 24-godzinny komunalny";
-        static string Kom72 = "\nBilet metropolitalny 72-godzinny komunalny";
+        static string BJP = "Bilet na jeden przejazd:";
+        static string Godzinny = "Bilet godzinny:";
+        static string H24 = "Bilet 24-godzinny:";
+        static string NBJP = "Bilet nocny na jeden przejazd:";
+        static string NGodzinny = "Bilet nocny godzinny:";
+        static string KomBJP = "Bilet metropolitalny na jeden przejazd:";
+        static string KomJPSpec = "Bilet metropolitalny na jeden przejazd na linie nocne, pospieszne, specjalne i zwykłe:";
+        static string Kom24 = "Bilet metropolitalny 24-godzinny komunalny";
+        static string Kom72 = "Bilet metropolitalny 72-godzinny komunalny";
         //static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
-        static string KolKom24All = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny wszystkich organizatorów";
-        static string KolKom72 = "\nBilet metropolitalny 72-godzinny kolejowo-komunalny wszystkich organizatorów";
+        static string KolKom24All = "Bilet metropolitalny 24-godzinny kolejowo-komunalny wszystkich organizatorów";
+        static string KolKom72 = "Bilet metropolitalny 72-godzinny kolejowo-komunalny wszystkich organizatorów";
         private string KolKom24 = null;
         #endregion
         #endregion
@@ -327,132 +327,85 @@ namespace Projekt_Wizualizacja
         }
 
 
+
         #region Do Update summary
+
+        //metoda do aktualizacji tb w jednorazowych
+        private string JednorazoweAktualizacajTB(string rodzajBiletu, string iloscNorm, string iloscUlga, double cena)
+        {
+            string tekst = "";
+            if (iloscNorm != "0" || iloscUlga != "0") //to oznacza ze wybrano jakiś bilet
+            {
+                tekst += Environment.NewLine;
+
+                tekst = rodzajBiletu + Environment.NewLine;
+            }
+            if (iloscNorm != "0")
+            {
+                tekst += Normalny + iloscNorm + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(iloscNorm) * cena)) + Environment.NewLine;
+            }
+            if (iloscUlga != "0")
+            {
+                tekst += Ulgowy + iloscUlga + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(iloscUlga) * cena / 2)) + Environment.NewLine;
+            }
+            if (iloscNorm != "0" || iloscUlga != "0") //dodatkowa pusta linia na końcu na końcu
+            {
+                tekst += Environment.NewLine;
+            }
+            return tekst;
+        }
+        private void ToDictionary()
+        {
+            if (Flag==1)
+            {
+
+            }
+        }
+
         #region Metody główne
         void Jednorazowe1()
-        {   //Dzienne na jeden przejazd
-            if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            {
-                rtb_Summary2.Text += BJP + Normalny + tb_NLeft.Text + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(tb_NLeft.Text) * ceny1.JDzienJP));
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            {
-                rtb_Summary2.Text += BJP + Ulgowy + tb_ULeft.Text + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(tb_ULeft.Text) * ceny1.JDzienJP / 2));
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            {
-                rtb_Summary2.Text += BJP + Normalny + tb_NLeft.Text + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(tb_NLeft.Text) * ceny1.JDzienJP)) + Ulgowy + tb_ULeft.Text + Cena + String.Format("{0:0.00} zł", (Convert.ToInt32(tb_ULeft.Text) * ceny1.JDzienJP / 2));
-            }
-                //Dzienne godzinne
-            if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
-            {
-                rtb_Summary2.Text += Godzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
-            {
-                rtb_Summary2.Text += Godzinny + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
-            {
-                rtb_Summary2.Text += Godzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-            }
-            //24h
-            //if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-            //{
-            //    rtb_Summary2.Text += H24 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.J24h).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-            //{
-            //    rtb_Summary2.Text += H24 + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.J24h / 2).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-            //{
-            //    rtb_Summary2.Text += H24 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.J24h).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.J24h / 2).ToString();
-            //}
-            #region zapas
-            /*Tutaj problemem jest z tym, że na subpanelu do jednorazowych też są 24-godzinne.
-             * Planuję to zrobić w ten sposób, że podczas zmiany panelu do kolekcji zapiszę obecny stan textboxów jako bufor, 
-             * skontroluję główną kolekcję czy są tam w odpowiednim miejscu wartości różne od zera i na podstawie tego poprzepisuję odpowiednie wartości,
-             * a po zakończeniu przerzucania zapiszę dane z bufora do głównej kolekcji.
-             * Tutaj masz część przykładu dla 24h, ale tylko w jedną stronę. Zapisywanie do/z bufora będzie musiało być wykonywane w metodzie kliknięcia w przycisk.*/
-
-            /*if (ValueStorage[tb_NRight] == "0" && ValueStorage[tb_URight] == "0")
-            {
-                if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-                {
-                    rtb_Summary2.Text += H24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString();
-                }
-                if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-                {
-                    rtb_Summary2.Text += H24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-                }
-                if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-                {
-                    rtb_Summary2.Text += H24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-                }
-            }
-            else
-            {
-                tb_NRight.Text = ValueStorage[tb_NRight];
-                tb_URight.Text = ValueStorage[tb_URight];
-                if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-                {
-                    rtb_Summary2.Text += H24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString();
-                }
-                if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-                {
-                    rtb_Summary2.Text += H24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-                }
-                if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-                {
-                    rtb_Summary2.Text += H24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JDzienGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JDzienGodz / 2).ToString();
-                }
-            }*/
-            #endregion
+        {   
+            //Dzienne na jeden przejazd
+            JednorazoweAktualizacajTB(BJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JDzienJP);
+            //Dzienne godzinne
+            JednorazoweAktualizacajTB(Godzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JDzienGodz);            
         }
         void Jednorazowe24h()
         {
-            if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-            {
-                rtb_Summary2.Text += H24 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.J24h).ToString();
-            }
-            if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-            {
-                rtb_Summary2.Text += H24 + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.J24h / 2).ToString();
-            }
-            if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-            {
-                rtb_Summary2.Text += H24 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.J24h).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.J24h / 2).ToString();
-            }
+            //24 godzinne
+            JednorazoweAktualizacajTB(H24, tb_NRight.Text, tb_URight.Text, ceny1.J24h);            
         }
         void Jednorazowe2()
         {//Nocne na jeden przejazd
-            if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            {
-                rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            {
-                rtb_Summary2.Text += NBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
-            }
-            if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            {
-                rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
-            }
+            JednorazoweAktualizacajTB(NBJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.JNocJP);
             //Nocne godzinne
-            if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
-            {
-                rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
-            {
-                rtb_Summary2.Text += NGodzinny + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
-            }
-            if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
-            {
-                rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
-            }
-            //24h       COŚ Z TYM TRZEBA ZROBIĆ
+            JednorazoweAktualizacajTB(Godzinny, tb_NMid.Text, tb_UMid.Text, ceny1.JNocGodz);
+            //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
+            //{
+            //    rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString();
+            //}
+            //if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
+            //{
+            //    rtb_Summary2.Text += NBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
+            //}
+            //if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
+            //{
+            //    rtb_Summary2.Text += NBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.JNocJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.JNocJP / 2).ToString();
+            //}
+            ////Nocne godzinne
+            //if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
+            //{
+            //    rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString();
+            //}
+            //if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
+            //{
+            //    rtb_Summary2.Text += NGodzinny + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
+            //}
+            //if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
+            //{
+            //    rtb_Summary2.Text += NGodzinny + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.JNocGodz).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.JNocGodz / 2).ToString();
+            //}
+            ////24h       COŚ Z TYM TRZEBA ZROBIĆ
 
 
         }
@@ -862,6 +815,8 @@ namespace Projekt_Wizualizacja
             GetCurrentTime();
             panelKoniecWstecz.Visible = false;
             panelMenu.BringToFront();
+            Reklamy reklama = new Reklamy();
+            //reklama.ShowDialog();
             //TimeOfTransaction = 64;
 
         }
@@ -1490,7 +1445,7 @@ namespace Projekt_Wizualizacja
         #endregion
 
 
-    #region Semestralne
+        #region Semestralne
 
         string DataDzialaniaSemestralnego = "";
         public int SemestralnyIleMiesiecy = 3; //4-4miesiace 5-5miesiecy , 3 domyslne
@@ -1713,17 +1668,17 @@ namespace Projekt_Wizualizacja
         private void pSemes_b_4miesiace_Click(object sender, EventArgs e)
         {
             SemestralnyIleMiesiecy = 4;
-            SemestralneOtwarcieOkna();
             SemestralneObslugaKontrolek();
+            SemestralneOtwarcieOkna();
         }
 
 
 
         private void pSemes_b_5mies_Click(object sender, EventArgs e)
         {
-            SemestralneOtwarcieOkna();
             SemestralnyIleMiesiecy = 5;
             SemestralneObslugaKontrolek();
+            SemestralneOtwarcieOkna();
         }
 
 
@@ -1806,7 +1761,6 @@ namespace Projekt_Wizualizacja
 
         private void btn_Other_Click(object sender, EventArgs e)
         {
-
             if (Flag == 1)  //panel 1 dla jednorazowych
             {
                 ValueStorage[tb_NLeft] = tb_NLeft.Text;
@@ -1862,7 +1816,6 @@ namespace Projekt_Wizualizacja
 
             //Tutaj wstawić zmianę elementów
         }
-
         private void btn_RemoveKolKom24_Click(object sender, EventArgs e)
         {
             KolKom24Remover rmv = new KolKom24Remover(KolKom24Storage, KolKom24StorageShort);
@@ -2069,6 +2022,13 @@ namespace Projekt_Wizualizacja
             label18.Text = Convert.ToString(DoUsunieciaZmienna % 22);
         }
 
+        int x = 0;
+        private void Main_Click(object sender, EventArgs e)
+        {
+            label18.Text = Convert.ToString(++x);
+        }
+        
+
         private void btn_MU24_Click(object sender, EventArgs e)
         {
             Minus(tb_URight);
@@ -2094,7 +2054,6 @@ namespace Projekt_Wizualizacja
                     ResetValuesOkresowe();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
-
                 }
                 podsumowanie.Close();
                 //podsumowanie.Visible = true;

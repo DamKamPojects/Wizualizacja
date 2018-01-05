@@ -76,7 +76,7 @@
             this.b_wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.b_wstecz.Location = new System.Drawing.Point(120, 260);
             this.b_wstecz.Name = "b_wstecz";
-            this.b_wstecz.Size = new System.Drawing.Size(300, 100);
+            this.b_wstecz.Size = new System.Drawing.Size(300, 80);
             this.b_wstecz.TabIndex = 3;
             this.b_wstecz.Text = "WSTECZ";
             this.b_wstecz.UseVisualStyleBackColor = false;

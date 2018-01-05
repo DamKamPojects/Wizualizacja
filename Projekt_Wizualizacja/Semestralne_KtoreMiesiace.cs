@@ -20,7 +20,7 @@ namespace Projekt_Wizualizacja
         {
             InitializeComponent();
         }
-        public Semestralne_KtoreMiesiace(int semestralneIleMiesiecy)
+        public Semestralne_KtoreMiesiace(int semestralneIleMiesiecy )
         {
             InitializeComponent();
             IleMiesiecy = semestralneIleMiesiecy;
