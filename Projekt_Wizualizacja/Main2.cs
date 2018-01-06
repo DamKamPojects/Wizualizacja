@@ -63,8 +63,8 @@ namespace Projekt_Wizualizacja
         static string Normalny = ">Normalny:\tilość - ";
         static string Ulgowy = ">Ulgowy:      \tilość - ";
         static string Cena = ",\tCena - ";
-        static string BJP = "Bilet na jeden przejazd:";
-        static string Godzinny = "Bilet godzinny:";
+        static string BJP = "Bilet na jeden przejazd na linie zwykłe:";
+        static string Godzinny = "Bilet godzinny na linie zwykłe:";
         static string H24 = "Bilet 24-godzinny:";
         static string NBJP = "Bilet nocny na jeden przejazd:";
         static string NGodzinny = "Bilet nocny godzinny:";
@@ -216,37 +216,40 @@ namespace Projekt_Wizualizacja
             {
                 pJedno_L_T.Text = "Bilet na jeden przejazd na linie zwykłe.";
                 pJedno_M_T.Text = "Bilet godzinny na linie zwykłe.";
-                pJedno_R_T.Text = "Bilet 24-godzinny";
-                return;
+                pJedno_R_T.Text = "Bilet 24-godzinny.";
+                //return;
             }
-            if (Flag == 2)
+            else if (Flag == 2)
             {
                 pJedno_L_T.Text = "Bilet na jeden przejazd na linie nocne, pośpieczne, specjalne lub zwykłe.";
                 pJedno_M_T.Text = "Bilet godzinny na linie nocne, pośpieczne, specjalne lub zwykłe.";
                 pJedno_R_T.Text = "Bilet 24-godzinny.";
-                return;
+                //return;
             }
-            if (Flag == 3)
+            else if (Flag == 3)
             {
                 pJedno_L_T.Text = "Bilet metropolitarny komunalny na jeden przejazd na linie ZWYKŁE.";
                 pJedno_M_T.Text = "Bilet metropolitarny komunalny 24-godzinny metropolitarny na wszystkie linie.";
                 pJedno_R_T.Text = "Bilet metropolitarny komunalny 72-godzinny metropolitarny na wszystkie linie.";
-                return;
+                //return;
             }
-            if (Flag == 4)
+            else if (Flag == 4)
             {
-                pJedno_L_T.Text = "Bilet metropolitarny komunalny  na jeden przejazd na linie NOCNE.";
+                pJedno_L_T.Text = "Bilet metropolitarny komunalny na jeden przejazd na linie NOCNE.";
                 pJedno_M_T.Text = "Bilet metropolitarny komunalny 24-godzinny metropolitarny na wszystkie linie.";
                 pJedno_R_T.Text = "Bilet metropolitarny komunalny 72-godzinny metropolitarny na wszystkie linie.";
-                return;
+                //return;
             }
-            if (Flag == 5)
+            else if (Flag == 5)
             {
                 pJedno_M_T.Text = "Bilet metropolitarny kolejowo-komunalny na wszystkich organizatorów.";
                 pJedno_R_T.Text = "Bilet metropolitarny kolejowo-komunalny 72-godzinny na wszystkich organizatorów.";
                 pJedno_L_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów.";
-                return;
+                //return;
             }
+            pJedno_l_Left.Text = pJedno_L_T.Text;
+            pJedno_l_Mid.Text = pJedno_M_T.Text;
+            pJedno_l_Right.Text = pJedno_R_T.Text;
         } //zmienia tekst w kontrolkach
         private void PrzesuwaniePaneli()
         {
@@ -726,6 +729,20 @@ namespace Projekt_Wizualizacja
                     tekstButton += "(DZIENNE)";
                 }
             }
+            else if (Flag == 5 || Flag == 6)
+            {
+                tekstLabel += "metropolitarne komunalno-kolejowe ";
+                if (Flag == 3) //czyli pierwsza zakladka
+                {
+                    tekstLabel += "dzienne";
+                    tekstButton += "(NOCNE)";
+                }
+                if (Flag == 4) //czyli druga zakladka
+                {
+                    tekstLabel += "nocne";
+                    tekstButton += "(DZIENNE)";
+                }
+            }
             btn_Other.Text = tekstButton;
             pJedno_l_NazwaZakladki.Text = tekstLabel;
         }
@@ -821,6 +838,8 @@ namespace Projekt_Wizualizacja
         public bool ClickKategori = false;
         public double CenaOkresowego;
         bool OkresoweCzyJestPrzed16;
+        DateTime AktualnieWybranaData = new DateTime(2000,1,1);
+        string Okresowy30dniTekst;
 
         //metody
         private bool PotwiedzenieZlegoBiltu() //jesli wybralismy bilet ziomowy i tracimy kilka miesiecy
@@ -864,7 +883,7 @@ namespace Projekt_Wizualizacja
             if (RodzajWybranegoBiletuOkresowego==1)
             {
                 pocz = "Bilet okresowy:\n " + Environment.NewLine;
-                if (bilet == 0) pocz = pocz +spacje+ "30 DNIOWY, " + Environment.NewLine; else if(bilet==1) pocz = pocz + spacje + "MIESIĘCZNY na miesiąc " + OkresoweMiesiac().ToUpper()+"," + Environment.NewLine;
+                if (bilet == 0) pocz = pocz +spacje+ "30 DNIOWY, obowiązujący "+Okresowy30dniTekst+"," + Environment.NewLine; else if(bilet==1) pocz = pocz + spacje + "MIESIĘCZNY na miesiąc " + OkresoweMiesiac().ToUpper()+"," + Environment.NewLine;
                 if (Rodzaj_ulgi == 0) pocz = pocz + spacje + "ZWYKŁY, " + Environment.NewLine; else if(Rodzaj_ulgi==1) pocz = pocz + spacje + "ULGOWY, " + Environment.NewLine;
                 if (Typ_biletu == 0) pocz = pocz + spacje + "IMIENNY, " + Environment.NewLine; else if(Typ_biletu==1) pocz = pocz + spacje + "NA OKAZICIELA, " + Environment.NewLine;
                 if (Waznosc_biletu == 0) pocz = pocz + spacje + "obowiązujący od PONIEDZIAŁKU do PIĄTKU, "; else if(Waznosc_biletu==1) pocz = pocz + spacje + "obowiązujący we WSZYSTKIE DNI TYGODNIA,";
@@ -872,8 +891,8 @@ namespace Projekt_Wizualizacja
             else if (RodzajWybranegoBiletuOkresowego == 2)
             {
                 pocz = "Bilet semestralny:\n " + Environment.NewLine;
-                pocz = pocz + spacje + "ważny we WSZYSTKIE DNI TYGODNIA," + DataDzialaniaSemestralnego+Environment.NewLine;
-                if (SemestralnyIleMiesiecy == 4) pocz += spacje + "4-miesięczny" + Environment.NewLine; else if(SemestralnyIleMiesiecy==5) pocz += spacje + "5-miesięczny" + Environment.NewLine;
+                if (SemestralnyIleMiesiecy == 4) pocz += spacje + "4-miesięczny" + Environment.NewLine; else if (SemestralnyIleMiesiecy == 5) pocz += spacje + "5-miesięczny" + Environment.NewLine;
+                pocz = pocz + spacje + "ważny we WSZYSTKIE DNI TYGODNIA," + DataDzialaniaSemestralnego+Environment.NewLine;                
                 if (Rodzaj_ulgi == 0) pocz = pocz + spacje + "ZWYKŁY, "; else if(Rodzaj_ulgi==1) pocz = pocz + spacje + "ULGOWY, ";
                 
             }
@@ -1249,8 +1268,23 @@ namespace Projekt_Wizualizacja
         //przyciski
         private void panelOkresowe_b_30dni_Click(object sender, EventArgs e)
         {
+            if (bilet==3) //to znaczy że jeszcze nie zostal wybrany wczesniej
+            {
+                Kalendarz kalendarz30Dni = new Kalendarz();
+                kalendarz30Dni.ShowDialog();
+                AktualnieWybranaData = kalendarz30Dni.AktualnieWybranaData;
+                Okresowy30dniTekst = kalendarz30Dni.Dni30Tekst;
+            }
+            else
+            {
+                Kalendarz kalendarz30Dni = new Kalendarz(AktualnieWybranaData);
+                kalendarz30Dni.ShowDialog();
+                AktualnieWybranaData = kalendarz30Dni.AktualnieWybranaData;
+                Okresowy30dniTekst = kalendarz30Dni.Dni30Tekst;
+            }
             bilet = 0;
             MiesieczneObslugaKontrolek();
+           
         }
         private void panelOkresowe_b_mies_Click(object sender, EventArgs e)
         {
@@ -1762,7 +1796,7 @@ namespace Projekt_Wizualizacja
                 tb_NLeft.Text = ValueStorage2[tb_NLeft];
                 tb_ULeft.Text = ValueStorage2[tb_ULeft];
                 Flag = 4;
-                pKoniecWstecz_b_Wstecz.Visible = true;
+                //pKoniecWstecz_b_Wstecz.Visible = true;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
                 return;
@@ -1775,7 +1809,7 @@ namespace Projekt_Wizualizacja
                 tb_NLeft.Text = ValueStorage[tb_NLeft];
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
                 Flag = 3;
-                pKoniecWstecz_b_Wstecz.Visible = false;
+                //pKoniecWstecz_b_Wstecz.Visible = false;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
                 return;

@@ -15,7 +15,27 @@ namespace Projekt_Wizualizacja
         public Kalendarz()
         {
             InitializeComponent();
+            ObslugaKalendarza();
         }
+
+        public Kalendarz(DateTime AktualnieWybrany)
+        {
+            InitializeComponent();
+            ObslugaKalendarza();
+            Calendar.SelectionStart = AktualnieWybrany;
+            Calendar.SelectionEnd = AktualnieWybrany;
+
+            l_Od.Text = Convert.ToString(AktualnieWybrany);
+
+            int day = Convert.ToInt32(String.Format("{0:dd}", AktualnieWybrany).TrimStart('0'));
+            int month = Convert.ToInt32((String.Format("{0:MM}", AktualnieWybrany).TrimStart('0')));
+            int year = Convert.ToInt32((String.Format("{0:yyyy}", AktualnieWybrany).TrimStart('0')));
+            l_Do.Text = Convert.ToString(GetEndDate(year, month, day, 30));
+        }
+        //zmienne
+        public string Dni30Tekst;
+        public DateTime AktualnieWybranaData;
+
 
 
         private void GetCurrentTime()
@@ -42,7 +62,7 @@ namespace Projekt_Wizualizacja
             this.StartPosition = FormStartPosition.Manual;
             this.Top = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
-            ObslugaKalendarza();
+            //ObslugaKalendarza();
         }
 
         int ZnajdzIleDniMaMiesiac(int year, int month)
@@ -63,6 +83,7 @@ namespace Projekt_Wizualizacja
             return 0;
         }
 
+        //oblsuguje kalendarz, le dni ma byc pokazanych w kalendarzu
         private void ObslugaKalendarza()
         {
             DateTime thisDay = DateTime.Now; //pobiera aktualna date
@@ -76,9 +97,60 @@ namespace Projekt_Wizualizacja
             DateTime LastDay = new DateTime(Year, Month+1, (Day+29) % ZnajdzIleDniMaMiesiac(Year,Month));
             Calendar.TodayDate = FirstDay;
             Calendar.MinDate = FirstDay;
-            Calendar.MaxDate = LastDay;     
-            
+            Calendar.MaxDate = LastDay;               
         }
 
+        //metoda dajaca jako wynik date o number dni pozniej
+        private DateTime GetEndDate(int year, int month, int day, int number)
+        {
+            DateTime lastDay = new DateTime(2018,1,10);
+            //DateTime LastDay = new DateTime(Year, Month + 1, (Day + 29) % ZnajdzIleDniMaMiesiac(Year, Month));
+            int IloscDniMiesiaca = ZnajdzIleDniMaMiesiac(year, month);
+            if (day+number<=IloscDniMiesiaca)
+            {
+                lastDay = new DateTime(year, month, (day + number));
+            }
+            else
+            {
+                try
+                {
+                    lastDay = new DateTime(year, month + 1, (day + number) - (ZnajdzIleDniMaMiesiac(year, month)));
+                }
+                catch (Exception)
+                {
+                    //luty
+                    lastDay = new DateTime(year, month + 2, (day + number) - (ZnajdzIleDniMaMiesiac(year, month)+ZnajdzIleDniMaMiesiac(year,month+1)));
+                }
+            }
+
+            return lastDay;
+        }
+
+        private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        //metoda na klikniecie
+        private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            //Calendar.SelectionStart
+            AktualnieWybranaData = Calendar.SelectionStart;
+            int day = Convert.ToInt32(String.Format("{0:dd}", AktualnieWybranaData).TrimStart('0'));
+            int month = Convert.ToInt32((String.Format("{0:MM}", AktualnieWybranaData).TrimStart('0')));
+            int year = Convert.ToInt32((String.Format("{0:yyyy}", AktualnieWybranaData).TrimStart('0')));
+
+            l_Od.Text = AktualnieWybranaData.ToString("dd.MM.yyyy");
+            l_Do.Text = GetEndDate(year, month, day, 30).ToString("dd.MM.yyyy");
+
+            Dni30Tekst = "od "+l_Od.Text + " do " + l_Do.Text;
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
