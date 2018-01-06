@@ -233,6 +233,26 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_wstecz {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_wstecz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_ZAKOŃCZ {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_ZAKOŃCZ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thJ7T8ZGJ0 {
             get {
                 object obj = ResourceManager.GetObject("thJ7T8ZGJ0", resourceCulture);

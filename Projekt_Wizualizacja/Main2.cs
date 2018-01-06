@@ -75,11 +75,13 @@ namespace Projekt_Wizualizacja
         //static string KolKom24 = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów";
         static string KolKom24All = "Bilet metropolitalny 24-godzinny kolejowo-komunalny wszystkich organizatorów";
         static string KolKom72 = "Bilet metropolitalny 72-godzinny kolejowo-komunalny wszystkich organizatorów";
-        private string KolKom24 = null;
+        static string KolKom24GDY = "Bilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów: ZKM GDYNIA oraz pociągów SKM i PR";
+        static string KolKom24GDA = "Bilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów: ZTM GDAŃSK oraz pociągów SKM i PR";
+        static string KolKom24WEJ = "Bilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów: MZK WEJHEROWO oraz pociągów SKM i PR";
         #endregion
         #endregion
 
-#region Metody
+        #region Metody
         private void UsuwanieWartosci()
         {
             pJedno_TekstDoTB = new string[4] { "", "", "", "" };
@@ -167,7 +169,7 @@ namespace Projekt_Wizualizacja
             tb_NRight.Text = "0";
             tb_URight.Text = "0";
 
-            tb_Price.Text = "0";
+            tb_Price.Text = "0,00 zł";
             pJedno_tb_Podsumowanie.Text = null;
             try
             {
@@ -242,9 +244,16 @@ namespace Projekt_Wizualizacja
             }
             else if (Flag == 5)
             {
-                pJedno_M_T.Text = "Bilet metropolitarny kolejowo-komunalny na wszystkich organizatorów.";
-                pJedno_R_T.Text = "Bilet metropolitarny kolejowo-komunalny 72-godzinny na wszystkich organizatorów.";
-                pJedno_L_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów.";
+                pJedno_L_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na wszystkich organizatorów.";
+                pJedno_M_T.Text = "Bilet metropolitarny kolejowo-komunalny 72-godzinny na wszystkich organizatorów.";
+                pJedno_R_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów: ZKM GDYNIA oraz w pociągach SKM i PR.";
+                //return;
+            }
+            else if (Flag == 6)
+            {
+                pJedno_L_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów: ZTM GDAŃSK oraz w pociągach SKM i PR.";
+                pJedno_M_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów: MZK WEJHEROWO oraz w pociągach SKM i PR.";
+                pJedno_R_T.Text = "Bilet metropolitarny kolejowo-komunalny 24-godzinny na dwóch organizatorów: ZKM GDYNIA oraz w pociągach SKM i PR.";
                 //return;
             }
             pJedno_l_Left.Text = pJedno_L_T.Text;
@@ -267,41 +276,41 @@ namespace Projekt_Wizualizacja
                 panelJednorazowe.Visible = true;
                 panelKoniecWstecz.Visible = true;
 
-                if (Flag != 5)
-                {
-                    btn_Other.Visible = true;
-                    btn_MNLeft.Visible = true;
-                    btn_PNLeft.Visible = true;
-                    btn_MULeft.Visible = true;
-                    btn_PULeft.Visible = true;
-                    tb_NLeft.Visible = true;
-                    tb_ULeft.Visible = true;
-                    label12.Visible = true;
-                    label15.Visible = true;
-                    pJedno_L_T.Enabled = false;
-                    btn_RemoveKolKom24.Visible = false;
-                    pJedno_L_T.Height = 160;
-                    pJedno_L_T.BackColor = pJedno_M_T.BackColor;
-                    //btn_RemoveKolKom24.Enabled = false;
-                }
-                else
-                {
-                    btn_Other.Visible = false;
-                    btn_MNLeft.Visible = false;
-                    btn_PNLeft.Visible = false;
-                    btn_MULeft.Visible = false;
-                    btn_PULeft.Visible = false;
-                    tb_NLeft.Visible = false;
-                    tb_ULeft.Visible = false;
-                    label12.Visible = false;
-                    label15.Visible = false;
-                    //pJedno_L_T.Height = 316;
-                    btn_RemoveKolKom24.Visible = true;
-                    btn_RemoveKolKom24.Enabled = false;
-                    pJedno_L_T.Enabled = true;
-                    pJedno_L_T.Height = 225;
-                    pJedno_L_T.BackColor = Color.White;
-                }
+                //if (Flag != 5)
+                //{
+                //    btn_Other.Visible = true;
+                //    btn_MNLeft.Visible = true;
+                //    btn_PNLeft.Visible = true;
+                //    btn_MULeft.Visible = true;
+                //    btn_PULeft.Visible = true;
+                //    tb_NLeft.Visible = true;
+                //    tb_ULeft.Visible = true;
+                //    label12.Visible = true;
+                //    label15.Visible = true;
+                //    pJedno_L_T.Enabled = false;
+                //    btn_RemoveKolKom24.Visible = false;
+                //    pJedno_L_T.Height = 160;
+                //    pJedno_L_T.BackColor = pJedno_M_T.BackColor;
+                //    //btn_RemoveKolKom24.Enabled = false;
+                //}
+                //else
+                //{
+                //    btn_Other.Visible = false;
+                //    btn_MNLeft.Visible = false;
+                //    btn_PNLeft.Visible = false;
+                //    btn_MULeft.Visible = false;
+                //    btn_PULeft.Visible = false;
+                //    tb_NLeft.Visible = false;
+                //    tb_ULeft.Visible = false;
+                //    label12.Visible = false;
+                //    label15.Visible = false;
+                //    //pJedno_L_T.Height = 316;
+                //    btn_RemoveKolKom24.Visible = true;
+                //    btn_RemoveKolKom24.Enabled = false;
+                //    pJedno_L_T.Enabled = true;
+                //    pJedno_L_T.Height = 225;
+                //    pJedno_L_T.BackColor = Color.White;
+                //}
             }
             if (AktualneOkno == 6) //bilety miesieczne
             {
@@ -388,83 +397,37 @@ namespace Projekt_Wizualizacja
         void Komunalne1()
         {
             pJedno_TekstDoTB[1] = pJedno_OpisBiletuDoTB(KomBJP, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKomDJP);
-            ////jeden przejazd zwykły
-            //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString();
-            //}
-            //if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomBJP + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
-            //}
-            //if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomBJP + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomDJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomDJP / 2).ToString();
-            //}
-            
         }
         void Komunalne2()
         {
             pJedno_TekstDoTB[2] = pJedno_OpisBiletuDoTB(KomJPSpec, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKomNJP);
-            ////jeden przejazd zwykły
-            //if (tb_NLeft.Text != "0" && tb_ULeft.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString();
-            //}
-            //if (tb_ULeft.Text != "0" && tb_NLeft.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
-            //}
-            //if (tb_ULeft.Text != "0" && tb_NLeft.Text != "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += KomJPSpec + Normalny + tb_NLeft.Text + Cena + (Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKomNJP).ToString() + Ulgowy + tb_ULeft.Text + Cena + (Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKomNJP / 2).ToString();
-            //}            
         }
         void Komunalne2472()
         {
             pJedno_TekstDoTB[3] = pJedno_OpisBiletuDoTB(Kom24, tb_NMid.Text, tb_UMid.Text, ceny1.MetroKom24)+ pJedno_OpisBiletuDoTB(Kom72, tb_NRight.Text, tb_URight.Text, ceny1.MetroKom72);
-            //24h all
-            //if (tb_NMid.Text != "0" && tb_UMid.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString();
-            //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom24 + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
-            //}
-            //if (tb_UMid.Text != "0" && tb_NMid.Text != "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom24 + Normalny + tb_NMid.Text + Cena + (Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKom24).ToString() + Ulgowy + tb_UMid.Text + Cena + (Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKom24 / 2).ToString();
-            //}
-            ////72h
-            //if (tb_NRight.Text != "0" && tb_URight.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text == "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom72 + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
-            //}
-            //if (tb_URight.Text != "0" && tb_NRight.Text != "0")
-            //{
-            //    pJedno_tb_Podsumowanie.Text += Kom72 + Normalny + tb_NRight.Text + Cena + (Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKom72).ToString() + Ulgowy + tb_URight.Text + Cena + (Convert.ToInt32(tb_URight.Text) * ceny1.MetroKom72 / 2).ToString();
-            //}
         }
 
         //kolejowo komunalne
         void KolejowoKomunalne()
-        {
-            //24h dla dwóch przewoźników
-            pJedno_TekstDoTB[1] = "";
-            foreach (var item in KolKom24Storage)
-            {
-                pJedno_TekstDoTB[1] += item;
-            }           
+        {       
             //24h dla wszystkich przewoźników
-            pJedno_TekstDoTB[2] = pJedno_OpisBiletuDoTB(KolKom24All, tb_NMid.Text, tb_UMid.Text, ceny1.MetroKolKom24_All);
+            pJedno_TekstDoTB[2] = pJedno_OpisBiletuDoTB(KolKom24All, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKolKom24_All);
             
             //72h all przewoźnicy
-            pJedno_TekstDoTB[3] = pJedno_OpisBiletuDoTB(KolKom72, tb_NRight.Text, tb_URight.Text, ceny1.MetroKolKom72);            
+            pJedno_TekstDoTB[2] += pJedno_OpisBiletuDoTB(KolKom72, tb_NMid.Text, tb_UMid.Text, ceny1.MetroKolKom72);            
+        }
+        void KolejowoKomunalneGdynia()
+        {           
+            //24h dla 2 przewoznikow: Gdynia
+            pJedno_TekstDoTB[1] = pJedno_OpisBiletuDoTB(KolKom24GDY, tb_NRight.Text, tb_URight.Text, ceny1.MetroKolKom24_2);            
+        }
+        void KolejowoKomunalne2()
+        {
+            //24h dla 2 przewoznikow: Gdańsk
+            pJedno_TekstDoTB[3] = pJedno_OpisBiletuDoTB(KolKom24GDA, tb_NLeft.Text, tb_ULeft.Text, ceny1.MetroKolKom24_2);
+
+            //24h dla 2 przewoznikow: Wejeherowo
+            pJedno_TekstDoTB[3] += pJedno_OpisBiletuDoTB(KolKom24WEJ, tb_NMid.Text, tb_UMid.Text, ceny1.MetroKolKom24_2);
         }
         #endregion
         
@@ -510,8 +473,17 @@ namespace Projekt_Wizualizacja
                     }
                 case 5:
                     {
-                        CheckRemoveButton();
                         KolejowoKomunalne();
+                        KolejowoKomunalneGdynia();
+
+                        GetPrice();
+                        break;
+                    }
+                case 6:
+                    {
+                        KolejowoKomunalne2();
+                        KolejowoKomunalneGdynia();
+
                         GetPrice();
                         break;
                     }
@@ -597,18 +569,44 @@ namespace Projekt_Wizualizacja
                     }
                 case 5:
                     {
-                        foreach (var item in KolKom24PricesNorm)
-                        {
-                            price += item;
-                        }
-                        foreach (var item in KolKom24PricesUlg)
-                        {
-                            price += item;
-                        }
-                        price += Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_All;
-                        price += Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_All / 2;
-                        price += Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom72;
-                        price += Convert.ToInt32(tb_URight.Text) * ceny1.MetroKolKom72 / 2;
+
+                        //2 strona
+                        price += Convert.ToInt32(ValueStorage2[tb_NLeft]) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(ValueStorage2[tb_ULeft]) * ceny1.MetroKolKom24_2 / 2;
+
+                        price += Convert.ToInt32(ValueStorage2[tb_NMid]) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(ValueStorage2[tb_UMid]) * ceny1.MetroKolKom24_2 / 2;
+
+                        //1 strona
+
+                        price += Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_All;
+                        price += Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKolKom24_All / 2;
+                        price += Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom72;
+                        price += Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom72 / 2;
+
+                        price += Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(tb_URight.Text) * ceny1.MetroKolKom24_2 / 2;
+
+                        tb_Price.Text = String.Format("{0:0.00} zł", price);
+                        break;
+
+                    }
+                case 6:
+                    {
+                        //z pierwszej strony
+                        price += Convert.ToInt32(ValueStorage[tb_NLeft]) * ceny1.MetroKolKom24_All;
+                        price += Convert.ToInt32(ValueStorage[tb_ULeft]) * ceny1.MetroKolKom24_All / 2;
+
+                        price += Convert.ToInt32(ValueStorage[tb_NMid]) * ceny1.MetroKolKom72;
+                        price += Convert.ToInt32(ValueStorage[tb_UMid]) * ceny1.MetroKolKom72 / 2;
+
+                        //z drugiej strony
+                        price += Convert.ToInt32(tb_NLeft.Text) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(tb_ULeft.Text) * ceny1.MetroKolKom24_2 / 2;
+                        price += Convert.ToInt32(tb_NMid.Text) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(tb_UMid.Text) * ceny1.MetroKolKom24_2 / 2;
+                        price += Convert.ToInt32(tb_NRight.Text) * ceny1.MetroKolKom24_2;
+                        price += Convert.ToInt32(tb_URight.Text) * ceny1.MetroKolKom24_2 / 2;
                         tb_Price.Text = String.Format("{0:0.00} zł", price);
                         break;
 
@@ -618,7 +616,7 @@ namespace Projekt_Wizualizacja
             }
         }
 
-        #endregion
+        #endregion 
 
 #region Programowanie kontrolek
 
@@ -706,12 +704,12 @@ namespace Projekt_Wizualizacja
                 tekstLabel += "jednorazowe ";
                 if (Flag==1) //czyli pierwsza zakladka
                 {
-                    tekstLabel += "dzienne";
+                    //tekstLabel += "dzienne";
                     tekstButton += "(NOCNE I SPECJALNE)";
                 }
                 if (Flag == 2) //czyli druga zakladka
                 {
-                    tekstLabel += "nocne";
+                    //tekstLabel += "nocne";
                     tekstButton += "(DZIENNE)";
                 }
             }
@@ -720,30 +718,32 @@ namespace Projekt_Wizualizacja
                 tekstLabel += "metropolitarne komunalne ";
                 if (Flag == 3) //czyli pierwsza zakladka
                 {
-                    tekstLabel += "dzienne";
+                    //tekstLabel += "dzienne";
                     tekstButton += "(NOCNE)";
                 }
                 if (Flag == 4) //czyli druga zakladka
                 {
-                    tekstLabel += "nocne";
+                    //tekstLabel += "nocne";
                     tekstButton += "(DZIENNE)";
                 }
             }
             else if (Flag == 5 || Flag == 6)
             {
                 tekstLabel += "metropolitarne komunalno-kolejowe ";
-                if (Flag == 3) //czyli pierwsza zakladka
+                if (Flag == 5) //czyli pierwsza zakladka
                 {
-                    tekstLabel += "dzienne";
-                    tekstButton += "(NOCNE)";
+                    //tekstLabel += "czasowe na wszytkie linie oraz na linię Gdynia + SKM i PR";
+                    tekstButton += "(NA DWÓCH PRZEWOŹNIKÓW)";
                 }
-                if (Flag == 4) //czyli druga zakladka
+                if (Flag == 6) //czyli druga zakladka
                 {
-                    tekstLabel += "nocne";
-                    tekstButton += "(DZIENNE)";
+                    //tekstLabel += "na dwóch przewoźników";
+                    tekstButton += "(NA WSZYSTKIE LINIE ORAZ NA LINIĘ GDYNIA + SKM i PR)";
                 }
             }
-            btn_Other.Text = tekstButton;
+            tekstLabel = tekstLabel.ToUpper();
+            tekstButton = "INNE BILETY";
+            btn_Other.Text = tekstButton.ToUpper();
             pJedno_l_NazwaZakladki.Text = tekstLabel;
         }
 
@@ -754,6 +754,7 @@ namespace Projekt_Wizualizacja
             MenuGlowneZmianaTextuButtonow();
             panelJednorazowe.BringToFront();                      
             AktualneOkno = 1;
+            
             PrzesuwaniePaneli();
         }
 
@@ -798,12 +799,10 @@ namespace Projekt_Wizualizacja
 
         private void panelMenu_b_BiletyMetroKolKom_Click(object sender, EventArgs e)
         {
-            /*Tutaj wrzucenie obrazków*/
-
-            //panelJednorazowe.BringToFront();
-            /* Tutaj wyciągnięcie Summary*/
-            panelJednorazowe.BringToFront();
             Flag = 5;
+            MenuGlowneZmianaTextuButtonow();
+            panelJednorazowe.BringToFront();
+            
             AktualneOkno = 1;
             PrzesuwaniePaneli();
         }
@@ -1790,7 +1789,7 @@ namespace Projekt_Wizualizacja
             }
             if (Flag == 3)  //panel 1 dla komunalnych
             {
-                btn_Other.Text = "Bilety DZIENNE";
+                //btn_Other.Text = "Bilety DZIENNE";
                 ValueStorage[tb_NLeft] = tb_NLeft.Text;
                 ValueStorage[tb_ULeft] = tb_ULeft.Text;
                 tb_NLeft.Text = ValueStorage2[tb_NLeft];
@@ -1803,12 +1802,46 @@ namespace Projekt_Wizualizacja
             }
             if (Flag == 4)  //panel 2 dla komunalnych
             {
-                btn_Other.Text = "Bilety NOCNE";
+                //btn_Other.Text = "Bilety NOCNE";
                 ValueStorage2[tb_NLeft] = tb_NLeft.Text;
                 ValueStorage2[tb_ULeft] = tb_ULeft.Text;
                 tb_NLeft.Text = ValueStorage[tb_NLeft];
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
                 Flag = 3;
+                //pKoniecWstecz_b_Wstecz.Visible = false;
+                RefreshSummaryRTB();
+                ZmianaTextuBilety();
+                return;
+            }
+            if (Flag == 5)  //panel 1 dla komunalnych-kolejowych
+            {
+                //btn_Other.Text = "Bilety DZIENNE";
+                ValueStorage[tb_NLeft] = tb_NLeft.Text;
+                ValueStorage[tb_ULeft] = tb_ULeft.Text;
+                ValueStorage[tb_NMid] = tb_NMid.Text;
+                ValueStorage[tb_UMid] = tb_UMid.Text;
+                tb_NLeft.Text = ValueStorage2[tb_NLeft];
+                tb_ULeft.Text = ValueStorage2[tb_ULeft];
+                tb_NMid.Text = ValueStorage2[tb_NMid];
+                tb_UMid.Text = ValueStorage2[tb_UMid];
+                Flag = 6;
+                //pKoniecWstecz_b_Wstecz.Visible = true;
+                RefreshSummaryRTB();
+                ZmianaTextuBilety();
+                return;
+            }
+            if (Flag == 6)  //panel 2 dla komunalnych-kolejowych
+            {
+                //btn_Other.Text = "Bilety NOCNE";
+                ValueStorage2[tb_NLeft] = tb_NLeft.Text;
+                ValueStorage2[tb_ULeft] = tb_ULeft.Text;
+                ValueStorage2[tb_NMid] = tb_NMid.Text;
+                ValueStorage2[tb_UMid] = tb_UMid.Text;
+                tb_NLeft.Text = ValueStorage[tb_NLeft];
+                tb_ULeft.Text = ValueStorage[tb_ULeft];
+                tb_NMid.Text = ValueStorage[tb_NMid];
+                tb_UMid.Text = ValueStorage[tb_UMid];
+                Flag = 5;
                 //pKoniecWstecz_b_Wstecz.Visible = false;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -1943,6 +1976,7 @@ namespace Projekt_Wizualizacja
                     ResetValuesOkresowe();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
+                    UsuwanieWartosci();
                 }
                 podsumowanie.Close();
                 //podsumowanie.Visible = true;
@@ -1954,27 +1988,27 @@ namespace Projekt_Wizualizacja
             }
         }
 
-        private void pJedno_L_T_Click(object sender, EventArgs e)
-        {
-            if (Flag == 5)
-            {
-                KolKomOrg pop = new KolKomOrg();
-                pop.ShowDialog();
-                if (pop.SendText)
-                {
-                    //KolKom24 = pop.TextToSend;
-                    KolKom24 = pJedno_OpisBiletuDoTB(pop.Poczatek, pop.QuantN, pop.QuantU, ceny1.MetroKolKom24_2);
-                    KolKom24Storage.Add(KolKom24);
-                    KolKom24StorageShort.Add("Przewoźnicy: " + pop.T1 + ", " + pop.T2 + "; Norm: " + pop.QuantN + ", " + String.Format("{0:0.00} zł", pop.PriceNorm) + "; Ulg: " + pop.QuantU + ", " + String.Format("{0:0.00} zł", pop.PriceUlg));
-                    KolKom24PricesNorm.Add(pop.PriceNorm);
-                    KolKom24PricesUlg.Add(pop.PriceUlg);
+        //private void pJedno_L_T_Click(object sender, EventArgs e)
+        //{
+        //    if (Flag == 5)
+        //    {
+        //        KolKomOrg pop = new KolKomOrg();
+        //        pop.ShowDialog();
+        //        if (pop.SendText)
+        //        {
+        //            //KolKom24 = pop.TextToSend;
+        //            KolKom24 = pJedno_OpisBiletuDoTB(pop.Poczatek, pop.QuantN, pop.QuantU, ceny1.MetroKolKom24_2);
+        //            KolKom24Storage.Add(KolKom24);
+        //            KolKom24StorageShort.Add("Przewoźnicy: " + pop.T1 + ", " + pop.T2 + "; Norm: " + pop.QuantN + ", " + String.Format("{0:0.00} zł", pop.PriceNorm) + "; Ulg: " + pop.QuantU + ", " + String.Format("{0:0.00} zł", pop.PriceUlg));
+        //            KolKom24PricesNorm.Add(pop.PriceNorm);
+        //            KolKom24PricesUlg.Add(pop.PriceUlg);
                     
-                    //RefreshSummaryRTB();
-                }
-                KolejowoKomunalne();
-                JednorazoweObslugaTB();
-            }
-        }
+        //            //RefreshSummaryRTB();
+        //        }
+        //        KolejowoKomunalne();
+        //        JednorazoweObslugaTB();
+        //    }
+        //}
         #endregion
 
 

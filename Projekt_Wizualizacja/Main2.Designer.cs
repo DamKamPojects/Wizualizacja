@@ -36,11 +36,8 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gb_WyborJezyka = new System.Windows.Forms.GroupBox();
-            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
             this.l_WyborJezyka = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gb_InneFunkcje = new System.Windows.Forms.GroupBox();
-            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
             this.panelMenu_b_RozkladJazdy = new System.Windows.Forms.Button();
             this.panelMenu_b_DoladowanieTelefonu = new System.Windows.Forms.Button();
             this.panelMenu_b_BiletyMiesieczne = new System.Windows.Forms.Button();
@@ -53,11 +50,9 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
-            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
-            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.panelOkresowe = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.pOkres_gb_RodzajBiletu = new System.Windows.Forms.GroupBox();
             this.panelOkresowe_b_ulgowy = new System.Windows.Forms.Button();
             this.panelOkresowe_b_zwykly = new System.Windows.Forms.Button();
@@ -67,6 +62,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelOkresowe_b_WszDni = new System.Windows.Forms.Button();
             this.pOkres_tb_TypBiletu = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panelOkresowe_b_okaziciela = new System.Windows.Forms.Button();
             this.panelOkresowe_b_imienny = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -112,54 +108,55 @@
             this.pJedno_b_Platnosc = new System.Windows.Forms.Button();
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.panelJednorazowe = new System.Windows.Forms.Panel();
-            this.pJedno_l_NazwaZakladki = new System.Windows.Forms.Label();
-            this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pJedno_R_T = new System.Windows.Forms.Button();
-            this.pJedno_L_T = new System.Windows.Forms.Button();
-            this.pJedno_M_T = new System.Windows.Forms.Button();
-            this.btn_Other = new System.Windows.Forms.Button();
-            this.tb_NMid = new System.Windows.Forms.TextBox();
-            this.tb_UMid = new System.Windows.Forms.TextBox();
-            this.tb_URight = new System.Windows.Forms.TextBox();
-            this.tb_NRight = new System.Windows.Forms.TextBox();
-            this.tb_ULeft = new System.Windows.Forms.TextBox();
-            this.tb_NLeft = new System.Windows.Forms.TextBox();
-            this.btn_PNLeft = new System.Windows.Forms.Button();
-            this.btn_MNLeft = new System.Windows.Forms.Button();
-            this.btn_MNMid = new System.Windows.Forms.Button();
-            this.btn_MUMid = new System.Windows.Forms.Button();
-            this.btn_MURight = new System.Windows.Forms.Button();
-            this.btn_MNRight = new System.Windows.Forms.Button();
-            this.btn_PNMid = new System.Windows.Forms.Button();
-            this.btn_PUMid = new System.Windows.Forms.Button();
-            this.btn_PURight = new System.Windows.Forms.Button();
-            this.btn_PNRight = new System.Windows.Forms.Button();
-            this.btn_PULeft = new System.Windows.Forms.Button();
-            this.btn_MULeft = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
-            this.pJedno_l_Left = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pJedno_l_Mid = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pJedno_l_Right = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.tb_NRight = new System.Windows.Forms.TextBox();
+            this.tb_URight = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pJedno_l_Mid = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tb_NMid = new System.Windows.Forms.TextBox();
+            this.tb_UMid = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pJedno_l_Left = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tb_ULeft = new System.Windows.Forms.TextBox();
+            this.tb_NLeft = new System.Windows.Forms.TextBox();
+            this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.pJedno_R_T = new System.Windows.Forms.Button();
+            this.pJedno_L_T = new System.Windows.Forms.Button();
+            this.pJedno_M_T = new System.Windows.Forms.Button();
+            this.btn_Other = new System.Windows.Forms.Button();
+            this.pJedno_l_NazwaZakladki = new System.Windows.Forms.Label();
+            this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
+            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
+            this.btn_MNRight = new System.Windows.Forms.Button();
+            this.btn_PNRight = new System.Windows.Forms.Button();
+            this.btn_MURight = new System.Windows.Forms.Button();
+            this.btn_PURight = new System.Windows.Forms.Button();
+            this.btn_MNMid = new System.Windows.Forms.Button();
+            this.btn_PNMid = new System.Windows.Forms.Button();
+            this.btn_MUMid = new System.Windows.Forms.Button();
+            this.btn_PUMid = new System.Windows.Forms.Button();
+            this.btn_PNLeft = new System.Windows.Forms.Button();
+            this.btn_MNLeft = new System.Windows.Forms.Button();
+            this.btn_PULeft = new System.Windows.Forms.Button();
+            this.btn_MULeft = new System.Windows.Forms.Button();
+            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gb_InneFunkcje.SuspendLayout();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKoniecWstecz.SuspendLayout();
             this.panelOkresowe.SuspendLayout();
             this.pOkres_gb_RodzajBiletu.SuspendLayout();
@@ -172,9 +169,12 @@
             this.pSemes_gb_RodzajeBiletow.SuspendLayout();
             this.pSemes_gb_IleMies.SuspendLayout();
             this.panelJednorazowe.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_postep
@@ -230,25 +230,11 @@
             this.gb_WyborJezyka.Name = "gb_WyborJezyka";
             this.gb_WyborJezyka.TabStop = false;
             // 
-            // pb_jezykPOL
-            // 
-            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
-            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
-            this.pb_jezykPOL.Name = "pb_jezykPOL";
-            this.pb_jezykPOL.TabStop = false;
-            // 
             // l_WyborJezyka
             // 
             resources.ApplyResources(this.l_WyborJezyka, "l_WyborJezyka");
             this.l_WyborJezyka.ForeColor = System.Drawing.Color.SeaShell;
             this.l_WyborJezyka.Name = "l_WyborJezyka";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
             // 
             // gb_InneFunkcje
             // 
@@ -258,15 +244,6 @@
             resources.ApplyResources(this.gb_InneFunkcje, "gb_InneFunkcje");
             this.gb_InneFunkcje.Name = "gb_InneFunkcje";
             this.gb_InneFunkcje.TabStop = false;
-            // 
-            // panelMenu_b_JakDojade
-            // 
-            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
-            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
-            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
-            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
-            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
-            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
             // 
             // panelMenu_b_RozkladJazdy
             // 
@@ -362,38 +339,12 @@
             this.l_data.ForeColor = System.Drawing.Color.SeaShell;
             this.l_data.Name = "l_data";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.ZKM_Gdynia;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // panelKoniecWstecz
             // 
             this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Wstecz);
             this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Koniec);
             resources.ApplyResources(this.panelKoniecWstecz, "panelKoniecWstecz");
             this.panelKoniecWstecz.Name = "panelKoniecWstecz";
-            // 
-            // pKoniecWstecz_b_Wstecz
-            // 
-            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
-            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.wstecz;
-            resources.ApplyResources(this.pKoniecWstecz_b_Wstecz, "pKoniecWstecz_b_Wstecz");
-            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
-            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
-            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
-            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
-            // 
-            // pKoniecWstecz_b_Koniec
-            // 
-            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
-            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.koniec1;
-            resources.ApplyResources(this.pKoniecWstecz_b_Koniec, "pKoniecWstecz_b_Koniec");
-            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
-            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
-            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
             // 
             // panelOkresowe
             // 
@@ -412,6 +363,12 @@
             this.panelOkresowe.Controls.Add(this.panelOkresowe_gb_RodzajeBiletow);
             resources.ApplyResources(this.panelOkresowe, "panelOkresowe");
             this.panelOkresowe.Name = "panelOkresowe";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Name = "label18";
             // 
             // pOkres_gb_RodzajBiletu
             // 
@@ -487,6 +444,12 @@
             resources.ApplyResources(this.pOkres_tb_TypBiletu, "pOkres_tb_TypBiletu");
             this.pOkres_tb_TypBiletu.Name = "pOkres_tb_TypBiletu";
             this.pOkres_tb_TypBiletu.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
             // 
             // panelOkresowe_b_okaziciela
             // 
@@ -855,85 +818,38 @@
             resources.ApplyResources(this.panelJednorazowe, "panelJednorazowe");
             this.panelJednorazowe.Name = "panelJednorazowe";
             // 
-            // pJedno_l_NazwaZakladki
+            // groupBox4
             // 
-            resources.ApplyResources(this.pJedno_l_NazwaZakladki, "pJedno_l_NazwaZakladki");
-            this.pJedno_l_NazwaZakladki.Name = "pJedno_l_NazwaZakladki";
+            this.groupBox4.Controls.Add(this.pJedno_l_Right);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.btn_MNRight);
+            this.groupBox4.Controls.Add(this.tb_NRight);
+            this.groupBox4.Controls.Add(this.btn_PNRight);
+            this.groupBox4.Controls.Add(this.btn_MURight);
+            this.groupBox4.Controls.Add(this.tb_URight);
+            this.groupBox4.Controls.Add(this.btn_PURight);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
             // 
-            // pJedno_tb_Podsumowanie
+            // pJedno_l_Right
             // 
-            resources.ApplyResources(this.pJedno_tb_Podsumowanie, "pJedno_tb_Podsumowanie");
-            this.pJedno_tb_Podsumowanie.Name = "pJedno_tb_Podsumowanie";
+            resources.ApplyResources(this.pJedno_l_Right, "pJedno_l_Right");
+            this.pJedno_l_Right.ForeColor = System.Drawing.Color.White;
+            this.pJedno_l_Right.Name = "pJedno_l_Right";
             // 
-            // label19
+            // label16
             // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Name = "label19";
+            this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
             // 
-            // label15
+            // label20
             // 
-            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // label12
-            // 
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // pJedno_R_T
-            // 
-            this.pJedno_R_T.BackColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.pJedno_R_T, "pJedno_R_T");
-            this.pJedno_R_T.ForeColor = System.Drawing.Color.Black;
-            this.pJedno_R_T.Name = "pJedno_R_T";
-            this.pJedno_R_T.UseVisualStyleBackColor = false;
-            // 
-            // pJedno_L_T
-            // 
-            this.pJedno_L_T.BackColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.pJedno_L_T, "pJedno_L_T");
-            this.pJedno_L_T.ForeColor = System.Drawing.Color.Black;
-            this.pJedno_L_T.Name = "pJedno_L_T";
-            this.pJedno_L_T.UseVisualStyleBackColor = false;
-            this.pJedno_L_T.Click += new System.EventHandler(this.pJedno_L_T_Click);
-            // 
-            // pJedno_M_T
-            // 
-            this.pJedno_M_T.BackColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.pJedno_M_T, "pJedno_M_T");
-            this.pJedno_M_T.ForeColor = System.Drawing.Color.Black;
-            this.pJedno_M_T.Name = "pJedno_M_T";
-            this.pJedno_M_T.UseVisualStyleBackColor = false;
-            // 
-            // btn_Other
-            // 
-            this.btn_Other.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_Other, "btn_Other");
-            this.btn_Other.ForeColor = System.Drawing.Color.Black;
-            this.btn_Other.Name = "btn_Other";
-            this.btn_Other.UseVisualStyleBackColor = false;
-            this.btn_Other.Click += new System.EventHandler(this.btn_Other_Click);
-            // 
-            // tb_NMid
-            // 
-            resources.ApplyResources(this.tb_NMid, "tb_NMid");
-            this.tb_NMid.Name = "tb_NMid";
-            this.tb_NMid.Click += new System.EventHandler(this.tb_NGodz_Click);
-            // 
-            // tb_UMid
-            // 
-            resources.ApplyResources(this.tb_UMid, "tb_UMid");
-            this.tb_UMid.Name = "tb_UMid";
-            this.tb_UMid.Click += new System.EventHandler(this.tb_UGodz_Click);
-            // 
-            // tb_URight
-            // 
-            resources.ApplyResources(this.tb_URight, "tb_URight");
-            this.tb_URight.Name = "tb_URight";
-            this.tb_URight.Click += new System.EventHandler(this.tb_U24_Click);
+            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
             // 
             // tb_NRight
             // 
@@ -941,157 +857,11 @@
             this.tb_NRight.Name = "tb_NRight";
             this.tb_NRight.Click += new System.EventHandler(this.tb_N24_Click);
             // 
-            // tb_ULeft
+            // tb_URight
             // 
-            resources.ApplyResources(this.tb_ULeft, "tb_ULeft");
-            this.tb_ULeft.Name = "tb_ULeft";
-            this.tb_ULeft.Click += new System.EventHandler(this.tb_UJedn_Click);
-            // 
-            // tb_NLeft
-            // 
-            this.tb_NLeft.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.tb_NLeft, "tb_NLeft");
-            this.tb_NLeft.Name = "tb_NLeft";
-            this.tb_NLeft.Click += new System.EventHandler(this.tb_NJedn_Click);
-            // 
-            // btn_PNLeft
-            // 
-            resources.ApplyResources(this.btn_PNLeft, "btn_PNLeft");
-            this.btn_PNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNLeft.Name = "btn_PNLeft";
-            this.btn_PNLeft.UseVisualStyleBackColor = true;
-            this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
-            // 
-            // btn_MNLeft
-            // 
-            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
-            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
-            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNLeft.Name = "btn_MNLeft";
-            this.btn_MNLeft.UseVisualStyleBackColor = true;
-            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
-            // 
-            // btn_MNMid
-            // 
-            resources.ApplyResources(this.btn_MNMid, "btn_MNMid");
-            this.btn_MNMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNMid.Name = "btn_MNMid";
-            this.btn_MNMid.UseVisualStyleBackColor = true;
-            this.btn_MNMid.Click += new System.EventHandler(this.btn_MNGodz_Click);
-            // 
-            // btn_MUMid
-            // 
-            resources.ApplyResources(this.btn_MUMid, "btn_MUMid");
-            this.btn_MUMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_MUMid.Name = "btn_MUMid";
-            this.btn_MUMid.UseVisualStyleBackColor = true;
-            this.btn_MUMid.Click += new System.EventHandler(this.btn_MUGodz_Click);
-            // 
-            // btn_MURight
-            // 
-            resources.ApplyResources(this.btn_MURight, "btn_MURight");
-            this.btn_MURight.ForeColor = System.Drawing.Color.Black;
-            this.btn_MURight.Name = "btn_MURight";
-            this.btn_MURight.UseVisualStyleBackColor = true;
-            this.btn_MURight.Click += new System.EventHandler(this.btn_MU24_Click);
-            // 
-            // btn_MNRight
-            // 
-            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
-            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNRight.Name = "btn_MNRight";
-            this.btn_MNRight.UseVisualStyleBackColor = true;
-            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
-            // 
-            // btn_PNMid
-            // 
-            resources.ApplyResources(this.btn_PNMid, "btn_PNMid");
-            this.btn_PNMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNMid.Name = "btn_PNMid";
-            this.btn_PNMid.UseVisualStyleBackColor = true;
-            this.btn_PNMid.Click += new System.EventHandler(this.btn_PNGodz_Click);
-            // 
-            // btn_PUMid
-            // 
-            resources.ApplyResources(this.btn_PUMid, "btn_PUMid");
-            this.btn_PUMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_PUMid.Name = "btn_PUMid";
-            this.btn_PUMid.UseVisualStyleBackColor = true;
-            this.btn_PUMid.Click += new System.EventHandler(this.btn_PUGodz_Click);
-            // 
-            // btn_PURight
-            // 
-            resources.ApplyResources(this.btn_PURight, "btn_PURight");
-            this.btn_PURight.ForeColor = System.Drawing.Color.Black;
-            this.btn_PURight.Name = "btn_PURight";
-            this.btn_PURight.UseVisualStyleBackColor = true;
-            this.btn_PURight.Click += new System.EventHandler(this.btn_PU24_Click);
-            // 
-            // btn_PNRight
-            // 
-            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
-            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNRight.Name = "btn_PNRight";
-            this.btn_PNRight.UseVisualStyleBackColor = true;
-            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
-            // 
-            // btn_PULeft
-            // 
-            resources.ApplyResources(this.btn_PULeft, "btn_PULeft");
-            this.btn_PULeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_PULeft.Name = "btn_PULeft";
-            this.btn_PULeft.UseVisualStyleBackColor = true;
-            this.btn_PULeft.Click += new System.EventHandler(this.btn_PUJedn_Click);
-            // 
-            // btn_MULeft
-            // 
-            resources.ApplyResources(this.btn_MULeft, "btn_MULeft");
-            this.btn_MULeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MULeft.Name = "btn_MULeft";
-            this.btn_MULeft.UseVisualStyleBackColor = true;
-            this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Name = "label18";
-            // 
-            // groupBox3
-            // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // btn_RemoveKolKom24
-            // 
-            this.btn_RemoveKolKom24.BackColor = System.Drawing.Color.Silver;
-            this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
-            this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
-            this.btn_RemoveKolKom24.UseVisualStyleBackColor = false;
-            this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
-            // 
-            // pJedno_l_Left
-            // 
-            resources.ApplyResources(this.pJedno_l_Left, "pJedno_l_Left");
-            this.pJedno_l_Left.ForeColor = System.Drawing.Color.White;
-            this.pJedno_l_Left.Name = "pJedno_l_Left";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pJedno_l_Left);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.tb_ULeft);
-            this.groupBox1.Controls.Add(this.tb_NLeft);
-            this.groupBox1.Controls.Add(this.btn_PNLeft);
-            this.groupBox1.Controls.Add(this.btn_MNLeft);
-            this.groupBox1.Controls.Add(this.btn_PULeft);
-            this.groupBox1.Controls.Add(this.btn_MULeft);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            resources.ApplyResources(this.tb_URight, "tb_URight");
+            this.tb_URight.Name = "tb_URight";
+            this.tb_URight.Click += new System.EventHandler(this.tb_U24_Click);
             // 
             // groupBox2
             // 
@@ -1126,38 +896,267 @@
             resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
             // 
-            // groupBox4
+            // tb_NMid
             // 
-            this.groupBox4.Controls.Add(this.pJedno_l_Right);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.btn_MNRight);
-            this.groupBox4.Controls.Add(this.tb_NRight);
-            this.groupBox4.Controls.Add(this.btn_PNRight);
-            this.groupBox4.Controls.Add(this.btn_MURight);
-            this.groupBox4.Controls.Add(this.tb_URight);
-            this.groupBox4.Controls.Add(this.btn_PURight);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
+            resources.ApplyResources(this.tb_NMid, "tb_NMid");
+            this.tb_NMid.Name = "tb_NMid";
+            this.tb_NMid.Click += new System.EventHandler(this.tb_NGodz_Click);
             // 
-            // pJedno_l_Right
+            // tb_UMid
             // 
-            resources.ApplyResources(this.pJedno_l_Right, "pJedno_l_Right");
-            this.pJedno_l_Right.ForeColor = System.Drawing.Color.White;
-            this.pJedno_l_Right.Name = "pJedno_l_Right";
+            resources.ApplyResources(this.tb_UMid, "tb_UMid");
+            this.tb_UMid.Name = "tb_UMid";
+            this.tb_UMid.Click += new System.EventHandler(this.tb_UGodz_Click);
             // 
-            // label16
+            // groupBox1
             // 
-            this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            this.groupBox1.Controls.Add(this.pJedno_l_Left);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.tb_ULeft);
+            this.groupBox1.Controls.Add(this.tb_NLeft);
+            this.groupBox1.Controls.Add(this.btn_PNLeft);
+            this.groupBox1.Controls.Add(this.btn_MNLeft);
+            this.groupBox1.Controls.Add(this.btn_PULeft);
+            this.groupBox1.Controls.Add(this.btn_MULeft);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
             // 
-            // label20
+            // pJedno_l_Left
             // 
-            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
+            resources.ApplyResources(this.pJedno_l_Left, "pJedno_l_Left");
+            this.pJedno_l_Left.ForeColor = System.Drawing.Color.White;
+            this.pJedno_l_Left.Name = "pJedno_l_Left";
+            // 
+            // label15
+            // 
+            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // label12
+            // 
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // tb_ULeft
+            // 
+            resources.ApplyResources(this.tb_ULeft, "tb_ULeft");
+            this.tb_ULeft.Name = "tb_ULeft";
+            this.tb_ULeft.Click += new System.EventHandler(this.tb_UJedn_Click);
+            // 
+            // tb_NLeft
+            // 
+            this.tb_NLeft.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.tb_NLeft, "tb_NLeft");
+            this.tb_NLeft.Name = "tb_NLeft";
+            this.tb_NLeft.Click += new System.EventHandler(this.tb_NJedn_Click);
+            // 
+            // pJedno_tb_Podsumowanie
+            // 
+            resources.ApplyResources(this.pJedno_tb_Podsumowanie, "pJedno_tb_Podsumowanie");
+            this.pJedno_tb_Podsumowanie.Name = "pJedno_tb_Podsumowanie";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label19.Name = "label19";
+            // 
+            // pJedno_R_T
+            // 
+            this.pJedno_R_T.BackColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.pJedno_R_T, "pJedno_R_T");
+            this.pJedno_R_T.ForeColor = System.Drawing.Color.Black;
+            this.pJedno_R_T.Name = "pJedno_R_T";
+            this.pJedno_R_T.UseVisualStyleBackColor = false;
+            // 
+            // pJedno_L_T
+            // 
+            this.pJedno_L_T.BackColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.pJedno_L_T, "pJedno_L_T");
+            this.pJedno_L_T.ForeColor = System.Drawing.Color.Black;
+            this.pJedno_L_T.Name = "pJedno_L_T";
+            this.pJedno_L_T.UseVisualStyleBackColor = false;
+            // 
+            // pJedno_M_T
+            // 
+            this.pJedno_M_T.BackColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.pJedno_M_T, "pJedno_M_T");
+            this.pJedno_M_T.ForeColor = System.Drawing.Color.Black;
+            this.pJedno_M_T.Name = "pJedno_M_T";
+            this.pJedno_M_T.UseVisualStyleBackColor = false;
+            // 
+            // btn_Other
+            // 
+            this.btn_Other.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btn_Other, "btn_Other");
+            this.btn_Other.ForeColor = System.Drawing.Color.Black;
+            this.btn_Other.Name = "btn_Other";
+            this.btn_Other.UseVisualStyleBackColor = false;
+            this.btn_Other.Click += new System.EventHandler(this.btn_Other_Click);
+            // 
+            // pJedno_l_NazwaZakladki
+            // 
+            resources.ApplyResources(this.pJedno_l_NazwaZakladki, "pJedno_l_NazwaZakladki");
+            this.pJedno_l_NazwaZakladki.Name = "pJedno_l_NazwaZakladki";
+            // 
+            // btn_RemoveKolKom24
+            // 
+            this.btn_RemoveKolKom24.BackColor = System.Drawing.Color.Silver;
+            this.btn_RemoveKolKom24.ForeColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.btn_RemoveKolKom24, "btn_RemoveKolKom24");
+            this.btn_RemoveKolKom24.Name = "btn_RemoveKolKom24";
+            this.btn_RemoveKolKom24.UseVisualStyleBackColor = false;
+            this.btn_RemoveKolKom24.Click += new System.EventHandler(this.btn_RemoveKolKom24_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.ZKM_Gdynia;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pKoniecWstecz_b_Wstecz
+            // 
+            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.Silver;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_wstecz;
+            resources.ApplyResources(this.pKoniecWstecz_b_Wstecz, "pKoniecWstecz_b_Wstecz");
+            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
+            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
+            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
+            // 
+            // pKoniecWstecz_b_Koniec
+            // 
+            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.Chocolate;
+            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_ZAKOŃCZ;
+            resources.ApplyResources(this.pKoniecWstecz_b_Koniec, "pKoniecWstecz_b_Koniec");
+            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
+            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
+            // 
+            // btn_MNRight
+            // 
+            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
+            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNRight.Name = "btn_MNRight";
+            this.btn_MNRight.UseVisualStyleBackColor = true;
+            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
+            // 
+            // btn_PNRight
+            // 
+            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
+            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNRight.Name = "btn_PNRight";
+            this.btn_PNRight.UseVisualStyleBackColor = true;
+            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
+            // 
+            // btn_MURight
+            // 
+            resources.ApplyResources(this.btn_MURight, "btn_MURight");
+            this.btn_MURight.ForeColor = System.Drawing.Color.Black;
+            this.btn_MURight.Name = "btn_MURight";
+            this.btn_MURight.UseVisualStyleBackColor = true;
+            this.btn_MURight.Click += new System.EventHandler(this.btn_MU24_Click);
+            // 
+            // btn_PURight
+            // 
+            resources.ApplyResources(this.btn_PURight, "btn_PURight");
+            this.btn_PURight.ForeColor = System.Drawing.Color.Black;
+            this.btn_PURight.Name = "btn_PURight";
+            this.btn_PURight.UseVisualStyleBackColor = true;
+            this.btn_PURight.Click += new System.EventHandler(this.btn_PU24_Click);
+            // 
+            // btn_MNMid
+            // 
+            resources.ApplyResources(this.btn_MNMid, "btn_MNMid");
+            this.btn_MNMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNMid.Name = "btn_MNMid";
+            this.btn_MNMid.UseVisualStyleBackColor = true;
+            this.btn_MNMid.Click += new System.EventHandler(this.btn_MNGodz_Click);
+            // 
+            // btn_PNMid
+            // 
+            resources.ApplyResources(this.btn_PNMid, "btn_PNMid");
+            this.btn_PNMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNMid.Name = "btn_PNMid";
+            this.btn_PNMid.UseVisualStyleBackColor = true;
+            this.btn_PNMid.Click += new System.EventHandler(this.btn_PNGodz_Click);
+            // 
+            // btn_MUMid
+            // 
+            resources.ApplyResources(this.btn_MUMid, "btn_MUMid");
+            this.btn_MUMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_MUMid.Name = "btn_MUMid";
+            this.btn_MUMid.UseVisualStyleBackColor = true;
+            this.btn_MUMid.Click += new System.EventHandler(this.btn_MUGodz_Click);
+            // 
+            // btn_PUMid
+            // 
+            resources.ApplyResources(this.btn_PUMid, "btn_PUMid");
+            this.btn_PUMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_PUMid.Name = "btn_PUMid";
+            this.btn_PUMid.UseVisualStyleBackColor = true;
+            this.btn_PUMid.Click += new System.EventHandler(this.btn_PUGodz_Click);
+            // 
+            // btn_PNLeft
+            // 
+            resources.ApplyResources(this.btn_PNLeft, "btn_PNLeft");
+            this.btn_PNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNLeft.Name = "btn_PNLeft";
+            this.btn_PNLeft.UseVisualStyleBackColor = true;
+            this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
+            // 
+            // btn_MNLeft
+            // 
+            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
+            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
+            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNLeft.Name = "btn_MNLeft";
+            this.btn_MNLeft.UseVisualStyleBackColor = true;
+            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
+            // 
+            // btn_PULeft
+            // 
+            resources.ApplyResources(this.btn_PULeft, "btn_PULeft");
+            this.btn_PULeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_PULeft.Name = "btn_PULeft";
+            this.btn_PULeft.UseVisualStyleBackColor = true;
+            this.btn_PULeft.Click += new System.EventHandler(this.btn_PUJedn_Click);
+            // 
+            // btn_MULeft
+            // 
+            resources.ApplyResources(this.btn_MULeft, "btn_MULeft");
+            this.btn_MULeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MULeft.Name = "btn_MULeft";
+            this.btn_MULeft.UseVisualStyleBackColor = true;
+            this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
+            // 
+            // pb_jezykPOL
+            // 
+            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
+            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
+            this.pb_jezykPOL.Name = "pb_jezykPOL";
+            this.pb_jezykPOL.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelMenu_b_JakDojade
+            // 
+            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
+            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
+            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
+            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
+            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
+            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
             // 
             // Main
             // 
@@ -1168,21 +1167,18 @@
             this.Controls.Add(this.panelGorny);
             this.Controls.Add(this.l_postep);
             this.Controls.Add(this.pb_postep);
-            this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.pSemes);
             this.Controls.Add(this.panelJednorazowe);
             this.Controls.Add(this.panelOkresowe);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.pSemes);
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
             this.panelMenu.ResumeLayout(false);
             this.gb_WyborJezyka.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gb_InneFunkcje.ResumeLayout(false);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKoniecWstecz.ResumeLayout(false);
             this.panelOkresowe.ResumeLayout(false);
             this.panelOkresowe.PerformLayout();
@@ -1204,12 +1200,15 @@
             this.pSemes_gb_IleMies.PerformLayout();
             this.panelJednorazowe.ResumeLayout(false);
             this.panelJednorazowe.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1328,7 +1327,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label pJedno_l_Left;
-        private System.Windows.Forms.Button btn_RemoveKolKom24;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label pJedno_l_Mid;
         private System.Windows.Forms.Label label22;
@@ -1337,6 +1335,7 @@
         private System.Windows.Forms.Label pJedno_l_Right;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btn_RemoveKolKom24;
     }
 }
 

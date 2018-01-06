@@ -87,20 +87,20 @@
             this.panelGorny.Name = "panelGorny";
             this.panelGorny.Size = new System.Drawing.Size(1312, 140);
             this.panelGorny.TabIndex = 13;
+            this.panelGorny.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGorny_Paint);
             // 
             // pKoniecWstecz_b_Wstecz
             // 
             this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
-            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.wstecz;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_wstecz;
             this.pKoniecWstecz_b_Wstecz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pKoniecWstecz_b_Wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
             this.pKoniecWstecz_b_Wstecz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pKoniecWstecz_b_Wstecz.Location = new System.Drawing.Point(885, 20);
+            this.pKoniecWstecz_b_Wstecz.Location = new System.Drawing.Point(873, 28);
             this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
-            this.pKoniecWstecz_b_Wstecz.Size = new System.Drawing.Size(190, 80);
+            this.pKoniecWstecz_b_Wstecz.Size = new System.Drawing.Size(180, 60);
             this.pKoniecWstecz_b_Wstecz.TabIndex = 3;
-            this.pKoniecWstecz_b_Wstecz.Text = "Wstecz";
             this.pKoniecWstecz_b_Wstecz.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
             this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
@@ -108,15 +108,14 @@
             // pKoniecWstecz_b_Koniec
             // 
             this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
-            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.koniec1;
+            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_ZAKOŃCZ;
             this.pKoniecWstecz_b_Koniec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pKoniecWstecz_b_Koniec.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.pKoniecWstecz_b_Koniec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pKoniecWstecz_b_Koniec.Location = new System.Drawing.Point(1090, 20);
+            this.pKoniecWstecz_b_Koniec.Location = new System.Drawing.Point(1091, 28);
             this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
-            this.pKoniecWstecz_b_Koniec.Size = new System.Drawing.Size(190, 80);
+            this.pKoniecWstecz_b_Koniec.Size = new System.Drawing.Size(180, 60);
             this.pKoniecWstecz_b_Koniec.TabIndex = 2;
-            this.pKoniecWstecz_b_Koniec.Text = "KONIEC";
             this.pKoniecWstecz_b_Koniec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
             this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);

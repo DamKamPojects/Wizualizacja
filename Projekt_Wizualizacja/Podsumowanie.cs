@@ -148,6 +148,7 @@ namespace Projekt_Wizualizacja
         {
             //Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
             //this.BackgroundImage = imageTlo;
+            GetCurrentTime();
             pPodsu.BringToFront();
             pKoniecWstecz_b_Wstecz.Visible = true;
             this.StartPosition = FormStartPosition.Manual;
@@ -240,7 +241,11 @@ namespace Projekt_Wizualizacja
             Zaplacono += 2.00;
             LabelsOperating();
         }
-        
+
+        private void panelGorny_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void pGotow_b_50gr_Click(object sender, EventArgs e)
         {

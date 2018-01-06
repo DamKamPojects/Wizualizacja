@@ -271,6 +271,8 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Przycisk_ZAKOŃCZ.png" />
+    <None Include="Resources\Przycisk_wstecz.png" />
     <None Include="Resources\ZKM_Gdynia.png" />
     <None Include="Resources\thJ7T8ZGJ0.jpg" />
     <None Include="Resources\koniec1.jpg" />
