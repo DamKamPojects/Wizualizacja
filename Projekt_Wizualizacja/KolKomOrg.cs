@@ -28,6 +28,7 @@ namespace Projekt_Wizualizacja
         public double PriceUlg;
         public string T1, T2;
         public string QuantN, QuantU;
+        public string Poczatek = "";
 
         private Ceny_biletow Price = new Ceny_biletow();
         private int[] buffer = new int[] { 0, 0 };
@@ -38,7 +39,7 @@ namespace Projekt_Wizualizacja
         const string MZK_G = "ZKM Gdynia";
         const string MZK_W = "ZKM Wejherowo";
         const string PR = "PR"; // nie wiem co to za przewoźnik
-        const string prefix = "\nBilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów ważny dla: ";
+        const string prefix = "Bilet metropolitalny 24-godzinny kolejowo-komunalny dwóch organizatorów ważny dla ";
         const string lacz = " oraz ";
         const string norm = "\n\tNormalny: ilość - ";
         const string ugl = "\n\tUlgowy: ilość - ";
@@ -238,9 +239,11 @@ namespace Projekt_Wizualizacja
             QuantU = tb_U.Text;
             PriceNorm = Convert.ToInt32(tb_N.Text) * Price.MetroKolKom24_2;
             PriceUlg = Convert.ToInt32(tb_U.Text) * Price.MetroKolKom24_2 / 2;
-            if (tb_N.Text!="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN + cena + String.Format("{0:0.00} zł", PriceNorm) + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
-            if (tb_N.Text!="0" && tb_U.Text=="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN  + cena + String.Format("{0:0.00} zł", PriceNorm);
-            if (tb_N.Text=="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
+
+            Poczatek = prefix + T1 + lacz + T2;
+            //if (tb_N.Text!="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN + cena + String.Format("{0:0.00} zł", PriceNorm) + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
+            //if (tb_N.Text!="0" && tb_U.Text=="0") TextToSend = prefix + T1 + lacz + T2 + norm + QuantN  + cena + String.Format("{0:0.00} zł", PriceNorm);
+            //if (tb_N.Text=="0" && tb_U.Text!="0") TextToSend = prefix + T1 + lacz + T2 + ugl + QuantU + cena + String.Format("{0:0.00} zł", PriceUlg);
         }
         string GetPrzewoznik(int input)
         {

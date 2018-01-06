@@ -38,6 +38,7 @@
             this.gb_WyborJezyka = new System.Windows.Forms.GroupBox();
             this.l_WyborJezyka = new System.Windows.Forms.Label();
             this.gb_InneFunkcje = new System.Windows.Forms.GroupBox();
+            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
             this.panelMenu_b_RozkladJazdy = new System.Windows.Forms.Button();
             this.panelMenu_b_DoladowanieTelefonu = new System.Windows.Forms.Button();
             this.panelMenu_b_BiletyMiesieczne = new System.Windows.Forms.Button();
@@ -49,10 +50,7 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
-            this.panelKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
-            this.panelKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
             this.panelOkresowe = new System.Windows.Forms.Panel();
             this.pOkres_gb_RodzajBiletu = new System.Windows.Forms.GroupBox();
             this.panelOkresowe_b_ulgowy = new System.Windows.Forms.Button();
@@ -109,6 +107,8 @@
             this.pJedno_b_Platnosc = new System.Windows.Forms.Button();
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.panelJednorazowe = new System.Windows.Forms.Panel();
+            this.pJedno_l_NazwaZakladki = new System.Windows.Forms.Label();
+            this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -127,10 +127,12 @@
             this.tb_NRight = new System.Windows.Forms.TextBox();
             this.tb_ULeft = new System.Windows.Forms.TextBox();
             this.tb_NLeft = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_PNLeft = new System.Windows.Forms.Button();
             this.btn_MNLeft = new System.Windows.Forms.Button();
+            this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
+            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
+            this.btn_PNLeft = new System.Windows.Forms.Button();
             this.btn_MNMid = new System.Windows.Forms.Button();
             this.btn_MUMid = new System.Windows.Forms.Button();
             this.btn_MURight = new System.Windows.Forms.Button();
@@ -143,9 +145,6 @@
             this.btn_MULeft = new System.Windows.Forms.Button();
             this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
-            this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
-            this.rtb_Summary2 = new System.Windows.Forms.RichTextBox();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
             this.gb_InneFunkcje.SuspendLayout();
@@ -236,6 +235,15 @@
             this.gb_InneFunkcje.Name = "gb_InneFunkcje";
             this.gb_InneFunkcje.TabStop = false;
             // 
+            // panelMenu_b_JakDojade
+            // 
+            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
+            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
+            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
+            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
+            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
+            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
+            // 
             // panelMenu_b_RozkladJazdy
             // 
             this.panelMenu_b_RozkladJazdy.BackColor = System.Drawing.Color.White;
@@ -295,7 +303,6 @@
             // 
             this.panelGorny.BackColor = System.Drawing.Color.Transparent;
             this.panelGorny.Controls.Add(this.gb_AktualnaData);
-            this.panelGorny.Controls.Add(this.button2);
             this.panelGorny.Controls.Add(this.panelMenu_b_Pomoc);
             this.panelGorny.Controls.Add(this.pictureBox1);
             this.panelGorny.Controls.Add(this.panelKoniecWstecz);
@@ -322,36 +329,12 @@
             this.l_data.ForeColor = System.Drawing.Color.SeaShell;
             this.l_data.Name = "l_data";
             // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panelKoniecWstecz
             // 
-            this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Koniec);
-            this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Wstecz);
+            this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Wstecz);
+            this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Koniec);
             resources.ApplyResources(this.panelKoniecWstecz, "panelKoniecWstecz");
             this.panelKoniecWstecz.Name = "panelKoniecWstecz";
-            // 
-            // panelKoniecWstecz_b_Koniec
-            // 
-            this.panelKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panelKoniecWstecz_b_Koniec, "panelKoniecWstecz_b_Koniec");
-            this.panelKoniecWstecz_b_Koniec.ForeColor = System.Drawing.Color.Maroon;
-            this.panelKoniecWstecz_b_Koniec.Name = "panelKoniecWstecz_b_Koniec";
-            this.panelKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
-            this.panelKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.panelKoniecWstecz_b_Koniec_Click);
-            // 
-            // panelKoniecWstecz_b_Wstecz
-            // 
-            this.panelKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panelKoniecWstecz_b_Wstecz, "panelKoniecWstecz_b_Wstecz");
-            this.panelKoniecWstecz_b_Wstecz.Name = "panelKoniecWstecz_b_Wstecz";
-            this.panelKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
-            this.panelKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.panelKoniecWstecz_b_Wstecz_Click);
             // 
             // panelOkresowe
             // 
@@ -800,6 +783,7 @@
             // panelJednorazowe
             // 
             this.panelJednorazowe.BackColor = System.Drawing.Color.Transparent;
+            this.panelJednorazowe.Controls.Add(this.pJedno_l_NazwaZakladki);
             this.panelJednorazowe.Controls.Add(this.pJedno_tb_Podsumowanie);
             this.panelJednorazowe.Controls.Add(this.label19);
             this.panelJednorazowe.Controls.Add(this.btn_RemoveKolKom24);
@@ -815,7 +799,6 @@
             this.panelJednorazowe.Controls.Add(this.pJedno_b_Platnosc);
             this.panelJednorazowe.Controls.Add(this.label11);
             this.panelJednorazowe.Controls.Add(this.tb_Price);
-            this.panelJednorazowe.Controls.Add(this.rtb_Summary2);
             this.panelJednorazowe.Controls.Add(this.btn_Other);
             this.panelJednorazowe.Controls.Add(this.tb_NMid);
             this.panelJednorazowe.Controls.Add(this.tb_UMid);
@@ -838,6 +821,16 @@
             this.panelJednorazowe.ForeColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.panelJednorazowe, "panelJednorazowe");
             this.panelJednorazowe.Name = "panelJednorazowe";
+            // 
+            // pJedno_l_NazwaZakladki
+            // 
+            resources.ApplyResources(this.pJedno_l_NazwaZakladki, "pJedno_l_NazwaZakladki");
+            this.pJedno_l_NazwaZakladki.Name = "pJedno_l_NazwaZakladki";
+            // 
+            // pJedno_tb_Podsumowanie
+            // 
+            resources.ApplyResources(this.pJedno_tb_Podsumowanie, "pJedno_tb_Podsumowanie");
+            this.pJedno_tb_Podsumowanie.Name = "pJedno_tb_Podsumowanie";
             // 
             // label19
             // 
@@ -961,17 +954,45 @@
             this.tb_NLeft.Name = "tb_NLeft";
             this.tb_NLeft.Click += new System.EventHandler(this.tb_NJedn_Click);
             // 
-            // label18
+            // btn_MNLeft
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
+            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNLeft.Name = "btn_MNLeft";
+            this.btn_MNLeft.UseVisualStyleBackColor = true;
+            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
+            // 
+            // rtb_Summary2
+            // 
+            this.rtb_Summary2.BackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.rtb_Summary2, "rtb_Summary2");
+            this.rtb_Summary2.Name = "rtb_Summary2";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.ZKM_Gdynia;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            // 
+            // pKoniecWstecz_b_Wstecz
+            // 
+            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.wstecz;
+            resources.ApplyResources(this.pKoniecWstecz_b_Wstecz, "pKoniecWstecz_b_Wstecz");
+            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
+            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
+            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
+            // 
+            // pKoniecWstecz_b_Koniec
+            // 
+            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
+            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.koniec1;
+            resources.ApplyResources(this.pKoniecWstecz_b_Koniec, "pKoniecWstecz_b_Koniec");
+            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
+            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
             // 
             // btn_PNLeft
             // 
@@ -980,15 +1001,6 @@
             this.btn_PNLeft.Name = "btn_PNLeft";
             this.btn_PNLeft.UseVisualStyleBackColor = true;
             this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
-            // 
-            // btn_MNLeft
-            // 
-            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
-            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
-            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNLeft.Name = "btn_MNLeft";
-            this.btn_MNLeft.UseVisualStyleBackColor = true;
-            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
             // 
             // btn_MNMid
             // 
@@ -1084,42 +1096,21 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // panelMenu_b_JakDojade
-            // 
-            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
-            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
-            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
-            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
-            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
-            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
-            // 
-            // pJedno_tb_Podsumowanie
-            // 
-            resources.ApplyResources(this.pJedno_tb_Podsumowanie, "pJedno_tb_Podsumowanie");
-            this.pJedno_tb_Podsumowanie.Name = "pJedno_tb_Podsumowanie";
-            // 
-            // rtb_Summary2
-            // 
-            this.rtb_Summary2.BackColor = System.Drawing.Color.Snow;
-            resources.ApplyResources(this.rtb_Summary2, "rtb_Summary2");
-            this.rtb_Summary2.Name = "rtb_Summary2";
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.panelGorny);
             this.Controls.Add(this.l_postep);
             this.Controls.Add(this.pb_postep);
-            this.Controls.Add(this.panelJednorazowe);
-            this.Controls.Add(this.pSemes);
-            this.Controls.Add(this.panelOkresowe);
+            this.Controls.Add(this.rtb_Summary2);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.pSemes);
+            this.Controls.Add(this.panelJednorazowe);
+            this.Controls.Add(this.panelOkresowe);
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Main_Click);
             this.panelMenu.ResumeLayout(false);
             this.gb_WyborJezyka.ResumeLayout(false);
             this.gb_InneFunkcje.ResumeLayout(false);
@@ -1150,7 +1141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1180,8 +1170,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelOkresowe;
         private System.Windows.Forms.Panel panelKoniecWstecz;
-        private System.Windows.Forms.Button panelKoniecWstecz_b_Koniec;
-        private System.Windows.Forms.Button panelKoniecWstecz_b_Wstecz;
+        private System.Windows.Forms.Button pKoniecWstecz_b_Wstecz;
+        private System.Windows.Forms.Button pKoniecWstecz_b_Koniec;
         private System.Windows.Forms.Label l_DoZaplaty;
         public System.Windows.Forms.TextBox panelOkresowe_tb_Suma;
         private System.Windows.Forms.Label lPodsumowanie;
@@ -1266,11 +1256,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_RemoveKolKom24;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox pJedno_tb_Podsumowanie;
         private System.Windows.Forms.RichTextBox rtb_Summary2;
+        private System.Windows.Forms.Label pJedno_l_NazwaZakladki;
     }
 }
 

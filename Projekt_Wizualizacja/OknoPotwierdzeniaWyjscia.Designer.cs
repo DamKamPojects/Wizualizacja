@@ -35,7 +35,7 @@
             // 
             // l_Ostrzezenie
             // 
-            this.l_Ostrzezenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_Ostrzezenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.l_Ostrzezenie.ForeColor = System.Drawing.Color.White;
             this.l_Ostrzezenie.Location = new System.Drawing.Point(0, 0);
             this.l_Ostrzezenie.Name = "l_Ostrzezenie";

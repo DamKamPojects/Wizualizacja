@@ -142,6 +142,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reklamy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,14 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Reklamy.resx">
       <DependentUpon>Reklamy.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,15 +256,6 @@
     <None Include="Resources\aaa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image2.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image1.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -277,12 +268,14 @@
     <None Include="Resources\image_Jakdojade.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image_tlo.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ZKM_Gdynia.png" />
+    <None Include="Resources\thJ7T8ZGJ0.jpg" />
+    <None Include="Resources\koniec1.jpg" />
+    <None Include="Resources\wstecz.jpg" />
+    <None Include="Resources\koniec.jpg" />
     <None Include="Resources\minut_dodawanie biletow.jpg" />
     <None Include="Resources\plus_dodawaniebiletow.jpg" />
     <None Include="Resources\minus.jpg" />
@@ -290,9 +283,10 @@
     <None Include="Resources\karta.jpg" />
     <None Include="Resources\gotowka.jpg" />
     <None Include="Resources\Bez tytułu.png" />
+    <None Include="Resources\a.jpg" />
+    <None Include="Resources\a1.jpg" />
     <Content Include="Resources\image_bilet2.jpg" />
     <None Include="Resources\niebieskietlo.jpg" />
-    <None Include="Resources\plusik_i_minusik.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

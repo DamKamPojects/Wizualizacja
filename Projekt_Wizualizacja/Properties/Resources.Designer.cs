@@ -63,6 +63,26 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a {
+            get {
+                object obj = ResourceManager.GetObject("a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a1 {
+            get {
+                object obj = ResourceManager.GetObject("a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aaa {
             get {
                 object obj = ResourceManager.GetObject("aaa", resourceCulture);
@@ -133,49 +153,29 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap image_tlo {
-            get {
-                object obj = ResourceManager.GetObject("image_tlo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image1 {
-            get {
-                object obj = ResourceManager.GetObject("Image1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image2 {
-            get {
-                object obj = ResourceManager.GetObject("Image2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image4 {
-            get {
-                object obj = ResourceManager.GetObject("Image4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap karta {
             get {
                 object obj = ResourceManager.GetObject("karta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap koniec {
+            get {
+                object obj = ResourceManager.GetObject("koniec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap koniec1 {
+            get {
+                object obj = ResourceManager.GetObject("koniec1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,29 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plusik_i_minusik {
+        internal static System.Drawing.Bitmap thJ7T8ZGJ0 {
             get {
-                object obj = ResourceManager.GetObject("plusik_i_minusik", resourceCulture);
+                object obj = ResourceManager.GetObject("thJ7T8ZGJ0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wstecz {
+            get {
+                object obj = ResourceManager.GetObject("wstecz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ZKM_Gdynia {
+            get {
+                object obj = ResourceManager.GetObject("ZKM_Gdynia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

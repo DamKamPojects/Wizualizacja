@@ -239,7 +239,7 @@ namespace Projekt_Wizualizacja
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }               
+        }
 
         private void pGotow_b_50gr_Click(object sender, EventArgs e)
         {

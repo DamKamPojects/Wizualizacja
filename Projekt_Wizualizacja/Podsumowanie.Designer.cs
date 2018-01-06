@@ -33,7 +33,6 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
             this.panelKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.panelKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             this.panelPodsumowanie_tb_SposobPlatnosci = new System.Windows.Forms.TextBox();
             this.pPodsu_b_Potwierdz = new System.Windows.Forms.Button();
             this.panelPodsumowanie_tb_Suma = new System.Windows.Forms.TextBox();
-            this.b_Powrot = new System.Windows.Forms.Button();
             this.pGotow = new System.Windows.Forms.Panel();
             this.pGotow_b_50gr = new System.Windows.Forms.Button();
             this.pGotow_b_2zl = new System.Windows.Forms.Button();
@@ -69,14 +67,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKoniecWstecz.SuspendLayout();
             this.pPodsu.SuspendLayout();
             this.pGotow.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pGotowka_gb_Pobrano.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGorny
@@ -124,21 +124,9 @@
             this.l_data.Text = "PONIEDZIAŁEK, 12.12.2012";
             this.l_data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panelKoniecWstecz
             // 
+            this.panelKoniecWstecz.Controls.Add(this.button1);
             this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Koniec);
             this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Wstecz);
             this.panelKoniecWstecz.Location = new System.Drawing.Point(901, 11);
@@ -177,11 +165,11 @@
             this.pb_postep.BackColor = System.Drawing.Color.White;
             this.pb_postep.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.pb_postep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pb_postep.Location = new System.Drawing.Point(24, 701);
+            this.pb_postep.Location = new System.Drawing.Point(546, 714);
             this.pb_postep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pb_postep.Maximum = 120;
             this.pb_postep.Name = "pb_postep";
-            this.pb_postep.Size = new System.Drawing.Size(1212, 25);
+            this.pb_postep.Size = new System.Drawing.Size(162, 25);
             this.pb_postep.Step = 1;
             this.pb_postep.TabIndex = 35;
             // 
@@ -195,22 +183,22 @@
             this.panelPodsum_tb_Podsumowanie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPodsum_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.panelPodsum_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panelPodsum_tb_Podsumowanie.Location = new System.Drawing.Point(93, 49);
             this.panelPodsum_tb_Podsumowanie.Multiline = true;
             this.panelPodsum_tb_Podsumowanie.Name = "panelPodsum_tb_Podsumowanie";
             this.panelPodsum_tb_Podsumowanie.ReadOnly = true;
-            this.panelPodsum_tb_Podsumowanie.Size = new System.Drawing.Size(726, 311);
+            this.panelPodsum_tb_Podsumowanie.Size = new System.Drawing.Size(661, 455);
             this.panelPodsum_tb_Podsumowanie.TabIndex = 270;
             this.panelPodsum_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(93, 384);
+            this.label2.Location = new System.Drawing.Point(1025, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 37);
+            this.label2.Size = new System.Drawing.Size(205, 37);
             this.label2.TabIndex = 276;
             this.label2.Text = "Sposób płatności:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -219,9 +207,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(93, 9);
+            this.label1.Location = new System.Drawing.Point(86, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(726, 37);
+            this.label1.Size = new System.Drawing.Size(668, 37);
             this.label1.TabIndex = 275;
             this.label1.Text = "PODSUMOWANIE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -236,20 +224,19 @@
             this.pPodsu.Controls.Add(this.pPodsu_b_Potwierdz);
             this.pPodsu.Controls.Add(this.panelPodsum_tb_Podsumowanie);
             this.pPodsu.Controls.Add(this.panelPodsumowanie_tb_Suma);
-            this.pPodsu.Controls.Add(this.b_Powrot);
             this.pPodsu.Controls.Add(this.label1);
             this.pPodsu.Location = new System.Drawing.Point(0, 140);
             this.pPodsu.Name = "pPodsu";
-            this.pPodsu.Size = new System.Drawing.Size(1312, 497);
+            this.pPodsu.Size = new System.Drawing.Size(1312, 531);
             this.pPodsu.TabIndex = 34;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(509, 384);
+            this.label3.Location = new System.Drawing.Point(791, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 37);
+            this.label3.Size = new System.Drawing.Size(205, 37);
             this.label3.TabIndex = 278;
             this.label3.Text = "Do zapłaty:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -258,9 +245,9 @@
             // 
             this.pPodsu_b_ZmienPlactnosci.BackColor = System.Drawing.Color.White;
             this.pPodsu_b_ZmienPlactnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pPodsu_b_ZmienPlactnosci.Location = new System.Drawing.Point(890, 49);
+            this.pPodsu_b_ZmienPlactnosci.Location = new System.Drawing.Point(890, 186);
             this.pPodsu_b_ZmienPlactnosci.Name = "pPodsu_b_ZmienPlactnosci";
-            this.pPodsu_b_ZmienPlactnosci.Size = new System.Drawing.Size(330, 120);
+            this.pPodsu_b_ZmienPlactnosci.Size = new System.Drawing.Size(233, 120);
             this.pPodsu_b_ZmienPlactnosci.TabIndex = 274;
             this.pPodsu_b_ZmienPlactnosci.Text = "Zmień sposób płatności";
             this.pPodsu_b_ZmienPlactnosci.UseVisualStyleBackColor = false;
@@ -269,12 +256,12 @@
             // panelPodsumowanie_tb_SposobPlatnosci
             // 
             this.panelPodsumowanie_tb_SposobPlatnosci.BackColor = System.Drawing.SystemColors.Control;
-            this.panelPodsumowanie_tb_SposobPlatnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(93, 424);
+            this.panelPodsumowanie_tb_SposobPlatnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(1030, 127);
             this.panelPodsumowanie_tb_SposobPlatnosci.Multiline = true;
             this.panelPodsumowanie_tb_SposobPlatnosci.Name = "panelPodsumowanie_tb_SposobPlatnosci";
             this.panelPodsumowanie_tb_SposobPlatnosci.ReadOnly = true;
-            this.panelPodsumowanie_tb_SposobPlatnosci.Size = new System.Drawing.Size(302, 63);
+            this.panelPodsumowanie_tb_SposobPlatnosci.Size = new System.Drawing.Size(200, 40);
             this.panelPodsumowanie_tb_SposobPlatnosci.TabIndex = 273;
             this.panelPodsumowanie_tb_SposobPlatnosci.Text = "Karta płatnicza";
             this.panelPodsumowanie_tb_SposobPlatnosci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -283,9 +270,9 @@
             // 
             this.pPodsu_b_Potwierdz.BackColor = System.Drawing.Color.White;
             this.pPodsu_b_Potwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(890, 354);
+            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(796, 384);
             this.pPodsu_b_Potwierdz.Name = "pPodsu_b_Potwierdz";
-            this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(330, 120);
+            this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(434, 120);
             this.pPodsu_b_Potwierdz.TabIndex = 272;
             this.pPodsu_b_Potwierdz.Text = "POTWIERDŹ";
             this.pPodsu_b_Potwierdz.UseVisualStyleBackColor = false;
@@ -297,24 +284,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPodsumowanie_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
-            this.panelPodsumowanie_tb_Suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(509, 421);
+            this.panelPodsumowanie_tb_Suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(796, 127);
             this.panelPodsumowanie_tb_Suma.Multiline = true;
             this.panelPodsumowanie_tb_Suma.Name = "panelPodsumowanie_tb_Suma";
             this.panelPodsumowanie_tb_Suma.ReadOnly = true;
-            this.panelPodsumowanie_tb_Suma.Size = new System.Drawing.Size(310, 69);
+            this.panelPodsumowanie_tb_Suma.Size = new System.Drawing.Size(200, 40);
             this.panelPodsumowanie_tb_Suma.TabIndex = 268;
+            this.panelPodsumowanie_tb_Suma.Text = "10";
             this.panelPodsumowanie_tb_Suma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // b_Powrot
-            // 
-            this.b_Powrot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.b_Powrot.Location = new System.Drawing.Point(1008, 521);
-            this.b_Powrot.Name = "b_Powrot";
-            this.b_Powrot.Size = new System.Drawing.Size(203, 35);
-            this.b_Powrot.TabIndex = 266;
-            this.b_Powrot.Text = "Powrót";
-            this.b_Powrot.UseVisualStyleBackColor = true;
             // 
             // pGotow
             // 
@@ -340,7 +318,7 @@
             // 
             // pGotow_b_50gr
             // 
-            this.pGotow_b_50gr.Location = new System.Drawing.Point(77, 390);
+            this.pGotow_b_50gr.Location = new System.Drawing.Point(12, 443);
             this.pGotow_b_50gr.Name = "pGotow_b_50gr";
             this.pGotow_b_50gr.Size = new System.Drawing.Size(40, 40);
             this.pGotow_b_50gr.TabIndex = 287;
@@ -360,7 +338,7 @@
             // 
             // pGotow_b_20zl
             // 
-            this.pGotow_b_20zl.Location = new System.Drawing.Point(77, 341);
+            this.pGotow_b_20zl.Location = new System.Drawing.Point(12, 285);
             this.pGotow_b_20zl.Name = "pGotow_b_20zl";
             this.pGotow_b_20zl.Size = new System.Drawing.Size(40, 40);
             this.pGotow_b_20zl.TabIndex = 285;
@@ -382,7 +360,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(398, 296);
+            this.label8.Location = new System.Drawing.Point(190, 477);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(518, 41);
             this.label8.TabIndex = 283;
@@ -393,9 +371,9 @@
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(481, 469);
+            this.label6.Location = new System.Drawing.Point(861, 318);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(362, 20);
+            this.label6.Size = new System.Drawing.Size(304, 20);
             this.label6.TabIndex = 282;
             this.label6.Text = "10zł, 20zł";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,9 +383,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(478, 432);
+            this.label7.Location = new System.Drawing.Point(861, 281);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(362, 37);
+            this.label7.Size = new System.Drawing.Size(304, 37);
             this.label7.TabIndex = 281;
             this.label7.Text = "Banknoty";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -416,9 +394,9 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(481, 374);
+            this.label5.Location = new System.Drawing.Point(861, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(362, 56);
+            this.label5.Size = new System.Drawing.Size(304, 56);
             this.label5.TabIndex = 280;
             this.label5.Text = "5gr, 10gr, 20gr, 50gr,\r\n1zł, 2zł, 5zł";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -428,9 +406,9 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(478, 337);
+            this.label9.Location = new System.Drawing.Point(861, 186);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(362, 37);
+            this.label9.Size = new System.Drawing.Size(304, 37);
             this.label9.TabIndex = 279;
             this.label9.Text = "Monety:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -439,7 +417,7 @@
             // 
             this.groupBox1.Controls.Add(this.pGotow_l_DoZaplaty);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Location = new System.Drawing.Point(844, 337);
+            this.groupBox1.Location = new System.Drawing.Point(861, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(304, 152);
             this.groupBox1.TabIndex = 278;
@@ -473,7 +451,7 @@
             // 
             this.pGotowka_gb_Pobrano.Controls.Add(this.pGotowka_l_Pobrano);
             this.pGotowka_gb_Pobrano.Controls.Add(this.pGotowka_l_pobrrr);
-            this.pGotowka_gb_Pobrano.Location = new System.Drawing.Point(168, 337);
+            this.pGotowka_gb_Pobrano.Location = new System.Drawing.Point(861, 341);
             this.pGotowka_gb_Pobrano.Name = "pGotowka_gb_Pobrano";
             this.pGotowka_gb_Pobrano.Size = new System.Drawing.Size(304, 152);
             this.pGotowka_gb_Pobrano.TabIndex = 277;
@@ -508,12 +486,12 @@
             this.pGotow_tb_Podsumowanie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pGotow_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.pGotow_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pGotow_tb_Podsumowanie.Location = new System.Drawing.Point(93, 49);
             this.pGotow_tb_Podsumowanie.Multiline = true;
             this.pGotow_tb_Podsumowanie.Name = "pGotow_tb_Podsumowanie";
             this.pGotow_tb_Podsumowanie.ReadOnly = true;
-            this.pGotow_tb_Podsumowanie.Size = new System.Drawing.Size(1127, 242);
+            this.pGotow_tb_Podsumowanie.Size = new System.Drawing.Size(706, 425);
             this.pGotow_tb_Podsumowanie.TabIndex = 270;
             this.pGotow_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
             // 
@@ -521,9 +499,9 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(93, 9);
+            this.label4.Location = new System.Drawing.Point(93, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1127, 37);
+            this.label4.Size = new System.Drawing.Size(706, 37);
             this.label4.TabIndex = 275;
             this.label4.Text = "PODSUMOWANIE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -538,19 +516,48 @@
             this.l_postep.BackColor = System.Drawing.Color.Transparent;
             this.l_postep.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.l_postep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.l_postep.Location = new System.Drawing.Point(6, 674);
+            this.l_postep.Location = new System.Drawing.Point(21, 687);
             this.l_postep.Name = "l_postep";
             this.l_postep.Size = new System.Drawing.Size(1214, 25);
             this.l_postep.TabIndex = 37;
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.a1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Maroon;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(-10, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(293, 100);
+            this.button1.TabIndex = 279;
+            this.button1.Text = "Wstecz";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1312, 727);
+            this.ClientSize = new System.Drawing.Size(1312, 750);
             this.ControlBox = false;
             this.Controls.Add(this.l_postep);
             this.Controls.Add(this.pb_postep);
@@ -561,7 +568,6 @@
             this.Load += new System.EventHandler(this.Podsumowanie_Load);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKoniecWstecz.ResumeLayout(false);
             this.pPodsu.ResumeLayout(false);
             this.pPodsu.PerformLayout();
@@ -569,6 +575,7 @@
             this.pGotow.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.pGotowka_gb_Pobrano.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,7 +596,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pPodsu;
-        private System.Windows.Forms.Button b_Powrot;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button pPodsu_b_ZmienPlactnosci;
         public System.Windows.Forms.TextBox panelPodsumowanie_tb_SposobPlatnosci;
@@ -615,5 +621,6 @@
         private System.Windows.Forms.Button pGotow_b_5zl;
         public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label l_postep;
+        private System.Windows.Forms.Button button1;
     }
 }
