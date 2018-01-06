@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelGorny = new System.Windows.Forms.Panel();
+            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
+            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
-            this.panelKoniecWstecz = new System.Windows.Forms.Panel();
-            this.panelKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
-            this.panelKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_postep = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelPodsum_tb_Podsumowanie = new System.Windows.Forms.TextBox();
@@ -67,28 +67,59 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
-            this.panelKoniecWstecz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pPodsu.SuspendLayout();
             this.pGotow.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pGotowka_gb_Pobrano.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGorny
             // 
             this.panelGorny.BackColor = System.Drawing.Color.Transparent;
+            this.panelGorny.Controls.Add(this.pKoniecWstecz_b_Wstecz);
+            this.panelGorny.Controls.Add(this.pKoniecWstecz_b_Koniec);
             this.panelGorny.Controls.Add(this.gb_AktualnaData);
             this.panelGorny.Controls.Add(this.pictureBox1);
-            this.panelGorny.Controls.Add(this.panelKoniecWstecz);
             this.panelGorny.Location = new System.Drawing.Point(-1, 1);
             this.panelGorny.Name = "panelGorny";
             this.panelGorny.Size = new System.Drawing.Size(1312, 140);
             this.panelGorny.TabIndex = 13;
+            // 
+            // pKoniecWstecz_b_Wstecz
+            // 
+            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.wstecz;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pKoniecWstecz_b_Wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
+            this.pKoniecWstecz_b_Wstecz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pKoniecWstecz_b_Wstecz.Location = new System.Drawing.Point(885, 20);
+            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
+            this.pKoniecWstecz_b_Wstecz.Size = new System.Drawing.Size(190, 80);
+            this.pKoniecWstecz_b_Wstecz.TabIndex = 3;
+            this.pKoniecWstecz_b_Wstecz.Text = "Wstecz";
+            this.pKoniecWstecz_b_Wstecz.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
+            // 
+            // pKoniecWstecz_b_Koniec
+            // 
+            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
+            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.koniec1;
+            this.pKoniecWstecz_b_Koniec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pKoniecWstecz_b_Koniec.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.pKoniecWstecz_b_Koniec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pKoniecWstecz_b_Koniec.Location = new System.Drawing.Point(1090, 20);
+            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
+            this.pKoniecWstecz_b_Koniec.Size = new System.Drawing.Size(190, 80);
+            this.pKoniecWstecz_b_Koniec.TabIndex = 2;
+            this.pKoniecWstecz_b_Koniec.Text = "KONIEC";
+            this.pKoniecWstecz_b_Koniec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
             // 
             // gb_AktualnaData
             // 
@@ -124,41 +155,17 @@
             this.l_data.Text = "PONIEDZIAŁEK, 12.12.2012";
             this.l_data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelKoniecWstecz
+            // pictureBox1
             // 
-            this.panelKoniecWstecz.Controls.Add(this.button1);
-            this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Koniec);
-            this.panelKoniecWstecz.Controls.Add(this.panelKoniecWstecz_b_Wstecz);
-            this.panelKoniecWstecz.Location = new System.Drawing.Point(901, 11);
-            this.panelKoniecWstecz.Name = "panelKoniecWstecz";
-            this.panelKoniecWstecz.Size = new System.Drawing.Size(360, 109);
-            this.panelKoniecWstecz.TabIndex = 14;
-            // 
-            // panelKoniecWstecz_b_Koniec
-            // 
-            this.panelKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.White;
-            this.panelKoniecWstecz_b_Koniec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.panelKoniecWstecz_b_Koniec.ForeColor = System.Drawing.Color.Maroon;
-            this.panelKoniecWstecz_b_Koniec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelKoniecWstecz_b_Koniec.Location = new System.Drawing.Point(200, 30);
-            this.panelKoniecWstecz_b_Koniec.Name = "panelKoniecWstecz_b_Koniec";
-            this.panelKoniecWstecz_b_Koniec.Size = new System.Drawing.Size(120, 50);
-            this.panelKoniecWstecz_b_Koniec.TabIndex = 1;
-            this.panelKoniecWstecz_b_Koniec.Text = "KONIEC";
-            this.panelKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
-            this.panelKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.panelKoniecWstecz_b_Koniec_Click);
-            // 
-            // panelKoniecWstecz_b_Wstecz
-            // 
-            this.panelKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.White;
-            this.panelKoniecWstecz_b_Wstecz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelKoniecWstecz_b_Wstecz.Location = new System.Drawing.Point(40, 30);
-            this.panelKoniecWstecz_b_Wstecz.Name = "panelKoniecWstecz_b_Wstecz";
-            this.panelKoniecWstecz_b_Wstecz.Size = new System.Drawing.Size(120, 50);
-            this.panelKoniecWstecz_b_Wstecz.TabIndex = 0;
-            this.panelKoniecWstecz_b_Wstecz.Text = "Wstecz";
-            this.panelKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
-            this.panelKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.panelKoniecWstecz_b_Wstecz_Click);
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // pb_postep
             // 
@@ -176,6 +183,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelPodsum_tb_Podsumowanie
@@ -183,11 +191,12 @@
             this.panelPodsum_tb_Podsumowanie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPodsum_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.panelPodsum_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.panelPodsum_tb_Podsumowanie.Location = new System.Drawing.Point(93, 49);
             this.panelPodsum_tb_Podsumowanie.Multiline = true;
             this.panelPodsum_tb_Podsumowanie.Name = "panelPodsum_tb_Podsumowanie";
             this.panelPodsum_tb_Podsumowanie.ReadOnly = true;
+            this.panelPodsum_tb_Podsumowanie.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.panelPodsum_tb_Podsumowanie.Size = new System.Drawing.Size(661, 455);
             this.panelPodsum_tb_Podsumowanie.TabIndex = 270;
             this.panelPodsum_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
@@ -523,35 +532,6 @@
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 80);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.a1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(-10, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 100);
-            this.button1.TabIndex = 279;
-            this.button1.Text = "Wstecz";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,14 +548,13 @@
             this.Load += new System.EventHandler(this.Podsumowanie_Load);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
-            this.panelKoniecWstecz.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pPodsu.ResumeLayout(false);
             this.pPodsu.PerformLayout();
             this.pGotow.ResumeLayout(false);
             this.pGotow.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.pGotowka_gb_Pobrano.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,9 +566,6 @@
         private System.Windows.Forms.Label l_godzina;
         private System.Windows.Forms.Label l_data;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelKoniecWstecz;
-        private System.Windows.Forms.Button panelKoniecWstecz_b_Koniec;
-        private System.Windows.Forms.Button panelKoniecWstecz_b_Wstecz;
         public System.Windows.Forms.ProgressBar pb_postep;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.TextBox panelPodsum_tb_Podsumowanie;
@@ -621,6 +597,7 @@
         private System.Windows.Forms.Button pGotow_b_5zl;
         public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label l_postep;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pKoniecWstecz_b_Wstecz;
+        private System.Windows.Forms.Button pKoniecWstecz_b_Koniec;
     }
 }

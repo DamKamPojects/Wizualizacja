@@ -37,7 +37,7 @@
             // b_letni
             // 
             this.b_letni.BackColor = System.Drawing.Color.White;
-            this.b_letni.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.b_letni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.b_letni.Location = new System.Drawing.Point(304, 103);
             this.b_letni.Name = "b_letni";
             this.b_letni.Size = new System.Drawing.Size(180, 150);
@@ -51,9 +51,9 @@
             this.l_Komunikat.BackColor = System.Drawing.Color.Transparent;
             this.l_Komunikat.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.l_Komunikat.ForeColor = System.Drawing.Color.White;
-            this.l_Komunikat.Location = new System.Drawing.Point(64, 9);
+            this.l_Komunikat.Location = new System.Drawing.Point(32, 9);
             this.l_Komunikat.Name = "l_Komunikat";
-            this.l_Komunikat.Size = new System.Drawing.Size(420, 75);
+            this.l_Komunikat.Size = new System.Drawing.Size(501, 75);
             this.l_Komunikat.TabIndex = 4;
             this.l_Komunikat.Text = "Wybierz miesiące, w którym bilet będzie ważny:";
             this.l_Komunikat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +61,7 @@
             // b_zimowy
             // 
             this.b_zimowy.BackColor = System.Drawing.Color.White;
-            this.b_zimowy.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.b_zimowy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.b_zimowy.Location = new System.Drawing.Point(71, 103);
             this.b_zimowy.Name = "b_zimowy";
             this.b_zimowy.Size = new System.Drawing.Size(180, 150);
@@ -108,7 +108,7 @@
 
         private System.Windows.Forms.Button b_letni;
         private System.Windows.Forms.Label l_Komunikat;
-        private System.Windows.Forms.Button b_zimowy;
         private System.Windows.Forms.Button b_zatwiedz;
+        public System.Windows.Forms.Button b_zimowy;
     }
 }

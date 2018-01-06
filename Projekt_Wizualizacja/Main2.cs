@@ -16,6 +16,7 @@ namespace Projekt_Wizualizacja
         public Main()
         {
             InitializeComponent();
+
             //Inicjalizacja dictionary
             ValueStorage = new Dictionary<TextBox, string>()
             {
@@ -39,6 +40,7 @@ namespace Projekt_Wizualizacja
 
 
 #region Zmienne
+        public int TimeFromLastMove=0;
         public int TimeOfTransaction=3000; //domyślny czas na kupienie biletu
         int AktualneOkno = 0;
         public double Suma;
@@ -633,7 +635,7 @@ namespace Projekt_Wizualizacja
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e) // czas ticku ustawiony na 1s - zmiana na inny spowoduje wiele problemów ze wszystkimi funckjami. Poki co lepiej zostawić ta 1 s
+        private void timer1_Tick(object sender, EventArgs e) 
         {
             //tb_godzina.Text = GetCurrentTime();
             GetCurrentTime();
@@ -648,7 +650,7 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        #region Panel wstecz i Koniec
+#region Panel wstecz i Koniec
         private void KoniecButton()
         {
             if (SprawdzyCzyWYbranoJakisBilet() == true)
@@ -661,7 +663,8 @@ namespace Projekt_Wizualizacja
         }
         bool SprawdzyCzyWYbranoJakisBilet()
         {
-            if (price > 0)            {
+            if (price > 0 || Suma!=0 || Cena_biletu(kategoria_biletu)!=0)
+            {
                 OknoPotwierdzeniaWyjscia ostrzezenieJednorazowe = new OknoPotwierdzeniaWyjscia("Jesteś pewny że chcesz wyjść z tej kategorii biletów? Wciśniecie przycisku TAK spowoduje utracenie dotychczas wybranych biletów.");
                 ostrzezenieJednorazowe.ShowDialog();
                 return ostrzezenieJednorazowe.Koniec;
@@ -740,6 +743,7 @@ namespace Projekt_Wizualizacja
         private void panel1_b_BiletyMiesieczne_Click(object sender, EventArgs e)
         {
             ResetValuesOkresowe();
+            Rodzaj_ulgi = 3;
             WyborMiesieczneSemestralne wyborMiesieczneSemestralne = new WyborMiesieczneSemestralne();
             wyborMiesieczneSemestralne.ShowDialog();
             RodzajWybranegoBiletuOkresowego = wyborMiesieczneSemestralne.RodzajWybranegobiletu;
@@ -747,13 +751,16 @@ namespace Projekt_Wizualizacja
             {
                 //panelOkresowe.BringToFront();
                 AktualneOkno = 6;
+                MiesieczneObslugaKontrolek();
                 PrzesuwaniePaneli();
+                
             }
             else if (wyborMiesieczneSemestralne.RodzajWybranegobiletu == 2)
             {
                 //pSemes.BringToFront();
                 Waznosc_biletu = 1;
                 AktualneOkno = 7;
+                SemestralneObslugaKontrolek();
                 PrzesuwaniePaneli();
             }
         }
@@ -803,7 +810,7 @@ namespace Projekt_Wizualizacja
 #endregion
         #endregion
 
-#region Bilety okresowe
+#region Bilety okresowe 30 dniowe i miesieczne
 
         Ceny_biletow ceny1 = new Ceny_biletow();
         //zmienne
@@ -813,33 +820,74 @@ namespace Projekt_Wizualizacja
         public bool sprawdzenie = false, SprawdzenieWyboruBiletu = false;
         public bool ClickKategori = false;
         public double CenaOkresowego;
+        bool OkresoweCzyJestPrzed16;
 
         //metody
+        private bool PotwiedzenieZlegoBiltu() //jesli wybralismy bilet ziomowy i tracimy kilka miesiecy
+        {
+            OknoPotwierdzeniaWyjscia oknoPotwierdzenia = new OknoPotwierdzeniaWyjscia("Wybrany przez Ciebie bilet będzie obowiązywał w miesiącu " + OkresoweMiesiac().ToUpper() + ", który się już zaczął. Bilet miesięczny obowiązujący w kolejnym miesiącu możesz zakupić dopiero po 16-tym dniu poprzedzającego miesiąca."+Environment.NewLine+" Czy jesteś pewny że chcesz wybrać bilet na ten okres?");
+            oknoPotwierdzenia.ShowDialog();
+            if (oknoPotwierdzenia.Koniec == true)
+            {
+                return true;
+            }
+            return false;
+        }
+        string OkresoweMiesiac() //zwraca nazwe miesiaca do  biletu miesiecznego
+        {
+            DateTime thisDay = DateTime.Now; //pobiera aktualna date
+
+            //potrzebne do utworzenia nowej daty z ewentualnie przesunietym miesiacem
+            int Day = Convert.ToInt32(String.Format("{0:dd}", thisDay).TrimStart('0'));
+            int Month = Convert.ToInt32((String.Format("{0:MM}", thisDay).TrimStart('0')));
+            int Year = Convert.ToInt32((String.Format("{0:yyyy}", thisDay).TrimStart('0')));
+            DateTime dt;
+
+
+            //jesli jest 16 lub pozniej, bilet miesieczny jest na kolejny miesiac
+            if (Day < 16)
+            {
+                dt = new DateTime(Year, Month, Day);
+                OkresoweCzyJestPrzed16 = true;
+            }
+            else
+            {
+                dt = new DateTime(Year, Month + 1, Day);
+                OkresoweCzyJestPrzed16 = false;
+            }
+
+            return String.Format("{0:MMMM}", dt);
+        }
         public void Nazwa_poczatek() //metoda do tworzdenia początku
         {
-            
+            string spacje = "    >";
             if (RodzajWybranegoBiletuOkresowego==1)
             {
                 pocz = "Bilet okresowy:\n " + Environment.NewLine;
-                if (bilet == 0) pocz = pocz + "\t-30 DNIOWY, " + Environment.NewLine; else pocz = pocz + "\t-MIESIĘCZNY, " + Environment.NewLine;
-                if (Rodzaj_ulgi == 0) pocz = pocz + "\n \t-ZWYKŁY, " + Environment.NewLine; else pocz = pocz + "\n \t-ULGOWY, " + Environment.NewLine;
-                if (Typ_biletu == 0) pocz = pocz + "\n \t-IMIENNY, " + Environment.NewLine; else pocz = pocz + "\n \t-NA OKAZICIELA, " + Environment.NewLine;
-                if (Waznosc_biletu == 0) pocz = pocz + "\n\t-ważny od PON do PT, " + Environment.NewLine + "na linie "; else pocz = pocz + "\n\t-ważny we WSZYSTKIE DNI TYGODNIA," + Environment.NewLine + "na linie ";
+                if (bilet == 0) pocz = pocz +spacje+ "30 DNIOWY, " + Environment.NewLine; else if(bilet==1) pocz = pocz + spacje + "MIESIĘCZNY na miesiąc " + OkresoweMiesiac().ToUpper()+"," + Environment.NewLine;
+                if (Rodzaj_ulgi == 0) pocz = pocz + spacje + "ZWYKŁY, " + Environment.NewLine; else if(Rodzaj_ulgi==1) pocz = pocz + spacje + "ULGOWY, " + Environment.NewLine;
+                if (Typ_biletu == 0) pocz = pocz + spacje + "IMIENNY, " + Environment.NewLine; else if(Typ_biletu==1) pocz = pocz + spacje + "NA OKAZICIELA, " + Environment.NewLine;
+                if (Waznosc_biletu == 0) pocz = pocz + spacje + "obowiązujący od PONIEDZIAŁKU do PIĄTKU, "; else if(Waznosc_biletu==1) pocz = pocz + spacje + "obowiązujący we WSZYSTKIE DNI TYGODNIA,";
             }
             else if (RodzajWybranegoBiletuOkresowego == 2)
             {
                 pocz = "Bilet semestralny:\n " + Environment.NewLine;
-                if (SemestralnyIleMiesiecy == 4) pocz += "\t-4-miesięczny" + Environment.NewLine; else pocz += "\t-5-miesięczny" + Environment.NewLine;
-                if (Rodzaj_ulgi == 0) pocz = pocz + "\n \t-ZWYKŁY, " + Environment.NewLine; else pocz = pocz + "\n \t-ULGOWY, " + Environment.NewLine;
-                pocz = pocz + "\n\t-ważny we WSZYSTKIE DNI TYGODNIA," +DataDzialaniaSemestralnego+ Environment.NewLine + "na linie ";
+                pocz = pocz + spacje + "ważny we WSZYSTKIE DNI TYGODNIA," + DataDzialaniaSemestralnego+Environment.NewLine;
+                if (SemestralnyIleMiesiecy == 4) pocz += spacje + "4-miesięczny" + Environment.NewLine; else if(SemestralnyIleMiesiecy==5) pocz += spacje + "5-miesięczny" + Environment.NewLine;
+                if (Rodzaj_ulgi == 0) pocz = pocz + spacje + "ZWYKŁY, "; else if(Rodzaj_ulgi==1) pocz = pocz + spacje + "ULGOWY, ";
+                
             }
-            
 
+            if (kategoria_biletu!=0)
+            {
+                pocz += Environment.NewLine + "na linie ";
+            }
             switch (kategoria_biletu)
             {
                 case 0:
                     {
-                        pocz = "Nie wybrano żadnego biletu."; break;
+                       // pocz = "Nie wybrano żadnego biletu.";
+                        break;
                     }
                 case 1:
                     {
@@ -862,7 +910,7 @@ namespace Projekt_Wizualizacja
                         pocz = pocz + "nocne, pospieszne i zwykłe w obrębie sieci komunikacyjnej [w tym linie G, N1, 101 i 171]"; break;
                     }
             }
-            komunikat_info = pocz + kategoria_tekst;
+            komunikat_info = pocz + kategoria_tekst+Environment.NewLine+"------------------------------------------------------------";
             //return pocz;
         }
         public void Spr_wszystkich_opcji() //metoda do sprawdzenia czy wszystkoe opcje zostały zaznaczone
@@ -937,7 +985,7 @@ namespace Projekt_Wizualizacja
             if (Rodzaj_ulgi == 1 && Typ_biletu == 0) CenaOkresowego = CenaOkresowego / 2; //naliczanie ulgi
             return CenaOkresowego;
         }
-        public void Wpisywanie_Do_TB()
+        public void MiesieczneWpisywanie_Do_TB()
         {
             if (sprawdzenie != true || kategoria_biletu == 0)
             {
@@ -946,22 +994,22 @@ namespace Projekt_Wizualizacja
             } //wyczyszenie buforu tekstu
 
             Nazwa_poczatek();
+            panelOkresowe_tb_Podsumowanie.Text = "\n" + komunikat_info;//kom1 + kom2 + kom3 + kom4 + kom5;
+            komunikat_suma = Convert.ToString(Cena_biletu(kategoria_biletu)) + ",00 zł.";
+            panelOkresowe_tb_Suma.Text = komunikat_suma;
+
             if (SprawdzenieWyboruBiletu == true && sprawdzenie == true)
             {
-                panelOkresowe_tb_Podsumowanie.Text = "\n" + komunikat_info;//kom1 + kom2 + kom3 + kom4 + kom5;
-                komunikat_suma = Convert.ToString(Cena_biletu(kategoria_biletu)) + ",00 zł.";
-                panelOkresowe_tb_Suma.Text = komunikat_suma;
+                
                 //pSemes_tb_Suma.Text = panelOkresowe_tb_Suma.Text;
                 //pSemes_tb_Podsumowanie.Text = panelOkresowe_tb_Podsumowanie.Text;
             }
             else
             {
-                panelOkresowe_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
-                komunikat_suma = "0,00 zł.";
-                panelOkresowe_tb_Suma.Text = komunikat_suma;
+                //panelOkresowe_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
+                //komunikat_suma = "0,00 zł.";
+                //panelOkresowe_tb_Suma.Text = komunikat_suma;
             }
-
-
         }
         public void ResetValuesOkresowe()
         {
@@ -978,7 +1026,7 @@ namespace Projekt_Wizualizacja
             bilet = 3; Rodzaj_ulgi = 3; Typ_biletu = 3; Waznosc_biletu = 3; kategoria_biletu = 0; SposobPlatnosci = 0;
             SemestralnyIleMiesiecy = 3;
             CenaOkresowego = 0;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
             SemestralneObslugaKontrolek();
         }
         public void ZmianaKoloruKontrolekOkresowe() //zmienia na biale
@@ -1041,7 +1089,7 @@ namespace Projekt_Wizualizacja
             else SprawdzenieWyboruBiletu = true;
 
         }
-        public void ObslugaKontrolek() //sluzy do pokazywania i ukrywania 
+        public void MiesieczneObslugaKontrolek() //sluzy do pokazywania i ukrywania 
         {
             Spr_wszystkich_opcji();
             PokazywanieKontrolekOkresowe();
@@ -1174,7 +1222,7 @@ namespace Projekt_Wizualizacja
                             okresowyRRW.ShowDialog();
                             kategoria_tekst = okresowyRRW.Teksty();
                             ClickKategori = false;
-                            Wpisywanie_Do_TB();
+                            MiesieczneWpisywanie_Do_TB();
                         }
                         ZmianaKoloruKontrolekOkresowe();
                         panelOkresowe_b_NocnyRRW.BackColor = Color.Green;
@@ -1186,7 +1234,7 @@ namespace Projekt_Wizualizacja
 
                         if (sprawdzenie == true)
                         {
-                            Wpisywanie_Do_TB();
+                            MiesieczneWpisywanie_Do_TB();
                         }
                         ZmianaKoloruKontrolekOkresowe();
                         panelOkresowe_b_NocnySieci.BackColor = Color.Green;
@@ -1195,19 +1243,32 @@ namespace Projekt_Wizualizacja
             }
 
             Suma = CenaOkresowego;
-            Wpisywanie_Do_TB();
+            MiesieczneWpisywanie_Do_TB();
         }
 
         //przyciski
         private void panelOkresowe_b_30dni_Click(object sender, EventArgs e)
         {
             bilet = 0;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_mies_Click(object sender, EventArgs e)
         {
+            OkresoweMiesiac();
+            if (OkresoweCzyJestPrzed16 == true && bilet!=1)
+            {
+                if (PotwiedzenieZlegoBiltu() == true)
+                {
+                    bilet = 1;
+                    MiesieczneObslugaKontrolek();
+                }
+                else
+                {
+                    return;
+                }
+            }
             bilet = 1;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_imienny_Click(object sender, EventArgs e)
         {
@@ -1220,24 +1281,24 @@ namespace Projekt_Wizualizacja
                 kategoria_biletu = 0;
             }
             Typ_biletu = 0;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_okaziciela_Click(object sender, EventArgs e)
         {
             Typ_biletu = 1;
             Rodzaj_ulgi = 0;
             Waznosc_biletu = 1;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_zwykly_Click(object sender, EventArgs e)
         {
             Rodzaj_ulgi = 0;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_ulgowy_Click(object sender, EventArgs e)
         {
             Rodzaj_ulgi = 1;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
 
         
@@ -1245,12 +1306,12 @@ namespace Projekt_Wizualizacja
         private void panelOkresowe_b_PonPia_Click(object sender, EventArgs e)
         {
             Waznosc_biletu = 0;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_szDni_Click(object sender, EventArgs e)
         {
             Waznosc_biletu = 1;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
 
         //wybor kategorii biletu
@@ -1258,31 +1319,31 @@ namespace Projekt_Wizualizacja
         {
             kategoria_biletu = 1;
             SprawdzenieWyboruBiletu = true;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_Nocny_Click(object sender, EventArgs e)
         {
             kategoria_biletu = 2;
 
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_NocnyGminy_Click(object sender, EventArgs e)
         {
             kategoria_biletu = 3;
             ClickKategori = true;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
         }
         private void panelOkresowe_b_NocnyRRW_Click(object sender, EventArgs e)
         {
             kategoria_biletu = 4;
             ClickKategori = true;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
 
         }
         private void panelOkresowe_b_NocnySieci_Click(object sender, EventArgs e)
         {
             kategoria_biletu = 5;
-            ObslugaKontrolek();
+            MiesieczneObslugaKontrolek();
 
         }
 
@@ -1320,7 +1381,7 @@ namespace Projekt_Wizualizacja
         #endregion
 
 #region Semestralne
-
+        //bool OkresoweOstrzezenie = false;
         string DataDzialaniaSemestralnego = "";
         public int SemestralnyIleMiesiecy = 3; //4-4miesiace 5-5miesiecy , 3 domyslne
 
@@ -1403,8 +1464,7 @@ namespace Projekt_Wizualizacja
             else SprawdzenieWyboruBiletu = true;
         }
         public void SemestralneObslugaKontrolek()
-        {
-            
+        {            
             SprWszystkichOpcjiSemestralne(); //sprawdza czy zostaly klikniete obie opcje
             SemestralnePokazwyanieKontrolek(); //pokazuje nowe kontrolki w zaleznosci od wcisnietych klawiszy
             Suma = CenaSemstralne();//obliczenie ceny bileut
@@ -1508,22 +1568,33 @@ namespace Projekt_Wizualizacja
         }        
         public void SemestralneWspiswyanieDoTB()            
         {
+            SemestralneOtwarcieOkna(); //inaczej nie chcce działać poprawnie
+            pSemes_tb_Podsumowanie.Text = "";
             if (sprawdzenie != true || kategoria_biletu == 0)
             {
                 CenaOkresowego = 0;
-                kategoria_tekst = "";
+                //kategoria_tekst = "Nie wybrano żadnego biletu.";
+                komunikat_suma = "0,00 zł.";
+                pSemes_tb_Suma.Text = komunikat_suma;
             } //wyczyszenie buforu tekstu
 
+
             Nazwa_poczatek();
+
+            //if (OkresoweOstrzezenie == true)
+            //{
+            //    pSemes_tb_Podsumowanie.Text = "\t   >>>UWAGA!<<<" + Environment.NewLine+ "WYBRANO BILET NA OKRES KTÓRY ZACZĄŁ SIĘ JAKIŚ CZAS TEMU!!" + Environment.NewLine + Environment.NewLine;
+            //}
+            pSemes_tb_Podsumowanie.Text += "\n" + komunikat_info;//kom1 + kom2 + kom3 + kom4 + kom5;
+            komunikat_suma = String.Format("{0:0.00} zł", CenaSemstralne());
+            pSemes_tb_Suma.Text = komunikat_suma;
             if (SprawdzenieWyboruBiletu == true && sprawdzenie == true)
             {
-                pSemes_tb_Podsumowanie.Text = "\n" + komunikat_info;//kom1 + kom2 + kom3 + kom4 + kom5;
-                komunikat_suma = String.Format("{0:0.00} zł",CenaSemstralne());
-                pSemes_tb_Suma.Text = komunikat_suma;
+                
             }
             else
             {
-                pSemes_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
+               // pSemes_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
                 komunikat_suma = "0,00 zł.";
                 pSemes_tb_Suma.Text = komunikat_suma;
             }
@@ -1531,9 +1602,19 @@ namespace Projekt_Wizualizacja
         public void SemestralneOtwarcieOkna() //otawrcie okna dowyboru jakie miesiace jest ważny
         {
             Semestralne_KtoreMiesiace semestralne_KtoreMiesiace = new Semestralne_KtoreMiesiace(SemestralnyIleMiesiecy);
-            semestralne_KtoreMiesiace.TekstButonow();
-            semestralne_KtoreMiesiace.ShowDialog();
-            DataDzialaniaSemestralnego = semestralne_KtoreMiesiace.tekst_KtoreMiesiaceWazny;            
+
+            //nie pozwalamy na wybór semestru bo bez sensu
+            //semestralne_KtoreMiesiace.b_zimowy.Enabled = false;
+            //semestralne_KtoreMiesiace.TekstButonow();
+            //semestralne_KtoreMiesiace.ShowDialog();
+            //if (semestralne_KtoreMiesiace.KtoreMiesiace==0) //to znak ze wybrano juz trwajacy okres
+            //{
+            //    OkresoweOstrzezenie = true;
+            //}
+            
+            semestralne_KtoreMiesiace.TworzenieTesktu();
+            DataDzialaniaSemestralnego = semestralne_KtoreMiesiace.tekst_KtoreMiesiaceWazny;
+            semestralne_KtoreMiesiace.Close();
         }
 
        
@@ -1542,8 +1623,8 @@ namespace Projekt_Wizualizacja
         private void pSemes_b_4miesiace_Click(object sender, EventArgs e)
         {
             SemestralnyIleMiesiecy = 4;
-            SemestralneObslugaKontrolek();
             SemestralneOtwarcieOkna();
+            SemestralneObslugaKontrolek();
         }
 
 
@@ -1609,12 +1690,13 @@ namespace Projekt_Wizualizacja
 
 
                 //Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
-                Podsumowanie podsumowanieOkresowe = new Podsumowanie(panelOkresowe_tb_Podsumowanie.Text, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
+                Podsumowanie podsumowanieOkresowe = new Podsumowanie(pSemes_tb_Podsumowanie.Text, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
                 podsumowanieOkresowe.RodzajKupowanegoBiletu = 1;
                 podsumowanieOkresowe.ShowDialog();
                 if (podsumowanieOkresowe.Koniec == true)
                 {
                     ResetValuesOkresowe();
+                    UsuwanieWartosci();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
                 }
@@ -1648,7 +1730,7 @@ namespace Projekt_Wizualizacja
                 tb_NMid.Text = ValueStorage2[tb_NMid];
                 tb_UMid.Text = ValueStorage2[tb_UMid];
                 Flag = 2;
-                pKoniecWstecz_b_Wstecz.Visible = true;
+                //pKoniecWstecz_b_Wstecz.Visible = true;
                 MenuGlowneZmianaTextuButtonow();
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -1665,7 +1747,7 @@ namespace Projekt_Wizualizacja
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
                 tb_NMid.Text = ValueStorage[tb_NMid];
                 tb_UMid.Text = ValueStorage[tb_UMid];
-                pKoniecWstecz_b_Wstecz.Visible = false;
+                //pKoniecWstecz_b_Wstecz.Visible = false;
                 Flag = 1;
                 MenuGlowneZmianaTextuButtonow();
                 RefreshSummaryRTB();
@@ -1783,6 +1865,23 @@ namespace Projekt_Wizualizacja
         {
             Plus(tb_URight);
             RefreshSummaryRTB();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Main_MouseMove(object sender, MouseEventArgs e)
+        {
+            Reklamy reklamy = new Reklamy();
+            //reklamy.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            ChowajAllPanele();
+            PrzesuwaniePaneli();
         }
 
         private void btn_MU24_Click(object sender, EventArgs e)

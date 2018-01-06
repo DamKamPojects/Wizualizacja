@@ -146,15 +146,16 @@ namespace Projekt_Wizualizacja
         //programowanie przyciskow
         private void Podsumowanie_Load(object sender, EventArgs e)
         {
-            Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
+            //Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
             //this.BackgroundImage = imageTlo;
             pPodsu.BringToFront();
+            pKoniecWstecz_b_Wstecz.Visible = true;
             this.StartPosition = FormStartPosition.Manual;
             this.Top = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
             AkutalneOkno = 1;
             DoZaplaty = Suma;
-            pb_postep.Maximum = 5000;
+            pb_postep.Maximum = 5000;            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -169,9 +170,10 @@ namespace Projekt_Wizualizacja
             //if (AktualneOkno != 0)
             //    panelKoniecWstecz.Visible = true;
         }
-        private void panelKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
+
+        private void pKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
-            if (AkutalneOkno==1)
+            if (AkutalneOkno == 1)
             {
                 this.Close();
             }
@@ -181,6 +183,18 @@ namespace Projekt_Wizualizacja
                 pPodsu.BringToFront();
             }
         }
+
+        private void pKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
+        {
+            OknoPotwierdzeniaWyjscia oknoPotwierdzeniaWyjscia = new OknoPotwierdzeniaWyjscia();
+            oknoPotwierdzeniaWyjscia.ShowDialog();
+            if (oknoPotwierdzeniaWyjscia.Koniec == true)
+            {
+                Koniec = true;
+                this.Close();
+            }
+            oknoPotwierdzeniaWyjscia.Close();
+        }
         private void pPodsu_b_ZmienPlactnosci_Click(object sender, EventArgs e)
         {
             WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(Komunikat_suma);
@@ -189,22 +203,13 @@ namespace Projekt_Wizualizacja
             tb_SposobPlatnosci();
             wyborKartaCzyGotowka.Close();
         }
-        private void panelKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
-        {
-            OknoPotwierdzeniaWyjscia oknoPotwierdzeniaWyjscia = new OknoPotwierdzeniaWyjscia();
-            oknoPotwierdzeniaWyjscia.ShowDialog();
-            if (oknoPotwierdzeniaWyjscia.Koniec==true)
-            {                
-                Koniec = true;
-                this.Close();
-            }
-            oknoPotwierdzeniaWyjscia.Close();
-        }
         private void pPodsu_b_Potwiedz_Click(object sender, EventArgs e)
         {
             if (SposobPlatnosci==1)
             {
                 pGotow.BringToFront();
+                AkutalneOkno = 2;
+                pKoniecWstecz_b_Wstecz.Visible = false;
             }
 
             else
@@ -235,11 +240,7 @@ namespace Projekt_Wizualizacja
             Zaplacono += 2.00;
             LabelsOperating();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void pGotow_b_50gr_Click(object sender, EventArgs e)
         {

@@ -35,11 +35,12 @@
             // 
             // l_Ostrzezenie
             // 
-            this.l_Ostrzezenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.l_Ostrzezenie.ForeColor = System.Drawing.Color.White;
+            this.l_Ostrzezenie.BackColor = System.Drawing.Color.Transparent;
+            this.l_Ostrzezenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_Ostrzezenie.ForeColor = System.Drawing.Color.Brown;
             this.l_Ostrzezenie.Location = new System.Drawing.Point(0, 0);
             this.l_Ostrzezenie.Name = "l_Ostrzezenie";
-            this.l_Ostrzezenie.Size = new System.Drawing.Size(680, 150);
+            this.l_Ostrzezenie.Size = new System.Drawing.Size(783, 150);
             this.l_Ostrzezenie.TabIndex = 0;
             this.l_Ostrzezenie.Text = "Jesteś pewny że chcesz anulować transakcję?";
             this.l_Ostrzezenie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +63,7 @@
             this.b_Nie.BackColor = System.Drawing.Color.White;
             this.b_Nie.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.b_Nie.ForeColor = System.Drawing.Color.Black;
-            this.b_Nie.Location = new System.Drawing.Point(420, 150);
+            this.b_Nie.Location = new System.Drawing.Point(509, 150);
             this.b_Nie.Name = "b_Nie";
             this.b_Nie.Size = new System.Drawing.Size(200, 80);
             this.b_Nie.TabIndex = 2;
@@ -74,8 +75,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(684, 261);
+            this.BackColor = System.Drawing.Color.LightYellow;
+            this.ClientSize = new System.Drawing.Size(783, 261);
             this.ControlBox = false;
             this.Controls.Add(this.b_Nie);
             this.Controls.Add(this.b_Tak);
