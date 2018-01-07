@@ -118,3 +118,4 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizu
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.pdb
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Kalendarz.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Reklamy.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKartyMiejskiej.resources

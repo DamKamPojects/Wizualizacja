@@ -66,7 +66,7 @@
             this.b_Semestralny.Name = "b_Semestralny";
             this.b_Semestralny.Size = new System.Drawing.Size(180, 150);
             this.b_Semestralny.TabIndex = 2;
-            this.b_Semestralny.Text = "Bilety semestralne";
+            this.b_Semestralny.Text = "Bilet semestralny na semestr LETNI";
             this.b_Semestralny.UseVisualStyleBackColor = false;
             this.b_Semestralny.Click += new System.EventHandler(this.b_Semestralny_Click);
             // 
@@ -80,6 +80,7 @@
             this.b_wstecz.TabIndex = 3;
             this.b_wstecz.Text = "WSTECZ";
             this.b_wstecz.UseVisualStyleBackColor = false;
+            this.b_wstecz.Visible = false;
             this.b_wstecz.Click += new System.EventHandler(this.b_wstecz_Click);
             // 
             // WyborMiesieczneSemestralne
@@ -87,7 +88,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(544, 384);
+            this.ClientSize = new System.Drawing.Size(544, 284);
             this.ControlBox = false;
             this.Controls.Add(this.b_wstecz);
             this.Controls.Add(this.b_Semestralny);

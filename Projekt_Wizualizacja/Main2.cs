@@ -82,6 +82,113 @@ namespace Projekt_Wizualizacja
         #endregion
 
         #region Metody
+        double JednoCena(int ktoryTB) 
+        {
+            switch (Flag)
+            {
+                case 1:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.JDzienJP;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.JDzienGodz;
+                        }
+                        else if (ktoryTB == 2) // /rightnorm
+                        {
+                            return ceny1.J24h;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.JNocJP;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.JNocGodz;
+                        }
+                        else if (ktoryTB == 2) //right norm
+                        {
+                            return ceny1.J24h;
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.MetroKomDJP;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.MetroKom24;
+                        }
+                        else if (ktoryTB == 2) //right norm
+                        {
+                            return ceny1.MetroKom72;
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.MetroKomNJP;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.MetroKom24;
+                        }
+                        else if (ktoryTB == 2) //right norm
+                        {
+                            return ceny1.MetroKom72;
+                        }
+                        break;
+                    }
+                case 5:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.MetroKolKom24_All;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.MetroKolKom72;
+                        }
+                        else if (ktoryTB == 2) //right norm
+                        {
+                            return ceny1.MetroKolKom24_2;
+                        }
+                        break;
+                    }
+                case 6:
+                    {
+                        if (ktoryTB == 0) //lewy normalny
+                        {
+                            return ceny1.MetroKolKom24_2;
+                        }
+                        else if (ktoryTB == 1) //mid norm
+                        {
+                            return ceny1.MetroKolKom24_2;
+                        }
+                        else if (ktoryTB == 2) //right norm
+                        {
+                            return ceny1.MetroKolKom24_2;
+                        }
+                        break;
+                    }
+                default:
+                    break;
+            }
+
+
+            return 0;
+        } //zwraca cene biletow w zaleznosci od pozycji i flagi; 0 lewo, 1 srodek, 2 prawo
         private void UsuwanieWartosci()
         {
             pJedno_TekstDoTB = new string[4] { "", "", "", "" };
@@ -139,7 +246,9 @@ namespace Projekt_Wizualizacja
         }
         void Plus(TextBox tb)   //dodawanie 1 do wartości w tb
         {
-            tb.Text = (Convert.ToInt32(tb.Text)+1).ToString();
+            if (Convert.ToInt32(tb.Text) + 1 < 100) tb.Text = (Convert.ToInt32(tb.Text) + 1).ToString();
+            else tb.Text = "99";
+            //tb.Text = (Convert.ToInt32(tb.Text)+1).ToString();
             RefreshSummaryRTB();
         }
         void Minus(TextBox tb)  //odejmowanie 1 od wartości w tb
@@ -210,7 +319,21 @@ namespace Projekt_Wizualizacja
             }
         }
 
+        //zmienie ceny biletow w labelach pod opisem
+        private void JednoLabelZmianaCenBiletow()
+        {
+            string Zwykly = "Bilet NORMALNY, cena: ";
+            string Ulgowy = "Bilet ULGOWY, cena: ";
 
+            pJedno_l_LN.Text = Zwykly + String.Format("{0:0.00} zł", JednoCena(0));
+            pJedno_l_LU.Text = Ulgowy + String.Format("{0:0.00} zł", JednoCena(0)/2);
+
+            pJedno_l_MN.Text = Zwykly + String.Format("{0:0.00} zł", JednoCena(1));
+            pJedno_l_MU.Text = Ulgowy + String.Format("{0:0.00} zł", JednoCena(1) / 2);
+
+            pJedno_l_RN.Text = Zwykly + String.Format("{0:0.00} zł", JednoCena(2));
+            pJedno_l_RU.Text = Ulgowy + String.Format("{0:0.00} zł", JednoCena(2) / 2);
+        }
         private void ZmianaTextuBilety()
         {
 
@@ -651,7 +774,16 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-#region Panel wstecz i Koniec
+        #region Panel wstecz i Koniec
+        //private bool CzyWybraneBiletyBylyOkresowe; //potrzebne do komunikatu wyjecia biletu
+        void OknoKomunikatKartaMiejska()
+        {
+            OknoKartyMiejskiej oknoKartyMiejskiej = new OknoKartyMiejskiej();
+            oknoKartyMiejskiej.b_Koniec.Visible = false;
+            oknoKartyMiejskiej.b_Ok.Text = "(Wyjmuję kartę miejską)";
+            oknoKartyMiejskiej.l_Komunikat.Text = "Proszę wyjąć kartę miejską z biletomatu.";
+            oknoKartyMiejskiej.ShowDialog();
+        }
         private void KoniecButton()
         {
             if (SprawdzyCzyWYbranoJakisBilet() == true)
@@ -664,17 +796,29 @@ namespace Projekt_Wizualizacja
         }
         bool SprawdzyCzyWYbranoJakisBilet()
         {
-            if (price > 0 || Suma!=0 || Cena_biletu(kategoria_biletu)!=0)
+            if (price > 0 || Suma!=0)
             {
                 OknoPotwierdzeniaWyjscia ostrzezenieJednorazowe = new OknoPotwierdzeniaWyjscia("Jesteś pewny że chcesz wyjść z tej kategorii biletów? Wciśniecie przycisku TAK spowoduje utracenie dotychczas wybranych biletów.");
                 ostrzezenieJednorazowe.ShowDialog();
                 return ostrzezenieJednorazowe.Koniec;
             }
+            else if (AktualneOkno==6 || AktualneOkno==7) //to znaczy ze sa to okresowe
+            {
+                OknoPotwierdzeniaWyjscia ostrzezenieOkresowe= new OknoPotwierdzeniaWyjscia("Jesteś pewny że chcesz wyjść z tej kategorii biletów?");
+                ostrzezenieOkresowe.ShowDialog();
+                if (ostrzezenieOkresowe.Koniec==true)
+                {
+                    OknoKomunikatKartaMiejska();
+                    return true;
+                }
+                return false;
+                
+            }
             return true;
         }
         private void pKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
-            if (Flag == 2 || Flag == 4) //to znaczy ze przeskoczylismy do drugiej zakladki
+            if (Flag == 2 || Flag == 4 || Flag==6) //to znaczy ze przeskoczylismy do drugiej zakladki
             {
                 btn_Other_Click(sender, e);
                 PrzesuwaniePaneli();
@@ -687,8 +831,9 @@ namespace Projekt_Wizualizacja
 
         private void pKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
         {
-            AktualneOkno = 0;
+            
             KoniecButton();
+            AktualneOkno = 0;
         }
         #endregion
 
@@ -697,6 +842,9 @@ namespace Projekt_Wizualizacja
         void MenuGlowneZmianaTextuButtonow()
         {
             string tekstLabel = "Bilety ";
+            string tekstNumerStrony = "";
+            string tekstLabel1 = "(Strona 1 z 2)";
+            string tekstLabel2 = "(Strona 2 z 2)";
             string tekstButton = "Inne bilety ";
             //jednorazowe
             if (Flag==1 || Flag==2)
@@ -704,11 +852,15 @@ namespace Projekt_Wizualizacja
                 tekstLabel += "jednorazowe ";
                 if (Flag==1) //czyli pierwsza zakladka
                 {
+                    tekstNumerStrony = tekstLabel1;
                     //tekstLabel += "dzienne";
                     tekstButton += "(NOCNE I SPECJALNE)";
                 }
                 if (Flag == 2) //czyli druga zakladka
                 {
+                    tekstNumerStrony = tekstLabel2;
+                    //tekstLabel2 += " (2 z 2)";
+
                     //tekstLabel += "nocne";
                     tekstButton += "(DZIENNE)";
                 }
@@ -718,11 +870,13 @@ namespace Projekt_Wizualizacja
                 tekstLabel += "metropolitarne komunalne ";
                 if (Flag == 3) //czyli pierwsza zakladka
                 {
+                    tekstNumerStrony = tekstLabel1;
                     //tekstLabel += "dzienne";
                     tekstButton += "(NOCNE)";
                 }
                 if (Flag == 4) //czyli druga zakladka
                 {
+                    tekstNumerStrony = tekstLabel2;
                     //tekstLabel += "nocne";
                     tekstButton += "(DZIENNE)";
                 }
@@ -732,11 +886,13 @@ namespace Projekt_Wizualizacja
                 tekstLabel += "metropolitarne komunalno-kolejowe ";
                 if (Flag == 5) //czyli pierwsza zakladka
                 {
+                    tekstNumerStrony = tekstLabel1;
                     //tekstLabel += "czasowe na wszytkie linie oraz na linię Gdynia + SKM i PR";
                     tekstButton += "(NA DWÓCH PRZEWOŹNIKÓW)";
                 }
                 if (Flag == 6) //czyli druga zakladka
                 {
+                    tekstNumerStrony = tekstLabel2;
                     //tekstLabel += "na dwóch przewoźników";
                     tekstButton += "(NA WSZYSTKIE LINIE ORAZ NA LINIĘ GDYNIA + SKM i PR)";
                 }
@@ -744,7 +900,8 @@ namespace Projekt_Wizualizacja
             tekstLabel = tekstLabel.ToUpper();
             tekstButton = "INNE BILETY";
             btn_Other.Text = tekstButton.ToUpper();
-            pJedno_l_NazwaZakladki.Text = tekstLabel;
+            pJedno_l_NazwaZakladki.Text = tekstLabel + tekstNumerStrony;
+            JednoLabelZmianaCenBiletow();
         }
 
 
@@ -752,7 +909,8 @@ namespace Projekt_Wizualizacja
         {
             Flag = 1;
             MenuGlowneZmianaTextuButtonow();
-            panelJednorazowe.BringToFront();                      
+            pJedno_gb_Right.Visible = true;
+            panelJednorazowe.BringToFront();
             AktualneOkno = 1;
             
             PrzesuwaniePaneli();
@@ -762,31 +920,38 @@ namespace Projekt_Wizualizacja
         {
             ResetValuesOkresowe();
             Rodzaj_ulgi = 3;
-            WyborMiesieczneSemestralne wyborMiesieczneSemestralne = new WyborMiesieczneSemestralne();
-            wyborMiesieczneSemestralne.ShowDialog();
-            RodzajWybranegoBiletuOkresowego = wyborMiesieczneSemestralne.RodzajWybranegobiletu;
-            if (wyborMiesieczneSemestralne.RodzajWybranegobiletu == 1)
+            OknoKartyMiejskiej oknoKartyMiejskiej = new OknoKartyMiejskiej();
+            oknoKartyMiejskiej.ShowDialog();
+            if (oknoKartyMiejskiej.CzyPrzylozonoKarte == true)
             {
-                //panelOkresowe.BringToFront();
-                AktualneOkno = 6;
-                MiesieczneObslugaKontrolek();
-                PrzesuwaniePaneli();
-                
+                WyborMiesieczneSemestralne wyborMiesieczneSemestralne = new WyborMiesieczneSemestralne();
+                wyborMiesieczneSemestralne.ShowDialog();
+                RodzajWybranegoBiletuOkresowego = wyborMiesieczneSemestralne.RodzajWybranegobiletu;
+                if (wyborMiesieczneSemestralne.RodzajWybranegobiletu == 1)
+                {
+                    //panelOkresowe.BringToFront();
+                    AktualneOkno = 6;
+                    MiesieczneObslugaKontrolek();
+                    PrzesuwaniePaneli();
+
+                }
+                else if (wyborMiesieczneSemestralne.RodzajWybranegobiletu == 2)
+                {
+                    //pSemes.BringToFront();
+                    Waznosc_biletu = 1;
+                    AktualneOkno = 7;
+                    SemestralneObslugaKontrolek();
+                    PrzesuwaniePaneli();
+                }
             }
-            else if (wyborMiesieczneSemestralne.RodzajWybranegobiletu == 2)
-            {
-                //pSemes.BringToFront();
-                Waznosc_biletu = 1;
-                AktualneOkno = 7;
-                SemestralneObslugaKontrolek();
-                PrzesuwaniePaneli();
-            }
+           
         }
 
         private void panelMenu_b_BiletyMetroKomun_Click(object sender, EventArgs e)
         {
             Flag = 3;
             MenuGlowneZmianaTextuButtonow();
+            pJedno_gb_Right.Visible = true;
             panelJednorazowe.BringToFront();            
             AktualneOkno = 1;
             PrzesuwaniePaneli();
@@ -801,6 +966,7 @@ namespace Projekt_Wizualizacja
         {
             Flag = 5;
             MenuGlowneZmianaTextuButtonow();
+            pJedno_gb_Right.Visible = true;
             panelJednorazowe.BringToFront();
             
             AktualneOkno = 1;
@@ -1013,7 +1179,7 @@ namespace Projekt_Wizualizacja
 
             Nazwa_poczatek();
             panelOkresowe_tb_Podsumowanie.Text = "\n" + komunikat_info;//kom1 + kom2 + kom3 + kom4 + kom5;
-            komunikat_suma = Convert.ToString(Cena_biletu(kategoria_biletu)) + ",00 zł.";
+            komunikat_suma = String.Format("{0:0.00} zł",Cena_biletu(kategoria_biletu));
             panelOkresowe_tb_Suma.Text = komunikat_suma;
 
             if (SprawdzenieWyboruBiletu == true && sprawdzenie == true)
@@ -1391,7 +1557,7 @@ namespace Projekt_Wizualizacja
                 wyborKartaCzyGotowka.Close();
 
 
-                Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
+                Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, CenaOkresowego);
                 podsumowanie.RodzajKupowanegoBiletu = 1;
                 podsumowanie.ShowDialog();
                 if (podsumowanie.Koniec == true)
@@ -1399,6 +1565,9 @@ namespace Projekt_Wizualizacja
                     ResetValuesOkresowe();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
+                    OknoKomunikatKartaMiejska();
+
+                    
                 }
                 podsumowanie.Close();
                 //podsumowanie.Visible = true;
@@ -1650,8 +1819,8 @@ namespace Projekt_Wizualizacja
             semestralne_KtoreMiesiace.Close();
         }
 
-       
 
+        #region przyciski
         //przyciski
         private void pSemes_b_4miesiace_Click(object sender, EventArgs e)
         {
@@ -1712,6 +1881,8 @@ namespace Projekt_Wizualizacja
             SemestralneObslugaKontrolek();
         }
 
+
+        #endregion
         private void pSemes_b_Platnosc_Click(object sender, EventArgs e)
         {
             if (CenaOkresowego > 0)
@@ -1730,6 +1901,8 @@ namespace Projekt_Wizualizacja
                 {
                     ResetValuesOkresowe();
                     UsuwanieWartosci();
+                    //KoniecButton();
+                    OknoKomunikatKartaMiejska();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
                 }
@@ -1744,7 +1917,7 @@ namespace Projekt_Wizualizacja
         }
         #endregion
 
-#region Jednorazowe
+        #region Jednorazowe
 
         /*Wchuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuj guzików*/
         #region Klikanie guzików
@@ -1762,6 +1935,7 @@ namespace Projekt_Wizualizacja
                 tb_ULeft.Text = ValueStorage2[tb_ULeft];
                 tb_NMid.Text = ValueStorage2[tb_NMid];
                 tb_UMid.Text = ValueStorage2[tb_UMid];
+                pJedno_gb_Right.Visible = false;
                 Flag = 2;
                 //pKoniecWstecz_b_Wstecz.Visible = true;
                 MenuGlowneZmianaTextuButtonow();
@@ -1780,6 +1954,7 @@ namespace Projekt_Wizualizacja
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
                 tb_NMid.Text = ValueStorage[tb_NMid];
                 tb_UMid.Text = ValueStorage[tb_UMid];
+                pJedno_gb_Right.Visible = true;
                 //pKoniecWstecz_b_Wstecz.Visible = false;
                 Flag = 1;
                 MenuGlowneZmianaTextuButtonow();
@@ -1794,7 +1969,10 @@ namespace Projekt_Wizualizacja
                 ValueStorage[tb_ULeft] = tb_ULeft.Text;
                 tb_NLeft.Text = ValueStorage2[tb_NLeft];
                 tb_ULeft.Text = ValueStorage2[tb_ULeft];
+                pJedno_gb_Right.Visible = false;
+                pJedno_gb_Mid.Visible = false;
                 Flag = 4;
+                MenuGlowneZmianaTextuButtonow();
                 //pKoniecWstecz_b_Wstecz.Visible = true;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -1807,7 +1985,10 @@ namespace Projekt_Wizualizacja
                 ValueStorage2[tb_ULeft] = tb_ULeft.Text;
                 tb_NLeft.Text = ValueStorage[tb_NLeft];
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
+                pJedno_gb_Right.Visible = true;
+                pJedno_gb_Mid.Visible = true;
                 Flag = 3;
+                MenuGlowneZmianaTextuButtonow();
                 //pKoniecWstecz_b_Wstecz.Visible = false;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -1824,7 +2005,9 @@ namespace Projekt_Wizualizacja
                 tb_ULeft.Text = ValueStorage2[tb_ULeft];
                 tb_NMid.Text = ValueStorage2[tb_NMid];
                 tb_UMid.Text = ValueStorage2[tb_UMid];
+                pJedno_gb_Right.Visible = false;
                 Flag = 6;
+                MenuGlowneZmianaTextuButtonow();
                 //pKoniecWstecz_b_Wstecz.Visible = true;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -1841,7 +2024,9 @@ namespace Projekt_Wizualizacja
                 tb_ULeft.Text = ValueStorage[tb_ULeft];
                 tb_NMid.Text = ValueStorage[tb_NMid];
                 tb_UMid.Text = ValueStorage[tb_UMid];
+                pJedno_gb_Right.Visible = true;
                 Flag = 5;
+                MenuGlowneZmianaTextuButtonow();
                 //pKoniecWstecz_b_Wstecz.Visible = false;
                 RefreshSummaryRTB();
                 ZmianaTextuBilety();
@@ -2002,7 +2187,7 @@ namespace Projekt_Wizualizacja
         //            KolKom24StorageShort.Add("Przewoźnicy: " + pop.T1 + ", " + pop.T2 + "; Norm: " + pop.QuantN + ", " + String.Format("{0:0.00} zł", pop.PriceNorm) + "; Ulg: " + pop.QuantU + ", " + String.Format("{0:0.00} zł", pop.PriceUlg));
         //            KolKom24PricesNorm.Add(pop.PriceNorm);
         //            KolKom24PricesUlg.Add(pop.PriceUlg);
-                    
+
         //            //RefreshSummaryRTB();
         //        }
         //        KolejowoKomunalne();
@@ -2012,36 +2197,41 @@ namespace Projekt_Wizualizacja
         #endregion
 
 
+
+
         #region Klikanie Textboxów
+            //metoda pobierająca cena w zależości od rodzaju flagi
+        
 
         private void tb_NJedn_Click(object sender, EventArgs e)
-        {
-            GetKeyboard(tb_NLeft, ceny1.JDzienJP);
+        {           
+
+            GetKeyboard(tb_NLeft, JednoCena(0));
         }
 
         private void tb_UJedn_Click(object sender, EventArgs e)
         {
-            GetKeyboard(tb_ULeft, ceny1.JDzienJP / 2);
+            GetKeyboard(tb_ULeft, JednoCena(0)/2);
         }
 
         private void tb_NGodz_Click(object sender, EventArgs e)
         {
-            GetKeyboard(tb_NMid, ceny1.JDzienGodz);
+            GetKeyboard(tb_NMid, JednoCena(1));
         }
 
         private void tb_UGodz_Click(object sender, EventArgs e)
         {
-            GetKeyboard(tb_UMid, ceny1.JDzienGodz / 2);
+            GetKeyboard(tb_UMid, JednoCena(1)/2);
         }
 
         private void tb_N24_Click(object sender, EventArgs e)
         {
-            GetKeyboard(tb_NRight, ceny1.J24h);
+            GetKeyboard(tb_NRight, JednoCena(2));
         }
 
         private void tb_U24_Click(object sender, EventArgs e)
         {
-            GetKeyboard(tb_URight, ceny1.J24h / 2);
+            GetKeyboard(tb_URight, JednoCena(2) / 2);
         }
         #endregion
         #endregion

@@ -21,6 +21,8 @@ namespace Wizualizacja01
         {
             suma = Convert.ToDouble(bilety) * cena;
             TBil_bil.Text = bilety;
+            l_IloscBiletow.Text = bilety;
+            l_CenaBIletow.Text= String.Format("{0:0.00} zł", suma);
             TBcen_bil.Text = String.Format("{0:0.00} zł", suma);
         }
 

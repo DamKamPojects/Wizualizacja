@@ -122,6 +122,12 @@
     <Compile Include="OknoPotwierdzeniaWyjscia.Designer.cs">
       <DependentUpon>OknoPotwierdzeniaWyjscia.cs</DependentUpon>
     </Compile>
+    <Compile Include="OknoKartyMiejskiej.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OknoKartyMiejskiej.Designer.cs">
+      <DependentUpon>OknoKartyMiejskiej.cs</DependentUpon>
+    </Compile>
     <Compile Include="OkresoweGminy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="OknoPotwierdzeniaWyjscia.resx">
       <DependentUpon>OknoPotwierdzeniaWyjscia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OknoKartyMiejskiej.resx">
+      <DependentUpon>OknoKartyMiejskiej.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OkresoweGminy.resx">
       <DependentUpon>OkresoweGminy.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +280,15 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Przycisk_BACKSPACE4.png" />
+    <None Include="Resources\Przycisk_Anuluj1.png" />
+    <None Include="Resources\Przycisk_Akceptuj1.png" />
+    <None Include="Resources\Przycisk_Anuluj.png" />
+    <None Include="Resources\Przycisk_Akceptuj.png" />
+    <None Include="Resources\Przycisk_BACKSPACE3.png" />
+    <None Include="Resources\Przycisk_BACKSPACE2.png" />
+    <None Include="Resources\Przycisk_BACKSPACE1.png" />
+    <None Include="Resources\Przycisk_BACKSPACE.png" />
     <None Include="Resources\Przycisk_ZAKOŃCZ.png" />
     <None Include="Resources\Przycisk_wstecz.png" />
     <None Include="Resources\ZKM_Gdynia.png" />

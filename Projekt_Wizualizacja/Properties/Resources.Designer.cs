@@ -233,6 +233,96 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_Akceptuj {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_Akceptuj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_Akceptuj1 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_Akceptuj1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_Anuluj {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_Anuluj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_Anuluj1 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_Anuluj1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_BACKSPACE {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_BACKSPACE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_BACKSPACE1 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_BACKSPACE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_BACKSPACE2 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_BACKSPACE2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_BACKSPACE3 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_BACKSPACE3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Przycisk_BACKSPACE4 {
+            get {
+                object obj = ResourceManager.GetObject("Przycisk_BACKSPACE4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Przycisk_wstecz {
             get {
                 object obj = ResourceManager.GetObject("Przycisk_wstecz", resourceCulture);

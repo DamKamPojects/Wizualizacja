@@ -32,11 +32,12 @@ namespace Projekt_Wizualizacja
             InitializeComponent();
             Suma = suma;
 
-            panelPodsum_tb_Podsumowanie.Text = tekst_podsumowanie;
-            pGotow_tb_Podsumowanie.Text = tekst_podsumowanie + "\nSUMA: " + Convert.ToString(Suma);
+            panelPodsum_tb_Podsumowanie.Text = tekst_podsumowanie + Environment.NewLine + "WARTOŚĆ ZAKUPU: " + String.Format("{0:0.00} zł",suma);
+            pGotow_tb_Podsumowanie.Text = tekst_podsumowanie +Environment.NewLine+ "WARTOŚĆ ZAKUPU: " + String.Format("{0:0.00} zł",suma);
 
             panelPodsumowanie_tb_Suma.Text = doZaplaty;
             pGotow_l_DoZaplaty.Text = doZaplaty;
+            l_doZaplaty.Text = doZaplaty;
             tb_SposobPlatnosci();
             //pb_postep.Value = progressBar;
         }
@@ -61,10 +62,12 @@ namespace Projekt_Wizualizacja
             if (SposobPlatnosci == 1)
             {
                 panelPodsumowanie_tb_SposobPlatnosci.Text = "Gotówka";
+                l_SposPaltnosci.Text = panelPodsumowanie_tb_SposobPlatnosci.Text;
             }
             else if (SposobPlatnosci == 2)
             {
                 panelPodsumowanie_tb_SposobPlatnosci.Text = "Karta płatnicza";
+                l_SposPaltnosci.Text = panelPodsumowanie_tb_SposobPlatnosci.Text;
             }
             else panelPodsumowanie_tb_SposobPlatnosci.Text = "Nie wybrano";
         }

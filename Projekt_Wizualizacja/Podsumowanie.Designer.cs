@@ -67,6 +67,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
+            this.l_doZaplaty = new System.Windows.Forms.Label();
+            this.l_SposPaltnosci = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +78,8 @@
             this.pGotow.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pGotowka_gb_Pobrano.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGorny
@@ -204,12 +210,12 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(1025, 91);
+            this.label2.Location = new System.Drawing.Point(0, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 37);
+            this.label2.Size = new System.Drawing.Size(230, 37);
             this.label2.TabIndex = 276;
             this.label2.Text = "Sposób płatności:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -225,29 +231,27 @@
             // pPodsu
             // 
             this.pPodsu.BackColor = System.Drawing.Color.Transparent;
-            this.pPodsu.Controls.Add(this.label3);
-            this.pPodsu.Controls.Add(this.label2);
+            this.pPodsu.Controls.Add(this.groupBox3);
+            this.pPodsu.Controls.Add(this.groupBox2);
             this.pPodsu.Controls.Add(this.pPodsu_b_ZmienPlactnosci);
-            this.pPodsu.Controls.Add(this.panelPodsumowanie_tb_SposobPlatnosci);
             this.pPodsu.Controls.Add(this.pPodsu_b_Potwierdz);
             this.pPodsu.Controls.Add(this.panelPodsum_tb_Podsumowanie);
-            this.pPodsu.Controls.Add(this.panelPodsumowanie_tb_Suma);
             this.pPodsu.Controls.Add(this.label1);
             this.pPodsu.Location = new System.Drawing.Point(0, 140);
             this.pPodsu.Name = "pPodsu";
-            this.pPodsu.Size = new System.Drawing.Size(1312, 531);
+            this.pPodsu.Size = new System.Drawing.Size(1312, 611);
             this.pPodsu.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(791, 91);
+            this.label3.Location = new System.Drawing.Point(0, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 37);
+            this.label3.Size = new System.Drawing.Size(150, 37);
             this.label3.TabIndex = 278;
             this.label3.Text = "Do zapłaty:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pPodsu_b_ZmienPlactnosci
             // 
@@ -265,7 +269,7 @@
             // 
             this.panelPodsumowanie_tb_SposobPlatnosci.BackColor = System.Drawing.SystemColors.Control;
             this.panelPodsumowanie_tb_SposobPlatnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(1030, 127);
+            this.panelPodsumowanie_tb_SposobPlatnosci.Location = new System.Drawing.Point(26, 46);
             this.panelPodsumowanie_tb_SposobPlatnosci.Multiline = true;
             this.panelPodsumowanie_tb_SposobPlatnosci.Name = "panelPodsumowanie_tb_SposobPlatnosci";
             this.panelPodsumowanie_tb_SposobPlatnosci.ReadOnly = true;
@@ -273,12 +277,13 @@
             this.panelPodsumowanie_tb_SposobPlatnosci.TabIndex = 273;
             this.panelPodsumowanie_tb_SposobPlatnosci.Text = "Karta płatnicza";
             this.panelPodsumowanie_tb_SposobPlatnosci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panelPodsumowanie_tb_SposobPlatnosci.Visible = false;
             // 
             // pPodsu_b_Potwierdz
             // 
             this.pPodsu_b_Potwierdz.BackColor = System.Drawing.Color.White;
             this.pPodsu_b_Potwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(796, 384);
+            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(800, 380);
             this.pPodsu_b_Potwierdz.Name = "pPodsu_b_Potwierdz";
             this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(434, 120);
             this.pPodsu_b_Potwierdz.TabIndex = 272;
@@ -293,14 +298,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPodsumowanie_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.panelPodsumowanie_tb_Suma.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(796, 127);
+            this.panelPodsumowanie_tb_Suma.Location = new System.Drawing.Point(15, 74);
             this.panelPodsumowanie_tb_Suma.Multiline = true;
             this.panelPodsumowanie_tb_Suma.Name = "panelPodsumowanie_tb_Suma";
             this.panelPodsumowanie_tb_Suma.ReadOnly = true;
-            this.panelPodsumowanie_tb_Suma.Size = new System.Drawing.Size(200, 40);
+            this.panelPodsumowanie_tb_Suma.Size = new System.Drawing.Size(127, 11);
             this.panelPodsumowanie_tb_Suma.TabIndex = 268;
             this.panelPodsumowanie_tb_Suma.Text = "10";
             this.panelPodsumowanie_tb_Suma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panelPodsumowanie_tb_Suma.Visible = false;
             // 
             // pGotow
             // 
@@ -321,7 +327,7 @@
             this.pGotow.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.pGotow.Location = new System.Drawing.Point(0, 140);
             this.pGotow.Name = "pGotow";
-            this.pGotow.Size = new System.Drawing.Size(1312, 526);
+            this.pGotow.Size = new System.Drawing.Size(1312, 650);
             this.pGotow.TabIndex = 36;
             // 
             // pGotow_b_50gr
@@ -368,9 +374,9 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(190, 477);
+            this.label8.Location = new System.Drawing.Point(93, 507);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(518, 41);
+            this.label8.Size = new System.Drawing.Size(661, 41);
             this.label8.TabIndex = 283;
             this.label8.Text = "PROSZĘ ZAPŁAĆ ZA BILET";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -494,12 +500,12 @@
             this.pGotow_tb_Podsumowanie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pGotow_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pGotow_tb_Podsumowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.pGotow_tb_Podsumowanie.Location = new System.Drawing.Point(93, 49);
             this.pGotow_tb_Podsumowanie.Multiline = true;
             this.pGotow_tb_Podsumowanie.Name = "pGotow_tb_Podsumowanie";
             this.pGotow_tb_Podsumowanie.ReadOnly = true;
-            this.pGotow_tb_Podsumowanie.Size = new System.Drawing.Size(706, 425);
+            this.pGotow_tb_Podsumowanie.Size = new System.Drawing.Size(661, 455);
             this.pGotow_tb_Podsumowanie.TabIndex = 270;
             this.pGotow_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
             // 
@@ -531,6 +537,50 @@
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // l_doZaplaty
+            // 
+            this.l_doZaplaty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_doZaplaty.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.l_doZaplaty.Location = new System.Drawing.Point(0, 50);
+            this.l_doZaplaty.Name = "l_doZaplaty";
+            this.l_doZaplaty.Size = new System.Drawing.Size(150, 40);
+            this.l_doZaplaty.TabIndex = 279;
+            this.l_doZaplaty.Text = "10,00 zł";
+            this.l_doZaplaty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_SposPaltnosci
+            // 
+            this.l_SposPaltnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_SposPaltnosci.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.l_SposPaltnosci.Location = new System.Drawing.Point(0, 50);
+            this.l_SposPaltnosci.Name = "l_SposPaltnosci";
+            this.l_SposPaltnosci.Size = new System.Drawing.Size(230, 40);
+            this.l_SposPaltnosci.TabIndex = 280;
+            this.l_SposPaltnosci.Text = "Karta płatnicza";
+            this.l_SposPaltnosci.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.l_doZaplaty);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.panelPodsumowanie_tb_Suma);
+            this.groupBox2.Location = new System.Drawing.Point(800, 50);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(150, 100);
+            this.groupBox2.TabIndex = 281;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.l_SposPaltnosci);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.panelPodsumowanie_tb_SposobPlatnosci);
+            this.groupBox3.Location = new System.Drawing.Point(1004, 47);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(230, 100);
+            this.groupBox3.TabIndex = 282;
+            this.groupBox3.TabStop = false;
+            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,6 +604,10 @@
             this.pGotow.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.pGotowka_gb_Pobrano.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -598,5 +652,9 @@
         private System.Windows.Forms.Label l_postep;
         private System.Windows.Forms.Button pKoniecWstecz_b_Wstecz;
         private System.Windows.Forms.Button pKoniecWstecz_b_Koniec;
+        private System.Windows.Forms.Label l_SposPaltnosci;
+        private System.Windows.Forms.Label l_doZaplaty;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
