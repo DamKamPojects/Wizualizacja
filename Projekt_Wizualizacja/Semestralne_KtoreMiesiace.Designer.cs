@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.b_letni = new System.Windows.Forms.Button();
             this.l_Komunikat = new System.Windows.Forms.Label();
             this.b_zimowy = new System.Windows.Forms.Button();
             this.b_zatwiedz = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // b_letni
@@ -82,6 +84,11 @@
             this.b_zatwiedz.UseVisualStyleBackColor = false;
             this.b_zatwiedz.Click += new System.EventHandler(this.b_zatwiedź_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            // 
             // Semestralne_KtoreMiesiace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,6 +101,7 @@
             this.Controls.Add(this.b_letni);
             this.Controls.Add(this.l_Komunikat);
             this.Controls.Add(this.b_zimowy);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Semestralne_KtoreMiesiace";
@@ -110,5 +118,6 @@
         private System.Windows.Forms.Label l_Komunikat;
         private System.Windows.Forms.Button b_zatwiedz;
         public System.Windows.Forms.Button b_zimowy;
+        private System.Windows.Forms.Timer timer1;
     }
 }

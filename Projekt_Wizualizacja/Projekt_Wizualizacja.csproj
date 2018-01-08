@@ -79,6 +79,7 @@
       <DependentUpon>aaa.cs</DependentUpon>
     </Compile>
     <Compile Include="Ceny_biletow.cs" />
+    <Compile Include="Czas.cs" />
     <Compile Include="Kalendarz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +281,14 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\reklama6.jpg" />
+    <None Include="Resources\Reklama11.jpg" />
+    <None Include="Resources\reklama5.jpg" />
+    <None Include="Resources\reklama4.jpg" />
+    <None Include="Resources\reklama3.jpg" />
+    <None Include="Resources\reklama2.png" />
+    <None Include="Resources\Reklama1v2.jpg" />
+    <None Include="Resources\Reklama1.jpg" />
     <None Include="Resources\Przycisk_BACKSPACE4.png" />
     <None Include="Resources\Przycisk_Anuluj1.png" />
     <None Include="Resources\Przycisk_Akceptuj1.png" />

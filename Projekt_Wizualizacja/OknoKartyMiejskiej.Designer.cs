@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.b_Koniec = new System.Windows.Forms.Button();
             this.l_Komunikat = new System.Windows.Forms.Label();
             this.b_Ok = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // b_Koniec
@@ -71,6 +73,12 @@
             this.b_Ok.UseVisualStyleBackColor = false;
             this.b_Ok.Click += new System.EventHandler(this.b_Ok_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // OknoKartyMiejskiej
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +89,7 @@
             this.Controls.Add(this.b_Ok);
             this.Controls.Add(this.l_Komunikat);
             this.Controls.Add(this.b_Koniec);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OknoKartyMiejskiej";
             this.Load += new System.EventHandler(this.OknoKartyMiejskiej_Load);
             this.ResumeLayout(false);
@@ -91,5 +100,6 @@
         public System.Windows.Forms.Button b_Koniec;
         public System.Windows.Forms.Button b_Ok;
         public System.Windows.Forms.Label l_Komunikat;
+        private System.Windows.Forms.Timer timer1;
     }
 }

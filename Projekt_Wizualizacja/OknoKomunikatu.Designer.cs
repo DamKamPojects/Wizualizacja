@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.l_Komunikat = new System.Windows.Forms.Label();
             this.b_OK = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // l_Komunikat
@@ -56,6 +58,12 @@
             this.b_OK.UseVisualStyleBackColor = false;
             this.b_OK.Click += new System.EventHandler(this.b_OK_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // OknoKomunikatu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,6 +73,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.b_OK);
             this.Controls.Add(this.l_Komunikat);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OknoKomunikatu";
             this.Load += new System.EventHandler(this.OknoKomunikatu_Load);
             this.ResumeLayout(false);
@@ -74,5 +83,6 @@
         #endregion
         private System.Windows.Forms.Button b_OK;
         public System.Windows.Forms.Label l_Komunikat;
+        private System.Windows.Forms.Timer timer1;
     }
 }

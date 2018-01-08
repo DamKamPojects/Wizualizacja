@@ -42,11 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pPodsu = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pPodsu_b_ZmienPlactnosci = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.l_SposPaltnosci = new System.Windows.Forms.Label();
             this.panelPodsumowanie_tb_SposobPlatnosci = new System.Windows.Forms.TextBox();
-            this.pPodsu_b_Potwierdz = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.l_doZaplaty = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelPodsumowanie_tb_Suma = new System.Windows.Forms.TextBox();
+            this.pPodsu_b_ZmienPlactnosci = new System.Windows.Forms.Button();
+            this.pPodsu_b_Potwierdz = new System.Windows.Forms.Button();
             this.pGotow = new System.Windows.Forms.Panel();
             this.pGotow_b_50gr = new System.Windows.Forms.Button();
             this.pGotow_b_2zl = new System.Windows.Forms.Button();
@@ -65,21 +69,16 @@
             this.pGotowka_l_pobrrr = new System.Windows.Forms.Label();
             this.pGotow_tb_Podsumowanie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
-            this.l_doZaplaty = new System.Windows.Forms.Label();
-            this.l_SposPaltnosci = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pPodsu.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.pGotow.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pGotowka_gb_Pobrano.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGorny
@@ -93,6 +92,7 @@
             this.panelGorny.Name = "panelGorny";
             this.panelGorny.Size = new System.Drawing.Size(1312, 140);
             this.panelGorny.TabIndex = 13;
+            this.panelGorny.Click += new System.EventHandler(this.panelGorny_Click);
             this.panelGorny.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGorny_Paint);
             // 
             // pKoniecWstecz_b_Wstecz
@@ -171,6 +171,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(250, 80);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pb_postep
             // 
@@ -205,6 +206,7 @@
             this.panelPodsum_tb_Podsumowanie.Size = new System.Drawing.Size(661, 455);
             this.panelPodsum_tb_Podsumowanie.TabIndex = 270;
             this.panelPodsum_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
+            this.panelPodsum_tb_Podsumowanie.Click += new System.EventHandler(this.panelPodsum_tb_Podsumowanie_Click);
             // 
             // label2
             // 
@@ -216,6 +218,7 @@
             this.label2.TabIndex = 276;
             this.label2.Text = "Sposób płatności:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -227,6 +230,7 @@
             this.label1.TabIndex = 275;
             this.label1.Text = "PODSUMOWANIE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pPodsu
             // 
@@ -241,29 +245,30 @@
             this.pPodsu.Name = "pPodsu";
             this.pPodsu.Size = new System.Drawing.Size(1312, 611);
             this.pPodsu.TabIndex = 34;
+            this.pPodsu.Click += new System.EventHandler(this.pPodsu_Click);
             // 
-            // label3
+            // groupBox3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(0, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 37);
-            this.label3.TabIndex = 278;
-            this.label3.Text = "Do zapłaty:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox3.Controls.Add(this.l_SposPaltnosci);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.panelPodsumowanie_tb_SposobPlatnosci);
+            this.groupBox3.Location = new System.Drawing.Point(1004, 47);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(230, 100);
+            this.groupBox3.TabIndex = 282;
+            this.groupBox3.TabStop = false;
             // 
-            // pPodsu_b_ZmienPlactnosci
+            // l_SposPaltnosci
             // 
-            this.pPodsu_b_ZmienPlactnosci.BackColor = System.Drawing.Color.White;
-            this.pPodsu_b_ZmienPlactnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pPodsu_b_ZmienPlactnosci.Location = new System.Drawing.Point(890, 186);
-            this.pPodsu_b_ZmienPlactnosci.Name = "pPodsu_b_ZmienPlactnosci";
-            this.pPodsu_b_ZmienPlactnosci.Size = new System.Drawing.Size(233, 120);
-            this.pPodsu_b_ZmienPlactnosci.TabIndex = 274;
-            this.pPodsu_b_ZmienPlactnosci.Text = "Zmień sposób płatności";
-            this.pPodsu_b_ZmienPlactnosci.UseVisualStyleBackColor = false;
-            this.pPodsu_b_ZmienPlactnosci.Click += new System.EventHandler(this.pPodsu_b_ZmienPlactnosci_Click);
+            this.l_SposPaltnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_SposPaltnosci.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.l_SposPaltnosci.Location = new System.Drawing.Point(0, 50);
+            this.l_SposPaltnosci.Name = "l_SposPaltnosci";
+            this.l_SposPaltnosci.Size = new System.Drawing.Size(230, 40);
+            this.l_SposPaltnosci.TabIndex = 280;
+            this.l_SposPaltnosci.Text = "Karta płatnicza";
+            this.l_SposPaltnosci.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_SposPaltnosci.Click += new System.EventHandler(this.l_SposPaltnosci_Click);
             // 
             // panelPodsumowanie_tb_SposobPlatnosci
             // 
@@ -279,17 +284,40 @@
             this.panelPodsumowanie_tb_SposobPlatnosci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.panelPodsumowanie_tb_SposobPlatnosci.Visible = false;
             // 
-            // pPodsu_b_Potwierdz
+            // groupBox2
             // 
-            this.pPodsu_b_Potwierdz.BackColor = System.Drawing.Color.White;
-            this.pPodsu_b_Potwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(800, 380);
-            this.pPodsu_b_Potwierdz.Name = "pPodsu_b_Potwierdz";
-            this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(434, 120);
-            this.pPodsu_b_Potwierdz.TabIndex = 272;
-            this.pPodsu_b_Potwierdz.Text = "POTWIERDŹ";
-            this.pPodsu_b_Potwierdz.UseVisualStyleBackColor = false;
-            this.pPodsu_b_Potwierdz.Click += new System.EventHandler(this.pPodsu_b_Potwiedz_Click);
+            this.groupBox2.Controls.Add(this.l_doZaplaty);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.panelPodsumowanie_tb_Suma);
+            this.groupBox2.Location = new System.Drawing.Point(800, 50);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(150, 100);
+            this.groupBox2.TabIndex = 281;
+            this.groupBox2.TabStop = false;
+            // 
+            // l_doZaplaty
+            // 
+            this.l_doZaplaty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.l_doZaplaty.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.l_doZaplaty.Location = new System.Drawing.Point(0, 50);
+            this.l_doZaplaty.Name = "l_doZaplaty";
+            this.l_doZaplaty.Size = new System.Drawing.Size(150, 40);
+            this.l_doZaplaty.TabIndex = 279;
+            this.l_doZaplaty.Text = "10,00 zł";
+            this.l_doZaplaty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_doZaplaty.Click += new System.EventHandler(this.l_doZaplaty_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(0, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 37);
+            this.label3.TabIndex = 278;
+            this.label3.Text = "Do zapłaty:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panelPodsumowanie_tb_Suma
             // 
@@ -307,6 +335,30 @@
             this.panelPodsumowanie_tb_Suma.Text = "10";
             this.panelPodsumowanie_tb_Suma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.panelPodsumowanie_tb_Suma.Visible = false;
+            // 
+            // pPodsu_b_ZmienPlactnosci
+            // 
+            this.pPodsu_b_ZmienPlactnosci.BackColor = System.Drawing.Color.White;
+            this.pPodsu_b_ZmienPlactnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pPodsu_b_ZmienPlactnosci.Location = new System.Drawing.Point(890, 186);
+            this.pPodsu_b_ZmienPlactnosci.Name = "pPodsu_b_ZmienPlactnosci";
+            this.pPodsu_b_ZmienPlactnosci.Size = new System.Drawing.Size(233, 120);
+            this.pPodsu_b_ZmienPlactnosci.TabIndex = 274;
+            this.pPodsu_b_ZmienPlactnosci.Text = "Zmień sposób płatności";
+            this.pPodsu_b_ZmienPlactnosci.UseVisualStyleBackColor = false;
+            this.pPodsu_b_ZmienPlactnosci.Click += new System.EventHandler(this.pPodsu_b_ZmienPlactnosci_Click);
+            // 
+            // pPodsu_b_Potwierdz
+            // 
+            this.pPodsu_b_Potwierdz.BackColor = System.Drawing.Color.White;
+            this.pPodsu_b_Potwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pPodsu_b_Potwierdz.Location = new System.Drawing.Point(800, 380);
+            this.pPodsu_b_Potwierdz.Name = "pPodsu_b_Potwierdz";
+            this.pPodsu_b_Potwierdz.Size = new System.Drawing.Size(434, 120);
+            this.pPodsu_b_Potwierdz.TabIndex = 272;
+            this.pPodsu_b_Potwierdz.Text = "POTWIERDŹ";
+            this.pPodsu_b_Potwierdz.UseVisualStyleBackColor = false;
+            this.pPodsu_b_Potwierdz.Click += new System.EventHandler(this.pPodsu_b_Potwiedz_Click);
             // 
             // pGotow
             // 
@@ -329,6 +381,7 @@
             this.pGotow.Name = "pGotow";
             this.pGotow.Size = new System.Drawing.Size(1312, 650);
             this.pGotow.TabIndex = 36;
+            this.pGotow.Click += new System.EventHandler(this.pGotow_Click);
             // 
             // pGotow_b_50gr
             // 
@@ -380,6 +433,7 @@
             this.label8.TabIndex = 283;
             this.label8.Text = "PROSZĘ ZAPŁAĆ ZA BILET";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label6
             // 
@@ -403,6 +457,7 @@
             this.label7.TabIndex = 281;
             this.label7.Text = "Banknoty";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
@@ -414,6 +469,7 @@
             this.label5.TabIndex = 280;
             this.label5.Text = "5gr, 10gr, 20gr, 50gr,\r\n1zł, 2zł, 5zł";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label9
             // 
@@ -448,6 +504,7 @@
             this.pGotow_l_DoZaplaty.TabIndex = 277;
             this.pGotow_l_DoZaplaty.Text = "0,00 zł";
             this.pGotow_l_DoZaplaty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pGotow_l_DoZaplaty.Click += new System.EventHandler(this.pGotow_l_DoZaplaty_Click);
             // 
             // label11
             // 
@@ -460,6 +517,7 @@
             this.label11.TabIndex = 276;
             this.label11.Text = "Do zapłaty:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pGotowka_gb_Pobrano
             // 
@@ -482,6 +540,7 @@
             this.pGotowka_l_Pobrano.TabIndex = 277;
             this.pGotowka_l_Pobrano.Text = "0,00 zł";
             this.pGotowka_l_Pobrano.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pGotowka_l_Pobrano.Click += new System.EventHandler(this.pGotowka_l_Pobrano_Click);
             // 
             // pGotowka_l_pobrrr
             // 
@@ -494,6 +553,7 @@
             this.pGotowka_l_pobrrr.TabIndex = 276;
             this.pGotowka_l_pobrrr.Text = "Pobrano:";
             this.pGotowka_l_pobrrr.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pGotowka_l_pobrrr.Click += new System.EventHandler(this.pGotowka_l_pobrrr_Click);
             // 
             // pGotow_tb_Podsumowanie
             // 
@@ -505,9 +565,11 @@
             this.pGotow_tb_Podsumowanie.Multiline = true;
             this.pGotow_tb_Podsumowanie.Name = "pGotow_tb_Podsumowanie";
             this.pGotow_tb_Podsumowanie.ReadOnly = true;
+            this.pGotow_tb_Podsumowanie.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.pGotow_tb_Podsumowanie.Size = new System.Drawing.Size(661, 455);
             this.pGotow_tb_Podsumowanie.TabIndex = 270;
             this.pGotow_tb_Podsumowanie.Text = "Nie wybrano żadnego biletu.";
+            this.pGotow_tb_Podsumowanie.Click += new System.EventHandler(this.pGotow_tb_Podsumowanie_Click);
             // 
             // label4
             // 
@@ -519,10 +581,6 @@
             this.label4.TabIndex = 275;
             this.label4.Text = "PODSUMOWANIE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // l_postep
             // 
@@ -536,50 +594,6 @@
             this.l_postep.TabIndex = 37;
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // l_doZaplaty
-            // 
-            this.l_doZaplaty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.l_doZaplaty.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.l_doZaplaty.Location = new System.Drawing.Point(0, 50);
-            this.l_doZaplaty.Name = "l_doZaplaty";
-            this.l_doZaplaty.Size = new System.Drawing.Size(150, 40);
-            this.l_doZaplaty.TabIndex = 279;
-            this.l_doZaplaty.Text = "10,00 zł";
-            this.l_doZaplaty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_SposPaltnosci
-            // 
-            this.l_SposPaltnosci.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.l_SposPaltnosci.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.l_SposPaltnosci.Location = new System.Drawing.Point(0, 50);
-            this.l_SposPaltnosci.Name = "l_SposPaltnosci";
-            this.l_SposPaltnosci.Size = new System.Drawing.Size(230, 40);
-            this.l_SposPaltnosci.TabIndex = 280;
-            this.l_SposPaltnosci.Text = "Karta płatnicza";
-            this.l_SposPaltnosci.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.l_doZaplaty);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.panelPodsumowanie_tb_Suma);
-            this.groupBox2.Location = new System.Drawing.Point(800, 50);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(150, 100);
-            this.groupBox2.TabIndex = 281;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.l_SposPaltnosci);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.panelPodsumowanie_tb_SposobPlatnosci);
-            this.groupBox3.Location = new System.Drawing.Point(1004, 47);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(230, 100);
-            this.groupBox3.TabIndex = 282;
-            this.groupBox3.TabStop = false;
             // 
             // Podsumowanie
             // 
@@ -600,14 +614,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pPodsu.ResumeLayout(false);
             this.pPodsu.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.pGotow.ResumeLayout(false);
             this.pGotow.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.pGotowka_gb_Pobrano.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -648,7 +662,6 @@
         private System.Windows.Forms.Button pGotow_b_2zl;
         private System.Windows.Forms.Button pGotow_b_20zl;
         private System.Windows.Forms.Button pGotow_b_5zl;
-        public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label l_postep;
         private System.Windows.Forms.Button pKoniecWstecz_b_Wstecz;
         private System.Windows.Forms.Button pKoniecWstecz_b_Koniec;

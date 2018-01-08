@@ -16,9 +16,10 @@ namespace Projekt_Wizualizacja
         public Main()
         {
             InitializeComponent();
-
-            //Inicjalizacja dictionary
-            ValueStorage = new Dictionary<TextBox, string>()
+            GetCurrentTime();
+            StepTimera = (double)timer1.Interval/1000.0;
+                //Inicjalizacja dictionary
+                ValueStorage = new Dictionary<TextBox, string>()
             {
                 {tb_NMid, "0" },
                 {tb_UMid, "0" },
@@ -36,11 +37,15 @@ namespace Projekt_Wizualizacja
                 //{tb_NRight, "0" },
                 //{tb_URight, "0" }
             };
+            
         }
 
 
-#region Zmienne
-        public int TimeFromLastMove=0;
+        #region Zmienne
+        bool CzyJestReklama = false;
+        bool DoResetowaniareklam = false; //mowi czy ekran zostal juz zresetowany
+        double StepTimera=1;
+        public double TimeFromLastMove=0; 
         public int TimeOfTransaction=3000; //domyślny czas na kupienie biletu
         int AktualneOkno = 0;
         public double Suma;
@@ -81,7 +86,7 @@ namespace Projekt_Wizualizacja
         #endregion
         #endregion
 
-        #region Metody
+#region Metody
         double JednoCena(int ktoryTB) 
         {
             switch (Flag)
@@ -246,6 +251,7 @@ namespace Projekt_Wizualizacja
         }
         void Plus(TextBox tb)   //dodawanie 1 do wartości w tb
         {
+            ResetujCzasReakcji();
             if (Convert.ToInt32(tb.Text) + 1 < 100) tb.Text = (Convert.ToInt32(tb.Text) + 1).ToString();
             else tb.Text = "99";
             //tb.Text = (Convert.ToInt32(tb.Text)+1).ToString();
@@ -253,10 +259,10 @@ namespace Projekt_Wizualizacja
         }
         void Minus(TextBox tb)  //odejmowanie 1 od wartości w tb
         {
+            ResetujCzasReakcji();
             if (Convert.ToInt32(tb.Text) - 1 >= 0) tb.Text = (Convert.ToInt32(tb.Text) - 1).ToString();
             else tb.Text = "0";
             RefreshSummaryRTB();
-
         }
 
         void EreaseStorages()
@@ -398,42 +404,6 @@ namespace Projekt_Wizualizacja
                 //ChowajAllPanele();
                 panelJednorazowe.Visible = true;
                 panelKoniecWstecz.Visible = true;
-
-                //if (Flag != 5)
-                //{
-                //    btn_Other.Visible = true;
-                //    btn_MNLeft.Visible = true;
-                //    btn_PNLeft.Visible = true;
-                //    btn_MULeft.Visible = true;
-                //    btn_PULeft.Visible = true;
-                //    tb_NLeft.Visible = true;
-                //    tb_ULeft.Visible = true;
-                //    label12.Visible = true;
-                //    label15.Visible = true;
-                //    pJedno_L_T.Enabled = false;
-                //    btn_RemoveKolKom24.Visible = false;
-                //    pJedno_L_T.Height = 160;
-                //    pJedno_L_T.BackColor = pJedno_M_T.BackColor;
-                //    //btn_RemoveKolKom24.Enabled = false;
-                //}
-                //else
-                //{
-                //    btn_Other.Visible = false;
-                //    btn_MNLeft.Visible = false;
-                //    btn_PNLeft.Visible = false;
-                //    btn_MULeft.Visible = false;
-                //    btn_PULeft.Visible = false;
-                //    tb_NLeft.Visible = false;
-                //    tb_ULeft.Visible = false;
-                //    label12.Visible = false;
-                //    label15.Visible = false;
-                //    //pJedno_L_T.Height = 316;
-                //    btn_RemoveKolKom24.Visible = true;
-                //    btn_RemoveKolKom24.Enabled = false;
-                //    pJedno_L_T.Enabled = true;
-                //    pJedno_L_T.Height = 225;
-                //    pJedno_L_T.BackColor = Color.White;
-                //}
             }
             if (AktualneOkno == 6) //bilety miesieczne
             {
@@ -619,6 +589,8 @@ namespace Projekt_Wizualizacja
         }
         void GetKeyboard(TextBox tb, double price)  //Klawiatura
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -10;
             string input = tb.Text;
             Klawiatura kl = new Klawiatura(tb.Text, price);
             kl.ShowDialog();
@@ -762,6 +734,7 @@ namespace Projekt_Wizualizacja
         private void timer1_Tick(object sender, EventArgs e) 
         {
             //tb_godzina.Text = GetCurrentTime();
+            ObslugaReklam(); //oblsuguje reklamy
             GetCurrentTime();
             if (this.pb_postep.Value < pb_postep.Maximum)
                 this.pb_postep.Value++;
@@ -774,7 +747,7 @@ namespace Projekt_Wizualizacja
 
         #endregion
 
-        #region Panel wstecz i Koniec
+#region Panel wstecz i Koniec
         //private bool CzyWybraneBiletyBylyOkresowe; //potrzebne do komunikatu wyjecia biletu
         void OknoKomunikatKartaMiejska()
         {
@@ -808,8 +781,12 @@ namespace Projekt_Wizualizacja
                 ostrzezenieOkresowe.ShowDialog();
                 if (ostrzezenieOkresowe.Koniec==true)
                 {
+                    AktualneOkno = 0;
+                    UsuwanieWartosci();
+                    ResetValuesOkresowe();
+                    PrzesuwaniePaneli();
                     OknoKomunikatKartaMiejska();
-                    return true;
+                    return false;
                 }
                 return false;
                 
@@ -818,6 +795,8 @@ namespace Projekt_Wizualizacja
         }
         private void pKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -5;
             if (Flag == 2 || Flag == 4 || Flag==6) //to znaczy ze przeskoczylismy do drugiej zakladki
             {
                 btn_Other_Click(sender, e);
@@ -831,7 +810,8 @@ namespace Projekt_Wizualizacja
 
         private void pKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
         {
-            
+            ResetujCzasReakcji();
+            TimeFromLastMove = -5;
             KoniecButton();
             AktualneOkno = 0;
         }
@@ -907,6 +887,7 @@ namespace Projekt_Wizualizacja
 
         private void panelMenu_b_BiletyJednorazowe_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Flag = 1;
             MenuGlowneZmianaTextuButtonow();
             pJedno_gb_Right.Visible = true;
@@ -918,10 +899,12 @@ namespace Projekt_Wizualizacja
 
         private void panel1_b_BiletyMiesieczne_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -10;
             ResetValuesOkresowe();
             Rodzaj_ulgi = 3;
             OknoKartyMiejskiej oknoKartyMiejskiej = new OknoKartyMiejskiej();
-            oknoKartyMiejskiej.ShowDialog();
+                oknoKartyMiejskiej.ShowDialog();
             if (oknoKartyMiejskiej.CzyPrzylozonoKarte == true)
             {
                 WyborMiesieczneSemestralne wyborMiesieczneSemestralne = new WyborMiesieczneSemestralne();
@@ -944,11 +927,14 @@ namespace Projekt_Wizualizacja
                     PrzesuwaniePaneli();
                 }
             }
+            
+            
            
         }
 
         private void panelMenu_b_BiletyMetroKomun_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Flag = 3;
             MenuGlowneZmianaTextuButtonow();
             pJedno_gb_Right.Visible = true;
@@ -964,6 +950,7 @@ namespace Projekt_Wizualizacja
 
         private void panelMenu_b_BiletyMetroKolKom_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Flag = 5;
             MenuGlowneZmianaTextuButtonow();
             pJedno_gb_Right.Visible = true;
@@ -976,18 +963,19 @@ namespace Projekt_Wizualizacja
         #region Boczne
         private void panelMenu_b_RozkladJazdy_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Kalendarz kalendarz = new Kalendarz();
             kalendarz.ShowDialog();
         }
 
         private void panelMenu_b_JakDojade_Click(object sender, EventArgs e)
         {
-
+            ResetujCzasReakcji();
         }
 
         private void panelMenu_b_DoladowanieTelefonu_Click(object sender, EventArgs e)
         {
-
+            ResetujCzasReakcji();
         }
 #endregion
         #endregion
@@ -1210,8 +1198,10 @@ namespace Projekt_Wizualizacja
             bilet = 3; Rodzaj_ulgi = 3; Typ_biletu = 3; Waznosc_biletu = 3; kategoria_biletu = 0; SposobPlatnosci = 0;
             SemestralnyIleMiesiecy = 3;
             CenaOkresowego = 0;
-            MiesieczneObslugaKontrolek();
-            SemestralneObslugaKontrolek();
+
+            //to zmieniłem
+            //MiesieczneObslugaKontrolek();
+            //SemestralneObslugaKontrolek();
         }
         public void ZmianaKoloruKontrolekOkresowe() //zmienia na biale
         {
@@ -1275,6 +1265,7 @@ namespace Projekt_Wizualizacja
         }
         public void MiesieczneObslugaKontrolek() //sluzy do pokazywania i ukrywania 
         {
+            ResetujCzasReakcji();
             Spr_wszystkich_opcji();
             PokazywanieKontrolekOkresowe();
             //zmiana kolorow kontrolek
@@ -1428,11 +1419,13 @@ namespace Projekt_Wizualizacja
 
             Suma = CenaOkresowego;
             MiesieczneWpisywanie_Do_TB();
+            TimeFromLastMove = -5;
         }
 
         //przyciski
         private void panelOkresowe_b_30dni_Click(object sender, EventArgs e)
         {
+            TimeFromLastMove = -10;
             if (bilet==3) //to znaczy że jeszcze nie zostal wybrany wczesniej
             {
                 Kalendarz kalendarz30Dni = new Kalendarz();
@@ -1549,6 +1542,7 @@ namespace Projekt_Wizualizacja
 
         private void panelOkresowe_b_Platnosc_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             if (CenaOkresowego > 0)
             {
                 WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(komunikat_suma);                
@@ -1556,18 +1550,18 @@ namespace Projekt_Wizualizacja
                 SposobPlatnosci = wyborKartaCzyGotowka.SposobPlatnosci;
                 wyborKartaCzyGotowka.Close();
 
-
+                AktualneOkno = 10;
                 Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, CenaOkresowego);
                 podsumowanie.RodzajKupowanegoBiletu = 1;
                 podsumowanie.ShowDialog();
+
+                AktualneOkno = 6;
                 if (podsumowanie.Koniec == true)
                 {
                     ResetValuesOkresowe();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
-                    OknoKomunikatKartaMiejska();
-
-                    
+                    OknoKomunikatKartaMiejska();                    
                 }
                 podsumowanie.Close();
                 //podsumowanie.Visible = true;
@@ -1824,6 +1818,7 @@ namespace Projekt_Wizualizacja
         //przyciski
         private void pSemes_b_4miesiace_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             SemestralnyIleMiesiecy = 4;
             SemestralneOtwarcieOkna();
             SemestralneObslugaKontrolek();
@@ -1833,6 +1828,7 @@ namespace Projekt_Wizualizacja
 
         private void pSemes_b_5mies_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             SemestralnyIleMiesiecy = 5;
             SemestralneObslugaKontrolek();
             SemestralneOtwarcieOkna();
@@ -1841,41 +1837,50 @@ namespace Projekt_Wizualizacja
 
         private void pSemes_b_zwykly_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Rodzaj_ulgi = 0;
             SemestralneObslugaKontrolek();
         }
         private void pSemes_b_ulgowy_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             Rodzaj_ulgi = 1;
             SemestralneObslugaKontrolek();
         }
 
         private void pSemes_b_zwykleGdy_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             kategoria_biletu = 1;
             ClickKategori = true;
             SemestralneObslugaKontrolek();
         }
         private void pSemes_b_Nocny_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             kategoria_biletu = 2;
             ClickKategori = true;
             SemestralneObslugaKontrolek();
         }
         private void pSemes_b_NocnyGminy_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -10;
             kategoria_biletu = 3;
             ClickKategori = true;
             SemestralneObslugaKontrolek();
         }
         private void pSemes_b_NocnyRRW_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -10;
             kategoria_biletu = 4;
             ClickKategori = true;
             SemestralneObslugaKontrolek();
         }
         private void pSemes_b_NocnySieci_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             kategoria_biletu = 5;
             ClickKategori = true;
             SemestralneObslugaKontrolek();
@@ -1885,6 +1890,8 @@ namespace Projekt_Wizualizacja
         #endregion
         private void pSemes_b_Platnosc_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -10;
             if (CenaOkresowego > 0)
             {
                 WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(komunikat_suma);
@@ -1892,20 +1899,23 @@ namespace Projekt_Wizualizacja
                 SposobPlatnosci = wyborKartaCzyGotowka.SposobPlatnosci;
                 wyborKartaCzyGotowka.Close();
 
-
+                AktualneOkno = 10;
                 //Podsumowanie podsumowanie = new Podsumowanie(komunikat_info, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
                 Podsumowanie podsumowanieOkresowe = new Podsumowanie(pSemes_tb_Podsumowanie.Text, komunikat_suma, SposobPlatnosci, pb_postep.Value, Suma);
                 podsumowanieOkresowe.RodzajKupowanegoBiletu = 1;
                 podsumowanieOkresowe.ShowDialog();
+                AktualneOkno = 7;
                 if (podsumowanieOkresowe.Koniec == true)
                 {
-                    ResetValuesOkresowe();
-                    UsuwanieWartosci();
-                    //KoniecButton();
-                    OknoKomunikatKartaMiejska();
                     AktualneOkno = 0;
                     PrzesuwaniePaneli();
+                    ResetValuesOkresowe();
+                    UsuwanieWartosci();
+                    AktualneOkno = 0;
+                    //KoniecButton();
+                    OknoKomunikatKartaMiejska();
                 }
+                
                 podsumowanieOkresowe.Close();
                 //podsumowanie.Visible = true;
             }
@@ -1917,14 +1927,14 @@ namespace Projekt_Wizualizacja
         }
         #endregion
 
-        #region Jednorazowe
+#region Jednorazowe
 
         /*Wchuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuj guzików*/
         #region Klikanie guzików
 
         private void btn_Other_Click(object sender, EventArgs e)
         {
-            
+            ResetujCzasReakcji();
             if (Flag == 1)  //panel 1 dla jednorazowych
             {
                 ValueStorage[tb_NLeft] = tb_NLeft.Text;
@@ -2052,6 +2062,7 @@ namespace Projekt_Wizualizacja
 
         private void btn_MNJedn_Click(object sender, EventArgs e)
         {
+
             Minus(tb_NLeft);
             RefreshSummaryRTB();
         }
@@ -2124,27 +2135,22 @@ namespace Projekt_Wizualizacja
             this.Close();
         }
 
-        private void Main_MouseMove(object sender, MouseEventArgs e)
-        {
-            Reklamy reklamy = new Reklamy();
-            //reklamy.ShowDialog();
-        }
+    
 
         private void Main_Load(object sender, EventArgs e)
         {
             ChowajAllPanele();
             PrzesuwaniePaneli();
+            WyswietlReklamy();
         }
 
-        private void btn_MU24_Click(object sender, EventArgs e)
-        {
-            Minus(tb_URight);
-            RefreshSummaryRTB();
-        }
+        
         #endregion
 
         private void pJedno_b_platnosc_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
+            TimeFromLastMove = -5;
             if (price > 0)
             {
                 WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(tb_Price.Text);
@@ -2152,10 +2158,12 @@ namespace Projekt_Wizualizacja
                 SposobPlatnosci = wyborKartaCzyGotowka.SposobPlatnosci;
                 wyborKartaCzyGotowka.Close();
 
+                AktualneOkno = 10;
                 //string cos = rtb_Summary2.Text;
                 Podsumowanie podsumowanie = new Podsumowanie(pJedno_tb_Podsumowanie.Text, tb_Price.Text, SposobPlatnosci, pb_postep.Value, price);
                 podsumowanie.RodzajKupowanegoBiletu = 0;
                 podsumowanie.ShowDialog();
+                AktualneOkno = 1;
                 if (podsumowanie.Koniec == true)
                 {
                     ResetValuesOkresowe();
@@ -2234,6 +2242,172 @@ namespace Projekt_Wizualizacja
             GetKeyboard(tb_URight, JednoCena(2) / 2);
         }
         #endregion
+        #endregion
+
+
+#region >>>>>>>Inne
+
+        int PoziomReklamy = 1; //potrzebne do zmiany kimunikatów 
+        public void ResetujCzasReakcji()//po wcisnieciu jakiegokolwiek buttona
+        {
+            TimeFromLastMove = 0;
+            DoResetowaniareklam = false;
+        }
+        bool CzyMaZamykac = false;
+        
+        void ObslugaReklam()
+        {
+            Czas czas = new Czas();
+
+            double CzasReklama = czas.CzasDoReklam;
+            double CzasKoniecSesji = czas.CzasDoReset;
+            
+            label12.Text = Convert.ToString(TimeFromLastMove);
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasReklama && CzyJestReklama == false && PoziomReklamy==0)
+            {
+                CzyJestReklama = true;
+
+                PoziomReklamy = 1;
+                WyswietlReklamy();
+            }
+            else if (TimeFromLastMove > CzasKoniecSesji && CzyJestReklama == true && PoziomReklamy == 1)
+            {
+                AktualneOkno = 0;
+                UsuwanieWartosci();
+                ResetValuesOkresowe();
+                PrzesuwaniePaneli();
+                PoziomReklamy = 2; //czyli kolejna sesja
+                DoResetowaniareklam = true;
+                CzyMaZamykac = true;
+            }
+
+            if (AktualneOkno != 10) //inne niz podsumowanie
+            {
+                TimeFromLastMove += StepTimera;
+            }
+            
+        }
+
+        public void WyswietlReklamy() //wyswietla reklamy
+        {            
+            Reklamy reklamy = new Reklamy();
+            reklamy.ShowDialog();
+            timer1.Enabled = true;
+            if (reklamy.Koniec == true)
+            {
+                CzyMaZamykac = false;
+                ResetujCzasReakcji();
+                CzyJestReklama = !reklamy.Koniec;
+                PoziomReklamy = 0;
+            }
+        }
+
+     #region Do resetowania
+        private void panelMenu_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelGorny_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelKoniecWstecz_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void Main_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pb_jezykPOL_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pSemes_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pSemes_gb_KategorieBiletow_Enter(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pSemes_tb_Suma_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelMenu_Click_1(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pSemes_tb_Podsumowanie_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pJedno_l_Mid_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pJedno_l_Right_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pJedno_l_Left_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelOkresowe_tb_Podsumowanie_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelOkresowe_tb_Suma_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelOkresowe_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void btn_MU24_Click(object sender, EventArgs e)
+        {
+            Minus(tb_URight);
+            RefreshSummaryRTB();
+        }
+        #endregion guziczki
+
+
         #endregion
     }
 }

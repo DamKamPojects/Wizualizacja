@@ -16,6 +16,13 @@ namespace Projekt_Wizualizacja
         {
             InitializeComponent();
             ObslugaKalendarza();
+            AktualnieWybranaData = Calendar.SelectionStart;
+            int day = Convert.ToInt32(String.Format("{0:dd}", AktualnieWybranaData).TrimStart('0'));
+            int month = Convert.ToInt32((String.Format("{0:MM}", AktualnieWybranaData).TrimStart('0')));
+            int year = Convert.ToInt32((String.Format("{0:yyyy}", AktualnieWybranaData).TrimStart('0')));
+
+            l_Od.Text = AktualnieWybranaData.ToString("dd.MM.yyyy");
+            l_Do.Text = GetEndDate(year, month, day, 30).ToString("dd.MM.yyyy");
         }
 
         public Kalendarz(DateTime AktualnieWybrany)
@@ -54,6 +61,7 @@ namespace Projekt_Wizualizacja
         private void timer1_Tick(object sender, EventArgs e)
         {
             GetCurrentTime();
+            ZamykanieOknaPoCzasie();
         }
 
         private void Kalendarz_Load(object sender, EventArgs e)
@@ -67,7 +75,6 @@ namespace Projekt_Wizualizacja
 
         int ZnajdzIleDniMaMiesiac(int year, int month)
         {
-            int dayNumber = 28;
             for (int i = 28; i < 33; i++)
             {
                 try
@@ -152,5 +159,33 @@ namespace Projekt_Wizualizacja
         {
             this.Close();
         }
+
+
+        #region Zamykanie po czasie
+        double StepSize;
+        double TimeFromLastMove = 0;
+       
+
+        #region DUzo guzikow
+        
+        #endregion
+
+        void ZamykanieOknaPoCzasie()
+        {
+            StepSize = (double)timer1.Interval / 1000.0;
+            Czas czas = new Czas();
+            
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasKoniecSesji)
+            {
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        #endregion
     }
 }

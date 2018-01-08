@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.pb_postep = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.l_postep = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -152,6 +151,8 @@
             this.pJedno_M_T = new System.Windows.Forms.Button();
             this.btn_Other = new System.Windows.Forms.Button();
             this.pJedno_l_NazwaZakladki = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pb_postep = new System.Windows.Forms.ProgressBar();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
@@ -177,19 +178,9 @@
             this.pJedno_gb_Left.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pb_postep
-            // 
-            this.pb_postep.BackColor = System.Drawing.Color.White;
-            this.pb_postep.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            resources.ApplyResources(this.pb_postep, "pb_postep");
-            this.pb_postep.Maximum = 600;
-            this.pb_postep.Name = "pb_postep";
-            this.pb_postep.Step = 1;
-            this.pb_postep.Click += new System.EventHandler(this.pb_postep_Click);
-            // 
             // timer1
             // 
-            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // l_postep
@@ -212,6 +203,7 @@
             this.panelMenu.Controls.Add(this.panelMenu_b_BiletyJednorazowe);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Click += new System.EventHandler(this.panelMenu_Click_1);
             // 
             // label1
             // 
@@ -236,6 +228,7 @@
             resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
             this.pb_jezykPOL.Name = "pb_jezykPOL";
             this.pb_jezykPOL.TabStop = false;
+            this.pb_jezykPOL.Click += new System.EventHandler(this.pb_jezykPOL_Click);
             // 
             // l_WyborJezyka
             // 
@@ -249,6 +242,7 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // gb_InneFunkcje
             // 
@@ -333,6 +327,7 @@
             this.panelGorny.Controls.Add(this.panelKoniecWstecz);
             resources.ApplyResources(this.panelGorny, "panelGorny");
             this.panelGorny.Name = "panelGorny";
+            this.panelGorny.Click += new System.EventHandler(this.panelGorny_Click);
             // 
             // button2
             // 
@@ -375,6 +370,7 @@
             this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Koniec);
             resources.ApplyResources(this.panelKoniecWstecz, "panelKoniecWstecz");
             this.panelKoniecWstecz.Name = "panelKoniecWstecz";
+            this.panelKoniecWstecz.Click += new System.EventHandler(this.panelKoniecWstecz_Click);
             // 
             // pKoniecWstecz_b_Wstecz
             // 
@@ -412,12 +408,14 @@
             this.panelOkresowe.Controls.Add(this.panelOkresowe_gb_RodzajeBiletow);
             resources.ApplyResources(this.panelOkresowe, "panelOkresowe");
             this.panelOkresowe.Name = "panelOkresowe";
+            this.panelOkresowe.Click += new System.EventHandler(this.panelOkresowe_Click);
             // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Name = "label18";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // pOkres_gb_RodzajBiletu
             // 
@@ -561,6 +559,7 @@
             this.panelOkresowe_tb_Podsumowanie.BackColor = System.Drawing.SystemColors.Control;
             this.panelOkresowe_tb_Podsumowanie.Name = "panelOkresowe_tb_Podsumowanie";
             this.panelOkresowe_tb_Podsumowanie.ReadOnly = true;
+            this.panelOkresowe_tb_Podsumowanie.Click += new System.EventHandler(this.panelOkresowe_tb_Podsumowanie_Click);
             // 
             // l_DoZaplaty
             // 
@@ -574,6 +573,7 @@
             this.panelOkresowe_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.panelOkresowe_tb_Suma.Name = "panelOkresowe_tb_Suma";
             this.panelOkresowe_tb_Suma.ReadOnly = true;
+            this.panelOkresowe_tb_Suma.Click += new System.EventHandler(this.panelOkresowe_tb_Suma_Click);
             // 
             // lPodsumowanie
             // 
@@ -661,6 +661,7 @@
             this.pSemes.Controls.Add(this.label6);
             resources.ApplyResources(this.pSemes, "pSemes");
             this.pSemes.Name = "pSemes";
+            this.pSemes.Click += new System.EventHandler(this.pSemes_Click);
             // 
             // pSemes_gb_KategorieBiletow
             // 
@@ -672,6 +673,7 @@
             resources.ApplyResources(this.pSemes_gb_KategorieBiletow, "pSemes_gb_KategorieBiletow");
             this.pSemes_gb_KategorieBiletow.Name = "pSemes_gb_KategorieBiletow";
             this.pSemes_gb_KategorieBiletow.TabStop = false;
+            this.pSemes_gb_KategorieBiletow.Enter += new System.EventHandler(this.pSemes_gb_KategorieBiletow_Enter);
             // 
             // pSemes_b_NocnySieci
             // 
@@ -784,6 +786,7 @@
             this.pSemes_tb_Podsumowanie.BackColor = System.Drawing.SystemColors.Control;
             this.pSemes_tb_Podsumowanie.Name = "pSemes_tb_Podsumowanie";
             this.pSemes_tb_Podsumowanie.ReadOnly = true;
+            this.pSemes_tb_Podsumowanie.Click += new System.EventHandler(this.pSemes_tb_Podsumowanie_Click);
             // 
             // label9
             // 
@@ -797,6 +800,7 @@
             this.pSemes_tb_Suma.BackColor = System.Drawing.SystemColors.Control;
             this.pSemes_tb_Suma.Name = "pSemes_tb_Suma";
             this.pSemes_tb_Suma.ReadOnly = true;
+            this.pSemes_tb_Suma.Click += new System.EventHandler(this.pSemes_tb_Suma_Click);
             // 
             // label10
             // 
@@ -824,6 +828,7 @@
             resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Name = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label11
             // 
@@ -900,6 +905,7 @@
             resources.ApplyResources(this.pJedno_l_Right, "pJedno_l_Right");
             this.pJedno_l_Right.ForeColor = System.Drawing.Color.White;
             this.pJedno_l_Right.Name = "pJedno_l_Right";
+            this.pJedno_l_Right.Click += new System.EventHandler(this.pJedno_l_Right_Click);
             // 
             // btn_MNRight
             // 
@@ -979,6 +985,7 @@
             resources.ApplyResources(this.pJedno_l_Mid, "pJedno_l_Mid");
             this.pJedno_l_Mid.ForeColor = System.Drawing.Color.White;
             this.pJedno_l_Mid.Name = "pJedno_l_Mid";
+            this.pJedno_l_Mid.Click += new System.EventHandler(this.pJedno_l_Mid_Click);
             // 
             // btn_MNMid
             // 
@@ -1058,6 +1065,7 @@
             resources.ApplyResources(this.pJedno_l_Left, "pJedno_l_Left");
             this.pJedno_l_Left.ForeColor = System.Drawing.Color.White;
             this.pJedno_l_Left.Name = "pJedno_l_Left";
+            this.pJedno_l_Left.Click += new System.EventHandler(this.pJedno_l_Left_Click);
             // 
             // tb_ULeft
             // 
@@ -1167,22 +1175,39 @@
             resources.ApplyResources(this.pJedno_l_NazwaZakladki, "pJedno_l_NazwaZakladki");
             this.pJedno_l_NazwaZakladki.Name = "pJedno_l_NazwaZakladki";
             // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // pb_postep
+            // 
+            this.pb_postep.BackColor = System.Drawing.Color.White;
+            this.pb_postep.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            resources.ApplyResources(this.pb_postep, "pb_postep");
+            this.pb_postep.Maximum = 600;
+            this.pb_postep.Name = "pb_postep";
+            this.pb_postep.Step = 1;
+            this.pb_postep.Click += new System.EventHandler(this.pb_postep_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ControlBox = false;
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.panelGorny);
             this.Controls.Add(this.l_postep);
             this.Controls.Add(this.pb_postep);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.pSemes);
             this.Controls.Add(this.panelJednorazowe);
             this.Controls.Add(this.panelOkresowe);
-            this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
+            this.Click += new System.EventHandler(this.Main_Click);
             this.panelMenu.ResumeLayout(false);
             this.gb_WyborJezyka.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
@@ -1219,12 +1244,12 @@
             this.pJedno_gb_Left.ResumeLayout(false);
             this.pJedno_gb_Left.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.ProgressBar pb_postep;
         private System.Windows.Forms.Label l_postep;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button panelMenu_b_BiletyMiesieczne;
@@ -1345,6 +1370,8 @@
         private System.Windows.Forms.Label pJedno_l_RN;
         private System.Windows.Forms.Label pJedno_l_MU;
         private System.Windows.Forms.Label pJedno_l_MN;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ProgressBar pb_postep;
     }
 }
 

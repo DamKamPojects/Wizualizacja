@@ -38,5 +38,37 @@ namespace Projekt_Wizualizacja
             SposobPlatnosci = 2;
             this.Close();
         }
+
+        #region Zamykanie po czasie
+        double StepSize;
+        double TimeFromLastMove = 0;
+
+
+        #region DUzo guzikow
+
+        #endregion
+
+        void ZamykanieOknaPoCzasie()
+        {
+            StepSize = (double)timer1.Interval / 1000.0;
+            Czas czas = new Czas();
+            
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasKoniecSesji)
+            {
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ZamykanieOknaPoCzasie();
+        }
     }
 }

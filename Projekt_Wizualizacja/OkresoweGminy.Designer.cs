@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.b_zatwiedz = new System.Windows.Forms.Button();
             this.b_wejherowo = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.b_kosakowo = new System.Windows.Forms.Button();
             this.b_rumia = new System.Windows.Forms.Button();
             this.b_sopot = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -140,6 +142,12 @@
             this.b_sopot.UseVisualStyleBackColor = false;
             this.b_sopot.Click += new System.EventHandler(this.b_sopot_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // OkresoweGminy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +163,7 @@
             this.Controls.Add(this.b_kosakowo);
             this.Controls.Add(this.b_rumia);
             this.Controls.Add(this.b_sopot);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OkresoweGminy";
             this.Load += new System.EventHandler(this.OkresoweGminy_Load);
             this.ResumeLayout(false);
@@ -172,5 +181,6 @@
         private System.Windows.Forms.Button b_kosakowo;
         private System.Windows.Forms.Button b_rumia;
         private System.Windows.Forms.Button b_sopot;
+        private System.Windows.Forms.Timer timer1;
     }
 }

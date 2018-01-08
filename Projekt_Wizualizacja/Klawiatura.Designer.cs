@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.p_1 = new System.Windows.Forms.Button();
             this.TBil_bil = new System.Windows.Forms.TextBox();
             this.p_2 = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.l_CenaBIletow = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -322,6 +324,12 @@
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Klawiatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +353,7 @@
             this.Controls.Add(this.p_3);
             this.Controls.Add(this.p_2);
             this.Controls.Add(this.p_1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Klawiatura";
@@ -381,5 +390,6 @@
         private System.Windows.Forms.Label l_CenaBIletow;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

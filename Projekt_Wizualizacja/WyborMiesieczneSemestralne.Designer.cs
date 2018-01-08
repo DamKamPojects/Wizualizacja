@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.b_Miesięczne = new System.Windows.Forms.Button();
             this.l_Komunikat = new System.Windows.Forms.Label();
             this.b_Semestralny = new System.Windows.Forms.Button();
             this.b_wstecz = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // b_Miesięczne
@@ -83,6 +85,12 @@
             this.b_wstecz.Visible = false;
             this.b_wstecz.Click += new System.EventHandler(this.b_wstecz_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WyborMiesieczneSemestralne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,7 +102,12 @@
             this.Controls.Add(this.b_Semestralny);
             this.Controls.Add(this.l_Komunikat);
             this.Controls.Add(this.b_Miesięczne);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "WyborMiesieczneSemestralne";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.WyborMiesieczneSemestralne_Load);
             this.ResumeLayout(false);
 
@@ -106,5 +119,6 @@
         private System.Windows.Forms.Label l_Komunikat;
         private System.Windows.Forms.Button b_Semestralny;
         private System.Windows.Forms.Button b_wstecz;
+        private System.Windows.Forms.Timer timer1;
     }
 }

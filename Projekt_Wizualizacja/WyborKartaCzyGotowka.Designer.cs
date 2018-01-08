@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.l_DoZaplaty = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.b_gotowka = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -112,6 +114,12 @@
             this.b_gotowka.UseVisualStyleBackColor = true;
             this.b_gotowka.Click += new System.EventHandler(this.b_gotowka_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WyborKartaCzyGotowka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +133,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.b_gotowka);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "WyborKartaCzyGotowka";
             this.Load += new System.EventHandler(this.WyborKartaCzyGotowka_Load);
             this.ResumeLayout(false);
@@ -139,5 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label l_DoZaplaty;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projekt_Wizualizacja;
 
 namespace Wizualizacja01
 {
@@ -131,6 +132,34 @@ namespace Wizualizacja01
         private void TBil_bil_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        #region Zamykanie po czasie
+        double StepSize;
+        double TimeFromLastMove = 0;
+
+        void ZamykanieOknaPoCzasie()
+        {
+            StepSize = (double)timer1.Interval / 1000.0;
+            Czas czas = new Czas();
+
+            double CzasReklama = czas.CzasDoReklam;
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasKoniecSesji)
+            {
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ZamykanieOknaPoCzasie();
         }
 
         // To Be Continued...

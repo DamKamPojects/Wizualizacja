@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.b_zatwiedz = new System.Windows.Forms.Button();
             this.b_RgW = new System.Windows.Forms.Button();
             this.b_RRW = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +86,12 @@
             this.b_RRW.UseVisualStyleBackColor = false;
             this.b_RRW.Click += new System.EventHandler(this.b_RRW_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // OkresowyRRW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +103,7 @@
             this.Controls.Add(this.b_zatwiedz);
             this.Controls.Add(this.b_RgW);
             this.Controls.Add(this.b_RRW);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OkresowyRRW";
             this.Load += new System.EventHandler(this.OkresowyRRW_Load);
             this.ResumeLayout(false);
@@ -108,5 +117,6 @@
         private System.Windows.Forms.Button b_zatwiedz;
         private System.Windows.Forms.Button b_RgW;
         private System.Windows.Forms.Button b_RRW;
+        private System.Windows.Forms.Timer timer1;
     }
 }
