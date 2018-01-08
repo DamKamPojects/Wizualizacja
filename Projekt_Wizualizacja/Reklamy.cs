@@ -120,7 +120,7 @@ namespace Projekt_Wizualizacja
         private void timer1_Tick(object sender, EventArgs e)
         {
             Time++;
-            if (Time % 7 ==0) //co 7 sekund bedzie sie reklama zmieniac
+            if (Time % 15 ==0) //co 15 sekund bedzie sie reklama zmieniac
             {
                 panel1.BackgroundImage = ListaReklam[Losowanie()];
             }

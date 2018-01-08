@@ -124,6 +124,9 @@
   <data name="Przycisk_Akceptuj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Przycisk_Akceptuj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minut_dodawanie biletow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minut_dodawanie biletow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thJ7T8ZGJ0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thJ7T8ZGJ0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +145,12 @@
   <data name="plus_dodawaniebiletow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_dodawaniebiletow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="znak-plus-w-kwadracie_318-53016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\znak-plus-w-kwadracie_318-53016.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Przycisk_Akceptuj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Przycisk_Akceptuj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Przycisk_BACKSPACE2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Przycisk_BACKSPACE2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,17 +166,8 @@
   <data name="niebieskietlo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\niebieskietlo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Przycisk_ZAKOŃCZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Przycisk_ZAKOŃCZ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_bilet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_bilet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Przycisk_BACKSPACE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Przycisk_BACKSPACE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Przycisk_Anuluj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Przycisk_Anuluj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reklama5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reklama5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wstecz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wstecz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +178,17 @@
   <data name="aaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aaa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rybki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rybki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reklama4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reklama4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Przycisk_BACKSPACE3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Przycisk_BACKSPACE3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="karta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\karta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +202,11 @@
   <data name="koniec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\koniec.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Przycisk_Akceptuj" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Przycisk_Akceptuj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Przycisk_BACKSPACE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Przycisk_BACKSPACE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reklama5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reklama5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo_Gdyni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_Gdyni.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Przycisk_wstecz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Przycisk_wstecz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,14 +220,17 @@
   <data name="Reklama1v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reklama1v2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="reklama6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reklama6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bez tytułu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bez tytułu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="koniec1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\koniec1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Przycisk_BACKSPACE3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Przycisk_BACKSPACE3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Przycisk_ZAKOŃCZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Przycisk_ZAKOŃCZ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,13 +238,13 @@
   <data name="Reklama11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reklama11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minut_dodawanie biletow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minut_dodawanie biletow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_bilet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_bilet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="znak-plus-w-kwadracie_318-53016" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\znak-plus-w-kwadracie_318-53016.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Przycisk_Anuluj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Przycisk_Anuluj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reklama6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reklama6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_zkm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_zkm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

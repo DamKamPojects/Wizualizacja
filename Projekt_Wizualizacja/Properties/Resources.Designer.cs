@@ -193,6 +193,26 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Gdyni {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Gdyni", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_zkm {
+            get {
+                object obj = ResourceManager.GetObject("logo_zkm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
@@ -416,6 +436,16 @@ namespace Projekt_Wizualizacja.Properties {
         internal static System.Drawing.Bitmap reklama6 {
             get {
                 object obj = ResourceManager.GetObject("reklama6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rybki {
+            get {
+                object obj = ResourceManager.GetObject("rybki", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

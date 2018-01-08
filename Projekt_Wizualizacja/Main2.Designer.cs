@@ -35,11 +35,8 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gb_WyborJezyka = new System.Windows.Forms.GroupBox();
-            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
             this.l_WyborJezyka = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gb_InneFunkcje = new System.Windows.Forms.GroupBox();
-            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
             this.panelMenu_b_RozkladJazdy = new System.Windows.Forms.Button();
             this.panelMenu_b_DoladowanieTelefonu = new System.Windows.Forms.Button();
             this.panelMenu_b_BiletyMiesieczne = new System.Windows.Forms.Button();
@@ -52,10 +49,7 @@
             this.gb_AktualnaData = new System.Windows.Forms.GroupBox();
             this.l_godzina = new System.Windows.Forms.Label();
             this.l_data = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKoniecWstecz = new System.Windows.Forms.Panel();
-            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
-            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
             this.panelOkresowe = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.pOkres_gb_RodzajBiletu = new System.Windows.Forms.GroupBox();
@@ -117,21 +111,13 @@
             this.pJedno_l_RU = new System.Windows.Forms.Label();
             this.pJedno_l_RN = new System.Windows.Forms.Label();
             this.pJedno_l_Right = new System.Windows.Forms.Label();
-            this.btn_MNRight = new System.Windows.Forms.Button();
             this.tb_NRight = new System.Windows.Forms.TextBox();
-            this.btn_PNRight = new System.Windows.Forms.Button();
-            this.btn_MURight = new System.Windows.Forms.Button();
             this.tb_URight = new System.Windows.Forms.TextBox();
-            this.btn_PURight = new System.Windows.Forms.Button();
             this.pJedno_gb_Mid = new System.Windows.Forms.GroupBox();
             this.pJedno_l_MU = new System.Windows.Forms.Label();
             this.pJedno_l_MN = new System.Windows.Forms.Label();
             this.pJedno_l_Mid = new System.Windows.Forms.Label();
-            this.btn_MNMid = new System.Windows.Forms.Button();
             this.tb_NMid = new System.Windows.Forms.TextBox();
-            this.btn_PNMid = new System.Windows.Forms.Button();
-            this.btn_MUMid = new System.Windows.Forms.Button();
-            this.btn_PUMid = new System.Windows.Forms.Button();
             this.tb_UMid = new System.Windows.Forms.TextBox();
             this.pJedno_gb_Left = new System.Windows.Forms.GroupBox();
             this.pJedno_l_LU = new System.Windows.Forms.Label();
@@ -139,10 +125,6 @@
             this.pJedno_l_Left = new System.Windows.Forms.Label();
             this.tb_ULeft = new System.Windows.Forms.TextBox();
             this.tb_NLeft = new System.Windows.Forms.TextBox();
-            this.btn_PNLeft = new System.Windows.Forms.Button();
-            this.btn_MNLeft = new System.Windows.Forms.Button();
-            this.btn_PULeft = new System.Windows.Forms.Button();
-            this.btn_MULeft = new System.Windows.Forms.Button();
             this.pJedno_tb_Podsumowanie = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_RemoveKolKom24 = new System.Windows.Forms.Button();
@@ -153,14 +135,29 @@
             this.pJedno_l_NazwaZakladki = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pb_postep = new System.Windows.Forms.ProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pKoniecWstecz_b_Wstecz = new System.Windows.Forms.Button();
+            this.pKoniecWstecz_b_Koniec = new System.Windows.Forms.Button();
+            this.pb_jezykPOL = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelMenu_b_JakDojade = new System.Windows.Forms.Button();
+            this.btn_MNRight = new System.Windows.Forms.Button();
+            this.btn_PNRight = new System.Windows.Forms.Button();
+            this.btn_MURight = new System.Windows.Forms.Button();
+            this.btn_PURight = new System.Windows.Forms.Button();
+            this.btn_MNMid = new System.Windows.Forms.Button();
+            this.btn_PNMid = new System.Windows.Forms.Button();
+            this.btn_MUMid = new System.Windows.Forms.Button();
+            this.btn_PUMid = new System.Windows.Forms.Button();
+            this.btn_PNLeft = new System.Windows.Forms.Button();
+            this.btn_MNLeft = new System.Windows.Forms.Button();
+            this.btn_PULeft = new System.Windows.Forms.Button();
+            this.btn_MULeft = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.gb_WyborJezyka.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gb_InneFunkcje.SuspendLayout();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKoniecWstecz.SuspendLayout();
             this.panelOkresowe.SuspendLayout();
             this.pOkres_gb_RodzajBiletu.SuspendLayout();
@@ -176,6 +173,9 @@
             this.pJedno_gb_Right.SuspendLayout();
             this.pJedno_gb_Mid.SuspendLayout();
             this.pJedno_gb_Left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -222,27 +222,11 @@
             this.gb_WyborJezyka.Name = "gb_WyborJezyka";
             this.gb_WyborJezyka.TabStop = false;
             // 
-            // pb_jezykPOL
-            // 
-            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
-            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
-            this.pb_jezykPOL.Name = "pb_jezykPOL";
-            this.pb_jezykPOL.TabStop = false;
-            this.pb_jezykPOL.Click += new System.EventHandler(this.pb_jezykPOL_Click);
-            // 
             // l_WyborJezyka
             // 
             resources.ApplyResources(this.l_WyborJezyka, "l_WyborJezyka");
             this.l_WyborJezyka.ForeColor = System.Drawing.Color.SeaShell;
             this.l_WyborJezyka.Name = "l_WyborJezyka";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // gb_InneFunkcje
             // 
@@ -252,15 +236,6 @@
             resources.ApplyResources(this.gb_InneFunkcje, "gb_InneFunkcje");
             this.gb_InneFunkcje.Name = "gb_InneFunkcje";
             this.gb_InneFunkcje.TabStop = false;
-            // 
-            // panelMenu_b_JakDojade
-            // 
-            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
-            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
-            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
-            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
-            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
-            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
             // 
             // panelMenu_b_RozkladJazdy
             // 
@@ -357,13 +332,6 @@
             this.l_data.ForeColor = System.Drawing.Color.SeaShell;
             this.l_data.Name = "l_data";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.ZKM_Gdynia;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // panelKoniecWstecz
             // 
             this.panelKoniecWstecz.Controls.Add(this.pKoniecWstecz_b_Wstecz);
@@ -371,25 +339,6 @@
             resources.ApplyResources(this.panelKoniecWstecz, "panelKoniecWstecz");
             this.panelKoniecWstecz.Name = "panelKoniecWstecz";
             this.panelKoniecWstecz.Click += new System.EventHandler(this.panelKoniecWstecz_Click);
-            // 
-            // pKoniecWstecz_b_Wstecz
-            // 
-            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.Silver;
-            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_wstecz;
-            resources.ApplyResources(this.pKoniecWstecz_b_Wstecz, "pKoniecWstecz_b_Wstecz");
-            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
-            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
-            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
-            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
-            // 
-            // pKoniecWstecz_b_Koniec
-            // 
-            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.Chocolate;
-            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_ZAKOŃCZ;
-            resources.ApplyResources(this.pKoniecWstecz_b_Koniec, "pKoniecWstecz_b_Koniec");
-            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
-            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
-            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
             // 
             // panelOkresowe
             // 
@@ -907,14 +856,6 @@
             this.pJedno_l_Right.Name = "pJedno_l_Right";
             this.pJedno_l_Right.Click += new System.EventHandler(this.pJedno_l_Right_Click);
             // 
-            // btn_MNRight
-            // 
-            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
-            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNRight.Name = "btn_MNRight";
-            this.btn_MNRight.UseVisualStyleBackColor = true;
-            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
-            // 
             // tb_NRight
             // 
             resources.ApplyResources(this.tb_NRight, "tb_NRight");
@@ -922,36 +863,12 @@
             this.tb_NRight.ReadOnly = true;
             this.tb_NRight.Click += new System.EventHandler(this.tb_N24_Click);
             // 
-            // btn_PNRight
-            // 
-            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
-            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNRight.Name = "btn_PNRight";
-            this.btn_PNRight.UseVisualStyleBackColor = true;
-            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
-            // 
-            // btn_MURight
-            // 
-            resources.ApplyResources(this.btn_MURight, "btn_MURight");
-            this.btn_MURight.ForeColor = System.Drawing.Color.Black;
-            this.btn_MURight.Name = "btn_MURight";
-            this.btn_MURight.UseVisualStyleBackColor = true;
-            this.btn_MURight.Click += new System.EventHandler(this.btn_MU24_Click);
-            // 
             // tb_URight
             // 
             resources.ApplyResources(this.tb_URight, "tb_URight");
             this.tb_URight.Name = "tb_URight";
             this.tb_URight.ReadOnly = true;
             this.tb_URight.Click += new System.EventHandler(this.tb_U24_Click);
-            // 
-            // btn_PURight
-            // 
-            resources.ApplyResources(this.btn_PURight, "btn_PURight");
-            this.btn_PURight.ForeColor = System.Drawing.Color.Black;
-            this.btn_PURight.Name = "btn_PURight";
-            this.btn_PURight.UseVisualStyleBackColor = true;
-            this.btn_PURight.Click += new System.EventHandler(this.btn_PU24_Click);
             // 
             // pJedno_gb_Mid
             // 
@@ -987,44 +904,12 @@
             this.pJedno_l_Mid.Name = "pJedno_l_Mid";
             this.pJedno_l_Mid.Click += new System.EventHandler(this.pJedno_l_Mid_Click);
             // 
-            // btn_MNMid
-            // 
-            resources.ApplyResources(this.btn_MNMid, "btn_MNMid");
-            this.btn_MNMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNMid.Name = "btn_MNMid";
-            this.btn_MNMid.UseVisualStyleBackColor = true;
-            this.btn_MNMid.Click += new System.EventHandler(this.btn_MNGodz_Click);
-            // 
             // tb_NMid
             // 
             resources.ApplyResources(this.tb_NMid, "tb_NMid");
             this.tb_NMid.Name = "tb_NMid";
             this.tb_NMid.ReadOnly = true;
             this.tb_NMid.Click += new System.EventHandler(this.tb_NGodz_Click);
-            // 
-            // btn_PNMid
-            // 
-            resources.ApplyResources(this.btn_PNMid, "btn_PNMid");
-            this.btn_PNMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNMid.Name = "btn_PNMid";
-            this.btn_PNMid.UseVisualStyleBackColor = true;
-            this.btn_PNMid.Click += new System.EventHandler(this.btn_PNGodz_Click);
-            // 
-            // btn_MUMid
-            // 
-            resources.ApplyResources(this.btn_MUMid, "btn_MUMid");
-            this.btn_MUMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_MUMid.Name = "btn_MUMid";
-            this.btn_MUMid.UseVisualStyleBackColor = true;
-            this.btn_MUMid.Click += new System.EventHandler(this.btn_MUGodz_Click);
-            // 
-            // btn_PUMid
-            // 
-            resources.ApplyResources(this.btn_PUMid, "btn_PUMid");
-            this.btn_PUMid.ForeColor = System.Drawing.Color.Black;
-            this.btn_PUMid.Name = "btn_PUMid";
-            this.btn_PUMid.UseVisualStyleBackColor = true;
-            this.btn_PUMid.Click += new System.EventHandler(this.btn_PUGodz_Click);
             // 
             // tb_UMid
             // 
@@ -1082,39 +967,6 @@
             this.tb_NLeft.Name = "tb_NLeft";
             this.tb_NLeft.ReadOnly = true;
             this.tb_NLeft.Click += new System.EventHandler(this.tb_NJedn_Click);
-            // 
-            // btn_PNLeft
-            // 
-            resources.ApplyResources(this.btn_PNLeft, "btn_PNLeft");
-            this.btn_PNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_PNLeft.Name = "btn_PNLeft";
-            this.btn_PNLeft.UseVisualStyleBackColor = true;
-            this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
-            // 
-            // btn_MNLeft
-            // 
-            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
-            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
-            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MNLeft.Name = "btn_MNLeft";
-            this.btn_MNLeft.UseVisualStyleBackColor = true;
-            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
-            // 
-            // btn_PULeft
-            // 
-            resources.ApplyResources(this.btn_PULeft, "btn_PULeft");
-            this.btn_PULeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_PULeft.Name = "btn_PULeft";
-            this.btn_PULeft.UseVisualStyleBackColor = true;
-            this.btn_PULeft.Click += new System.EventHandler(this.btn_PUJedn_Click);
-            // 
-            // btn_MULeft
-            // 
-            resources.ApplyResources(this.btn_MULeft, "btn_MULeft");
-            this.btn_MULeft.ForeColor = System.Drawing.Color.Black;
-            this.btn_MULeft.Name = "btn_MULeft";
-            this.btn_MULeft.UseVisualStyleBackColor = true;
-            this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
             // 
             // pJedno_tb_Podsumowanie
             // 
@@ -1190,6 +1042,154 @@
             this.pb_postep.Step = 1;
             this.pb_postep.Click += new System.EventHandler(this.pb_postep_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.logo_zkm;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pKoniecWstecz_b_Wstecz
+            // 
+            this.pKoniecWstecz_b_Wstecz.BackColor = System.Drawing.Color.Silver;
+            this.pKoniecWstecz_b_Wstecz.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_wstecz;
+            resources.ApplyResources(this.pKoniecWstecz_b_Wstecz, "pKoniecWstecz_b_Wstecz");
+            this.pKoniecWstecz_b_Wstecz.ForeColor = System.Drawing.Color.Black;
+            this.pKoniecWstecz_b_Wstecz.Name = "pKoniecWstecz_b_Wstecz";
+            this.pKoniecWstecz_b_Wstecz.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Wstecz.Click += new System.EventHandler(this.pKoniecWstecz_b_Wstecz_Click);
+            // 
+            // pKoniecWstecz_b_Koniec
+            // 
+            this.pKoniecWstecz_b_Koniec.BackColor = System.Drawing.Color.Chocolate;
+            this.pKoniecWstecz_b_Koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_ZAKOŃCZ;
+            resources.ApplyResources(this.pKoniecWstecz_b_Koniec, "pKoniecWstecz_b_Koniec");
+            this.pKoniecWstecz_b_Koniec.Name = "pKoniecWstecz_b_Koniec";
+            this.pKoniecWstecz_b_Koniec.UseVisualStyleBackColor = false;
+            this.pKoniecWstecz_b_Koniec.Click += new System.EventHandler(this.pKoniecWstecz_b_Koniec_Click);
+            // 
+            // pb_jezykPOL
+            // 
+            this.pb_jezykPOL.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaPOL;
+            resources.ApplyResources(this.pb_jezykPOL, "pb_jezykPOL");
+            this.pb_jezykPOL.Name = "pb_jezykPOL";
+            this.pb_jezykPOL.TabStop = false;
+            this.pb_jezykPOL.Click += new System.EventHandler(this.pb_jezykPOL_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_flagaENG;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panelMenu_b_JakDojade
+            // 
+            this.panelMenu_b_JakDojade.BackColor = System.Drawing.Color.White;
+            this.panelMenu_b_JakDojade.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.image_Jakdojade;
+            resources.ApplyResources(this.panelMenu_b_JakDojade, "panelMenu_b_JakDojade");
+            this.panelMenu_b_JakDojade.Name = "panelMenu_b_JakDojade";
+            this.panelMenu_b_JakDojade.UseVisualStyleBackColor = false;
+            this.panelMenu_b_JakDojade.Click += new System.EventHandler(this.panelMenu_b_JakDojade_Click);
+            // 
+            // btn_MNRight
+            // 
+            resources.ApplyResources(this.btn_MNRight, "btn_MNRight");
+            this.btn_MNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNRight.Name = "btn_MNRight";
+            this.btn_MNRight.UseVisualStyleBackColor = true;
+            this.btn_MNRight.Click += new System.EventHandler(this.btn_MN24_Click);
+            // 
+            // btn_PNRight
+            // 
+            resources.ApplyResources(this.btn_PNRight, "btn_PNRight");
+            this.btn_PNRight.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNRight.Name = "btn_PNRight";
+            this.btn_PNRight.UseVisualStyleBackColor = true;
+            this.btn_PNRight.Click += new System.EventHandler(this.btn_PN24_Click);
+            // 
+            // btn_MURight
+            // 
+            resources.ApplyResources(this.btn_MURight, "btn_MURight");
+            this.btn_MURight.ForeColor = System.Drawing.Color.Black;
+            this.btn_MURight.Name = "btn_MURight";
+            this.btn_MURight.UseVisualStyleBackColor = true;
+            this.btn_MURight.Click += new System.EventHandler(this.btn_MU24_Click);
+            // 
+            // btn_PURight
+            // 
+            resources.ApplyResources(this.btn_PURight, "btn_PURight");
+            this.btn_PURight.ForeColor = System.Drawing.Color.Black;
+            this.btn_PURight.Name = "btn_PURight";
+            this.btn_PURight.UseVisualStyleBackColor = true;
+            this.btn_PURight.Click += new System.EventHandler(this.btn_PU24_Click);
+            // 
+            // btn_MNMid
+            // 
+            resources.ApplyResources(this.btn_MNMid, "btn_MNMid");
+            this.btn_MNMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNMid.Name = "btn_MNMid";
+            this.btn_MNMid.UseVisualStyleBackColor = true;
+            this.btn_MNMid.Click += new System.EventHandler(this.btn_MNGodz_Click);
+            // 
+            // btn_PNMid
+            // 
+            resources.ApplyResources(this.btn_PNMid, "btn_PNMid");
+            this.btn_PNMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNMid.Name = "btn_PNMid";
+            this.btn_PNMid.UseVisualStyleBackColor = true;
+            this.btn_PNMid.Click += new System.EventHandler(this.btn_PNGodz_Click);
+            // 
+            // btn_MUMid
+            // 
+            resources.ApplyResources(this.btn_MUMid, "btn_MUMid");
+            this.btn_MUMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_MUMid.Name = "btn_MUMid";
+            this.btn_MUMid.UseVisualStyleBackColor = true;
+            this.btn_MUMid.Click += new System.EventHandler(this.btn_MUGodz_Click);
+            // 
+            // btn_PUMid
+            // 
+            resources.ApplyResources(this.btn_PUMid, "btn_PUMid");
+            this.btn_PUMid.ForeColor = System.Drawing.Color.Black;
+            this.btn_PUMid.Name = "btn_PUMid";
+            this.btn_PUMid.UseVisualStyleBackColor = true;
+            this.btn_PUMid.Click += new System.EventHandler(this.btn_PUGodz_Click);
+            // 
+            // btn_PNLeft
+            // 
+            resources.ApplyResources(this.btn_PNLeft, "btn_PNLeft");
+            this.btn_PNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_PNLeft.Name = "btn_PNLeft";
+            this.btn_PNLeft.UseVisualStyleBackColor = true;
+            this.btn_PNLeft.Click += new System.EventHandler(this.btn_PNJedn_Click);
+            // 
+            // btn_MNLeft
+            // 
+            this.btn_MNLeft.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.minut_dodawanie_biletow;
+            resources.ApplyResources(this.btn_MNLeft, "btn_MNLeft");
+            this.btn_MNLeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MNLeft.Name = "btn_MNLeft";
+            this.btn_MNLeft.UseVisualStyleBackColor = true;
+            this.btn_MNLeft.Click += new System.EventHandler(this.btn_MNJedn_Click);
+            // 
+            // btn_PULeft
+            // 
+            resources.ApplyResources(this.btn_PULeft, "btn_PULeft");
+            this.btn_PULeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_PULeft.Name = "btn_PULeft";
+            this.btn_PULeft.UseVisualStyleBackColor = true;
+            this.btn_PULeft.Click += new System.EventHandler(this.btn_PUJedn_Click);
+            // 
+            // btn_MULeft
+            // 
+            resources.ApplyResources(this.btn_MULeft, "btn_MULeft");
+            this.btn_MULeft.ForeColor = System.Drawing.Color.Black;
+            this.btn_MULeft.Name = "btn_MULeft";
+            this.btn_MULeft.UseVisualStyleBackColor = true;
+            this.btn_MULeft.Click += new System.EventHandler(this.btn_MUJedn_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -1210,12 +1210,9 @@
             this.Click += new System.EventHandler(this.Main_Click);
             this.panelMenu.ResumeLayout(false);
             this.gb_WyborJezyka.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gb_InneFunkcje.ResumeLayout(false);
             this.panelGorny.ResumeLayout(false);
             this.gb_AktualnaData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKoniecWstecz.ResumeLayout(false);
             this.panelOkresowe.ResumeLayout(false);
             this.panelOkresowe.PerformLayout();
@@ -1243,6 +1240,9 @@
             this.pJedno_gb_Mid.PerformLayout();
             this.pJedno_gb_Left.ResumeLayout(false);
             this.pJedno_gb_Left.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_jezykPOL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

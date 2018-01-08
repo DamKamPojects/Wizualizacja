@@ -399,19 +399,19 @@ namespace Projekt_Wizualizacja
                 EreaseStorages();
                 panelMenu.Visible = true;
             }
-            if (AktualneOkno == 1) //bielty jednorazowe, komunalne itd
+            else if (AktualneOkno == 1) //bielty jednorazowe, komunalne itd
             {
                 //ChowajAllPanele();
                 panelJednorazowe.Visible = true;
                 panelKoniecWstecz.Visible = true;
             }
-            if (AktualneOkno == 6) //bilety miesieczne
+            else if (AktualneOkno == 6) //bilety miesieczne
             {
                 ChowajAllPanele();
                 panelOkresowe.Visible = true;
                 panelKoniecWstecz.Visible = true;
             }
-            if (AktualneOkno == 7) //bilety semetsralne
+            else if (AktualneOkno == 7) //bilety semetsralne
             {
                 ChowajAllPanele();
                 pSemes.Visible = true;
@@ -711,9 +711,18 @@ namespace Projekt_Wizualizacja
             }
         }
 
-        #endregion 
+        #endregion
 
-#region Programowanie kontrolek
+        #region Programowanie kontrolek
+
+
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            ChowajAllPanele();
+            PrzesuwaniePaneli();
+            WyswietlReklamy();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -813,7 +822,7 @@ namespace Projekt_Wizualizacja
             ResetujCzasReakcji();
             TimeFromLastMove = -5;
             KoniecButton();
-            AktualneOkno = 0;
+            //AktualneOkno = 0;
         }
         #endregion
 
@@ -971,6 +980,13 @@ namespace Projekt_Wizualizacja
         private void panelMenu_b_JakDojade_Click(object sender, EventArgs e)
         {
             ResetujCzasReakcji();
+            ZAtrzymanieCzasu = true;
+            JakDojade A = new JakDojade();
+            A.ShowDialog();
+            if (A.Koniec==true)
+            {
+                ZAtrzymanieCzasu = false;
+            }
         }
 
         private void panelMenu_b_DoladowanieTelefonu_Click(object sender, EventArgs e)
@@ -2137,13 +2153,6 @@ namespace Projekt_Wizualizacja
 
     
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-            ChowajAllPanele();
-            PrzesuwaniePaneli();
-            WyswietlReklamy();
-        }
-
         
         #endregion
 
@@ -2245,8 +2254,9 @@ namespace Projekt_Wizualizacja
         #endregion
 
 
-#region >>>>>>>Inne
+        #region >>>>>>>Inne
 
+        bool ZAtrzymanieCzasu = false;
         int PoziomReklamy = 1; //potrzebne do zmiany kimunikatów 
         public void ResetujCzasReakcji()//po wcisnieciu jakiegokolwiek buttona
         {
@@ -2283,7 +2293,7 @@ namespace Projekt_Wizualizacja
                 CzyMaZamykac = true;
             }
 
-            if (AktualneOkno != 10) //inne niz podsumowanie
+            if (AktualneOkno != 10 && ZAtrzymanieCzasu==false) //inne niz podsumowanie
             {
                 TimeFromLastMove += StepTimera;
             }

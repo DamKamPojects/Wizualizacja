@@ -96,7 +96,6 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizu
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Debug\Projekt_Wizualizacja.pdb
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Debug\pl\Projekt_Wizualizacja.resources.dll
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
-E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.aaa.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Wizualizacja01.Klawiatura.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.KolKom24Remover.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.KolKomOrg.resources
@@ -119,3 +118,4 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizu
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Kalendarz.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.Reklamy.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.OknoKartyMiejskiej.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Debug\Projekt_Wizualizacja.JakDojade.resources

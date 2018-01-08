@@ -72,11 +72,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aaa.cs">
+    <Compile Include="JakDojade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aaa.Designer.cs">
-      <DependentUpon>aaa.cs</DependentUpon>
+    <Compile Include="JakDojade.Designer.cs">
+      <DependentUpon>JakDojade.cs</DependentUpon>
     </Compile>
     <Compile Include="Ceny_biletow.cs" />
     <Compile Include="Czas.cs" />
@@ -178,8 +178,8 @@
     <Compile Include="WyborMiesieczneSemestralne.Designer.cs">
       <DependentUpon>WyborMiesieczneSemestralne.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="aaa.resx">
-      <DependentUpon>aaa.cs</DependentUpon>
+    <EmbeddedResource Include="JakDojade.resx">
+      <DependentUpon>JakDojade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kalendarz.resx">
       <DependentUpon>Kalendarz.cs</DependentUpon>
@@ -281,6 +281,9 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo_zkm.png" />
+    <None Include="Resources\rybki.png" />
+    <None Include="Resources\Logo_Gdyni.jpg" />
     <None Include="Resources\reklama6.jpg" />
     <None Include="Resources\Reklama11.jpg" />
     <None Include="Resources\reklama5.jpg" />
