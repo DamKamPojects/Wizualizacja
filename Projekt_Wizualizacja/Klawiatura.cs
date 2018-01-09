@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projekt_Wizualizacja;
 
 namespace Wizualizacja01
 {
@@ -21,15 +22,17 @@ namespace Wizualizacja01
         {
             suma = Convert.ToDouble(bilety) * cena;
             TBil_bil.Text = bilety;
-            TBcen_bil.Text = Convert.ToString(suma);
+            l_IloscBiletow.Text = bilety;
+            l_CenaBIletow.Text= String.Format("{0:0.00} zł", suma);
+            TBcen_bil.Text = String.Format("{0:0.00} zł", suma);
         }
 
         public void WpisywanieDoTB(string cyfra) //metoda edytująca pole tekstowe ilość biletów oraz cene po wcisnieciu klawisza
         {
             // ten if sprawdza czy
             if (bilety=="0")   bilety = cyfra;   
-            else if(bilety.Length<3)  bilety = bilety + cyfra; 
-            else bilety = "999";
+            else if(bilety.Length<2)  bilety = bilety + cyfra; 
+            else bilety = "99";
             
             EdycjaTextBoxow();
         }
@@ -131,6 +134,34 @@ namespace Wizualizacja01
 
         }
 
+        #region Zamykanie po czasie
+        double StepSize;
+        double TimeFromLastMove = 0;
+
+        void ZamykanieOknaPoCzasie()
+        {
+            StepSize = (double)timer1.Interval / 1000.0;
+            Czas czas = new Czas();
+
+            double CzasReklama = czas.CzasDoReklam;
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasKoniecSesji)
+            {
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ZamykanieOknaPoCzasie();
+        }
+
         // To Be Continued...
         private void PotwiedzBut_Click(object sender, EventArgs e)
         {
@@ -144,7 +175,6 @@ namespace Wizualizacja01
         {
             if (bilety.Length > 1) bilety=bilety.Remove(bilety.Length-1);
             else if (bilety != "0" && bilety.Length == 1) bilety = "0";
-            //else TBcen_bil.Text = "Chuj";
 
             EdycjaTextBoxow();            
         }

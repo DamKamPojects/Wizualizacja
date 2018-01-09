@@ -53,8 +53,11 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,15 +67,25 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aaa.cs">
+    <Compile Include="JakDojade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aaa.Designer.cs">
-      <DependentUpon>aaa.cs</DependentUpon>
+    <Compile Include="JakDojade.Designer.cs">
+      <DependentUpon>JakDojade.cs</DependentUpon>
     </Compile>
     <Compile Include="Ceny_biletow.cs" />
+    <Compile Include="Czas.cs" />
+    <Compile Include="Kalendarz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kalendarz.Designer.cs">
+      <DependentUpon>Kalendarz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klawiatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +104,7 @@
     <Compile Include="KolKomOrg.Designer.cs">
       <DependentUpon>KolKomOrg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kolory.cs" />
     <Compile Include="Main2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +122,12 @@
     </Compile>
     <Compile Include="OknoPotwierdzeniaWyjscia.Designer.cs">
       <DependentUpon>OknoPotwierdzeniaWyjscia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OknoKartyMiejskiej.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OknoKartyMiejskiej.Designer.cs">
+      <DependentUpon>OknoKartyMiejskiej.cs</DependentUpon>
     </Compile>
     <Compile Include="OkresoweGminy.cs">
       <SubType>Form</SubType>
@@ -129,6 +149,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reklamy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reklamy.Designer.cs">
+      <DependentUpon>Reklamy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Semestralne_KtoreMiesiace.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,8 +178,11 @@
     <Compile Include="WyborMiesieczneSemestralne.Designer.cs">
       <DependentUpon>WyborMiesieczneSemestralne.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="aaa.resx">
-      <DependentUpon>aaa.cs</DependentUpon>
+    <EmbeddedResource Include="JakDojade.resx">
+      <DependentUpon>JakDojade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kalendarz.resx">
+      <DependentUpon>Kalendarz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klawiatura.resx">
       <DependentUpon>Klawiatura.cs</DependentUpon>
@@ -171,6 +205,9 @@
     <EmbeddedResource Include="OknoPotwierdzeniaWyjscia.resx">
       <DependentUpon>OknoPotwierdzeniaWyjscia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OknoKartyMiejskiej.resx">
+      <DependentUpon>OknoKartyMiejskiej.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OkresoweGminy.resx">
       <DependentUpon>OkresoweGminy.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,14 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Reklamy.resx">
+      <DependentUpon>Reklamy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Semestralne_KtoreMiesiace.resx">
       <DependentUpon>Semestralne_KtoreMiesiace.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,15 +266,6 @@
     <None Include="Resources\aaa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image2.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image1.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -252,17 +278,47 @@
     <None Include="Resources\image_Jakdojade.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image_tlo.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo_zkm.png" />
+    <None Include="Resources\rybki.png" />
+    <None Include="Resources\Logo_Gdyni.jpg" />
+    <None Include="Resources\reklama6.jpg" />
+    <None Include="Resources\Reklama11.jpg" />
+    <None Include="Resources\reklama5.jpg" />
+    <None Include="Resources\reklama4.jpg" />
+    <None Include="Resources\reklama3.jpg" />
+    <None Include="Resources\reklama2.png" />
+    <None Include="Resources\Reklama1v2.jpg" />
+    <None Include="Resources\Reklama1.jpg" />
+    <None Include="Resources\Przycisk_BACKSPACE4.png" />
+    <None Include="Resources\Przycisk_Anuluj1.png" />
+    <None Include="Resources\Przycisk_Akceptuj1.png" />
+    <None Include="Resources\Przycisk_Anuluj.png" />
+    <None Include="Resources\Przycisk_Akceptuj.png" />
+    <None Include="Resources\Przycisk_BACKSPACE3.png" />
+    <None Include="Resources\Przycisk_BACKSPACE2.png" />
+    <None Include="Resources\Przycisk_BACKSPACE1.png" />
+    <None Include="Resources\Przycisk_BACKSPACE.png" />
+    <None Include="Resources\Przycisk_ZAKOŃCZ.png" />
+    <None Include="Resources\Przycisk_wstecz.png" />
+    <None Include="Resources\ZKM_Gdynia.png" />
+    <None Include="Resources\thJ7T8ZGJ0.jpg" />
+    <None Include="Resources\koniec1.jpg" />
+    <None Include="Resources\wstecz.jpg" />
+    <None Include="Resources\koniec.jpg" />
+    <None Include="Resources\minut_dodawanie biletow.jpg" />
+    <None Include="Resources\plus_dodawaniebiletow.jpg" />
+    <None Include="Resources\minus.jpg" />
+    <None Include="Resources\znak-plus-w-kwadracie_318-53016.jpg" />
     <None Include="Resources\karta.jpg" />
     <None Include="Resources\gotowka.jpg" />
+    <None Include="Resources\Bez tytułu.png" />
+    <None Include="Resources\a.jpg" />
+    <None Include="Resources\a1.jpg" />
     <Content Include="Resources\image_bilet2.jpg" />
     <None Include="Resources\niebieskietlo.jpg" />
-    <None Include="Resources\plusik_i_minusik.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

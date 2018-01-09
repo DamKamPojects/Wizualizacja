@@ -13,14 +13,14 @@ namespace Projekt_Wizualizacja
     public partial class Semestralne_KtoreMiesiace : Form
     {
         public int KtoreMiesiace = 3; // ktore miesiace zostaly wybrane
-        int IleMiesiecy = 3; //wartosc wejsciowa; jaki przycisk wcisnieto
+        public int IleMiesiecy=3; //wartosc wejsciowa; jaki przycisk wcisnieto
         public string tekst_KtoreMiesiaceWazny = "";
 
         public Semestralne_KtoreMiesiace()
         {
             InitializeComponent();
         }
-        public Semestralne_KtoreMiesiace(int semestralneIleMiesiecy)
+        public Semestralne_KtoreMiesiace(int semestralneIleMiesiecy )
         {
             InitializeComponent();
             IleMiesiecy = semestralneIleMiesiecy;
@@ -38,43 +38,45 @@ namespace Projekt_Wizualizacja
             }
             return false;
         }
-        private void TworzenieTesktu() //ustawianie tekstu do okna podsumowania
+        public void TworzenieTesktu() //ustawianie tekstu do okna podsumowania
         {
-            if (IleMiesiecy==0) //4 miesiace
+            if (IleMiesiecy==4) //4 miesiace
             {
-
-                if (KtoreMiesiace==0) //zimowy
-                {
-                    tekst_KtoreMiesiaceWazny = " 01.10.2017-31.01.2018";
-                }
-                else if (KtoreMiesiace==1) //letni
-                {
-                    tekst_KtoreMiesiaceWazny = " 01.02.2017-31.05.2018";
-                }
+                tekst_KtoreMiesiaceWazny = " od 01.02.2017 do 31.05.2018,";
+                //potrzebne do wersji pozwalajacej na wybor semestru
+                //if (KtoreMiesiace==0) //zimowy
+                //{
+                //    tekst_KtoreMiesiaceWazny = " 01.10.2017-31.01.2018";
+                //}
+                //else if (KtoreMiesiace==1) //letni
+                //{
+                //    tekst_KtoreMiesiaceWazny = " 01.02.2017-31.05.2018";
+                //}
             }
-            else if (true)
+            else if (IleMiesiecy==5)
             {
-                if (KtoreMiesiace == 0) //zimowy
-                {
-                    tekst_KtoreMiesiaceWazny = " 01.09.2017-31.01.2018";
-                }
-                else if (KtoreMiesiace == 1)
-                {
-                    tekst_KtoreMiesiaceWazny = " 01.02.2017-30.06.2018";
-                }
+                tekst_KtoreMiesiaceWazny = " od 01.02.2017 do 30.06.2018,";
+                //if (KtoreMiesiace == 0) //zimowy
+                //{
+                //    tekst_KtoreMiesiaceWazny = " 01.09.2017-31.01.2018";
+                //}
+                //else if (KtoreMiesiace == 1)
+                //{
+                //    tekst_KtoreMiesiaceWazny = " 01.02.2017-30.06.2018";
+                //}
             }
         }
         public void TekstButonow()
         {
             if (IleMiesiecy == 4)
             {
-                b_letni.Text = "01.02.2017 - 31.05.2018";
-                b_zimowy.Text = "01.10.2017 - 31.01.2018";
+                b_letni.Text = "Od 01.02.2017 do 31.05.2018,";
+                b_zimowy.Text = "OKRES NIEDOSTĘPNY!" + Environment.NewLine + Environment.NewLine + "01.10.2017 -"+Environment.NewLine+"31.01.2018";
             }
             else 
             {
-                b_letni.Text = "01.02.2017-30.06.2018";
-                b_zimowy.Text = "01.09.2017-31.01.2018";
+                b_letni.Text = "Od 01.02.2017 do 30.06.2018,";
+                b_zimowy.Text = "OKRES NIEDOSTĘPNY!" + Environment.NewLine + Environment.NewLine + "01.09.2017-" + Environment.NewLine + "31.01.2018";
             }
         }
 

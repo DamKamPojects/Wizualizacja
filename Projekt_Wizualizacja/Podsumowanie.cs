@@ -12,6 +12,7 @@ namespace Projekt_Wizualizacja
 {
     public partial class Podsumowanie : Form
     {
+        double StepSize;
         public List<string> list = new List<string>();
         int SposobPlatnosci;
         public double Suma, DoZaplaty=10,Zaplacono=0;
@@ -32,12 +33,14 @@ namespace Projekt_Wizualizacja
             InitializeComponent();
             Suma = suma;
 
-            panelPodsum_tb_Podsumowanie.Text = tekst_podsumowanie;
-            pGotow_tb_Podsumowanie.Text = tekst_podsumowanie + "\nSUMA: " + Convert.ToString(Suma);
+            panelPodsum_tb_Podsumowanie.Text = tekst_podsumowanie + Environment.NewLine + "WARTOŚĆ ZAKUPU: " + String.Format("{0:0.00} zł",suma);
+            pGotow_tb_Podsumowanie.Text = tekst_podsumowanie +Environment.NewLine+ "WARTOŚĆ ZAKUPU: " + String.Format("{0:0.00} zł",suma);
 
             panelPodsumowanie_tb_Suma.Text = doZaplaty;
             pGotow_l_DoZaplaty.Text = doZaplaty;
+            l_doZaplaty.Text = doZaplaty;
             tb_SposobPlatnosci();
+            StepSize = (double)timer1.Interval / 1000.0;
             //pb_postep.Value = progressBar;
         }
 
@@ -61,10 +64,12 @@ namespace Projekt_Wizualizacja
             if (SposobPlatnosci == 1)
             {
                 panelPodsumowanie_tb_SposobPlatnosci.Text = "Gotówka";
+                l_SposPaltnosci.Text = panelPodsumowanie_tb_SposobPlatnosci.Text;
             }
             else if (SposobPlatnosci == 2)
             {
                 panelPodsumowanie_tb_SposobPlatnosci.Text = "Karta płatnicza";
+                l_SposPaltnosci.Text = panelPodsumowanie_tb_SposobPlatnosci.Text;
             }
             else panelPodsumowanie_tb_SposobPlatnosci.Text = "Nie wybrano";
         }
@@ -146,32 +151,29 @@ namespace Projekt_Wizualizacja
         //programowanie przyciskow
         private void Podsumowanie_Load(object sender, EventArgs e)
         {
-            Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
-            this.BackgroundImage = imageTlo;
+            //Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
+            //this.BackgroundImage = imageTlo;
+            GetCurrentTime();
             pPodsu.BringToFront();
+            pKoniecWstecz_b_Wstecz.Visible = true;
             this.StartPosition = FormStartPosition.Manual;
             this.Top = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
             AkutalneOkno = 1;
             DoZaplaty = Suma;
-            pb_postep.Maximum = 5000;
+            pb_postep.Maximum = 5000;            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //tb_godzina.Text = GetCurrentTime();
+            ObslugaReklam();
             GetCurrentTime();
-            if (this.pb_postep.Value < pb_postep.Maximum)
-                this.pb_postep.Value++;
-            else this.pb_postep.Value = 0;
-            //TimeToLeft();
-            //this.pb_postep.Value = this.pb_postep.Value + 10;
-            //if (AktualneOkno != 0)
-            //    panelKoniecWstecz.Visible = true;
         }
-        private void panelKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
+
+        private void pKoniecWstecz_b_Wstecz_Click(object sender, EventArgs e)
         {
-            if (AkutalneOkno==1)
+            ResetujCzasReakcji();
+            if (AkutalneOkno == 1)
             {
                 this.Close();
             }
@@ -181,30 +183,36 @@ namespace Projekt_Wizualizacja
                 pPodsu.BringToFront();
             }
         }
+
+        private void pKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+            OknoPotwierdzeniaWyjscia oknoPotwierdzeniaWyjscia = new OknoPotwierdzeniaWyjscia();
+            oknoPotwierdzeniaWyjscia.ShowDialog();
+            if (oknoPotwierdzeniaWyjscia.Koniec == true)
+            {
+                Koniec = true;
+                this.Close();
+            }
+            oknoPotwierdzeniaWyjscia.Close();
+        }
         private void pPodsu_b_ZmienPlactnosci_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             WyborKartaCzyGotowka wyborKartaCzyGotowka = new WyborKartaCzyGotowka(Komunikat_suma);
             wyborKartaCzyGotowka.ShowDialog();
             SposobPlatnosci = wyborKartaCzyGotowka.SposobPlatnosci;
             tb_SposobPlatnosci();
             wyborKartaCzyGotowka.Close();
         }
-        private void panelKoniecWstecz_b_Koniec_Click(object sender, EventArgs e)
-        {
-            OknoPotwierdzeniaWyjscia oknoPotwierdzeniaWyjscia = new OknoPotwierdzeniaWyjscia();
-            oknoPotwierdzeniaWyjscia.ShowDialog();
-            if (oknoPotwierdzeniaWyjscia.Koniec==true)
-            {                
-                Koniec = true;
-                this.Close();
-            }
-            oknoPotwierdzeniaWyjscia.Close();
-        }
         private void pPodsu_b_Potwiedz_Click(object sender, EventArgs e)
         {
+            ResetujCzasReakcji();
             if (SposobPlatnosci==1)
             {
                 pGotow.BringToFront();
+                AkutalneOkno = 2;
+                pKoniecWstecz_b_Wstecz.Visible = false;
             }
 
             else
@@ -236,7 +244,7 @@ namespace Projekt_Wizualizacja
             LabelsOperating();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void panelGorny_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -251,5 +259,149 @@ namespace Projekt_Wizualizacja
         {
 
         }
+
+
+        #region >>>>>>>Inne
+        double TimeFromLastMove;
+        bool DoResetowaniareklam = false;
+        bool CzyJestReklama = false;
+        int PoziomReklamy = 0; //potrzebne do zmiany kimunikatów 
+        public void ResetujCzasReakcji()//po wcisnieciu jakiegokolwiek buttona
+        {
+            TimeFromLastMove = 0;
+            DoResetowaniareklam = false;
+        }
+
+        #region DUzo guzikow
+        private void panelGorny_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pGotow_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pGotow_tb_Podsumowanie_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pGotowka_l_pobrrr_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pGotowka_l_Pobrano_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pGotow_l_DoZaplaty_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pPodsu_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void panelPodsum_tb_Podsumowanie_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void l_SposPaltnosci_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+
+        private void l_doZaplaty_Click(object sender, EventArgs e)
+        {
+            ResetujCzasReakcji();
+        }
+        #endregion
+
+        void ObslugaReklam()
+        {
+            Czas czas = new Czas();
+
+            double CzasReklama = czas.CzasDoReklam;
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasReklama && CzyJestReklama == false && PoziomReklamy==0)
+            {
+                CzyJestReklama = true;
+                PoziomReklamy = 1;
+                WyswietlReklamy();
+            }
+            else if (TimeFromLastMove > CzasKoniecSesji && CzyJestReklama == true && PoziomReklamy == 1)
+            {
+                Koniec = true;                
+                PoziomReklamy = 2; //czyli kolejna sesja
+                DoResetowaniareklam = true;
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        public void WyswietlReklamy() //wyswietla reklamy
+        {
+
+            Reklamy reklamy = new Reklamy();
+            reklamy.ShowDialog();
+            timer1.Enabled = true;
+            if (reklamy.Koniec == true)
+            {
+                ResetujCzasReakcji();
+                PoziomReklamy = 0;
+                CzyJestReklama = !reklamy.Koniec;
+            }
+        }
+        #endregion
     }
 }

@@ -21,3 +21,30 @@ E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\l
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.exe
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.pdb
 E:\Nauka\Automatyka i robotyka\II semestr\Wizualizacja i multimedia w technice\lab 2\wizu14_12_1122\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\Projekt_Wizualizacja.exe.config
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\Projekt_Wizualizacja.exe
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\Projekt_Wizualizacja.pdb
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\pl\Projekt_Wizualizacja.resources.dll
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.aaa.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Kalendarz.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Wizualizacja01.Klawiatura.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.KolKom24Remover.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.KolKomOrg.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Main.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OknoKomunikatu.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OknoPotwierdzeniaWyjscia.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OkresoweGminy.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OkresowyRRW.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Podsumowanie.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Properties.Resources.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Reklamy.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Semestralne_KtoreMiesiace.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.WyborKartaCzyGotowka.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.WyborMiesieczneSemestralne.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Main.pl.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.csproj.GenerateResource.Cache
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.csproj.CoreCompileInputs.cache
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\pl\Projekt_Wizualizacja.resources.dll
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.exe
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.pdb

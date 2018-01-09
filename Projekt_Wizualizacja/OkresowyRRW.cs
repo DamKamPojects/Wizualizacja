@@ -59,6 +59,39 @@ namespace Projekt_Wizualizacja
             this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
         }
 
+        #region Zamykanie po czasie
+        double StepSize;
+        double TimeFromLastMove = 0;
+
+
+        #region DUzo guzikow
+
+        #endregion
+
+        void ZamykanieOknaPoCzasie()
+        {
+            StepSize = (double)timer1.Interval / 1000.0;
+            Czas czas = new Czas();
+
+            double CzasReklama = czas.CzasDoReklam;
+            double CzasKoniecSesji = czas.CzasDoReset;
+
+
+            //sprawdza czy juz nie jest czas by wyswietlic reklame
+            if (TimeFromLastMove > CzasKoniecSesji)
+            {
+                this.Close();
+            }
+
+            TimeFromLastMove += StepSize;
+        }
+        #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ZamykanieOknaPoCzasie();
+        }
+
         private void b_RRW_Click(object sender, EventArgs e)
         {
             wybor = 1;
