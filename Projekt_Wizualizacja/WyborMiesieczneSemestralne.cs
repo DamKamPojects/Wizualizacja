@@ -74,7 +74,7 @@ namespace Projekt_Wizualizacja
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ZamykanieOknaPoCzasie();
+            //ZamykanieOknaPoCzasie();
         }
 
         private void WyborMiesieczneSemestralne_Click(object sender, EventArgs e)

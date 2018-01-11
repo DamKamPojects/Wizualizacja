@@ -253,6 +253,16 @@ namespace Projekt_Wizualizacja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pomoc {
+            get {
+                object obj = ResourceManager.GetObject("pomoc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Przycisk_Akceptuj {
             get {
                 object obj = ResourceManager.GetObject("Przycisk_Akceptuj", resourceCulture);
@@ -446,6 +456,76 @@ namespace Projekt_Wizualizacja.Properties {
         internal static System.Drawing.Bitmap rybki {
             get {
                 object obj = ResourceManager.GetObject("rybki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_nju {
+            get {
+                object obj = ResourceManager.GetObject("tel_nju", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_orange {
+            get {
+                object obj = ResourceManager.GetObject("tel_orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_play {
+            get {
+                object obj = ResourceManager.GetObject("tel_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_play1 {
+            get {
+                object obj = ResourceManager.GetObject("tel_play1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_plus {
+            get {
+                object obj = ResourceManager.GetObject("tel_plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_tmobile {
+            get {
+                object obj = ResourceManager.GetObject("tel_tmobile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tel_virgin {
+            get {
+                object obj = ResourceManager.GetObject("tel_virgin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

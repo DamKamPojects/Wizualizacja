@@ -50,12 +50,12 @@
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 120);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 130);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(1328, 630);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("https://jakdojade.pl/trojmiasto", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri("https://jakdojade.pl/Gdynia", System.UriKind.Absolute);
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             this.webBrowser1.NewWindow += new System.ComponentModel.CancelEventHandler(this.webBrowser1_NewWindow);
@@ -87,6 +87,7 @@
             this.button2.Size = new System.Drawing.Size(26, 23);
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
             // gb_AktualnaData
             // 
@@ -134,6 +135,7 @@
             this.pomoc.TabIndex = 3;
             this.pomoc.Text = "Pomoc";
             this.pomoc.UseVisualStyleBackColor = false;
+            this.pomoc.Visible = false;
             // 
             // pictureBox1
             // 
@@ -197,13 +199,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 750);
+            this.ClientSize = new System.Drawing.Size(1328, 760);
             this.ControlBox = false;
             this.Controls.Add(this.panelGorny);
             this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximumSize = new System.Drawing.Size(1334, 756);
-            this.MinimumSize = new System.Drawing.Size(1334, 756);
+            this.MaximumSize = new System.Drawing.Size(1334, 766);
+            this.MinimumSize = new System.Drawing.Size(1334, 766);
             this.Name = "JakDojade";
             this.Load += new System.EventHandler(this.aaa_Load);
             this.panelGorny.ResumeLayout(false);

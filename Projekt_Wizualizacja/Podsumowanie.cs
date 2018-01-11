@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -88,8 +89,10 @@ namespace Projekt_Wizualizacja
             pGotowka_l_Pobrano.Text = String.Format("{0:0.00} zł",Zaplacono);
             if (DoZaplaty<=0)
             {
+                ResetujCzasReakcji();
+                CzasStop = true;
                 ObslugaKomunikatow();
-                OknoKomunikatu okno = new OknoKomunikatu(list);
+                OknoKomunikatu okno = new OknoKomunikatu(list, SposobPlatnosci);
                 okno.ShowDialog();
                 Koniec = true;
                 list.Clear();
@@ -101,7 +104,7 @@ namespace Projekt_Wizualizacja
         {
             if (SposobPlatnosci==2)
             {
-                list.Add("Proszę przyłożyć karte płatniczą do terminala płatniczego.");
+                list.Add("Proszę przyłożyć karte płatniczą do terminala płatniczego.\n\n\n\n\n");
                 list.Add("Trwa przetwarzanie danych... Prosimy czekać.");
                 if (RodzajKupowanegoBiletu == 1)
                 {
@@ -121,10 +124,10 @@ namespace Projekt_Wizualizacja
                 list.Add("Przetwarzanie danych...");
                 if (RodzajKupowanegoBiletu == 1)
                 {
-                    list.Add("Prosimy wyjąć kartę miejscą z biletomatu.");
+                    list.Add("Prosimy wyjąć kartę miejską z biletomatu.");
                     if (DoZaplaty < 0)
                     {
-                        list.Add("Prosimy odebrać resztą z biletomatu.");
+                        list.Add("Prosimy odebrać resztę z biletomatu.");
                     }
                     list.Add("Bilet został kupiony pomyślnie.");
                 }
@@ -146,7 +149,6 @@ namespace Projekt_Wizualizacja
             }
             
         }
-
 
         //programowanie przyciskow
         private void Podsumowanie_Load(object sender, EventArgs e)
@@ -218,8 +220,9 @@ namespace Projekt_Wizualizacja
             else
             {
                 ObslugaKomunikatow();
-                OknoKomunikatu okno = new OknoKomunikatu(list);
+                OknoKomunikatu okno = new OknoKomunikatu(list, SposobPlatnosci);
                 okno.ShowDialog();
+                okno.ZmianaKomunikatow();
                 Koniec = true;
                 list.Clear();
                 this.Close();
@@ -265,6 +268,7 @@ namespace Projekt_Wizualizacja
         double TimeFromLastMove;
         bool DoResetowaniareklam = false;
         bool CzyJestReklama = false;
+        public bool CzasStop=false;
         int PoziomReklamy = 0; //potrzebne do zmiany kimunikatów 
         public void ResetujCzasReakcji()//po wcisnieciu jakiegokolwiek buttona
         {
@@ -387,7 +391,10 @@ namespace Projekt_Wizualizacja
                 this.Close();
             }
 
-            TimeFromLastMove += StepSize;
+            if (CzasStop ==false)
+            {
+                TimeFromLastMove += StepSize;
+            }
         }
         public void WyswietlReklamy() //wyswietla reklamy
         {

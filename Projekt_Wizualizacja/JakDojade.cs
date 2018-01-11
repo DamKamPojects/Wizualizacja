@@ -16,6 +16,15 @@ namespace Projekt_Wizualizacja
         {
             InitializeComponent();
         }
+
+        public JakDojade(string link)
+        {
+            InitializeComponent();
+            GetCurrentTime();
+            Uri Link = new Uri(link);
+            webBrowser1.Url = Link;
+
+        }
         public bool Koniec = false;
 
         private void aaa_Load(object sender, EventArgs e)

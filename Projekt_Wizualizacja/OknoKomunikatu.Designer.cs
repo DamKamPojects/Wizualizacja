@@ -32,6 +32,7 @@
             this.l_Komunikat = new System.Windows.Forms.Label();
             this.b_OK = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.b_koniec = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // l_Komunikat
@@ -41,10 +42,11 @@
             this.l_Komunikat.ForeColor = System.Drawing.Color.White;
             this.l_Komunikat.Location = new System.Drawing.Point(0, 0);
             this.l_Komunikat.Name = "l_Komunikat";
-            this.l_Komunikat.Size = new System.Drawing.Size(684, 175);
+            this.l_Komunikat.Size = new System.Drawing.Size(684, 386);
             this.l_Komunikat.TabIndex = 0;
             this.l_Komunikat.Text = "Jakiś komunikat";
             this.l_Komunikat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_Komunikat.Click += new System.EventHandler(this.l_Komunikat_Click);
             // 
             // b_OK
             // 
@@ -56,13 +58,26 @@
             this.b_OK.TabIndex = 1;
             this.b_OK.Text = "OK";
             this.b_OK.UseVisualStyleBackColor = false;
+            this.b_OK.Visible = false;
             this.b_OK.Click += new System.EventHandler(this.b_OK_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
+            this.timer1.Interval = 4000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // b_koniec
+            // 
+            this.b_koniec.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.Przycisk_Anuluj1;
+            this.b_koniec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_koniec.Location = new System.Drawing.Point(609, 0);
+            this.b_koniec.Name = "b_koniec";
+            this.b_koniec.Size = new System.Drawing.Size(75, 75);
+            this.b_koniec.TabIndex = 2;
+            this.b_koniec.UseVisualStyleBackColor = true;
+            this.b_koniec.Visible = false;
+            this.b_koniec.Click += new System.EventHandler(this.b_koniec_Click);
             // 
             // OknoKomunikatu
             // 
@@ -71,6 +86,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(684, 384);
             this.ControlBox = false;
+            this.Controls.Add(this.b_koniec);
             this.Controls.Add(this.b_OK);
             this.Controls.Add(this.l_Komunikat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -81,8 +97,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button b_OK;
         public System.Windows.Forms.Label l_Komunikat;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Button b_OK;
+        private System.Windows.Forms.Button b_koniec;
     }
 }

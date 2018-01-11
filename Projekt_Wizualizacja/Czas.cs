@@ -10,9 +10,9 @@ namespace Projekt_Wizualizacja
     {
         public Czas()
         {
-            CzasDoReset = CzasDoReklam*2;
+            CzasDoReset = CzasDoReklam+7;
         }
-        public Double CzasDoReklam = 30;
+        public Double CzasDoReklam = 60;
         public Double CzasDoReset;
     }
 }

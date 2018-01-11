@@ -41,7 +41,7 @@
             this.l_Komunikat.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.l_Komunikat.Location = new System.Drawing.Point(0, 0);
             this.l_Komunikat.Name = "l_Komunikat";
-            this.l_Komunikat.Size = new System.Drawing.Size(1312, 100);
+            this.l_Komunikat.Size = new System.Drawing.Size(1328, 100);
             this.l_Komunikat.TabIndex = 0;
             this.l_Komunikat.Text = "Dotknij ekranu aby przejść do zakupu biletów";
             this.l_Komunikat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1312, 650);
+            this.panel1.Size = new System.Drawing.Size(1328, 660);
             this.panel1.TabIndex = 1;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
@@ -69,11 +69,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 750);
+            this.ClientSize = new System.Drawing.Size(1328, 760);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.l_Komunikat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximumSize = new System.Drawing.Size(1334, 766);
+            this.MinimumSize = new System.Drawing.Size(1334, 766);
             this.Name = "Reklamy";
             this.Load += new System.EventHandler(this.Reklamy_Load);
             this.Click += new System.EventHandler(this.Reklamy_Click);

@@ -72,6 +72,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doładowani2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doładowani2.Designer.cs">
+      <DependentUpon>Doładowani2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doładowanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doładowanie.Designer.cs">
+      <DependentUpon>Doładowanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacje.Designer.cs">
+      <DependentUpon>Informacje.cs</DependentUpon>
+    </Compile>
     <Compile Include="JakDojade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +196,15 @@
     <Compile Include="WyborMiesieczneSemestralne.Designer.cs">
       <DependentUpon>WyborMiesieczneSemestralne.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Doładowani2.resx">
+      <DependentUpon>Doładowani2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doładowanie.resx">
+      <DependentUpon>Doładowanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacje.resx">
+      <DependentUpon>Informacje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JakDojade.resx">
       <DependentUpon>JakDojade.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +308,14 @@
     <None Include="Resources\image_bilet1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pomoc.jpg" />
+    <None Include="Resources\tel_virgin.PNG" />
+    <None Include="Resources\tel_nju.PNG" />
+    <None Include="Resources\tel_play1.PNG" />
+    <None Include="Resources\tel_tmobile.PNG" />
+    <None Include="Resources\tel_play.PNG" />
+    <None Include="Resources\tel_orange.PNG" />
+    <None Include="Resources\tel_plus.PNG" />
     <None Include="Resources\logo_zkm.png" />
     <None Include="Resources\rybki.png" />
     <None Include="Resources\Logo_Gdyni.jpg" />

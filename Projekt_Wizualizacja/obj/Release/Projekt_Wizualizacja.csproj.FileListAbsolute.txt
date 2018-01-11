@@ -26,7 +26,6 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\Projekt_Wi
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\Projekt_Wizualizacja.pdb
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\bin\Release\pl\Projekt_Wizualizacja.resources.dll
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.csprojResolveAssemblyReference.cache
-E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.aaa.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Kalendarz.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Wizualizacja01.Klawiatura.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.KolKom24Remover.resources
@@ -48,3 +47,5 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wi
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\pl\Projekt_Wizualizacja.resources.dll
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.exe
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.pdb
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.JakDojade.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OknoKartyMiejskiej.resources
