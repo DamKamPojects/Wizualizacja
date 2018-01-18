@@ -14,13 +14,16 @@ namespace Projekt_Wizualizacja
     {
         public Kalendarz()
         {
+            //Calendar.MinDate = new DateTime(2018, 1, 11);
+            //Calendar.MaxDate = new DateTime(2018, 2, 27);
             InitializeComponent();
             ObslugaKalendarza();
-            AktualnieWybranaData = Calendar.SelectionStart;
+            //AktualnieWybranaData = new DateTime.Now;
             int day = Convert.ToInt32(String.Format("{0:dd}", AktualnieWybranaData).TrimStart('0'));
             int month = Convert.ToInt32((String.Format("{0:MM}", AktualnieWybranaData).TrimStart('0')));
             int year = Convert.ToInt32((String.Format("{0:yyyy}", AktualnieWybranaData).TrimStart('0')));
 
+            Calendar.MinDate = new DateTime(year, month, day);
             l_Od.Text = AktualnieWybranaData.ToString("dd.MM.yyyy");
             l_Do.Text = GetEndDate(year, month, day, 30).ToString("dd.MM.yyyy");
         }
@@ -28,9 +31,12 @@ namespace Projekt_Wizualizacja
         public Kalendarz(DateTime AktualnieWybrany)
         {
             InitializeComponent();
-            ObslugaKalendarza();
+            Calendar.SelectionRange.Start = AktualnieWybrany;
+            Calendar.SelectionRange.End = AktualnieWybrany;
             Calendar.SelectionStart = AktualnieWybrany;
             Calendar.SelectionEnd = AktualnieWybrany;
+
+            ObslugaKalendarza();
 
             l_Od.Text = Convert.ToString(AktualnieWybrany);
 
@@ -41,7 +47,8 @@ namespace Projekt_Wizualizacja
         }
         //zmienne
         public string Dni30Tekst;
-        public DateTime AktualnieWybranaData;
+        public DateTime AktualnieWybranaData=new DateTime(2018,1,11);
+        public bool Dzialaj = false;
 
 
 
@@ -142,6 +149,7 @@ namespace Projekt_Wizualizacja
         private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
         {
             //Calendar.SelectionStart
+            button1.Enabled = true;
             AktualnieWybranaData = Calendar.SelectionStart;
             int day = Convert.ToInt32(String.Format("{0:dd}", AktualnieWybranaData).TrimStart('0'));
             int month = Convert.ToInt32((String.Format("{0:MM}", AktualnieWybranaData).TrimStart('0')));
@@ -151,12 +159,15 @@ namespace Projekt_Wizualizacja
             l_Do.Text = GetEndDate(year, month, day, 30).ToString("dd.MM.yyyy");
 
             Dni30Tekst = "od "+l_Od.Text + " do " + l_Do.Text;
-
+            Dzialaj = true;
 
         }
-
+        DateRangeEventArgs eeee;
         private void button1_Click(object sender, EventArgs e)
         {
+            Calendar_DateSelected(sender, eeee);
+            //AktualnieWybranaData = Calendar.SelectionRange.Start;
+
             this.Close();
         }
 
@@ -187,5 +198,13 @@ namespace Projekt_Wizualizacja
             TimeFromLastMove += StepSize;
         }
         #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Calendar_DateSelected(sender, eeee);
+            //AktualnieWybranaData = Calendar.SelectionRange.Start;
+
+            this.Close();
+        }
     }
 }

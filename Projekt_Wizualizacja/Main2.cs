@@ -37,7 +37,10 @@ namespace Projekt_Wizualizacja
                 //{tb_NRight, "0" },
                 //{tb_URight, "0" }
             };
-            
+            this.StartPosition = FormStartPosition.Manual;
+            this.Top = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
+            this.Left = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
+
         }
 
 
@@ -729,7 +732,7 @@ namespace Projekt_Wizualizacja
             //Image imageTlo = new Bitmap(global::Projekt_Wizualizacja.Properties.Resources.niebieskietlo);
             //this.BackgroundImage = imageTlo;
             //pb_postep.Maximum = 1200;
-            this.Size=new Size(1334, 766); //bazowa wielkość okna
+            //this.Size=new Size(1334, 766); //bazowa wielkość okna
             MoveToTheCenter();
             GetCurrentTime();
             panelKoniecWstecz.Visible = false;
@@ -768,6 +771,7 @@ namespace Projekt_Wizualizacja
         }
         private void KoniecButton()
         {
+            AktualnieWybranaData = new DateTime(2018, 1, 11);
             if (SprawdzyCzyWYbranoJakisBilet() == true)
             {
                 AktualneOkno = 0;
@@ -1025,7 +1029,7 @@ namespace Projekt_Wizualizacja
         public bool ClickKategori = false;
         public double CenaOkresowego;
         bool OkresoweCzyJestPrzed16;
-        DateTime AktualnieWybranaData = new DateTime(2018,1,15);
+        DateTime AktualnieWybranaData = new DateTime(2018,1,11);
         string Okresowy30dniTekst;
 
         //metody
@@ -1466,10 +1470,19 @@ namespace Projekt_Wizualizacja
                 //TimeFromLastMove = -10;
             if (bilet==3) //to znaczy że jeszcze nie zostal wybrany wczesniej
             {
-                Kalendarz kalendarz30Dni = new Kalendarz();
-                kalendarz30Dni.ShowDialog();
-                AktualnieWybranaData = kalendarz30Dni.AktualnieWybranaData;
-                Okresowy30dniTekst = kalendarz30Dni.Dni30Tekst;
+                try
+                {
+                    Kalendarz kalendarz30Dni = new Kalendarz(AktualnieWybranaData);
+                    kalendarz30Dni.ShowDialog();
+                    AktualnieWybranaData = kalendarz30Dni.AktualnieWybranaData;
+                    Okresowy30dniTekst = kalendarz30Dni.Dni30Tekst;
+                }
+                catch (Exception exc)
+                {
+                    //MessageBox.Show(exc.Message);
+                    
+                }
+                
             }
             else
             {

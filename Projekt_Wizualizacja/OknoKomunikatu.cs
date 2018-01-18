@@ -76,6 +76,7 @@ namespace Projekt_Wizualizacja
                 ZmianaKomunikatow();
                 b_koniec.Visible = true;
                 b_OK.Visible = true;
+                b_OK.Text = "(Postępuję zgodnie z intrukcjami na terminalu)";
                 timer1.Enabled = false;
             }
             else

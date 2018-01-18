@@ -70,6 +70,7 @@
             this.pGotow_tb_Podsumowanie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.l_postep = new System.Windows.Forms.Label();
+            this.panelMenu_b_Pomoc = new System.Windows.Forms.Button();
             this.panelGorny.SuspendLayout();
             this.gb_AktualnaData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,7 @@
             // panelGorny
             // 
             this.panelGorny.BackColor = System.Drawing.Color.Transparent;
+            this.panelGorny.Controls.Add(this.panelMenu_b_Pomoc);
             this.panelGorny.Controls.Add(this.pKoniecWstecz_b_Wstecz);
             this.panelGorny.Controls.Add(this.pKoniecWstecz_b_Koniec);
             this.panelGorny.Controls.Add(this.gb_AktualnaData);
@@ -595,6 +597,20 @@
             this.l_postep.Text = "Pozostały czas na wykonanie transakcji";
             this.l_postep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panelMenu_b_Pomoc
+            // 
+            this.panelMenu_b_Pomoc.BackColor = System.Drawing.Color.White;
+            this.panelMenu_b_Pomoc.BackgroundImage = global::Projekt_Wizualizacja.Properties.Resources.pomoc;
+            this.panelMenu_b_Pomoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMenu_b_Pomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.panelMenu_b_Pomoc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelMenu_b_Pomoc.Location = new System.Drawing.Point(366, 31);
+            this.panelMenu_b_Pomoc.Name = "panelMenu_b_Pomoc";
+            this.panelMenu_b_Pomoc.Size = new System.Drawing.Size(60, 60);
+            this.panelMenu_b_Pomoc.TabIndex = 38;
+            this.panelMenu_b_Pomoc.UseVisualStyleBackColor = false;
+            this.panelMenu_b_Pomoc.Click += new System.EventHandler(this.panelMenu_b_Pomoc_Click);
+            // 
             // Podsumowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -672,5 +688,6 @@
         private System.Windows.Forms.Label l_doZaplaty;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button panelMenu_b_Pomoc;
     }
 }

@@ -104,7 +104,7 @@ namespace Projekt_Wizualizacja
         {
             if (SposobPlatnosci==2)
             {
-                list.Add("Proszę przyłożyć karte płatniczą do terminala płatniczego.\n\n\n\n\n");
+                list.Add("Proszę postępować zgodnie z intrukcjami na terminalu płatniczym.\n\n\n\n\n");
                 list.Add("Trwa przetwarzanie danych... Prosimy czekać.");
                 if (RodzajKupowanegoBiletu == 1)
                 {
@@ -137,7 +137,7 @@ namespace Projekt_Wizualizacja
                     list.Add("Trwa drukowanie biletu... \n Prosimy o cierpliwość...");
                     if (DoZaplaty < 0)
                     {
-                        list.Add("Proszimy odebrać bilety oraz resztę.");
+                        list.Add("Prosimy odebrać bilety oraz resztę.");
                     }
                     else
                     {
@@ -367,6 +367,12 @@ namespace Projekt_Wizualizacja
             ResetujCzasReakcji();
         }
         #endregion
+
+        private void panelMenu_b_Pomoc_Click(object sender, EventArgs e)
+        {
+            Informacje informacje = new Informacje();
+            informacje.ShowDialog();
+        }
 
         void ObslugaReklam()
         {

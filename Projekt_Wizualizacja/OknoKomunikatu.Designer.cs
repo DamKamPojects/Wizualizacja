@@ -51,7 +51,7 @@
             // b_OK
             // 
             this.b_OK.BackColor = System.Drawing.Color.White;
-            this.b_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.b_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.b_OK.Location = new System.Drawing.Point(120, 220);
             this.b_OK.Name = "b_OK";
             this.b_OK.Size = new System.Drawing.Size(458, 100);

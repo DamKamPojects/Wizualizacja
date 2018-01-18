@@ -49,3 +49,6 @@ E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wi
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.pdb
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.JakDojade.resources
 E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.OknoKartyMiejskiej.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Doładowani2.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Doładowanie.resources
+E:\Nauka\Kurs C#\GitHub\Wizualizacja\Projekt_Wizualizacja\obj\Release\Projekt_Wizualizacja.Informacje.resources

@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.l_godzina = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -239,6 +240,17 @@
             this.label2.Text = "Bilety okresowy 30-dniowy";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(597, 18);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Powrót";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Kalendarz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +258,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(684, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.l_godzina);
             this.Controls.Add(this.button1);
@@ -279,5 +292,6 @@
         private System.Windows.Forms.Label l_godzina;
         public System.Windows.Forms.MonthCalendar Calendar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }
